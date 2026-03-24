@@ -171,31 +171,7 @@ export default function Home() {
           Layout: left green panel | right image + countdown
       ════════════════════════════════════════ */}
       <section className="w-full">
-        <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[480px]">
-          {/* Left — green panel */}
-          <div className="bg-primary px-10 md:px-16 py-14 flex flex-col justify-center">
-            <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}>
-              <p className="text-white/60 uppercase tracking-widest text-xs font-semibold mb-4">Sự Kiện Sắp Diễn Ra</p>
-              <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight mb-5">
-                Dự án về<br />nông nghiệp xanh
-              </h2>
-              <div className="inline-block bg-white/10 border border-white/20 text-white/90 text-xs font-bold uppercase tracking-wider px-4 py-2 rounded-sm mb-5 leading-relaxed">
-                Khởi Động Dự Án Le Mont Resort & Golf<br />
-                Công Bố ESGValley · Khánh Thành Đường Vành Đai V
-              </div>
-              <p className="text-white/65 text-sm leading-relaxed mb-8 max-w-md">
-                Sự kiện đánh dấu cột mốc quan trọng trong hành trình phát triển bền vững của ESG Valley – ra mắt không gian sinh thái trà đẳng cấp quốc tế, kết hợp bảo tồn thiên nhiên và văn hóa Việt.
-              </p>
-              <Link href="/tin-tuc">
-                <button className="inline-flex items-center gap-2 px-6 py-3 border border-white text-white text-sm font-semibold uppercase tracking-wider hover:bg-white hover:text-primary transition-all duration-300 rounded-sm">
-                  Xem Thêm <ArrowRight className="w-4 h-4" />
-                </button>
-              </Link>
-            </motion.div>
-          </div>
-
-          {/* Right — image + countdown overlay */}
-          <div className="relative min-h-[320px] lg:min-h-0 overflow-hidden">
+        <div className="relative min-h-[420px] overflow-hidden">
             <img
               src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&q=80&w=1200"
               alt="Nông nghiệp xanh"
