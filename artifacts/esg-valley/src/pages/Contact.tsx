@@ -34,13 +34,6 @@ export default function Contact() {
   return (
     <div className="w-full bg-background pt-24 pb-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h1 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-4">Liên Hệ Với Chúng Tôi</h1>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
-            Hãy để lại lời nhắn, chúng tôi luôn sẵn sàng lắng nghe và đồng hành cùng bạn.
-          </p>
-        </div>
-
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-24">
           {/* Form */}
           <motion.div initial={{ opacity: 0, x: -30 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.6 }}>
