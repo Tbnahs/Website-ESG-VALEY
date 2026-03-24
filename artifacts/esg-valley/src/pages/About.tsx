@@ -81,7 +81,7 @@ export default function About() {
       {/* ── HERO ── */}
       <div className="relative w-full h-[55vh] min-h-[400px] overflow-hidden">
         <img
-          src="https://images.unsplash.com/photo-1530831916053-1d9a93ee5e3c?w=1400&q=80"
+          src={`${import.meta.env.BASE_URL}images/gioi-thieu-hero.png`}
           alt="ESG Valley tea garden"
           className="w-full h-full object-cover"
         />
