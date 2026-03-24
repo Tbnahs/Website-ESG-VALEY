@@ -58,16 +58,6 @@ const cheStories = [
   {
     text: (
       <>
-        Chúng tôi không dùng chất trừ sâu, không dùng phân bón hóa học, không đánh đổi chất lượng để lấy sản lượng.{" "}
-        <span className="text-primary font-semibold">Từng búp trà được hái thủ công</span> vào buổi sáng tinh sương,
-        khi tinh dầu còn nguyên vẹn nhất — đó là lời cam kết của chúng tôi với người thưởng trà.
-      </>
-    ),
-    img: "https://images.unsplash.com/photo-1571934811356-5cc061b6d72a?w=400&q=80",
-  },
-  {
-    text: (
-      <>
         Tổng hợp các loại trà chất lượng cao được chế biến theo phương pháp truyền thống, qua bàn tay người thợ{" "}
         <span className="text-primary font-semibold">lành nghề qua nhiều thế hệ</span> — chúng tôi tin rằng không có
         máy móc nào thay thế được cái tâm và sự am hiểu của người làm trà đích thực.
