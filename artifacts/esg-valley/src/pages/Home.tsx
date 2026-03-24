@@ -422,7 +422,7 @@ export default function Home() {
             className="flex flex-col sm:flex-row items-center justify-center gap-6"
           >
             <img
-              src="/image_2206.png"
+              src="/image_2206_nobg.png"
               alt="100+ đối tác thương hiệu"
               className="w-full max-w-2xl object-contain"
             />
