@@ -94,7 +94,8 @@ export const esgPillars = [
     accent: "bg-emerald-50 border-emerald-200",
     textAccent: "text-emerald-700",
     description: "Chúng tôi hiểu rằng môi trường là nền tảng cho sự sống và sự phát triển. Mỗi hành động đều hướng đến giảm thiểu tác động tiêu cực đến thiên nhiên – từ tối ưu hóa sử dụng tài nguyên, giảm phát thải carbon, đến thúc đẩy mô hình sản xuất – tiêu dùng xanh. Đó là cách chúng tôi chung tay bảo vệ hành tinh cho các thế hệ sau.",
-    points: ["Canh tác hữu cơ 100%", "Giảm phát thải carbon", "Bảo tồn đa dạng sinh học"]
+    points: ["Canh tác hữu cơ 100%", "Giảm phát thải carbon", "Bảo tồn đa dạng sinh học"],
+    image: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&q=80&w=900"
   },
   {
     code: "S",
@@ -104,7 +105,8 @@ export const esgPillars = [
     accent: "bg-amber-50 border-amber-200",
     textAccent: "text-amber-700",
     description: "Chúng tôi tin rằng một doanh nghiệp bền vững phải đặt con người làm trung tâm. Từ việc hỗ trợ sinh kế người dân trồng chè vùng cao, đến việc gìn giữ và phát huy văn hóa bản địa – mỗi sản phẩm ESG Valley là cầu nối giữa cộng đồng và thế giới.",
-    points: ["Hỗ trợ 500+ hộ nông dân", "Bảo tồn văn hóa bản địa", "Phát triển cộng đồng bền vững"]
+    points: ["Hỗ trợ 500+ hộ nông dân", "Bảo tồn văn hóa bản địa", "Phát triển cộng đồng bền vững"],
+    image: "https://images.unsplash.com/photo-1542810634-71277d95dcbb?auto=format&fit=crop&q=80&w=900"
   },
   {
     code: "G",
@@ -114,6 +116,7 @@ export const esgPillars = [
     accent: "bg-slate-50 border-slate-200",
     textAccent: "text-slate-700",
     description: "Quản trị minh bạch là nền tảng của niềm tin. Chúng tôi cam kết vận hành theo chuẩn mực quốc tế – từ chuỗi cung ứng có trách nhiệm đến báo cáo ESG công khai hàng năm – để mỗi đối tác, khách hàng đều có thể đặt trọn niềm tin.",
-    points: ["Minh bạch chuỗi cung ứng", "Báo cáo ESG hàng năm", "Chứng nhận quốc tế"]
+    points: ["Minh bạch chuỗi cung ứng", "Báo cáo ESG hàng năm", "Chứng nhận quốc tế"],
+    image: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&q=80&w=900"
   }
 ];

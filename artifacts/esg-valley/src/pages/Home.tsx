@@ -227,7 +227,7 @@ export default function Home() {
               {/* Image */}
               <div className="order-1 lg:order-2 aspect-[4/3] rounded-sm overflow-hidden shadow-xl">
                 <img
-                  src="https://images.unsplash.com/photo-1564890369478-c89ca6d9cde9?auto=format&fit=crop&q=80&w=900"
+                  src={pillar.image}
                   alt={pillar.subtitle}
                   className="w-full h-full object-cover"
                 />
