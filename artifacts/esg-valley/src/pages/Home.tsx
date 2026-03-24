@@ -416,6 +416,23 @@ export default function Home() {
             </p>
           </motion.div>
 
+          <motion.div
+            initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }} viewport={{ once: true }}
+            className="flex flex-col sm:flex-row items-center justify-center gap-6"
+          >
+            <img
+              src="/image_2206.png"
+              alt="100+ đối tác thương hiệu"
+              className="w-full max-w-2xl object-contain"
+            />
+            <img
+              src="/_.png"
+              alt="+"
+              className="w-10 h-10 object-contain flex-shrink-0"
+            />
+          </motion.div>
+
         </div>
       </section>
 
