@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/"
+title = "ESG Valley"
+version = "1.0.0"
+id = "artifacts/esg-valley"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 20102
+
+[services.development]
+run = "pnpm --filter @workspace/esg-valley run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/esg-valley", "run", "build" ]
+publicDir = "artifacts/esg-valley/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "20102"
+BASE_PATH = "/"

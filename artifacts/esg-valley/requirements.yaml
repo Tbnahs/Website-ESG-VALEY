@@ -1,0 +1,29 @@
+packages:
+  "framer-motion": "For premium smooth animations and page transitions"
+  "embla-carousel-react": "For the hero slider and product carousels"
+  "embla-carousel-autoplay": "For auto-advancing slides"
+  "lucide-react": "For icons"
+
+images:
+  - path: "artifacts/esg-valley/public/images/hero-slide-1.png"
+    description: "Luxurious Vietnamese tea gift collection for Tet holiday, elegant packaging, cinematic lighting, earthy and gold accents, highly detailed, premium aesthetic"
+    aspect_ratio: "16:9"
+  - path: "artifacts/esg-valley/public/images/hero-slide-2.png"
+    description: "Ancient Shan Snow tea tree in the misty mountains of Ha Giang Vietnam, cinematic landscape, soft morning light, lush green"
+    aspect_ratio: "16:9"
+  - path: "artifacts/esg-valley/public/images/hero-slide-3.png"
+    description: "Sustainable tea farming community, organic terraced fields, earthy, high quality, panoramic, natural sunlight"
+    aspect_ratio: "16:9"
+  - path: "artifacts/esg-valley/public/images/about-banner.png"
+    description: "Vietnamese cultural tea ceremony, elegant, heritage, natural sunlight, premium wooden table, soft focus"
+    aspect_ratio: "16:9"
+  - path: "artifacts/esg-valley/public/images/ecosystem-banner.png"
+    description: "Abstract artistic representation of nature and community, deep forest greens and earth tones, elegant minimalist texture"
+    aspect_ratio: "16:9"
+  - path: "artifacts/esg-valley/public/images/video-thumb.png"
+    description: "Close up of golden tea pouring into a handcrafted ceramic cup, dark moody background, highly aesthetic, luxury"
+    aspect_ratio: "16:9"
+
+notes:
+  - "The app uses framer-motion for animations and embla-carousel for sliders."
+  - "Since there is no backend API, mock data is used throughout the application to demonstrate completeness."
