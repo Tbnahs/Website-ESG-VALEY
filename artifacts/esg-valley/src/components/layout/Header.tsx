@@ -69,9 +69,11 @@ export function Header() {
 
         {/* Logo */}
         <Link href="/" className="flex-shrink-0">
-          <h1 className="font-display text-2xl md:text-3xl font-bold tracking-widest uppercase">
-            ESG VALLEY
-          </h1>
+          <img
+            src="/images/logo-esg-valley.png"
+            alt="ESG Valley"
+            className="h-14 md:h-16 w-auto object-contain transition-all duration-300"
+          />
         </Link>
 
         {/* Desktop Nav */}
@@ -127,7 +129,7 @@ export function Header() {
               className="fixed top-0 left-0 bottom-0 w-[280px] bg-background text-foreground z-50 shadow-2xl flex flex-col"
             >
               <div className="p-4 flex justify-between items-center border-b">
-                <h2 className="font-display text-xl font-bold">ESG VALLEY</h2>
+                <img src="/images/logo-esg-valley.png" alt="ESG Valley" className="h-12 w-auto object-contain" />
                 <button onClick={() => setMobileMenuOpen(false)} className="p-2">
                   <X className="w-6 h-6" />
                 </button>
