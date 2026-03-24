@@ -39,7 +39,6 @@ export function Header() {
 
   const navLinks = [
     { path: "/", label: "Trang Chủ" },
-    { path: "/ve-esg-valley", label: "Câu chuyện ESGValley" },
     { path: "/san-pham", label: "Sản Phẩm" },
     { path: "/tin-tuc", label: "Tin Tức" },
     { path: "/lien-he", label: "Liên Hệ" },
