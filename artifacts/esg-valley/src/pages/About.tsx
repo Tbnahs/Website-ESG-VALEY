@@ -223,6 +223,13 @@ export default function About() {
             transition={{ duration: 0.4 }}
             className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center"
           >
+            <div className="overflow-hidden rounded-sm">
+              <img
+                src={activeData.img}
+                alt={activeData.title}
+                className="w-full h-72 object-cover"
+              />
+            </div>
             <div>
               <span className="text-primary font-semibold text-sm uppercase tracking-widest">
                 {activeYear}
@@ -235,13 +242,6 @@ export default function About() {
                   {para}
                 </p>
               ))}
-            </div>
-            <div className="overflow-hidden rounded-sm">
-              <img
-                src={activeData.img}
-                alt={activeData.title}
-                className="w-full h-72 object-cover"
-              />
             </div>
           </motion.div>
         </div>
