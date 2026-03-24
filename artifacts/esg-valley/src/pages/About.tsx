@@ -58,16 +58,6 @@ const cheStories = [
   {
     text: (
       <>
-        Diện tích vùng trồng mạnh của búp chè — nhiều khi đất làm đến 5km mỗi mẻ ông. Để nó hình thành nào chính là{" "}
-        <span className="text-primary font-semibold">kết tinh của những con đường mòn dẫn lên núi cao</span>, nơi sương
-        mù còn lưu giữ hơi thở của rừng già. Chúng tôi không chỉ hái trà — chúng tôi lắng nghe từng nhịp thở của đất.
-      </>
-    ),
-    img: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&q=80",
-  },
-  {
-    text: (
-      <>
         Chúng tôi không dùng chất trừ sâu, không dùng phân bón hóa học, không đánh đổi chất lượng để lấy sản lượng.{" "}
         <span className="text-primary font-semibold">Từng búp trà được hái thủ công</span> vào buổi sáng tinh sương,
         khi tinh dầu còn nguyên vẹn nhất — đó là lời cam kết của chúng tôi với người thưởng trà.
