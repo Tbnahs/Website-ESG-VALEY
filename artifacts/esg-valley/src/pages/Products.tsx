@@ -14,10 +14,16 @@ export default function Products() {
   return (
     <div className="w-full bg-background pt-24 pb-24">
       {/* Header */}
-      <div className="bg-muted py-16 mb-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-4">Sản Phẩm ESG Valley</h1>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
+      <div className="relative py-24 mb-12 overflow-hidden">
+        <img
+          src="https://images.unsplash.com/photo-1544787219-7f47ccb76574?w=1600&q=85"
+          alt="Sản phẩm ESG Valley"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-black/55" />
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h1 className="font-display text-4xl md:text-5xl font-bold text-white mb-4">Sản Phẩm ESG Valley</h1>
+          <p className="text-white/80 max-w-2xl mx-auto">
             Trải nghiệm bộ sưu tập tinh hoa hội tụ từ thiên nhiên và nghệ thuật thủ công truyền thống.
           </p>
         </div>
