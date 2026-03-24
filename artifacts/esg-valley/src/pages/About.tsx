@@ -252,7 +252,7 @@ export default function About() {
               <img
                 src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80"
                 alt="ESG Valley overview"
-                className="w-full h-[420px] object-cover"
+                className="w-full h-[420px] object-cover border-t-[0px] border-r-[0px] border-b-[0px] border-l-[0px] rounded-tl-[30px] rounded-tr-[30px] rounded-bl-[30px] rounded-br-[30px]"
               />
             </motion.div>
 
