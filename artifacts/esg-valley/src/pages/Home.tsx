@@ -167,7 +167,7 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}>
               <div className="text-accent font-semibold tracking-widest uppercase mb-4 text-sm">Khám Phá</div>
-              <h2 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-6">Câu Chuyện ESG Valley</h2>
+              <h2 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-6">Câu CValley Của Chúng Tôi</h2>
               <p className="text-muted-foreground leading-relaxed mb-8">
                 Khởi nguồn từ niềm đam mê sâu sắc với trà Việt, ESG Valley không chỉ mang đến những phẩm trà thượng hạng mà còn kể câu chuyện về văn hóa, con người và vùng đất sinh ra nó. Mỗi tách trà là một hành trình kết nối quá khứ, hiện tại và tương lai bền vững.
               </p>
