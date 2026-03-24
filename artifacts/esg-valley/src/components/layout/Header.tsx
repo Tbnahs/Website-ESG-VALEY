@@ -27,6 +27,11 @@ export function Header() {
   }, []);
 
   useEffect(() => {
+    window.scrollTo(0, 0);
+    setIsScrolled(false);
+  }, [location]);
+
+  useEffect(() => {
     const handleClick = (e: MouseEvent) => {
       if (langRef.current && !langRef.current.contains(e.target as Node)) setLangOpen(false);
       if (userRef.current && !userRef.current.contains(e.target as Node)) setUserMenuOpen(false);
