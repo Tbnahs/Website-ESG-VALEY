@@ -54,30 +54,6 @@ const missionImages = [
   "https://images.unsplash.com/photo-1530831916053-1d9a93ee5e3c?w=400&q=80",
 ];
 
-const cheStories = [
-  {
-    text: (
-      <>
-        Tổng hợp các loại trà chất lượng cao được chế biến theo phương pháp truyền thống, qua bàn tay người thợ{" "}
-        <span className="text-primary font-semibold">lành nghề qua nhiều thế hệ</span> — chúng tôi tin rằng không có
-        máy móc nào thay thế được cái tâm và sự am hiểu của người làm trà đích thực.
-      </>
-    ),
-    img: null,
-  },
-  {
-    text: (
-      <>
-        Từ tay người trồng đến tay người uống, hành trình đó được{" "}
-        <span className="text-primary font-semibold">ghi chép minh bạch theo chuẩn ESG quốc tế</span> — để mỗi người
-        thưởng trà biết rằng tách trà họ cầm trên tay là sản phẩm của một chuỗi giá trị có trách nhiệm với con người,
-        thiên nhiên và tương lai.
-      </>
-    ),
-    img: "https://images.unsplash.com/photo-1519682337058-a94d519337bc?w=400&q=80",
-  },
-];
-
 const achievementImages = [
   {
     src: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&q=80",
@@ -328,47 +304,19 @@ export default function About() {
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
-            {/* Left: organic shaped image */}
-            <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.7 }}
-              className="flex justify-center lg:justify-end lg:sticky lg:top-32"
-            >
-              <img
-                src={`${import.meta.env.BASE_URL}images/che-story-nobg.png`}
-                alt="Câu chuyện với chè"
-                className="w-full max-w-sm md:max-w-md drop-shadow-2xl"
-              />
-            </motion.div>
-
-            {/* Right: story blocks */}
-            <div className="space-y-10">
-              {cheStories.map((story, i) => (
-                <motion.div
-                  key={i}
-                  initial={{ opacity: 0, y: 24 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: i * 0.1 }}
-                  className="bg-white rounded-2xl p-6 shadow-sm"
-                >
-                  <p className="text-muted-foreground leading-relaxed text-[15px]">{story.text}</p>
-                  {story.img && (
-                    <div className="mt-4 overflow-hidden rounded-xl">
-                      <img
-                        src={story.img}
-                        alt=""
-                        className="w-full h-48 object-cover hover:scale-105 transition-transform duration-500"
-                      />
-                    </div>
-                  )}
-                </motion.div>
-              ))}
-            </div>
-          </div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7 }}
+            className="flex justify-center"
+          >
+            <img
+              src={`${import.meta.env.BASE_URL}images/che-story-nobg.png`}
+              alt="Câu chuyện với chè"
+              className="w-full max-w-2xl drop-shadow-2xl"
+            />
+          </motion.div>
         </div>
       </section>
 
