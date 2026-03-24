@@ -12,9 +12,7 @@ export default function News() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h1 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-4">Tin Tức & Media</h1>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
-            Cập nhật những hoạt động mới nhất và khoảnh khắc đẹp từ ESG Valley.
-          </p>
+          <p className="text-muted-foreground max-w-2xl mx-auto text-[31px] font-bold">TIN TỨC</p>
         </div>
 
         {/* Tabs */}
