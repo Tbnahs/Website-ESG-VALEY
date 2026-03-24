@@ -416,26 +416,6 @@ export default function Home() {
             </p>
           </motion.div>
 
-          {/* Cert logos */}
-          <motion.div
-            initial="hidden" whileInView="visible" viewport={{ once: true }}
-            className="flex flex-wrap justify-center gap-4 mb-14"
-          >
-            {certs.map((cert, idx) => (
-              <motion.div
-                key={cert.name}
-                initial={{ opacity: 0, scale: 0.9 }} whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ delay: idx * 0.08, duration: 0.4 }} viewport={{ once: true }}
-                className="bg-background border border-border rounded-sm px-6 py-4 flex flex-col items-center justify-center min-w-[110px] hover:border-primary/50 hover:shadow-md transition-all duration-300 group"
-              >
-                <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mb-2 group-hover:bg-primary/20 transition-colors">
-                  <span className="text-primary font-bold text-xs">{cert.name.slice(0, 2)}</span>
-                </div>
-                <span className="text-foreground font-semibold text-xs text-center leading-tight">{cert.name}</span>
-              </motion.div>
-            ))}
-          </motion.div>
-
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {stats.map((stat, idx) => (
