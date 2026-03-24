@@ -304,36 +304,6 @@ export default function About() {
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-            >
-              <p className="text-muted-foreground leading-relaxed mb-4">
-                Từ tay người dân tộc đến đô thị sầm uất, hành trình theo lâu dài, ESG Valley là cầu nối đưa những người uống trà về gần hơn với nguồn cội của chiếc tách trong tay họ. Mỗi lần mở nắp hộp trà là một lần hành hương.
-              </p>
-              <p className="text-muted-foreground leading-relaxed">
-                Chúng tôi đang cùng nhau viết thêm những trang mới trong câu chuyện dài của trà Việt –{" "}
-                <strong className="text-primary">câu chuyện của sự bền vững</strong>,{" "}
-                <strong className="text-primary">của lòng biết ơn</strong>, và của niềm tin vào những điều tốt đẹp được gìn giữ qua thời gian.
-              </p>
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="overflow-hidden rounded-sm"
-            >
-              <img
-                src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=700&q=80"
-                alt="Tea ceremony"
-                className="w-full h-72 object-cover"
-              />
-            </motion.div>
-          </div>
         </div>
       </section>
 
