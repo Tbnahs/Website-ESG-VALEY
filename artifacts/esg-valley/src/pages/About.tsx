@@ -304,40 +304,6 @@ export default function About() {
             </h2>
           </div>
 
-          {/* Block 2 */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-16">
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="overflow-hidden rounded-sm md:order-1"
-            >
-              <img
-                src="https://images.unsplash.com/photo-1559056199-641a0ac8b55e?w=700&q=80"
-                alt="Tea processing"
-                className="w-full h-72 object-cover"
-              />
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="md:order-2"
-            >
-              <p className="text-muted-foreground leading-relaxed mb-4">
-                Từng mẻ sao, từng công đoạn vò trà, sấy khô đều được thực hiện thủ công bởi những nghệ nhân có kinh nghiệm hàng chục năm. Không có cỗ máy nào thay thế được đôi bàn tay cảm nhận nhiệt độ, độ ẩm, và nhịp thở của lá trà.
-              </p>
-              <p className="text-muted-foreground leading-relaxed">
-                Tổng hòa của tất cả điều đó tạo nên hương vị mà{" "}
-                <strong className="text-primary">không thể sao chép</strong>,{" "}
-                <strong className="text-primary">không thể công nghiệp hóa</strong> – chỉ có thể cảm nhận bằng tâm và bằng vị giác được rèn giũa theo năm tháng.
-              </p>
-            </motion.div>
-          </div>
-
-          {/* Block 3 */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <motion.div
               initial={{ opacity: 0, x: -20 }}
