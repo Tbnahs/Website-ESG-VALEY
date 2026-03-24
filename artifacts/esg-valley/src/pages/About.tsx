@@ -306,9 +306,9 @@ export default function About() {
 
           <div className="flex justify-center">
             <img
-              src={`${import.meta.env.BASE_URL}images/che-story.png`}
+              src={`${import.meta.env.BASE_URL}images/che-story-nobg.png`}
               alt="Câu chuyện với chè"
-              className="w-full max-w-2xl"
+              className="w-full max-w-4xl"
             />
           </div>
 
