@@ -102,7 +102,6 @@ export default function Home() {
           ))}
         </div>
       </section>
-
       {/* 2. Vòng Tuần Hoàn ESG Valley */}
       <section className="py-24 bg-background relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -162,7 +161,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       {/* 3. Brand Video */}
       <section className="py-24 bg-muted">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -194,13 +192,12 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       {/* 4. Featured Products */}
       <section className="py-24 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row justify-between items-end mb-12">
             <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="max-w-2xl">
-              <h2 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-4">Tuyệt Phẩm Từ Thiên Nhiên</h2>
+              <h2 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-4">Sản Phẩm Nổi Bật</h2>
               <p className="text-muted-foreground">Những sản phẩm tự hào mang thương hiệu ESG Valley, được chăm chút từ búp trà non đến tay người thưởng thức.</p>
             </motion.div>
             <Link href="/san-pham" className="mt-6 md:mt-0">
@@ -246,7 +243,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       {/* 5. Certifications */}
       <section className="py-12 bg-accent/10 border-y border-accent/20 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
@@ -264,7 +260,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       {/* 6. News Highlights */}
       <section className="py-24 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -293,7 +288,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-      
       {/* 7. Newsletter CTA */}
       <section className="py-24 bg-primary relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
@@ -317,7 +311,6 @@ export default function Home() {
           </motion.div>
         </div>
       </section>
-      
       <style dangerouslySetInnerHTML={{__html: `
         @keyframes scroll {
           0% { transform: translateX(0); }
