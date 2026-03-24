@@ -111,7 +111,6 @@ export default function About() {
           </motion.p>
         </div>
       </div>
-
       {/* ── TIMELINE ── */}
       <section className="py-16 bg-background">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -183,7 +182,7 @@ export default function About() {
               <img
                 src={activeData.img}
                 alt={activeData.title}
-                className="w-full h-72 object-cover"
+                className="w-full h-72 object-cover rounded-tl-[30px] rounded-tr-[30px] rounded-br-[30px] rounded-bl-[30px]"
               />
             </div>
             <div>
@@ -202,7 +201,6 @@ export default function About() {
           </motion.div>
         </div>
       </section>
-
       {/* ── SỨ MỆNH ── */}
       <section className="py-20 bg-[#f5f9f4]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -240,7 +238,6 @@ export default function About() {
           </div>
         </div>
       </section>
-
       {/* ── TỔNG QUAN ── */}
       <section className="py-20 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -293,7 +290,6 @@ export default function About() {
           </div>
         </div>
       </section>
-
       {/* ── CÂU CHUYỆN VỚI "CHÈ" ── */}
       <section className="py-20 bg-[#f5f9f4]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -319,7 +315,6 @@ export default function About() {
           </motion.div>
         </div>
       </section>
-
       {/* ── THÀNH TỰU ── */}
       <section className="py-20 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
