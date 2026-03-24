@@ -416,20 +416,6 @@ export default function Home() {
             </p>
           </motion.div>
 
-          {/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {stats.map((stat, idx) => (
-              <motion.div
-                key={stat.label}
-                initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: idx * 0.1, duration: 0.5 }} viewport={{ once: true }}
-                className="text-center"
-              >
-                <div className="font-display text-4xl md:text-5xl font-bold text-primary mb-2">{stat.num}</div>
-                <div className="text-muted-foreground text-sm">{stat.label}</div>
-              </motion.div>
-            ))}
-          </div>
         </div>
       </section>
 
