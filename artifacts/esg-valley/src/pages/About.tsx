@@ -8,36 +8,42 @@ const timelineData = [
     title: "Khởi Nguồn Ý Tưởng",
     content:
       "Từ những chuyến đi thực địa lên các vùng chè cổ thụ Thái Nguyên, Hà Giang, một nhóm những người trẻ yêu trà đã ấp ủ giấc mơ về một thương hiệu trà di sản mang tinh thần ESG – kết nối bền vững giữa con người, thiên nhiên và cộng đồng.",
+    img: "https://images.unsplash.com/photo-1606113294786-44c5cd3b56c0?w=700&q=80",
   },
   {
     year: 2021,
     title: "Điểm Khởi Đầu",
     content:
       "Từ những đồi chè cổ hàng trăm năm tuổi, nơi mỗi búp trà là kết tinh của đất trời và bàn tay người nông dân, ESG Valley chính thức ra đời. Chúng tôi bắt đầu với tâm niệm: trà không chỉ là thức uống – đó là di sản văn hóa cần được gìn giữ và tôn vinh.\n\nNăm đó, giữa vô số thách thức về thị trường, chúng tôi vẫn chọn đi con đường khó hơn: xây dựng chuỗi cung ứng minh bạch, gắn kết trực tiếp với người trồng trà, hướng tới phát triển bền vững theo tiêu chuẩn quốc tế.",
+    img: "https://images.unsplash.com/photo-1563822249366-3efb23b8e0c9?w=700&q=80",
   },
   {
     year: 2022,
     title: "Mở Rộng Vùng Trồng",
     content:
       "ESG Valley mở rộng hợp tác với các hộ nông dân tại Hà Giang, Lai Châu và Lâm Đồng. Các vùng nguyên liệu được chứng nhận hữu cơ, quy trình canh tác bền vững được áp dụng đồng bộ, đảm bảo chất lượng từ gốc rễ đến tách trà.",
+    img: "https://images.unsplash.com/photo-1571934811356-5cc061b6d72a?w=700&q=80",
   },
   {
     year: 2023,
     title: "Ra Mắt Dòng Sản Phẩm",
     content:
       "Bộ sản phẩm đầu tiên chính thức ra mắt thị trường: Mã Đáo Thành Công, Bách Niên Trà, Mạc Triều Trà. Mỗi dòng sản phẩm là một câu chuyện riêng, mang theo hồn cốt của vùng đất và con người nơi nó được sinh ra.",
+    img: "https://images.unsplash.com/photo-1530831916053-1d9a93ee5e3c?w=700&q=80",
   },
   {
     year: 2024,
     title: "Hệ Sinh Thái ESG",
     content:
       "ESG Valley không chỉ là thương hiệu trà – chúng tôi kiến tạo một hệ sinh thái hoàn chỉnh: từ không gian trải nghiệm trà, dịch vụ tiệc trà cao cấp, đến chương trình giáo dục và kết nối cộng đồng những người yêu trà Việt.",
+    img: "https://images.unsplash.com/photo-1559056199-641a0ac8b55e?w=700&q=80",
   },
   {
     year: 2025,
     title: "Tầm Nhìn Toàn Cầu",
     content:
       "Đưa trà Việt ra thế giới theo đúng nghĩa: không chỉ xuất khẩu nguyên liệu mà tôn vinh câu chuyện, văn hóa và bản sắc. ESG Valley hướng tới trở thành đại sứ của trà di sản Việt Nam trên bản đồ trà thế giới.",
+    img: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=700&q=80",
   },
 ];
 
@@ -46,6 +52,50 @@ const missionImages = [
   "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=400&q=80",
   "https://images.unsplash.com/photo-1563822249548-9a72b6353cd1?w=400&q=80",
   "https://images.unsplash.com/photo-1530831916053-1d9a93ee5e3c?w=400&q=80",
+];
+
+const cheStories = [
+  {
+    text: (
+      <>
+        Diện tích vùng trồng mạnh của búp chè — nhiều khi đất làm đến 5km mỗi mẻ ông. Để nó hình thành nào chính là{" "}
+        <span className="text-primary font-semibold">kết tinh của những con đường mòn dẫn lên núi cao</span>, nơi sương
+        mù còn lưu giữ hơi thở của rừng già. Chúng tôi không chỉ hái trà — chúng tôi lắng nghe từng nhịp thở của đất.
+      </>
+    ),
+    img: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&q=80",
+  },
+  {
+    text: (
+      <>
+        Chúng tôi không dùng chất trừ sâu, không dùng phân bón hóa học, không đánh đổi chất lượng để lấy sản lượng.{" "}
+        <span className="text-primary font-semibold">Từng búp trà được hái thủ công</span> vào buổi sáng tinh sương,
+        khi tinh dầu còn nguyên vẹn nhất — đó là lời cam kết của chúng tôi với người thưởng trà.
+      </>
+    ),
+    img: "https://images.unsplash.com/photo-1571934811356-5cc061b6d72a?w=400&q=80",
+  },
+  {
+    text: (
+      <>
+        Tổng hợp các loại trà chất lượng cao được chế biến theo phương pháp truyền thống, qua bàn tay người thợ{" "}
+        <span className="text-primary font-semibold">lành nghề qua nhiều thế hệ</span> — chúng tôi tin rằng không có
+        máy móc nào thay thế được cái tâm và sự am hiểu của người làm trà đích thực.
+      </>
+    ),
+    img: null,
+  },
+  {
+    text: (
+      <>
+        Từ tay người trồng đến tay người uống, hành trình đó được{" "}
+        <span className="text-primary font-semibold">ghi chép minh bạch theo chuẩn ESG quốc tế</span> — để mỗi người
+        thưởng trà biết rằng tách trà họ cầm trên tay là sản phẩm của một chuỗi giá trị có trách nhiệm với con người,
+        thiên nhiên và tương lai.
+      </>
+    ),
+    img: "https://images.unsplash.com/photo-1519682337058-a94d519337bc?w=400&q=80",
+  },
 ];
 
 const achievementImages = [
@@ -105,6 +155,7 @@ export default function About() {
           </motion.p>
         </div>
       </div>
+
       {/* ── TIMELINE ── */}
       <section className="py-16 bg-background">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -187,16 +238,7 @@ export default function About() {
             </div>
             <div className="overflow-hidden rounded-sm">
               <img
-                src={`https://images.unsplash.com/photo-${
-                  [
-                    "1606113294786-44c5cd3b56c0",
-                    "1563822249366-3efb23b8e0c9",
-                    "1571934811356-5cc061b6d72a",
-                    "1530831916053-1d9a93ee5e3c",
-                    "1559056199-641a0ac8b55e",
-                    "1576091160399-112ba8d25d1d",
-                  ][activeIndex]
-                }?w=700&q=80`}
+                src={activeData.img}
                 alt={activeData.title}
                 className="w-full h-72 object-cover"
               />
@@ -204,6 +246,7 @@ export default function About() {
           </motion.div>
         </div>
       </section>
+
       {/* ── SỨ MỆNH ── */}
       <section className="py-20 bg-[#f5f9f4]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -233,11 +276,15 @@ export default function About() {
 
           <div className="max-w-3xl mx-auto text-center">
             <p className="text-muted-foreground leading-relaxed">
-              Chúng tôi tin rằng một tách trà ngon là kết tinh của ba yếu tố: <strong className="text-foreground">đất lành</strong> – nơi những cây chè cổ thụ bám rễ qua trăm năm; <strong className="text-foreground">tay nghề</strong> – di truyền từ thế hệ này sang thế hệ khác; và <strong className="text-foreground">tâm thức</strong> – sự trân trọng với từng búp trà, từng giây phút thưởng trà. ESG Valley ra đời để bảo tồn và lan tỏa những giá trị đó.
+              Chúng tôi tin rằng một tách trà ngon là kết tinh của ba yếu tố:{" "}
+              <strong className="text-foreground">đất lành</strong> – nơi những cây chè cổ thụ bám rễ qua trăm năm;{" "}
+              <strong className="text-foreground">tay nghề</strong> – di truyền từ thế hệ này sang thế hệ khác; và{" "}
+              <strong className="text-foreground">tâm thức</strong> – sự trân trọng với từng búp trà, từng giây phút thưởng trà. ESG Valley ra đời để bảo tồn và lan tỏa những giá trị đó.
             </p>
           </div>
         </div>
       </section>
+
       {/* ── TỔNG QUAN ── */}
       <section className="py-20 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -247,12 +294,12 @@ export default function About() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="overflow-hidden rounded-sm"
+              className="overflow-hidden rounded-[30px]"
             >
               <img
                 src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80"
                 alt="ESG Valley overview"
-                className="w-full h-[420px] object-cover border-t-[0px] border-r-[0px] border-b-[0px] border-l-[0px] rounded-tl-[30px] rounded-tr-[30px] rounded-bl-[30px] rounded-br-[30px]"
+                className="w-full h-[420px] object-cover"
               />
             </motion.div>
 
@@ -290,6 +337,7 @@ export default function About() {
           </div>
         </div>
       </section>
+
       {/* ── CÂU CHUYỆN VỚI "CHÈ" ── */}
       <section className="py-20 bg-[#f5f9f4]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -300,16 +348,50 @@ export default function About() {
             </h2>
           </div>
 
-          <div className="flex justify-center">
-            <img
-              src={`${import.meta.env.BASE_URL}images/che-story-nobg.png`}
-              alt="Câu chuyện với chè"
-              className="w-full max-w-4xl"
-            />
-          </div>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
+            {/* Left: organic shaped image */}
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.7 }}
+              className="flex justify-center lg:justify-end lg:sticky lg:top-32"
+            >
+              <img
+                src={`${import.meta.env.BASE_URL}images/che-story-nobg.png`}
+                alt="Câu chuyện với chè"
+                className="w-full max-w-sm md:max-w-md drop-shadow-2xl"
+              />
+            </motion.div>
 
+            {/* Right: story blocks */}
+            <div className="space-y-10">
+              {cheStories.map((story, i) => (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, y: 24 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: i * 0.1 }}
+                  className="bg-white rounded-2xl p-6 shadow-sm"
+                >
+                  <p className="text-muted-foreground leading-relaxed text-[15px]">{story.text}</p>
+                  {story.img && (
+                    <div className="mt-4 overflow-hidden rounded-xl">
+                      <img
+                        src={story.img}
+                        alt=""
+                        className="w-full h-48 object-cover hover:scale-105 transition-transform duration-500"
+                      />
+                    </div>
+                  )}
+                </motion.div>
+              ))}
+            </div>
+          </div>
         </div>
       </section>
+
       {/* ── THÀNH TỰU ── */}
       <section className="py-20 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
