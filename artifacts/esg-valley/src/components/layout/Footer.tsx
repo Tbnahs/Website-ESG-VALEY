@@ -32,6 +32,7 @@ export function Footer() {
           <div>
             <h3 className="font-display text-xl font-semibold mb-6 uppercase tracking-wider">Liên Kết</h3>
             <ul className="space-y-3 text-sm text-primary-foreground/80">
+              <li><Link href="/ve-esg-valley" className="hover:text-white transition-colors">Câu chuyện ESGValley</Link></li>
               <li><Link href="/he-sinh-thai" className="hover:text-white transition-colors">Hệ Sinh Thái</Link></li>
               <li><Link href="/tin-tuc" className="hover:text-white transition-colors">Tin Tức & Media</Link></li>
               <li><Link href="/lien-he" className="hover:text-white transition-colors">Liên Hệ</Link></li>
