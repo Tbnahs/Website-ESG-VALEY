@@ -7,6 +7,7 @@ export function Header() {
   const [location] = useLocation();
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [searchQuery, setSearchQuery] = useState("");
   
   const isHomePage = location === "/";
 
@@ -94,10 +95,25 @@ export function Header() {
         </nav>
 
         {/* Icons */}
-        <div className="flex items-center space-x-4 md:space-x-6">
-          <button className="hover:text-accent transition-colors hover:scale-110 transform duration-200">
-            <Search className="w-5 h-5" />
-          </button>
+        <div className="flex items-center space-x-3 md:space-x-4">
+          {/* Search bar */}
+          <form
+            onSubmit={(e) => { e.preventDefault(); if (searchQuery.trim()) alert(`Tìm kiếm: ${searchQuery}`); }}
+            className={`hidden md:flex items-center rounded-full border px-3 py-1.5 transition-all duration-300 ${
+              isTransparent
+                ? "border-white/40 bg-white/10 text-white placeholder-white/60 focus-within:bg-white/20"
+                : "border-border bg-muted/50 text-foreground placeholder-muted-foreground focus-within:bg-background focus-within:border-primary/50"
+            }`}
+          >
+            <Search className="w-4 h-4 flex-shrink-0 opacity-70" />
+            <input
+              type="search"
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              placeholder="Tìm kiếm..."
+              className="bg-transparent outline-none border-none ml-2 text-sm w-36 lg:w-48"
+            />
+          </form>
           <button className="hidden md:block hover:text-accent transition-colors hover:scale-110 transform duration-200">
             <User className="w-5 h-5" />
           </button>
@@ -106,6 +122,10 @@ export function Header() {
             <span className={`absolute -top-2 -right-2 w-4 h-4 text-[10px] flex items-center justify-center rounded-full ${isTransparent ? 'bg-white text-primary' : 'bg-primary text-white'}`}>
               0
             </span>
+          </button>
+          {/* Mobile search icon */}
+          <button className="md:hidden hover:text-accent transition-colors">
+            <Search className="w-5 h-5" />
           </button>
         </div>
       </div>
@@ -134,6 +154,19 @@ export function Header() {
                   <X className="w-6 h-6" />
                 </button>
               </div>
+              <form
+                onSubmit={(e) => { e.preventDefault(); if (searchQuery.trim()) { setMobileMenuOpen(false); alert(`Tìm kiếm: ${searchQuery}`); } }}
+                className="flex items-center mx-4 mt-4 rounded-full border border-border bg-muted/50 px-3 py-2"
+              >
+                <Search className="w-4 h-4 flex-shrink-0 text-muted-foreground" />
+                <input
+                  type="search"
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  placeholder="Tìm kiếm sản phẩm..."
+                  className="bg-transparent outline-none border-none ml-2 text-sm flex-1"
+                />
+              </form>
               <nav className="flex flex-col p-4 space-y-4 flex-grow overflow-y-auto">
                 {navLinks.map((link) => (
                   <Link 
