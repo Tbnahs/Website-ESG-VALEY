@@ -304,39 +304,6 @@ export default function About() {
             </h2>
           </div>
 
-          {/* Block 1 */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-16">
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-            >
-              <p className="text-muted-foreground leading-relaxed mb-4">
-                Bước lên những triền đồi mờ sương buổi sớm, bàn tay người hái chè lướt nhẹ trên từng búp non – đó là khoảnh khắc ngàn năm không đổi. Chúng tôi đã đi tìm những khoảnh khắc ấy, lắng nghe chúng kể chuyện, và quyết tâm mang hơi thở đó vào từng hộp trà ESG Valley.
-              </p>
-              <p className="text-muted-foreground leading-relaxed">
-                Cây chè không chỉ là cây công nghiệp – nó là người bạn đồng hành của bao thế hệ gia đình, là{" "}
-                <strong className="text-primary">nguồn sống</strong>, là{" "}
-                <strong className="text-primary">ký ức</strong>, là{" "}
-                <strong className="text-primary">niềm tự hào</strong> của mỗi bản làng vùng cao.
-              </p>
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="overflow-hidden rounded-sm"
-            >
-              <img
-                src="https://images.unsplash.com/photo-1563822249366-3efb23b8e0c9?w=700&q=80"
-                alt="Tea picking"
-                className="w-full h-72 object-cover"
-              />
-            </motion.div>
-          </div>
-
           {/* Block 2 */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-16">
             <motion.div
