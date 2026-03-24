@@ -18,13 +18,12 @@ export default function News() {
         />
         <div className="absolute inset-0 bg-black/55" />
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="font-display text-4xl md:text-5xl font-bold text-white mb-4">Tin Tức & Media</h1>
+          <h1 className="font-display text-4xl md:text-5xl font-bold text-white mb-4">Tin Tức </h1>
           <p className="text-white/80 max-w-2xl mx-auto">
             Cập nhật những câu chuyện mới nhất từ hành trình ESG Valley và thế giới trà Việt.
           </p>
         </div>
       </div>
-
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Tabs */}
