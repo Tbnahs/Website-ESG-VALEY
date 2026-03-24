@@ -48,10 +48,10 @@ const timelineData = [
 ];
 
 const missionImages = [
-  "https://images.unsplash.com/photo-1571934811356-5cc061b6d72a?w=400&q=80",
-  "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=400&q=80",
-  "https://images.unsplash.com/photo-1563822249548-9a72b6353cd1?w=400&q=80",
-  "https://images.unsplash.com/photo-1530831916053-1d9a93ee5e3c?w=400&q=80",
+  { src: "https://images.unsplash.com/photo-1564890369478-c89ca6d9cde9?w=400&q=80", label: "Trà xanh tươi" },
+  { src: "https://images.unsplash.com/photo-1597318281611-f5e5a7dbef63?w=400&q=80", label: "Trà vàng" },
+  { src: "https://images.unsplash.com/photo-1556909172-8c2f041fca1e?w=400&q=80", label: "Trà đỏ" },
+  { src: "https://images.unsplash.com/photo-1563822249366-3efb23b8e0c9?w=400&q=80", label: "Trà cổ thụ" },
 ];
 
 const achievementImages = [
@@ -213,19 +213,24 @@ export default function About() {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-12">
-            {missionImages.map((src, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: i * 0.1 }}
-                className="overflow-hidden rounded-sm aspect-[3/4]"
-              >
-                <img src={src} alt="" className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
-              </motion.div>
-            ))}
+          <div className="flex justify-center mb-12">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-3 max-w-2xl w-full">
+              {missionImages.map((item, i) => (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: i * 0.1 }}
+                  className="flex flex-col items-center gap-2"
+                >
+                  <div className="overflow-hidden rounded-xl aspect-square w-full max-w-[130px] shadow-md">
+                    <img src={item.src} alt={item.label} className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+                  </div>
+                  <span className="text-xs text-muted-foreground font-medium">{item.label}</span>
+                </motion.div>
+              ))}
+            </div>
           </div>
 
           <div className="max-w-3xl mx-auto text-center">
