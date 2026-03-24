@@ -91,7 +91,7 @@ export default function About() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
-            className="font-display text-4xl md:text-6xl font-bold text-white mb-4"
+            className="font-display text-4xl md:text-6xl font-bold text-white mb-4 mt-[100px]"
           >
             Hành Trình Cùng ESG
           </motion.h1>
@@ -105,7 +105,6 @@ export default function About() {
           </motion.p>
         </div>
       </div>
-
       {/* ── TIMELINE ── */}
       <section className="py-16 bg-background">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -205,7 +204,6 @@ export default function About() {
           </motion.div>
         </div>
       </section>
-
       {/* ── SỨ MỆNH ── */}
       <section className="py-20 bg-[#f5f9f4]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -240,7 +238,6 @@ export default function About() {
           </div>
         </div>
       </section>
-
       {/* ── TỔNG QUAN ── */}
       <section className="py-20 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -293,7 +290,6 @@ export default function About() {
           </div>
         </div>
       </section>
-
       {/* ── CÂU CHUYỆN VỚI "CHÈ" ── */}
       <section className="py-20 bg-[#f5f9f4]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -314,7 +310,6 @@ export default function About() {
 
         </div>
       </section>
-
       {/* ── THÀNH TỰU ── */}
       <section className="py-20 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
