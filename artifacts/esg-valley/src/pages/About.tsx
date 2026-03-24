@@ -19,14 +19,13 @@ export default function About() {
         />
         <div className="absolute inset-0 z-20 flex flex-col items-center justify-center text-center px-4">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
-            <h1 className="text-white font-display text-5xl md:text-7xl font-bold mb-4">Về ESG Valley</h1>
+            <h1 className="text-white font-display text-5xl md:text-7xl font-bold mb-4">Hành trình cùng ESG</h1>
             <p className="text-white/90 text-lg md:text-xl max-w-2xl font-light">
               Hành trình mang văn hoá trà Việt vươn tầm thế giới, kiến tạo giá trị bền vững cho cộng đồng và thiên nhiên.
             </p>
           </motion.div>
         </div>
       </section>
-
       {/* Tổng Quan & Tầm nhìn */}
       <section className="py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -67,7 +66,6 @@ export default function About() {
           </div>
         </div>
       </section>
-
       {/* Hành Trình ESG */}
       <section className="py-24 bg-muted/50 border-y border-border">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
