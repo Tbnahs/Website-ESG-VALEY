@@ -167,36 +167,6 @@ export default function Home() {
       </section>
 
       {/* ════════════════════════════════════════
-          2. DỰ ÁN NÔNG NGHIỆP XANH (Event + Countdown)
-          Layout: left green panel | right image + countdown
-      ════════════════════════════════════════ */}
-      <section className="w-full">
-        <div className="relative min-h-[420px] overflow-hidden">
-            {/* Countdown overlay bar at bottom */}
-            <div className="absolute bottom-0 left-0 right-0 bg-black/75 backdrop-blur-sm px-6 py-5">
-              <div className="flex items-center justify-center gap-2 md:gap-6">
-                {[
-                  { val: countdown.days, label: "Ngày" },
-                  { val: countdown.hours, label: "Giờ" },
-                  { val: countdown.minutes, label: "Phút" },
-                  { val: countdown.seconds, label: "Giây" },
-                ].map(({ val, label }, i) => (
-                  <div key={label} className="flex items-center gap-2 md:gap-6">
-                    <div className="text-center">
-                      <div className="font-display text-3xl md:text-4xl font-bold text-white leading-none">
-                        {String(val).padStart(2, "0")}
-                      </div>
-                      <div className="text-white/60 text-[10px] uppercase tracking-widest mt-1">{label}</div>
-                    </div>
-                    {i < 3 && <span className="font-display text-2xl text-white/40 font-bold mb-3">:</span>}
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-      </section>
-
-      {/* ════════════════════════════════════════
           3. VÒNG TUẦN HOÀN ESG
           Layout: centered title → 3 tab pills → left text | right image
       ════════════════════════════════════════ */}
