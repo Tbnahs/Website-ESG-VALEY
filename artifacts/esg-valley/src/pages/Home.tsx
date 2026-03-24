@@ -172,11 +172,6 @@ export default function Home() {
       ════════════════════════════════════════ */}
       <section className="w-full">
         <div className="relative min-h-[420px] overflow-hidden">
-            <img
-              src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&q=80&w=1200"
-              alt="Nông nghiệp xanh"
-              className="w-full h-full object-cover"
-            />
             {/* Countdown overlay bar at bottom */}
             <div className="absolute bottom-0 left-0 right-0 bg-black/75 backdrop-blur-sm px-6 py-5">
               <div className="flex items-center justify-center gap-2 md:gap-6">
