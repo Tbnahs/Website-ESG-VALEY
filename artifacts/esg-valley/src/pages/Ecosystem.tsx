@@ -181,7 +181,6 @@ export default function Ecosystem() {
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-2xl">
             <motion.div variants={fadeUp} initial="hidden" whileInView="show" viewport={{ once: true }}>
-              <p className="text-[#C9A84C] text-sm uppercase tracking-[0.3em] font-semibold mb-3">03</p>
               <h2 className="font-display text-3xl md:text-5xl font-bold text-white mb-6 leading-tight">
                 Bảo Tồn Di Sản
               </h2>
