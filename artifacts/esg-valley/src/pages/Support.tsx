@@ -157,7 +157,13 @@ export default function Support() {
         id="lien-he"
         className="scroll-mt-24 max-w-6xl mx-auto px-6 lg:px-12 py-20"
       >
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+        <motion.div
+          initial={{ opacity: 0, y: 32 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.55, ease: "easeOut" }}
+          viewport={{ once: false, margin: "-80px" }}
+          className="grid grid-cols-1 lg:grid-cols-2 gap-16"
+        >
           {/* Left: Contact Form */}
           <div>
             <h2 className="text-2xl font-bold text-foreground mb-8">Gửi tin nhắn cho chúng tôi</h2>
@@ -289,7 +295,7 @@ export default function Support() {
               />
             </div>
           </div>
-        </div>
+        </motion.div>
       </section>
       <div className="border-t border-gray-100" />
       {/* ── SECTION 2: FAQ ── */}
@@ -298,7 +304,13 @@ export default function Support() {
         id="faq"
         className="scroll-mt-24 max-w-6xl mx-auto px-6 lg:px-12 py-20"
       >
-        <div className="text-center mb-12">
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, ease: "easeOut" }}
+          viewport={{ once: false, margin: "-80px" }}
+          className="text-center mb-12"
+        >
           <h2 className="text-3xl font-bold text-foreground mb-3">FAQs</h2>
           <p className="text-muted-foreground max-w-xl mx-auto text-sm leading-relaxed">
             Tổng hợp những câu hỏi thường gặp từ cộng đồng trà nhân ESG Valley. Không tìm thấy câu trả lời?{" "}
@@ -306,8 +318,14 @@ export default function Support() {
               Liên hệ với chúng tôi.
             </button>
           </p>
-        </div>
-        <div className="max-w-3xl mx-auto divide-y divide-gray-100 border-y border-gray-100">
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 28 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.55, ease: "easeOut" }}
+          viewport={{ once: false, margin: "-80px" }}
+          className="max-w-3xl mx-auto divide-y divide-gray-100 border-y border-gray-100"
+        >
           {faqs.map((faq, idx) => (
             <div key={idx}>
               <button
@@ -334,7 +352,7 @@ export default function Support() {
               </AnimatePresence>
             </div>
           ))}
-        </div>
+        </motion.div>
       </section>
       <div className="border-t border-gray-100" />
       {/* ── SECTION 3: CHÍNH SÁCH BẢO MẬT ── */}
@@ -343,7 +361,14 @@ export default function Support() {
         id="chinh-sach-bao-mat"
         className="scroll-mt-24 max-w-6xl mx-auto px-6 lg:px-12 py-20"
       >
-        <SectionHeading icon={Shield} title="Chính Sách Bảo Mật" subtitle="ESG Valley cam kết bảo vệ thông tin cá nhân của khách hàng theo tiêu chuẩn cao nhất." />
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, ease: "easeOut" }}
+          viewport={{ once: false, margin: "-80px" }}
+        >
+          <SectionHeading icon={Shield} title="Chính Sách Bảo Mật" subtitle="ESG Valley cam kết bảo vệ thông tin cá nhân của khách hàng theo tiêu chuẩn cao nhất." />
+        </motion.div>
         <div className="mt-10 max-w-4xl space-y-5">
           {[
             { icon: Lock, title: "1. Thu thập thông tin", body: "Chúng tôi chỉ thu thập những thông tin cần thiết để xử lý đơn hàng và cải thiện trải nghiệm của bạn, bao gồm: họ tên, số điện thoại, địa chỉ giao hàng, địa chỉ email. Chúng tôi không thu thập thông tin thẻ ngân hàng — mọi giao dịch thanh toán được xử lý an toàn qua cổng thanh toán được chứng nhận PCI-DSS." },
@@ -355,7 +380,7 @@ export default function Support() {
               key={title}
               initial={{ opacity: 0, y: 12 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              viewport={{ once: false, margin: "-60px" }}
               transition={{ duration: 0.35 }}
               className="flex gap-5 p-6 border border-gray-100 rounded-lg bg-gray-50"
             >
@@ -378,14 +403,28 @@ export default function Support() {
         id="chinh-sach-doi-tra"
         className="scroll-mt-24 max-w-6xl mx-auto px-6 lg:px-12 py-20"
       >
-        <SectionHeading icon={RefreshCw} title="Chính Sách Đổi Trả Hàng" subtitle="Chúng tôi cam kết mang đến sự hài lòng tuyệt đối — đổi trả dễ dàng, minh bạch." />
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, ease: "easeOut" }}
+          viewport={{ once: false, margin: "-80px" }}
+        >
+          <SectionHeading icon={RefreshCw} title="Chính Sách Đổi Trả Hàng" subtitle="Chúng tôi cam kết mang đến sự hài lòng tuyệt đối — đổi trả dễ dàng, minh bạch." />
+        </motion.div>
         <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-5 mb-8">
           {[
             { icon: CheckCircle, color: "text-green-700", bg: "bg-green-50", border: "border-green-100", title: "Được đổi trả", items: ["Sản phẩm bị lỗi do nhà sản xuất", "Sản phẩm giao sai mẫu mã / size", "Sản phẩm không đúng số lượng đặt hàng", "Sản phẩm bị hỏng do vận chuyển"] },
             { icon: AlertCircle, color: "text-red-600",   bg: "bg-red-50",   border: "border-red-100",   title: "Không đổi trả", items: ["Sản phẩm đã qua sử dụng, mở niêm phong", "Trà đã được pha / pha chế", "Sản phẩm mua theo chương trình giảm giá đặc biệt", "Hết thời gian đổi trả (sau 7 ngày)"] },
             { icon: Truck,       color: "text-blue-600",  bg: "bg-blue-50",  border: "border-blue-100",  title: "Quy trình đổi trả", items: ["Liên hệ hotline hoặc email trong 7 ngày", "Cung cấp ảnh chụp lỗi sản phẩm", "Chúng tôi gửi hàng mới / hoàn tiền trong 3–5 ngày", "Phí vận chuyển đổi trả: ESG Valley chịu hoàn toàn"] },
-          ].map(({ icon: Icon, color, bg, border, title, items }) => (
-            <div key={title} className={`p-6 rounded-lg border ${border} ${bg}`}>
+          ].map(({ icon: Icon, color, bg, border, title, items }, i) => (
+            <motion.div
+              key={title}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.45, ease: "easeOut", delay: i * 0.08 }}
+              viewport={{ once: false, margin: "-60px" }}
+              className={`p-6 rounded-lg border ${border} ${bg}`}
+            >
               <div className={`flex items-center gap-2 mb-4 ${color}`}>
                 <Icon className="w-4 h-4" />
                 <h4 className="font-semibold text-sm">{title}</h4>
@@ -397,10 +436,16 @@ export default function Support() {
                   </li>
                 ))}
               </ul>
-            </div>
+            </motion.div>
           ))}
         </div>
-        <div className="max-w-4xl border border-gray-100 rounded-lg p-5 bg-gray-50">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, ease: "easeOut" }}
+          viewport={{ once: false, margin: "-60px" }}
+          className="max-w-4xl border border-gray-100 rounded-lg p-5 bg-gray-50"
+        >
           <div className="flex items-start gap-4">
             <RotateCcw className="w-5 h-5 text-[#3d7a3d] shrink-0 mt-0.5" />
             <div>
@@ -408,7 +453,7 @@ export default function Support() {
               <p className="text-sm text-muted-foreground leading-relaxed">Trong trường hợp không có sản phẩm thay thế, chúng tôi sẽ hoàn tiền 100% vào tài khoản ngân hàng hoặc ví điện tử của bạn trong vòng 5–7 ngày làm việc. Liên hệ <strong>0969 510 955</strong> hoặc <strong>support@esgvalley.vn</strong> để được hỗ trợ nhanh nhất.</p>
             </div>
           </div>
-        </div>
+        </motion.div>
       </section>
       <div className="border-t border-gray-100" />
       {/* ── SECTION 5: TRA CỨU ĐƠN HÀNG ── */}
@@ -417,9 +462,22 @@ export default function Support() {
         id="tra-cuu-don-hang"
         className="scroll-mt-24 max-w-6xl mx-auto px-6 lg:px-12 pt-10 pb-20"
       >
-        <SectionHeading icon={Package} title="Tra Cứu Đơn Hàng" subtitle="Nhập mã đơn hàng để kiểm tra trạng thái giao hàng của bạn." />
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, ease: "easeOut" }}
+          viewport={{ once: false, margin: "-80px" }}
+        >
+          <SectionHeading icon={Package} title="Tra Cứu Đơn Hàng" subtitle="Nhập mã đơn hàng để kiểm tra trạng thái giao hàng của bạn." />
+        </motion.div>
 
-        <div className="mt-10">
+        <motion.div
+          initial={{ opacity: 0, y: 28 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.55, ease: "easeOut" }}
+          viewport={{ once: false, margin: "-80px" }}
+          className="mt-10"
+        >
           <form onSubmit={handleOrderLookup} className="flex gap-3 max-w-2xl">
             <div className="flex-1 relative">
               <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
@@ -559,7 +617,7 @@ export default function Support() {
               </motion.div>
             )}
           </AnimatePresence>
-        </div>
+        </motion.div>
       </section>
     </div>
   );
