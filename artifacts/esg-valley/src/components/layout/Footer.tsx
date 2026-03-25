@@ -1,87 +1,65 @@
 import { Link } from "wouter";
-import { Facebook, Instagram, Youtube, MapPin, Phone, Mail } from "lucide-react";
+import { Facebook, Youtube } from "lucide-react";
 
 export function Footer() {
   return (
-    <footer className="bg-primary text-primary-foreground pt-16 pb-8">
+    <footer className="bg-primary text-primary-foreground pt-8 pb-5">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 mb-12">
-          
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-6">
+
           {/* Brand Info */}
-          <div className="space-y-6">
-            <img src="/images/logo-white.png" alt="ESG Valley" className="h-24 w-auto object-contain" />
-            <p className="text-primary-foreground/80 text-sm leading-relaxed">
+          <div className="space-y-3">
+            <img src="/images/logo-white.png" alt="ESG Valley" className="h-16 w-auto object-contain" />
+            <p className="text-primary-foreground/80 text-xs leading-relaxed">
               Thương hiệu trà di sản Việt Nam, cam kết phát triển bền vững theo tiêu chuẩn ESG. Kết nối văn hóa, thiên nhiên và cộng đồng.
             </p>
-            <div className="flex items-center gap-4 flex-wrap">
-              <a href="#" className="w-10 h-10 rounded-full border border-primary-foreground/20 flex items-center justify-center hover:bg-white hover:text-primary transition-colors">
-                <Facebook className="w-4 h-4" />
+            <div className="flex items-center gap-3 flex-wrap">
+              <a href="#" className="w-8 h-8 rounded-full border border-primary-foreground/20 flex items-center justify-center hover:bg-white hover:text-primary transition-colors">
+                <Facebook className="w-3.5 h-3.5" />
               </a>
-              <a href="#" className="w-10 h-10 rounded-full border border-primary-foreground/20 flex items-center justify-center hover:bg-white hover:text-primary transition-colors">
-                <Instagram className="w-4 h-4" />
-              </a>
-              <a href="#" className="w-10 h-10 rounded-full border border-primary-foreground/20 flex items-center justify-center hover:bg-white hover:text-primary transition-colors">
-                <Youtube className="w-4 h-4" />
+              <a href="#" className="w-8 h-8 rounded-full border border-primary-foreground/20 flex items-center justify-center hover:bg-white hover:text-primary transition-colors">
+                <Youtube className="w-3.5 h-3.5" />
               </a>
               <a href="https://online.gov.vn" target="_blank" rel="noopener noreferrer">
-                <img src="/images/bo-cong-thuong.png" alt="Đã đăng ký Bộ Công Thương" className="h-10 w-auto object-contain" />
+                <img src="/images/bo-cong-thuong.png" alt="Đã đăng ký Bộ Công Thương" className="h-8 w-auto object-contain" />
               </a>
             </div>
           </div>
 
-          {/* Products */}
+          {/* Contact */}
           <div>
-            <h3 className="font-display text-xl font-semibold mb-6 uppercase tracking-wider text-[#C9A84C]">Sản Phẩm</h3>
-            <ul className="space-y-3 text-sm text-primary-foreground/80">
-              <li><Link href={`/san-pham?category=${encodeURIComponent("Trà")}`} className="hover:text-white transition-colors">Trà</Link></li>
-              <li><Link href={`/san-pham?category=${encodeURIComponent("Matcha")}`} className="hover:text-white transition-colors">Matcha</Link></li>
-              <li><Link href={`/san-pham?category=${encodeURIComponent("Trà Cụ")}`} className="hover:text-white transition-colors">Trà Cụ</Link></li>
-              <li><Link href={`/san-pham?category=${encodeURIComponent("Dịch Vụ Đặc Biệt")}`} className="hover:text-white transition-colors">Dịch Vụ Tiệc Trà Di Sản</Link></li>
-              <li><Link href={`/san-pham?category=${encodeURIComponent("Dịch Vụ Đặc Biệt")}`} className="hover:text-white transition-colors">Tea Show</Link></li>
+            <h3 className="font-display text-sm font-semibold mb-4 uppercase tracking-wider text-[#C9A84C]">Liên Hệ</h3>
+            <ul className="space-y-2 text-xs text-primary-foreground/80">
+              <li>0969 510 955</li>
+              <li>info@esgvalley.vn</li>
+              <li className="leading-relaxed">Số 586, đường Cách mạng Tháng Tám, Phường Gia Sàng, Thái Nguyên</li>
             </ul>
           </div>
 
-          {/* Hỗ trợ khách hàng */}
+          {/* Liên Kết */}
           <div>
-            <h3 className="font-display text-xl font-semibold mb-6 uppercase tracking-wider text-[#C9A84C]">Hỗ Trợ Khách Hàng</h3>
-            <ul className="space-y-3 text-sm text-primary-foreground/80">
+            <h3 className="font-display text-sm font-semibold mb-4 uppercase tracking-wider text-[#C9A84C]">Liên Kết</h3>
+            <ul className="space-y-2 text-xs text-primary-foreground/80">
+              <li><Link href="/" className="hover:text-white transition-colors">Hành trình nông nghiệp xanh</Link></li>
+              <li><Link href={`/san-pham`} className="hover:text-white transition-colors">Sản phẩm</Link></li>
+              <li><Link href={`/san-pham?category=${encodeURIComponent("Trà Cụ")}`} className="hover:text-white transition-colors">Trà cụ</Link></li>
+            </ul>
+          </div>
+
+          {/* Quy Định */}
+          <div>
+            <h3 className="font-display text-sm font-semibold mb-4 uppercase tracking-wider text-[#C9A84C]">Quy Định</h3>
+            <ul className="space-y-2 text-xs text-primary-foreground/80">
               <li><Link href="#" className="hover:text-white transition-colors">Chính sách bảo mật</Link></li>
-              <li><Link href="#" className="hover:text-white transition-colors">Chính sách đổi trả hàng</Link></li>
-              <li><Link href="#" className="hover:text-white transition-colors">Câu hỏi thường gặp</Link></li>
-              <li><Link href="/lien-he" className="hover:text-white transition-colors">Liên hệ</Link></li>
-              <li><Link href="#" className="hover:text-white transition-colors">Tra cứu đơn hàng</Link></li>
-            </ul>
-          </div>
-
-          {/* Contact & Newsletter */}
-          <div>
-            <h3 className="font-display text-xl font-semibold mb-6 uppercase tracking-wider text-[#C9A84C]">Liên Hệ</h3>
-            <ul className="space-y-4 text-sm text-primary-foreground/80 mb-6">
-              <li className="flex items-start">
-                <MapPin className="w-4 h-4 mr-3 flex-shrink-0 mt-0.5" />
-                <span>123 Đường Trà, Quận Tây Hồ, Hà Nội</span>
-              </li>
-              <li className="flex items-center">
-                <Phone className="w-4 h-4 mr-3 flex-shrink-0" />
-                <span>0969 510 955</span>
-              </li>
-              <li className="flex items-center">
-                <Mail className="w-4 h-4 mr-3 flex-shrink-0" />
-                <span>info@esgvalley.vn</span>
-              </li>
+              <li><Link href="#" className="hover:text-white transition-colors">Điều khoản sử dụng</Link></li>
             </ul>
           </div>
 
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-8 border-t border-primary-foreground/10 flex flex-col md:flex-row justify-between items-center text-xs text-primary-foreground/60">
+        <div className="pt-4 border-t border-primary-foreground/10 flex flex-col md:flex-row justify-between items-center text-xs text-primary-foreground/60">
           <p>&copy; {new Date().getFullYear()} ESG Valley. Bảo lưu mọi quyền.</p>
-          <div className="flex space-x-6 mt-4 md:mt-0">
-            <Link href="#" className="hover:text-white transition-colors">Chính sách bảo mật</Link>
-            <Link href="#" className="hover:text-white transition-colors">Điều khoản dịch vụ</Link>
-            <Link href="#" className="hover:text-white transition-colors">Chính sách đổi trả</Link>
-          </div>
         </div>
       </div>
     </footer>
