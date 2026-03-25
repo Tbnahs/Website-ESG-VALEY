@@ -207,7 +207,11 @@ export function Header() {
                   <div className="grid grid-cols-4 gap-0">
                     {productMenu.map((col, ci) => (
                       <div key={ci} className={`p-5 ${ci < productMenu.length - 1 ? "border-r border-border" : ""}`}>
-                        <p className="text-primary text-[10px] font-bold uppercase tracking-widest mb-3">{col.heading}</p>
+                        <Link
+                          href={`/san-pham?category=${encodeURIComponent(col.heading)}`}
+                          onClick={() => setProductMenuOpen(false)}
+                          className="block text-primary text-[10px] font-bold uppercase tracking-widest mb-3 hover:underline"
+                        >{col.heading}</Link>
                         <ul className="space-y-1">
                           {col.items.map(item => (
                             <li key={item.label}>
@@ -384,7 +388,11 @@ export function Header() {
                     <div className="pb-2 pl-3">
                       {productMenu.map((col) => (
                         <div key={col.heading} className="mb-3">
-                          <p className="text-primary text-[10px] font-bold uppercase tracking-widest px-2 mb-1">{col.heading}</p>
+                          <Link
+                            href={`/san-pham?category=${encodeURIComponent(col.heading)}`}
+                            onClick={() => setMobileMenuOpen(false)}
+                            className="block text-primary text-[10px] font-bold uppercase tracking-widest px-2 mb-1 hover:underline"
+                          >{col.heading}</Link>
                           {col.items.map(item => (
                             <Link
                               key={item.label}
