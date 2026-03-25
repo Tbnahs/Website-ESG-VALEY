@@ -117,6 +117,6 @@ export const esgPillars = [
     textAccent: "text-slate-700",
     description: "Quản trị minh bạch là nền tảng của niềm tin. Chúng tôi cam kết vận hành theo chuẩn mực quốc tế – từ chuỗi cung ứng có trách nhiệm đến báo cáo ESG công khai hàng năm – để mỗi đối tác, khách hàng đều có thể đặt trọn niềm tin.",
     points: ["Minh bạch chuỗi cung ứng", "Báo cáo ESG hàng năm", "Chứng nhận quốc tế"],
-    image: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&q=80&w=900"
+    image: "/images/governance.jpg"
   }
 ];
