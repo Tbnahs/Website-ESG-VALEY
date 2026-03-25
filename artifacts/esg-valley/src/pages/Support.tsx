@@ -70,7 +70,9 @@ export default function Support() {
   const [orderCode, setOrderCode] = useState("");
   const [foundOrder, setFoundOrder] = useState<ReturnType<ReturnType<typeof useOrders>["lookupOrder"]> | null>(null);
   const [orderNotFound, setOrderNotFound] = useState(false);
-  const [selectedProduct, setSelectedProduct] = useState("");
+  const [selectedProducts, setSelectedProducts] = useState<string[]>([]);
+  const [productDropdownOpen, setProductDropdownOpen] = useState(false);
+  const productDropdownRef = useRef<HTMLDivElement>(null);
   const { toast } = useToast();
   const { lookupOrder } = useOrders();
   const [, navigate] = useLocation();
@@ -91,6 +93,19 @@ export default function Support() {
     window.addEventListener("hashchange", onHashChange);
     return () => window.removeEventListener("hashchange", onHashChange);
   }, []);
+
+  useEffect(() => {
+    const handleClickOutside = (e: MouseEvent) => {
+      if (productDropdownRef.current && !productDropdownRef.current.contains(e.target as Node)) {
+        setProductDropdownOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
+  const toggleProduct = (p: string) =>
+    setSelectedProducts(prev => prev.includes(p) ? prev.filter(x => x !== p) : [...prev, p]);
 
   const scrollTo = (id: string) => {
     setActiveSection(id);
@@ -174,21 +189,63 @@ export default function Support() {
                 />
               </div>
               <div>
-                <label className="block text-sm font-medium text-foreground mb-1.5">Sản phẩm bạn quan tâm *</label>
-                <div className="relative">
-                  <select
-                    value={selectedProduct}
-                    onChange={e => setSelectedProduct(e.target.value)}
-                    required
-                    className="w-full appearance-none px-4 py-3 border border-gray-200 rounded focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all text-sm bg-white pr-10"
+                <label className="block text-sm font-medium text-foreground mb-1.5">Sản phẩm bạn quan tâm</label>
+                <div className="relative" ref={productDropdownRef}>
+                  <button
+                    type="button"
+                    onClick={() => setProductDropdownOpen(o => !o)}
+                    className="w-full flex items-center justify-between px-4 py-3 border border-gray-200 rounded focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all text-sm bg-white text-left"
                   >
-                    <option value="" disabled>-- Chọn sản phẩm --</option>
-                    {PRODUCTS.map(p => (
-                      <option key={p} value={p}>{p}</option>
-                    ))}
-                  </select>
-                  <ChevronDown className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" />
+                    <span className={selectedProducts.length === 0 ? "text-gray-400" : "text-foreground"}>
+                      {selectedProducts.length === 0
+                        ? "-- Chọn sản phẩm --"
+                        : selectedProducts.length === 1
+                          ? selectedProducts[0]
+                          : `${selectedProducts.length} sản phẩm đã chọn`}
+                    </span>
+                    <ChevronDown className={`w-4 h-4 text-gray-400 transition-transform duration-200 ${productDropdownOpen ? "rotate-180" : ""}`} />
+                  </button>
+
+                  <AnimatePresence>
+                    {productDropdownOpen && (
+                      <motion.ul
+                        initial={{ opacity: 0, y: -4 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: -4 }}
+                        transition={{ duration: 0.15 }}
+                        className="absolute z-50 w-full mt-1 bg-white border border-gray-200 rounded-lg shadow-lg overflow-hidden max-h-64 overflow-y-auto"
+                      >
+                        {PRODUCTS.map(p => {
+                          const checked = selectedProducts.includes(p);
+                          return (
+                            <li key={p}>
+                              <button
+                                type="button"
+                                onClick={() => toggleProduct(p)}
+                                className={`w-full flex items-center gap-3 px-4 py-2.5 text-sm text-left transition-colors ${checked ? "bg-[#3d7a3d]/5 text-[#3d7a3d]" : "hover:bg-gray-50 text-foreground"}`}
+                              >
+                                <div className={`w-4 h-4 rounded border-2 flex items-center justify-center shrink-0 transition-all ${checked ? "bg-[#3d7a3d] border-[#3d7a3d]" : "border-gray-300"}`}>
+                                  {checked && <CheckCircle className="w-2.5 h-2.5 text-white" />}
+                                </div>
+                                {p}
+                              </button>
+                            </li>
+                          );
+                        })}
+                      </motion.ul>
+                    )}
+                  </AnimatePresence>
                 </div>
+                {selectedProducts.length > 0 && (
+                  <div className="flex flex-wrap gap-1.5 mt-2">
+                    {selectedProducts.map(p => (
+                      <span key={p} className="inline-flex items-center gap-1 px-2.5 py-1 bg-[#3d7a3d]/10 text-[#3d7a3d] text-xs rounded-full font-medium">
+                        {p}
+                        <button type="button" onClick={() => toggleProduct(p)} className="hover:text-red-500 transition-colors">×</button>
+                      </span>
+                    ))}
+                  </div>
+                )}
               </div>
               <button
                 type="submit"
