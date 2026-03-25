@@ -117,7 +117,6 @@ export default function Home() {
 
   return (
     <div className="w-full">
-
       {/* ════════════════════════════════════════
           1. HERO BANNER
       ════════════════════════════════════════ */}
@@ -165,7 +164,6 @@ export default function Home() {
           ))}
         </div>
       </section>
-
       {/* ════════════════════════════════════════
           3. VÒNG TUẦN HOÀN ESG
           Layout: centered title → 3 tab pills → left text | right image
@@ -229,14 +227,13 @@ export default function Home() {
                 <img
                   src={pillar.image}
                   alt={pillar.subtitle}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover rounded-tl-[30px] rounded-tr-[30px] rounded-br-[30px] rounded-bl-[30px]"
                 />
               </div>
             </motion.div>
           </AnimatePresence>
         </div>
       </section>
-
       {/* ════════════════════════════════════════
           4. CÂU CHUYỆN CỦA CHÚNG TÔI
           Layout: title → 3-col image mosaic
@@ -328,7 +325,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       {/* ════════════════════════════════════════
           5. SẢN PHẨM NỔI BẬT
           Layout: header row → 2×2 product grid
@@ -400,7 +396,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       {/* ════════════════════════════════════════
           6. CHỨNG NHẬN CHẤT LƯỢNG
           Layout: title + description | cert logos row | stats
@@ -435,7 +430,6 @@ export default function Home() {
 
         </div>
       </section>
-
       {/* ════════════════════════════════════════
           7. TIN TỨC GẦN ĐÂY
           Layout: title + 3-column news cards
@@ -488,7 +482,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
     </div>
   );
 }

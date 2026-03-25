@@ -84,45 +84,46 @@ export default function About() {
 
   return (
     <div className="w-full bg-background">
-      {/* ── HERO ── */}
-      <div className="relative w-full h-[55vh] min-h-[400px] overflow-hidden">
-        <img
-          src="https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=1600&q=85"
-          alt="ESG Valley tea garden"
-          className="w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-black/45" />
-        <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4">
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7 }}
-            className="font-display text-4xl md:text-6xl font-bold text-white mb-4 mt-[100px]"
-          >
-            Hành Trình Cùng ESG
-          </motion.h1>
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.15 }}
-            className="text-white/80 max-w-2xl text-base md:text-lg"
-          >
-            Mỗi tách trà là một câu chuyện – về đất, về người, về hành trình kiên định theo đuổi giá trị bền vững và di sản văn hóa Việt Nam.
-          </motion.p>
-        </div>
-      </div>
-      {/* ── TIMELINE ── */}
-      <section className="py-16 bg-background">
+      {/* ── HÀNH TRÌNH CÙNG ESG ── */}
+      <section className="pt-24 pb-0 bg-background">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Title */}
+          <div className="text-center mb-6">
+            <motion.h1
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7 }}
+              className="font-display text-4xl md:text-5xl font-bold mb-4"
+            >
+              <span className="text-primary">Hành trình</span>{" "}
+              <span className="text-foreground">cùng ESG</span>
+            </motion.h1>
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.15 }}
+              className="text-muted-foreground max-w-2xl mx-auto text-sm md:text-base"
+            >
+              Mỗi tách trà là một câu chuyện – về đất, về người, về hành trình kiên định theo đuổi giá trị bền vững và di sản văn hóa Việt Nam.
+            </motion.p>
+          </div>
+
+          {/* Wide hero image */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.25 }}
+            className="w-full overflow-hidden rounded-2xl mb-10"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=1600&q=85"
+              alt="ESG Valley tea garden"
+              className="w-full h-[320px] md:h-[400px] object-cover"
+            />
+          </motion.div>
+
           {/* Year rail */}
           <div className="flex items-center justify-center gap-0 mb-10">
-            <button
-              onClick={prev}
-              disabled={activeIndex === 0}
-              className="p-2 text-muted-foreground hover:text-primary disabled:opacity-30 transition-colors"
-            >
-              <ChevronLeft className="w-6 h-6" />
-            </button>
             <div className="flex items-center">
               {years.map((y, i) => (
                 <div key={y} className="flex items-center">
@@ -149,7 +150,7 @@ export default function About() {
                       }`}
                     />
                     <span
-                      className={`mt-2 text-sm font-semibold px-2 py-0.5 rounded-full transition-all ${
+                      className={`mt-2 text-sm font-semibold px-3 py-0.5 rounded-full transition-all ${
                         y === activeYear
                           ? "bg-primary text-primary-foreground"
                           : "text-muted-foreground"
@@ -161,44 +162,52 @@ export default function About() {
                 </div>
               ))}
             </div>
-            <button
-              onClick={next}
-              disabled={activeIndex === years.length - 1}
-              className="p-2 text-muted-foreground hover:text-primary disabled:opacity-30 transition-colors"
-            >
-              <ChevronRight className="w-6 h-6" />
-            </button>
           </div>
 
           {/* Timeline content */}
-          <motion.div
-            key={activeYear}
-            initial={{ opacity: 0, y: 16 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.4 }}
-            className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center"
-          >
-            <div className="overflow-hidden rounded-sm">
-              <img
-                src={activeData.img}
-                alt={activeData.title}
-                className="w-full h-72 object-cover rounded-tl-[30px] rounded-tr-[30px] rounded-br-[30px] rounded-bl-[30px]"
-              />
-            </div>
-            <div>
-              <span className="text-primary font-semibold text-sm uppercase tracking-widest">
-                {activeYear}
-              </span>
-              <h2 className="font-display text-3xl font-bold mt-2 mb-4">
-                {activeData.title}
-              </h2>
-              {activeData.content.split("\n\n").map((para, i) => (
-                <p key={i} className="text-muted-foreground leading-relaxed mb-4">
-                  {para}
-                </p>
-              ))}
-            </div>
-          </motion.div>
+          <div className="relative flex items-center gap-4">
+            <button
+              onClick={prev}
+              disabled={activeIndex === 0}
+              className="flex-shrink-0 w-10 h-10 rounded-full border border-border flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary disabled:opacity-30 transition-colors"
+            >
+              <ChevronLeft className="w-5 h-5" />
+            </button>
+
+            <motion.div
+              key={activeYear}
+              initial={{ opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.4 }}
+              className="flex-1 grid grid-cols-1 md:grid-cols-2 gap-8 items-start"
+            >
+              <div className="overflow-hidden rounded-2xl">
+                <img
+                  src={activeData.img}
+                  alt={activeData.title}
+                  className="w-full h-56 object-cover"
+                />
+              </div>
+              <div>
+                <h2 className="font-display text-2xl font-bold mt-2 mb-3">
+                  {activeData.title}
+                </h2>
+                {activeData.content.split("\n\n").map((para, i) => (
+                  <p key={i} className="text-muted-foreground text-sm leading-relaxed mb-3">
+                    {para}
+                  </p>
+                ))}
+              </div>
+            </motion.div>
+
+            <button
+              onClick={next}
+              disabled={activeIndex === years.length - 1}
+              className="flex-shrink-0 w-10 h-10 rounded-full border border-border flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary disabled:opacity-30 transition-colors"
+            >
+              <ChevronRight className="w-5 h-5" />
+            </button>
+          </div>
         </div>
       </section>
       {/* ── SỨ MỆNH ── */}
