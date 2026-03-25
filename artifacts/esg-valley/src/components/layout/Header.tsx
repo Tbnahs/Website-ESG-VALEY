@@ -86,7 +86,7 @@ export function Header() {
     { path: "/", label: "Trang Chủ" },
     { path: "/ve-esg-valley", label: "Câu chuyện ESGValley" },
     { path: "/tin-tuc", label: "Tin Tức" },
-    { path: "/lien-he", label: "Liên Hệ" },
+    { path: "/lien-he", label: "Liên Hệ và tra cứu" },
   ];
 
   const currentLang = LANGUAGES.find(l => l.code === lang)!;
@@ -415,7 +415,7 @@ export function Header() {
                 </Link>
                 <Link href="/lien-he" onClick={() => setMobileMenuOpen(false)}
                   className={`text-base font-medium py-3 px-2 border-b border-border/50 uppercase tracking-wider transition-colors hover:text-primary ${location === "/lien-he" ? "text-primary font-semibold" : ""}`}>
-                  Liên Hệ
+                  Liên Hệ và tra cứu
                 </Link>
               </nav>
 
