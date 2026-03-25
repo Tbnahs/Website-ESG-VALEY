@@ -47,7 +47,7 @@ export default function Ecosystem() {
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.2 }}
-            className="text-white/80 max-w-2xl mx-auto text-lg leading-relaxed mb-10"
+            className="text-white/80 max-w-2xl mx-auto text-lg leading-relaxed mb-[0px]"
           >
             Mô hình vòng tuần hoàn khép kín — nơi công nghệ, thiên nhiên, văn hóa và con người cùng phát triển bền vững theo chuẩn mực ESG quốc tế.
           </motion.p>
