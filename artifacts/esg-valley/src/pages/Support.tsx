@@ -109,6 +109,23 @@ export default function Support() {
   return (
     <div className="w-full bg-white min-h-screen">
 
+      {/* Hero */}
+      <div className="relative py-28 overflow-hidden">
+        <img
+          src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=1600&q=85"
+          alt="Hỗ trợ khách hàng ESG Valley"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-black/60" />
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <p className="text-[#C9A84C] text-sm uppercase tracking-[0.3em] font-semibold mb-3">ESG Valley</p>
+          <h1 className="font-display text-4xl md:text-5xl font-bold text-white mb-4">Hỗ Trợ Khách Hàng</h1>
+          <p className="text-white/80 max-w-2xl mx-auto text-lg">
+            Luôn sẵn sàng lắng nghe và đồng hành cùng bạn trên hành trình thưởng trà.
+          </p>
+        </div>
+      </div>
+
       {/* ── SECTION 1: LIÊN HỆ ── */}
       <section
         ref={el => { sectionRefs.current["lien-he"] = el; }}
