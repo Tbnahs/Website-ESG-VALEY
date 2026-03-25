@@ -306,7 +306,6 @@ export default function Ecosystem() {
             variants={fadeUp} initial="hidden" whileInView="show" viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <p className="text-[#C9A84C] text-sm uppercase tracking-[0.3em] font-semibold mb-3">06</p>
             <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
               Giáo Dục & Đào Tạo
             </h2>
