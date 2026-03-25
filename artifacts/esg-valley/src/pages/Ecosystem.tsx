@@ -138,7 +138,6 @@ export default function Ecosystem() {
             <motion.div
               variants={fadeUp} initial="hidden" whileInView="show" viewport={{ once: true }} custom={1}
             >
-              <p className="text-[#C9A84C] text-sm uppercase tracking-[0.3em] font-semibold mb-3">02</p>
               <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-5">
                 Phát Triển Vùng Nguyên Liệu & Sản Xuất
               </h2>
