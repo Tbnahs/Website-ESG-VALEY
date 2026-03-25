@@ -66,7 +66,7 @@ export default function Ecosystem() {
       </div>
 
       {/* ════════ 01 — VIỆN NGHIÊN CỨU ════════ */}
-      <section className="py-24 bg-background">
+      <section id="vien-nghien-cuu" className="py-24 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Header */}
           <motion.div
@@ -125,7 +125,7 @@ export default function Ecosystem() {
       </section>
 
       {/* ════════ 02 — VÙNG NGUYÊN LIỆU ════════ */}
-      <section className="py-24 bg-[#f5f9f4]">
+      <section id="vung-nguyen-lieu" className="py-24 bg-[#f5f9f4]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             {/* Image */}
@@ -185,7 +185,7 @@ export default function Ecosystem() {
       </section>
 
       {/* ════════ 03 — BẢO TỒN DI SẢN (full bleed) ════════ */}
-      <section className="relative py-32 overflow-hidden">
+      <section id="bao-ton-di-san" className="relative py-32 overflow-hidden">
         <img
           src="/images/tong-quan.jpg"
           alt="Bảo tồn di sản trà Shan Tuyết"
@@ -219,7 +219,7 @@ export default function Ecosystem() {
       </section>
 
       {/* ════════ 04 — R&D SẢN PHẨM ════════ */}
-      <section className="py-24 bg-background">
+      <section id="nghien-cuu-san-pham" className="py-24 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             variants={fadeUp} initial="hidden" whileInView="show" viewport={{ once: true }}
@@ -282,7 +282,7 @@ export default function Ecosystem() {
       </section>
 
       {/* ════════ 05 — TRẢI NGHIỆM & DU LỊCH ════════ */}
-      <section className="py-24 bg-[#f5f9f4]">
+      <section id="trai-nghiem-van-hoa" className="py-24 bg-[#f5f9f4]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             {/* Text */}
@@ -338,7 +338,7 @@ export default function Ecosystem() {
       </section>
 
       {/* ════════ 06 — GIÁO DỤC ════════ */}
-      <section className="py-24 bg-background">
+      <section id="giao-duc" className="py-24 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             variants={fadeUp} initial="hidden" whileInView="show" viewport={{ once: true }}

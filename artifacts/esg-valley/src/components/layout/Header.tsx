@@ -61,10 +61,13 @@ export function Header() {
   const [userMenuOpen, setUserMenuOpen] = useState(false);
   const [productMenuOpen, setProductMenuOpen] = useState(false);
   const [supportMenuOpen, setSupportMenuOpen] = useState(false);
+  const [ecosystemMenuOpen, setEcosystemMenuOpen] = useState(false);
+  const [mobileEcosystemOpen, setMobileEcosystemOpen] = useState(false);
   const langRef = useRef<HTMLDivElement>(null);
   const userRef = useRef<HTMLDivElement>(null);
   const productRef = useRef<HTMLDivElement>(null);
   const supportRef = useRef<HTMLDivElement>(null);
+  const ecosystemRef = useRef<HTMLDivElement>(null);
 
   const { user, isLoggedIn, logout, openAuthModal } = useAuth();
   const { lang, setLang } = useLang();
@@ -99,11 +102,23 @@ export function Header() {
     setIsScrolled(false);
   }, [location]);
 
+  const handleEcosystemNav = (hash: string) => {
+    setEcosystemMenuOpen(false);
+    setMobileMenuOpen(false);
+    if (location === "/he-sinh-thai") {
+      window.location.hash = hash;
+    } else {
+      navigate("/he-sinh-thai");
+      setTimeout(() => { window.location.hash = hash; }, 200);
+    }
+  };
+
   useEffect(() => {
     const handleClick = (e: MouseEvent) => {
       if (langRef.current && !langRef.current.contains(e.target as Node)) setLangOpen(false);
       if (userRef.current && !userRef.current.contains(e.target as Node)) setUserMenuOpen(false);
       if (productRef.current && !productRef.current.contains(e.target as Node)) setProductMenuOpen(false);
+      if (ecosystemRef.current && !ecosystemRef.current.contains(e.target as Node)) setEcosystemMenuOpen(false);
     };
     document.addEventListener("mousedown", handleClick);
     return () => document.removeEventListener("mousedown", handleClick);
@@ -307,15 +322,61 @@ export function Header() {
             </AnimatePresence>
           </div>
 
-          {/* Hệ Sinh Thái */}
-          <Link
-            href="/he-sinh-thai"
-            className={`text-sm uppercase tracking-wider font-semibold transition-all duration-300 relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-[1px] hover:after:w-full after:transition-all after:duration-300 ${
-              location === "/he-sinh-thai" ? "after:w-full" : ""
-            } ${isTransparent ? "after:bg-white" : "after:bg-primary"}`}
-          >
-            Hệ Sinh Thái
-          </Link>
+          {/* Hệ Sinh Thái dropdown */}
+          <div className="relative" ref={ecosystemRef}>
+            <button
+              onClick={() => setEcosystemMenuOpen(v => !v)}
+              onMouseEnter={() => setEcosystemMenuOpen(true)}
+              className={`text-sm uppercase tracking-wider font-semibold transition-all duration-300 flex items-center gap-1 relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:h-[1px] after:transition-all after:duration-300 ${
+                location.startsWith("/he-sinh-thai") ? "after:w-full" : "after:w-0 hover:after:w-full"
+              } ${isTransparent ? "after:bg-white" : "after:bg-primary"}`}
+            >
+              Hệ Sinh Thái
+              <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-200 ${ecosystemMenuOpen ? "rotate-180" : ""}`} />
+            </button>
+
+            <AnimatePresence>
+              {ecosystemMenuOpen && (
+                <motion.div
+                  initial={{ opacity: 0, y: 8 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: 8 }}
+                  transition={{ duration: 0.18 }}
+                  onMouseLeave={() => setEcosystemMenuOpen(false)}
+                  className="absolute left-1/2 -translate-x-1/2 top-full mt-3 bg-background border border-border rounded-xl shadow-2xl z-[60] overflow-hidden"
+                  style={{ minWidth: "280px" }}
+                >
+                  <div className="py-2">
+                    {[
+                      { label: "01 · Viện Nghiên Cứu & Công Nghệ", hash: "vien-nghien-cuu" },
+                      { label: "02 · Vùng Nguyên Liệu & Sản Xuất", hash: "vung-nguyen-lieu" },
+                      { label: "03 · Bảo Tồn Di Sản", hash: "bao-ton-di-san" },
+                      { label: "04 · Nghiên Cứu & Phát Triển", hash: "nghien-cuu-san-pham" },
+                      { label: "05 · Trải Nghiệm & Du Lịch", hash: "trai-nghiem-van-hoa" },
+                      { label: "06 · Giáo Dục & Đào Tạo", hash: "giao-duc" },
+                    ].map(item => (
+                      <button
+                        key={item.hash}
+                        onClick={() => handleEcosystemNav(item.hash)}
+                        className="w-full text-left block text-sm text-foreground hover:text-primary hover:bg-primary/5 px-5 py-2.5 transition-colors"
+                      >
+                        {item.label}
+                      </button>
+                    ))}
+                    <div className="border-t border-border mt-1 pt-1">
+                      <Link
+                        href="/he-sinh-thai"
+                        onClick={() => setEcosystemMenuOpen(false)}
+                        className="block text-xs text-primary font-semibold hover:underline px-5 py-2.5"
+                      >
+                        Xem toàn bộ Hệ Sinh Thái →
+                      </Link>
+                    </div>
+                  </div>
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </div>
 
           {/* Tin Tức */}
           <Link
@@ -446,10 +507,41 @@ export function Header() {
                   className={`text-base font-medium py-3 px-2 border-b border-border/50 uppercase tracking-wider transition-colors hover:text-primary ${location === "/ve-esg-valley" ? "text-primary font-semibold" : ""}`}>
                   Câu chuyện ESGValley
                 </Link>
-                <Link href="/he-sinh-thai" onClick={() => setMobileMenuOpen(false)}
-                  className={`text-base font-medium py-3 px-2 border-b border-border/50 uppercase tracking-wider transition-colors hover:text-primary ${location === "/he-sinh-thai" ? "text-primary font-semibold" : ""}`}>
-                  Hệ Sinh Thái
-                </Link>
+                {/* Mobile Hệ Sinh Thái accordion */}
+                <div className="border-b border-border/50">
+                  <button
+                    onClick={() => setMobileEcosystemOpen(v => !v)}
+                    className={`w-full flex items-center justify-between text-base font-medium py-3 px-2 uppercase tracking-wider hover:text-primary transition-colors ${location.startsWith("/he-sinh-thai") ? "text-primary font-semibold" : ""}`}
+                  >
+                    Hệ Sinh Thái
+                    <ChevronDown className={`w-4 h-4 transition-transform ${mobileEcosystemOpen ? "rotate-180" : ""}`} />
+                  </button>
+                  {mobileEcosystemOpen && (
+                    <div className="pb-2 pl-3">
+                      <Link
+                        href="/he-sinh-thai"
+                        onClick={() => setMobileMenuOpen(false)}
+                        className="block text-primary text-[10px] font-bold uppercase tracking-widest px-2 mb-2 hover:underline"
+                      >Xem toàn bộ</Link>
+                      {[
+                        { label: "01 · Viện Nghiên Cứu & Công Nghệ", hash: "vien-nghien-cuu" },
+                        { label: "02 · Vùng Nguyên Liệu & Sản Xuất", hash: "vung-nguyen-lieu" },
+                        { label: "03 · Bảo Tồn Di Sản", hash: "bao-ton-di-san" },
+                        { label: "04 · Nghiên Cứu & Phát Triển", hash: "nghien-cuu-san-pham" },
+                        { label: "05 · Trải Nghiệm & Du Lịch", hash: "trai-nghiem-van-hoa" },
+                        { label: "06 · Giáo Dục & Đào Tạo", hash: "giao-duc" },
+                      ].map(item => (
+                        <button
+                          key={item.hash}
+                          onClick={() => handleEcosystemNav(item.hash)}
+                          className="w-full text-left block text-sm text-muted-foreground hover:text-primary py-2 px-2 transition-colors"
+                        >
+                          {item.label}
+                        </button>
+                      ))}
+                    </div>
+                  )}
+                </div>
 
                 {/* Mobile Sản Phẩm accordion */}
                 <div className="border-b border-border/50">
