@@ -109,6 +109,18 @@ export default function Products() {
                         {product.description}
                       </p>
 
+                      {/* Thumbnails */}
+                      <div className="flex gap-2 mb-6">
+                        {[0, 1].map(i => (
+                          <div key={i} className="w-14 h-14 rounded-lg overflow-hidden border border-gray-200 flex-shrink-0">
+                            <img
+                              src={product.image}
+                              alt={product.name}
+                              className="w-full h-full object-cover"
+                            />
+                          </div>
+                        ))}
+                      </div>
                     </div>
 
                     {/* CTA */}
