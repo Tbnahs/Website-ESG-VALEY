@@ -222,7 +222,14 @@ export function Header() {
           {/* Sản Phẩm mega-menu */}
           <div className="relative" ref={productRef}>
             <button
-              onClick={() => setProductMenuOpen(v => !v)}
+              onClick={() => {
+                if (productMenuOpen) {
+                  setProductMenuOpen(false);
+                  navigate("/san-pham");
+                } else {
+                  setProductMenuOpen(true);
+                }
+              }}
               onMouseEnter={() => setProductMenuOpen(true)}
               className={`text-sm uppercase tracking-wider font-semibold transition-all duration-300 flex items-center gap-1 relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:h-[1px] after:transition-all after:duration-300 ${
                 location.startsWith("/san-pham") ? "after:w-full" : "after:w-0 hover:after:w-full"
@@ -284,7 +291,14 @@ export function Header() {
           {/* Hỗ Trợ Khách Hàng dropdown */}
           <div className="relative" ref={supportRef}>
             <button
-              onClick={() => setSupportMenuOpen(v => !v)}
+              onClick={() => {
+                if (supportMenuOpen) {
+                  setSupportMenuOpen(false);
+                  navigate("/ho-tro");
+                } else {
+                  setSupportMenuOpen(true);
+                }
+              }}
               onMouseEnter={() => setSupportMenuOpen(true)}
               className={`text-sm uppercase tracking-wider font-semibold transition-all duration-300 flex items-center gap-1 relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:h-[1px] after:transition-all after:duration-300 ${
                 location.startsWith("/ho-tro") || location.startsWith("/lien-he") ? "after:w-full" : "after:w-0 hover:after:w-full"
