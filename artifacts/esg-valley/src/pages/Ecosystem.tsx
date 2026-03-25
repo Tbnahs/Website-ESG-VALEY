@@ -325,7 +325,7 @@ export default function Ecosystem() {
             >
               <div className="rounded-[2rem] overflow-hidden aspect-[4/3] shadow-2xl">
                 <img
-                  src="/images/hanh-trinh.jpg"
+                  src="/images/du-lich.jpg"
                   alt="Trải nghiệm văn hóa trà"
                   className="w-full h-full object-cover"
                 />
