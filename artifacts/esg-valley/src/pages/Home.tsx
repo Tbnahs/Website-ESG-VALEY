@@ -13,7 +13,7 @@ const slides = [
     title: "Tiệc Trà Di Sản",
     subtitle: "Tinh Hoa Trà Việt - Trọn Vẹn Tâm Tình",
     cta: "Khám Phá Ngay",
-    link: "/san-pham",
+    link: "/san-pham?category=Dịch Vụ",
   },
   {
     image: `${import.meta.env.BASE_URL}images/hero-slide-2.png`,

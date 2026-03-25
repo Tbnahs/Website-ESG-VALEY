@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Search, Filter } from "lucide-react";
 import { products } from "@/lib/data";
@@ -6,6 +6,14 @@ import { products } from "@/lib/data";
 export default function Products() {
   const [activeCategory, setActiveCategory] = useState("Tất cả");
   const categories = ["Tất cả", "Trà", "Trà Cụ", "Dịch Vụ"];
+
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const cat = params.get("category");
+    if (cat && categories.includes(cat)) {
+      setActiveCategory(cat);
+    }
+  }, []);
 
   const filteredProducts = activeCategory === "Tất cả" 
     ? products 
