@@ -5,7 +5,7 @@ export const products = [
     category: "Trà",
     description: "Hộp quà tặng cao cấp Tết 2026, tinh hoa trà Việt – trọn vẹn tâm tình.",
     price: "Liên hệ",
-    image: "/images/product-ma-dao.png"
+    image: "/images/product-ma-dao-chinh.png"
   },
   {
     id: 2,
