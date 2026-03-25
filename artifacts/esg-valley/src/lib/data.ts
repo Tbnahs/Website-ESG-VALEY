@@ -45,7 +45,7 @@ export const products = [
     category: "Matcha",
     description: "Matcha thượng hạng được chọn lọc từ vùng chè đặc sản, chế biến theo phương pháp truyền thống Nhật Bản kết hợp bản sắc Việt – màu xanh ngọc, hương thơm thanh thoát, vị đậm đà.",
     price: "Liên hệ",
-    image: "https://images.unsplash.com/photo-1536040745-a7f0a2e4d64a?auto=format&fit=crop&q=80&w=800"
+    image: "/images/product-matcha.jpg"
   },
   {
     id: 7,
