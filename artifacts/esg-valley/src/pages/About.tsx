@@ -143,7 +143,7 @@ export default function About() {
             className="w-full overflow-hidden rounded-2xl mb-10"
           >
             <img
-              src="https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=1600&q=85"
+              src="/images/hanh-trinh.jpg"
               alt="ESG Valley tea garden"
               className="w-full h-[320px] md:h-[400px] object-cover"
             />
