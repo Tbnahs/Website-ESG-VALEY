@@ -9,7 +9,7 @@ const timelineData = [
     title: "Khởi Nguồn Ý Tưởng",
     content:
       "Từ những chuyến đi thực địa lên các vùng chè cổ thụ Thái Nguyên, Hà Giang, một nhóm những người trẻ yêu trà đã ấp ủ giấc mơ về một thương hiệu trà di sản mang tinh thần ESG – kết nối bền vững giữa con người, thiên nhiên và cộng đồng.",
-    img: "https://images.unsplash.com/photo-1606113294786-44c5cd3b56c0?w=700&q=80",
+    img: "/images/khoi-nguon.jpg",
   },
   {
     year: 2021,
