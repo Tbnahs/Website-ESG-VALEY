@@ -23,13 +23,21 @@ export default function Products() {
   return (
     <div className="w-full bg-[#f8f8f4] min-h-screen">
       {/* Header */}
-      <div className="bg-[#1a2e1a] pt-28 pb-10 text-center">
-        <p className="text-white/60 text-sm mb-2 flex items-center justify-center gap-1.5">
-          <Link href="/" className="hover:text-white/90 transition-colors">Trang chủ</Link>
-          <ChevronRight className="w-3.5 h-3.5" />
-          <span className="text-white/80">Danh sách sản phẩm</span>
-        </p>
-        <h1 className="font-display text-3xl md:text-4xl font-bold text-white">Danh sách sản phẩm</h1>
+      <div className="relative pt-28 pb-16 text-center overflow-hidden">
+        <img
+          src="/images/tong-quan.jpg"
+          alt="Danh sách sản phẩm"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-black/55" />
+        <div className="relative z-10">
+          <p className="text-white/70 text-sm mb-2 flex items-center justify-center gap-1.5">
+            <Link href="/" className="hover:text-white transition-colors">Trang chủ</Link>
+            <ChevronRight className="w-3.5 h-3.5" />
+            <span className="text-white/90">Danh sách sản phẩm</span>
+          </p>
+          <h1 className="font-display text-3xl md:text-4xl font-bold text-white">Danh sách sản phẩm</h1>
+        </div>
       </div>
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
