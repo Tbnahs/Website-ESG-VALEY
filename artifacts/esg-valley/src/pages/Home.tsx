@@ -17,7 +17,7 @@ const slides = [
   },
   {
     image: `${import.meta.env.BASE_URL}images/hero-slide-2.png`,
-    title: "Trà Di Sản Shan Tuyết",
+    title: "Trà Di Sản Thượng Hạng",
     subtitle: "Hương vị nguyên bản từ những rừng trà cổ thụ hàng trăm năm tuổi.",
     cta: "Tìm Hiểu Nguồn Gốc",
     link: "/ve-esg-valley",
