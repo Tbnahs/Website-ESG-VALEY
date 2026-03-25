@@ -111,26 +111,43 @@ export default function About() {
 
   return (
     <div className="w-full bg-background">
-      {/* ── HERO BANNER ── */}
-      <div className="relative pt-44 pb-28 overflow-hidden">
-        <img
-          src="/images/hanh-trinh.jpg"
-          alt="Câu chuyện ESG Valley"
-          className="absolute inset-0 w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-black/60" />
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <p className="text-[#C9A84C] text-sm uppercase tracking-[0.3em] font-semibold mb-3">ESG Valley</p>
-          <h1 className="font-display text-4xl md:text-5xl font-bold text-white mb-4">Câu Chuyện Thương Hiệu</h1>
-          <p className="text-white/80 max-w-2xl mx-auto text-lg">
-            Mỗi tách trà là một câu chuyện – về đất, về người, về hành trình kiên định theo đuổi giá trị bền vững và di sản văn hóa Việt Nam.
-          </p>
-        </div>
-      </div>
-
       {/* ── HÀNH TRÌNH CÙNG ESG ── */}
-      <section className="pt-16 pb-0 bg-background">
+      <section className="pt-36 pb-0 bg-background">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Title */}
+          <div className="text-center mb-6">
+            <motion.h1
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7 }}
+              className="font-display text-4xl md:text-5xl font-bold mb-4"
+            >
+              <span className="text-primary">Hành trình</span>{" "}
+              <span className="text-foreground">cùng ESG</span>
+            </motion.h1>
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.15 }}
+              className="text-muted-foreground max-w-2xl mx-auto text-sm md:text-base"
+            >
+              Mỗi tách trà là một câu chuyện – về đất, về người, về hành trình kiên định theo đuổi giá trị bền vững và di sản văn hóa Việt Nam.
+            </motion.p>
+          </div>
+
+          {/* Wide hero image */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.25 }}
+            className="w-full overflow-hidden rounded-2xl mb-10"
+          >
+            <img
+              src="/images/hanh-trinh.jpg"
+              alt="ESG Valley tea garden"
+              className="w-full h-[320px] md:h-[400px] object-cover"
+            />
+          </motion.div>
 
           {/* Year rail */}
           <div className="flex items-center justify-center gap-0 mb-10">
