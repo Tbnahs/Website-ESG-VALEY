@@ -44,7 +44,7 @@ const timelineData = [
     title: "Tầm Nhìn Toàn Cầu",
     content:
       "Đưa trà Việt ra thế giới theo đúng nghĩa: không chỉ xuất khẩu nguyên liệu mà tôn vinh câu chuyện, văn hóa và bản sắc. ESG Valley hướng tới trở thành đại sứ của trà di sản Việt Nam trên bản đồ trà thế giới.",
-    img: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=700&q=80",
+    img: "/images/toan-cau.jpg",
   },
 ];
 
