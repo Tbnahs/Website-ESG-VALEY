@@ -13,7 +13,7 @@ export function Footer() {
             <p className="text-primary-foreground/80 text-sm leading-relaxed">
               Thương hiệu trà di sản Việt Nam, cam kết phát triển bền vững theo tiêu chuẩn ESG. Kết nối văn hóa, thiên nhiên và cộng đồng.
             </p>
-            <div className="flex space-x-4">
+            <div className="flex items-center gap-4 flex-wrap">
               <a href="#" className="w-10 h-10 rounded-full border border-primary-foreground/20 flex items-center justify-center hover:bg-white hover:text-primary transition-colors">
                 <Facebook className="w-4 h-4" />
               </a>
@@ -22,6 +22,9 @@ export function Footer() {
               </a>
               <a href="#" className="w-10 h-10 rounded-full border border-primary-foreground/20 flex items-center justify-center hover:bg-white hover:text-primary transition-colors">
                 <Youtube className="w-4 h-4" />
+              </a>
+              <a href="https://online.gov.vn" target="_blank" rel="noopener noreferrer">
+                <img src="/images/bo-cong-thuong.png" alt="Đã đăng ký Bộ Công Thương" className="h-10 w-auto object-contain" />
               </a>
             </div>
           </div>
