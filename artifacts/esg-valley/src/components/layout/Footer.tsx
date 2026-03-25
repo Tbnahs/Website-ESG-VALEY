@@ -116,7 +116,7 @@ export function Footer() {
             </div>
             <div className="mt-4">
               <p className="text-white/50 text-xs mb-2">Phương thức thanh toán</p>
-              <img src="/images/payment-methods.png" alt="Phương thức thanh toán" className="h-6 w-auto object-contain opacity-80" />
+              <img src="/images/payment-methods.png" alt="Phương thức thanh toán" className="h-12 w-auto object-contain opacity-85" />
             </div>
           </div>
 
