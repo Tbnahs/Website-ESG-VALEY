@@ -57,19 +57,19 @@ const defaultMissionImages = [
 
 const achievementImages = [
   {
-    src: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&q=80",
+    src: "/images/thanh-tuu-1.png",
     label: "Triển lãm quốc tế 2023",
   },
   {
-    src: "https://images.unsplash.com/photo-1559056199-641a0ac8b55e?w=600&q=80",
+    src: "/images/thanh-tuu-2.png",
     label: "Giải thưởng ESG xuất sắc",
   },
   {
-    src: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=600&q=80",
+    src: "/images/thanh-tuu-3.png",
     label: "Hội chợ Nông sản Việt",
   },
   {
-    src: "https://images.unsplash.com/photo-1590846406792-0adc7f938f1d?w=600&q=80",
+    src: "/images/thanh-tuu-4.png",
     label: "Cộng đồng nông dân bền vững",
   },
 ];
