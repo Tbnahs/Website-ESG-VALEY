@@ -1,6 +1,6 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { motion } from "framer-motion";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { ChevronLeft, ChevronRight, Upload } from "lucide-react";
 
 const timelineData = [
   {
@@ -47,7 +47,7 @@ const timelineData = [
   },
 ];
 
-const missionImages = [
+const defaultMissionImages = [
   { src: "https://images.unsplash.com/photo-1564890369478-c89ca6d9cde9?w=400&q=80", label: "Trà xanh tươi" },
   { src: "https://images.unsplash.com/photo-1597318281611-f5e5a7dbef63?w=400&q=80", label: "Trà vàng" },
   { src: "https://images.unsplash.com/photo-1556909172-8c2f041fca1e?w=400&q=80", label: "Trà đỏ" },
@@ -81,6 +81,31 @@ export default function About() {
 
   const prev = () => activeIndex > 0 && setActiveYear(years[activeIndex - 1]);
   const next = () => activeIndex < years.length - 1 && setActiveYear(years[activeIndex + 1]);
+
+  const [missionImages, setMissionImages] = useState(defaultMissionImages);
+  const [uploading, setUploading] = useState<number | null>(null);
+  const fileInputRef0 = useRef<HTMLInputElement>(null);
+  const fileInputRef1 = useRef<HTMLInputElement>(null);
+  const fileInputRef2 = useRef<HTMLInputElement>(null);
+  const fileInputRef3 = useRef<HTMLInputElement>(null);
+  const fileInputRefs = [fileInputRef0, fileInputRef1, fileInputRef2, fileInputRef3];
+
+  const handleUpload = async (index: number, file: File) => {
+    setUploading(index);
+    try {
+      const formData = new FormData();
+      formData.append("image", file);
+      const res = await fetch(`${import.meta.env.BASE_URL}api/upload`, { method: "POST", body: formData });
+      const data = await res.json();
+      if (data.url) {
+        setMissionImages((prev) => prev.map((img, i) => i === index ? { ...img, src: data.url } : img));
+      }
+    } catch (e) {
+      console.error(e);
+    } finally {
+      setUploading(null);
+    }
+  };
 
   return (
     <div className="w-full bg-background">
@@ -233,9 +258,25 @@ export default function About() {
                   transition={{ duration: 0.5, delay: i * 0.1 }}
                   className="flex flex-col items-center gap-2"
                 >
-                  <div className="overflow-hidden rounded-xl aspect-square w-full max-w-[130px] shadow-md">
-                    <img src={item.src} alt={item.label} className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+                  <div
+                    className="relative overflow-hidden rounded-xl aspect-square w-full max-w-[130px] shadow-md cursor-pointer group"
+                    onClick={() => fileInputRefs[i].current?.click()}
+                  >
+                    <img src={item.src} alt={item.label} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                    <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                      {uploading === i
+                        ? <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin" />
+                        : <Upload className="w-5 h-5 text-white" />
+                      }
+                    </div>
                   </div>
+                  <input
+                    ref={fileInputRefs[i]}
+                    type="file"
+                    accept="image/*"
+                    className="hidden"
+                    onChange={(e) => { const f = e.target.files?.[0]; if (f) handleUpload(i, f); e.target.value = ""; }}
+                  />
                   <span className="text-xs text-muted-foreground font-medium">{item.label}</span>
                 </motion.div>
               ))}
