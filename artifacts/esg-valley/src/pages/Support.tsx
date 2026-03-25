@@ -136,19 +136,21 @@ export default function Support() {
   return (
     <div className="w-full bg-white min-h-screen">
       {/* Hero */}
-      <div className="relative py-28 overflow-hidden">
+      <div className="relative overflow-hidden">
         <img
           src="/images/support-hero.png"
           alt="Hỗ trợ khách hàng ESG Valley"
-          className="absolute inset-0 w-full h-full object-cover object-center"
+          className="w-full h-auto block"
         />
-        <div className="absolute inset-0 bg-black/60" />
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <p className="text-[#C9A84C] text-sm uppercase tracking-[0.3em] font-semibold mb-3">ESG Valley</p>
-          <h1 className="font-display text-4xl md:text-5xl font-bold text-white mb-4">Hỗ Trợ Khách Hàng</h1>
-          <p className="text-white/80 max-w-2xl mx-auto text-lg">
-            Luôn sẵn sàng lắng nghe và đồng hành cùng bạn trên hành trình thưởng trà.
-          </p>
+        <div className="absolute inset-0 bg-black/50" />
+        <div className="absolute inset-0 flex items-center justify-center">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p className="text-[#C9A84C] text-sm uppercase tracking-[0.3em] font-semibold mb-3">ESG Valley</p>
+            <h1 className="font-display text-4xl md:text-5xl font-bold text-white mb-4">Hỗ Trợ Khách Hàng</h1>
+            <p className="text-white/80 max-w-2xl mx-auto text-lg">
+              Luôn sẵn sàng lắng nghe và đồng hành cùng bạn trên hành trình thưởng trà.
+            </p>
+          </div>
         </div>
       </div>
       {/* ── SECTION 1: LIÊN HỆ ── */}
