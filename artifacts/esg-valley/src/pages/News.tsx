@@ -10,7 +10,7 @@ export default function News() {
   return (
     <div className="w-full bg-background pt-24 pb-24">
       {/* Header */}
-      <div className="relative py-28 mb-12 overflow-hidden">
+      <div className="relative py-16 mb-12 overflow-hidden">
         <img
           src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=1600&q=85"
           alt="Tin tức ESG Valley"
