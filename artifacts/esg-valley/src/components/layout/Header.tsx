@@ -468,9 +468,9 @@ export function Header() {
           </div>
 
           <button
-            onClick={openCart}
+            onClick={() => isLoggedIn ? openCart() : openAuthModal()}
             className="relative hover:text-accent transition-colors hover:scale-110 transform duration-200"
-            title="Giỏ hàng"
+            title={isLoggedIn ? "Giỏ hàng" : "Đăng nhập để xem giỏ hàng"}
           >
             <ShoppingBag className="w-5 h-5" />
             {totalItems > 0 && (
