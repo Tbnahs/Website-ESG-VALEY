@@ -47,20 +47,19 @@ export default function Products() {
   return (
     <div className="w-full bg-white min-h-screen">
       {/* Header */}
-      <div className="relative pt-28 pb-16 text-center overflow-hidden">
+      <div className="relative py-28 overflow-hidden">
         <img
           src="/images/products-hero.jpg"
           alt="Danh sách sản phẩm"
           className="absolute inset-0 w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-black/55" />
-        <div className="relative z-10">
-          <p className="text-white/70 text-sm mb-2 flex items-center justify-center gap-1.5">
-            <Link href="/" className="hover:text-white transition-colors">Trang chủ</Link>
-            <ChevronRight className="w-3.5 h-3.5" />
-            <span className="text-white/90">Danh sách sản phẩm</span>
+        <div className="absolute inset-0 bg-black/60" />
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <p className="text-[#C9A84C] text-sm uppercase tracking-[0.3em] font-semibold mb-3">ESG Valley</p>
+          <h1 className="font-display text-4xl md:text-5xl font-bold text-white mb-4">Sản Phẩm</h1>
+          <p className="text-white/80 max-w-2xl mx-auto text-lg">
+            Tinh hoa trà Việt – từ núi rừng Tây Bắc đến tay bạn.
           </p>
-          <h1 className="font-display text-3xl md:text-4xl font-bold text-white mt-[100px] mb-[0px]">Danh sách sản phẩm</h1>
         </div>
       </div>
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">

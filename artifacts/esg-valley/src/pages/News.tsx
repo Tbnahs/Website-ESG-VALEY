@@ -10,16 +10,17 @@ export default function News() {
   return (
     <div className="w-full bg-background pt-24 pb-24">
       {/* Header */}
-      <div className="relative py-24 mb-12 overflow-hidden">
+      <div className="relative py-28 mb-12 overflow-hidden">
         <img
           src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=1600&q=85"
           alt="Tin tức ESG Valley"
           className="absolute inset-0 w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-black/55" />
+        <div className="absolute inset-0 bg-black/60" />
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="font-display text-4xl md:text-5xl font-bold text-white mb-4">Tin Tức </h1>
-          <p className="text-white/80 max-w-2xl mx-auto">
+          <p className="text-[#C9A84C] text-sm uppercase tracking-[0.3em] font-semibold mb-3">ESG Valley</p>
+          <h1 className="font-display text-4xl md:text-5xl font-bold text-white mb-4">Tin Tức</h1>
+          <p className="text-white/80 max-w-2xl mx-auto text-lg">
             Cập nhật những câu chuyện mới nhất từ hành trình ESG Valley và thế giới trà Việt.
           </p>
         </div>
