@@ -5,6 +5,14 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useAuth } from "@/lib/auth";
 import { useLang, LANGUAGES, type Lang } from "@/lib/lang";
 
+const supportMenu = [
+  { label: "Chính sách bảo mật", path: "/chinh-sach-bao-mat" },
+  { label: "Chính sách đổi trả hàng", path: "/chinh-sach-doi-tra" },
+  { label: "Câu hỏi thường gặp", path: "/faq" },
+  { label: "Liên hệ", path: "/lien-he" },
+  { label: "Tra cứu đơn hàng", path: "/tra-cuu-don-hang" },
+];
+
 const productMenu = [
   {
     heading: "Trà",
@@ -46,13 +54,16 @@ export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [mobileProductOpen, setMobileProductOpen] = useState(false);
+  const [mobileSupportOpen, setMobileSupportOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
   const [langOpen, setLangOpen] = useState(false);
   const [userMenuOpen, setUserMenuOpen] = useState(false);
   const [productMenuOpen, setProductMenuOpen] = useState(false);
+  const [supportMenuOpen, setSupportMenuOpen] = useState(false);
   const langRef = useRef<HTMLDivElement>(null);
   const userRef = useRef<HTMLDivElement>(null);
   const productRef = useRef<HTMLDivElement>(null);
+  const supportRef = useRef<HTMLDivElement>(null);
 
   const { user, isLoggedIn, logout, openAuthModal } = useAuth();
   const { lang, setLang } = useLang();
@@ -86,7 +97,6 @@ export function Header() {
     { path: "/", label: "Trang Chủ" },
     { path: "/ve-esg-valley", label: "Câu chuyện ESGValley" },
     { path: "/tin-tuc", label: "Tin Tức" },
-    { path: "/lien-he", label: "Hỗ Trợ Khách Hàng" },
   ];
 
   const currentLang = LANGUAGES.find(l => l.code === lang)!;
@@ -242,18 +252,57 @@ export function Header() {
             </AnimatePresence>
           </div>
 
-          {/* Remaining nav links */}
-          {navLinks.slice(2).map(link => (
-            <Link
-              key={link.path}
-              href={link.path}
-              className={`text-sm uppercase tracking-wider font-semibold transition-all duration-300 relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-[1px] hover:after:w-full after:transition-all after:duration-300 ${
-                location === link.path ? "after:w-full" : ""
+          {/* Tin Tức */}
+          <Link
+            href="/tin-tuc"
+            className={`text-sm uppercase tracking-wider font-semibold transition-all duration-300 relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-[1px] hover:after:w-full after:transition-all after:duration-300 ${
+              location === "/tin-tuc" ? "after:w-full" : ""
+            } ${isTransparent ? "after:bg-white" : "after:bg-primary"}`}
+          >
+            Tin Tức
+          </Link>
+
+          {/* Hỗ Trợ Khách Hàng dropdown */}
+          <div className="relative" ref={supportRef}>
+            <button
+              onClick={() => setSupportMenuOpen(v => !v)}
+              onMouseEnter={() => setSupportMenuOpen(true)}
+              className={`text-sm uppercase tracking-wider font-semibold transition-all duration-300 flex items-center gap-1 relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:h-[1px] after:transition-all after:duration-300 ${
+                location.startsWith("/lien-he") || location.startsWith("/chinh-sach") || location.startsWith("/faq") || location.startsWith("/tra-cuu") ? "after:w-full" : "after:w-0 hover:after:w-full"
               } ${isTransparent ? "after:bg-white" : "after:bg-primary"}`}
             >
-              {link.label}
-            </Link>
-          ))}
+              Hỗ Trợ Khách Hàng
+              <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-200 ${supportMenuOpen ? "rotate-180" : ""}`} />
+            </button>
+
+            <AnimatePresence>
+              {supportMenuOpen && (
+                <motion.div
+                  initial={{ opacity: 0, y: 8 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: 8 }}
+                  transition={{ duration: 0.18 }}
+                  onMouseLeave={() => setSupportMenuOpen(false)}
+                  className="absolute left-1/2 -translate-x-1/2 top-full mt-3 bg-background border border-border rounded-xl shadow-2xl z-[60] overflow-hidden"
+                  style={{ minWidth: "220px" }}
+                >
+                  <ul className="py-2">
+                    {supportMenu.map(item => (
+                      <li key={item.path}>
+                        <Link
+                          href={item.path}
+                          onClick={() => setSupportMenuOpen(false)}
+                          className="block text-sm text-foreground hover:text-primary hover:bg-primary/5 px-5 py-2.5 transition-colors"
+                        >
+                          {item.label}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </div>
         </nav>
 
         {/* Right icons */}
@@ -413,10 +462,30 @@ export function Header() {
                   className={`text-base font-medium py-3 px-2 border-b border-border/50 uppercase tracking-wider transition-colors hover:text-primary ${location === "/tin-tuc" ? "text-primary font-semibold" : ""}`}>
                   Tin Tức
                 </Link>
-                <Link href="/lien-he" onClick={() => setMobileMenuOpen(false)}
-                  className={`text-base font-medium py-3 px-2 border-b border-border/50 uppercase tracking-wider transition-colors hover:text-primary ${location === "/lien-he" ? "text-primary font-semibold" : ""}`}>
-                  Hỗ Trợ Khách Hàng
-                </Link>
+                {/* Mobile Hỗ Trợ accordion */}
+                <div className="border-b border-border/50">
+                  <button
+                    onClick={() => setMobileSupportOpen(v => !v)}
+                    className="w-full flex items-center justify-between text-base font-medium py-3 px-2 uppercase tracking-wider hover:text-primary transition-colors"
+                  >
+                    Hỗ Trợ Khách Hàng
+                    <ChevronDown className={`w-4 h-4 transition-transform ${mobileSupportOpen ? "rotate-180" : ""}`} />
+                  </button>
+                  {mobileSupportOpen && (
+                    <div className="pb-2 pl-3">
+                      {supportMenu.map(item => (
+                        <Link
+                          key={item.path}
+                          href={item.path}
+                          onClick={() => setMobileMenuOpen(false)}
+                          className="block text-sm text-foreground hover:text-primary px-2 py-2 transition-colors"
+                        >
+                          {item.label}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                </div>
               </nav>
 
               <div className="px-4 py-3 border-t border-border">
