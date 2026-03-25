@@ -125,7 +125,7 @@ export function Header() {
         {/* Logo */}
         <Link href="/" className="flex-shrink-0">
           <img
-            src="/images/logo-esg-valley.png"
+            src={isTransparent ? "/images/logo-white.png" : "/images/logo-esg-valley.png"}
             alt="ESG Valley"
             className="h-14 md:h-16 w-auto object-contain transition-all duration-300"
           />
