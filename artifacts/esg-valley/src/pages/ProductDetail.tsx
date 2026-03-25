@@ -34,7 +34,7 @@ export default function ProductDetail() {
 
   const handleAddToCart = () => {
     if (!isLoggedIn) { openAuthModal(); return; }
-    addItem({ product, quantity: 1 });
+    addItem(product);
     setAdded(true);
     setTimeout(() => setAdded(false), 2000);
   };
@@ -50,7 +50,7 @@ export default function ProductDetail() {
     <div className="bg-white min-h-screen">
 
       {/* Breadcrumb */}
-      <div className="max-w-6xl mx-auto px-6 lg:px-12 pt-8 pb-0">
+      <div className="max-w-6xl mx-auto px-6 lg:px-12 pt-28 pb-0">
         <nav className="flex items-center gap-1.5 text-xs text-muted-foreground">
           <button onClick={() => navigate("/")} className="hover:text-primary transition-colors">Trang chủ</button>
           <ChevronRight className="w-3.5 h-3.5" />
