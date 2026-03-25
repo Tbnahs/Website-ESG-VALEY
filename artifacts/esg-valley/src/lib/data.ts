@@ -95,7 +95,7 @@ export const esgPillars = [
     textAccent: "text-emerald-700",
     description: "Chúng tôi hiểu rằng môi trường là nền tảng cho sự sống và sự phát triển. Mỗi hành động đều hướng đến giảm thiểu tác động tiêu cực đến thiên nhiên – từ tối ưu hóa sử dụng tài nguyên, giảm phát thải carbon, đến thúc đẩy mô hình sản xuất – tiêu dùng xanh. Đó là cách chúng tôi chung tay bảo vệ hành tinh cho các thế hệ sau.",
     points: ["Canh tác hữu cơ 100%", "Giảm phát thải carbon", "Bảo tồn đa dạng sinh học"],
-    image: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&q=80&w=900"
+    image: "/images/vong-tuan-hoan.png"
   },
   {
     code: "S",
