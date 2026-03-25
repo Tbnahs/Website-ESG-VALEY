@@ -2,19 +2,31 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronRight, ShoppingCart, CheckCircle } from "lucide-react";
 import { products } from "@/lib/data";
-import { Link } from "wouter";
+import { Link, useLocation } from "wouter";
 import { useCart } from "@/lib/cart";
+import { useAuth } from "@/lib/auth";
 
 export default function Products() {
   const [activeCategory, setActiveCategory] = useState("Tất cả");
   const categories = ["Tất cả", "Trà", "Matcha", "Trà Cụ", "Dịch Vụ Đặc Biệt"];
   const { addItem } = useCart();
+  const { isLoggedIn, openAuthModal } = useAuth();
+  const [, navigate] = useLocation();
   const [addedId, setAddedId] = useState<number | null>(null);
 
   const handleAddToCart = (product: typeof products[0]) => {
+    if (!isLoggedIn) {
+      openAuthModal();
+      return;
+    }
     addItem(product);
     setAddedId(product.id);
     setTimeout(() => setAddedId(null), 1500);
+  };
+
+  const handleContact = () => {
+    navigate("/ho-tro");
+    setTimeout(() => { window.location.hash = "lien-he"; }, 150);
   };
 
   useEffect(() => {
@@ -133,7 +145,10 @@ export default function Products() {
 
                     {/* CTA */}
                     <div className="flex items-center gap-3">
-                      <button className="px-5 py-2.5 border border-primary text-primary text-sm font-semibold rounded-full hover:bg-primary/10 transition-colors">
+                      <button
+                        onClick={handleContact}
+                        className="px-5 py-2.5 border border-primary text-primary text-sm font-semibold rounded-full hover:bg-primary/10 transition-colors"
+                      >
                         Liên hệ báo giá
                       </button>
                       <button
