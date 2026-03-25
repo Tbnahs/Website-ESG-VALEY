@@ -42,13 +42,12 @@ export default function Contact() {
         />
         <div className="absolute inset-0 bg-black/55" />
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="font-display text-4xl md:text-5xl font-bold text-white mb-4">Liên Hệ</h1>
+          <h1 className="font-display text-4xl md:text-5xl font-bold text-white mb-4">Hỗ trợ khách hàng</h1>
           <p className="text-white/80 max-w-2xl mx-auto">
             Hãy để lại lời nhắn, chúng tôi luôn sẵn sàng lắng nghe và đồng hành cùng bạn.
           </p>
         </div>
       </div>
-
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-24">
           {/* Form */}
