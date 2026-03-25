@@ -16,7 +16,7 @@ const timelineData = [
     title: "Điểm Khởi Đầu",
     content:
       "Từ những đồi chè cổ hàng trăm năm tuổi, nơi mỗi búp trà là kết tinh của đất trời và bàn tay người nông dân, ESG Valley chính thức ra đời. Chúng tôi bắt đầu với tâm niệm: trà không chỉ là thức uống – đó là di sản văn hóa cần được gìn giữ và tôn vinh.\n\nNăm đó, giữa vô số thách thức về thị trường, chúng tôi vẫn chọn đi con đường khó hơn: xây dựng chuỗi cung ứng minh bạch, gắn kết trực tiếp với người trồng trà, hướng tới phát triển bền vững theo tiêu chuẩn quốc tế.",
-    img: "https://images.unsplash.com/photo-1563822249366-3efb23b8e0c9?w=700&q=80",
+    img: "/images/hanh-trinh.jpg",
   },
   {
     year: 2022,
