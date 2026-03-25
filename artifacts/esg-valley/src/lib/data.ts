@@ -5,7 +5,7 @@ export const products = [
     category: "Trà",
     description: "Hộp quà tặng cao cấp Tết 2026, tinh hoa trà Việt – trọn vẹn tâm tình.",
     price: "Liên hệ",
-    image: "https://images.unsplash.com/photo-1576092762791-dd9e2220afa1?auto=format&fit=crop&q=80&w=800"
+    image: "/images/product-ma-dao.png"
   },
   {
     id: 2,
@@ -13,7 +13,7 @@ export const products = [
     category: "Trà",
     description: "Thuở hồng hoang, khi Thần Nông nếm bách thảo và phát hiện lá trà có thể giải độc, đất Việt cũng bắt đầu ghi dấu sự sống nơi núi Tản Viên – vùng non thiêng hội tụ linh khí đất trời.",
     price: "Liên hệ",
-    image: "https://images.unsplash.com/photo-1594631252845-29fc4cc8c0a1?auto=format&fit=crop&q=80&w=800"
+    image: "/images/product-tan-vien.png"
   },
   {
     id: 3,
@@ -21,7 +21,7 @@ export const products = [
     category: "Trà",
     description: "Mạc Triều Trà mang trong mình câu chuyện về sự chắt lọc, nâng tầm và gửi gắm của bao thế hệ. Ban đầu, chén trà vốn chỉ là thức uống dân dã, giản dị bên mái nhà sàn, bên nương chè xanh.",
     price: "Liên hệ",
-    image: "https://images.unsplash.com/photo-1564890369478-c89ca6d9cde9?auto=format&fit=crop&q=80&w=800"
+    image: "/images/product-mac-trieu.png"
   },
   {
     id: 4,
@@ -29,7 +29,7 @@ export const products = [
     category: "Trà",
     description: "Trải qua suốt chiều dài lịch sử, từ thuở dựng nước đến hôm nay, những giá trị văn hóa không ngừng được truyền lại như một báu vật vô giá. Trà – không chỉ là thức uống – đã trở thành món quà tinh thần thiêng liêng.",
     price: "Liên hệ",
-    image: "https://images.unsplash.com/photo-1582793988951-9aed5509eb97?auto=format&fit=crop&q=80&w=800"
+    image: "/images/product-bach-nien.png"
   },
   {
     id: 5,
