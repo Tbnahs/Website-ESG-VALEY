@@ -252,16 +252,6 @@ export function Header() {
             </AnimatePresence>
           </div>
 
-          {/* Tin Tức */}
-          <Link
-            href="/tin-tuc"
-            className={`text-sm uppercase tracking-wider font-semibold transition-all duration-300 relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-[1px] hover:after:w-full after:transition-all after:duration-300 ${
-              location === "/tin-tuc" ? "after:w-full" : ""
-            } ${isTransparent ? "after:bg-white" : "after:bg-primary"}`}
-          >
-            Tin Tức
-          </Link>
-
           {/* Hỗ Trợ Khách Hàng dropdown */}
           <div className="relative" ref={supportRef}>
             <button
@@ -303,6 +293,16 @@ export function Header() {
               )}
             </AnimatePresence>
           </div>
+
+          {/* Tin Tức */}
+          <Link
+            href="/tin-tuc"
+            className={`text-sm uppercase tracking-wider font-semibold transition-all duration-300 relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-[1px] hover:after:w-full after:transition-all after:duration-300 ${
+              location === "/tin-tuc" ? "after:w-full" : ""
+            } ${isTransparent ? "after:bg-white" : "after:bg-primary"}`}
+          >
+            Tin Tức
+          </Link>
         </nav>
 
         {/* Right icons */}
@@ -458,10 +458,6 @@ export function Header() {
                   )}
                 </div>
 
-                <Link href="/tin-tuc" onClick={() => setMobileMenuOpen(false)}
-                  className={`text-base font-medium py-3 px-2 border-b border-border/50 uppercase tracking-wider transition-colors hover:text-primary ${location === "/tin-tuc" ? "text-primary font-semibold" : ""}`}>
-                  Tin Tức
-                </Link>
                 {/* Mobile Hỗ Trợ accordion */}
                 <div className="border-b border-border/50">
                   <button
@@ -486,6 +482,10 @@ export function Header() {
                     </div>
                   )}
                 </div>
+                <Link href="/tin-tuc" onClick={() => setMobileMenuOpen(false)}
+                  className={`text-base font-medium py-3 px-2 border-b border-border/50 uppercase tracking-wider transition-colors hover:text-primary ${location === "/tin-tuc" ? "text-primary font-semibold" : ""}`}>
+                  Tin Tức
+                </Link>
               </nav>
 
               <div className="px-4 py-3 border-t border-border">
