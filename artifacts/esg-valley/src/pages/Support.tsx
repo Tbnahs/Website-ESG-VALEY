@@ -3,53 +3,60 @@ import { motion, AnimatePresence } from "framer-motion";
 import {
   MapPin, Phone, Mail, Clock, ChevronDown,
   Shield, RefreshCw, HelpCircle, MessageSquare, Search, Package,
-  CheckCircle, AlertCircle, Truck, RotateCcw, Lock, Eye, FileText,
+  CheckCircle, AlertCircle, Truck, RotateCcw, Lock, Eye, FileText, Send,
 } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { useLocation } from "wouter";
 import { useOrders } from "@/lib/orders";
 
 const SECTIONS = [
-  { id: "lien-he",           label: "Liên Hệ",                icon: MessageSquare },
+  { id: "lien-he",            label: "Liên Hệ",               icon: MessageSquare },
   { id: "chinh-sach-bao-mat", label: "Chính Sách Bảo Mật",   icon: Shield },
   { id: "chinh-sach-doi-tra", label: "Chính Sách Đổi Trả",   icon: RefreshCw },
-  { id: "faq",               label: "Câu Hỏi Thường Gặp",    icon: HelpCircle },
-  { id: "tra-cuu-don-hang",  label: "Tra Cứu Đơn Hàng",      icon: Package },
+  { id: "faq",                label: "Câu Hỏi Thường Gặp",   icon: HelpCircle },
+  { id: "tra-cuu-don-hang",   label: "Tra Cứu Đơn Hàng",     icon: Package },
 ];
+
+const PRODUCTS = ["Tản Viên Trà", "Mạc Triều Trà", "Bách Niên Trà", "Thượng Cổ Trà"];
 
 const faqs = [
   {
-    q: "ESG Valley có giao hàng toàn quốc không?",
-    a: "Có, chúng tôi giao hàng đến tất cả 63 tỉnh thành trên toàn quốc. Thời gian giao hàng thông thường từ 2–5 ngày làm việc. Đối với khu vực Hà Nội và TP.HCM, chúng tôi có dịch vụ giao nhanh trong ngày."
+    q: "Chè của bạn được trồng ở đâu? Có gì đặc biệt so với các vùng khác?",
+    a: "Chè của chúng tôi được trồng tại các vùng nguyên liệu nổi tiếng như Tản Viên, Mộc Châu, Hà Giang – nơi có khí hậu quanh năm mát mẻ, đất đỏ bazan giàu dưỡng chất và sương mù bao phủ vào mỗi sáng tinh mơ. Chính những điều kiện tự nhiên đặc biệt này đã tạo ra hương vị chè thanh thuần, tinh tế và sắc vị đậm đà mà ít nơi nào có được. Chúng chỉ là vùng chè tinh anh nhất, nơi chúng tôi áp dụng kỹ thuật canh tác truyền thống, kết hợp giữa thiên nhiên và bàn tay cần mẫn của người dân bản địa.",
   },
   {
-    q: "Làm thế nào để phân biệt trà hữu cơ ESG Valley?",
-    a: "Tất cả sản phẩm của ESG Valley đều có tem quét mã QR truy xuất nguồn gốc rõ ràng từ vườn trồng đến thành phẩm. Bạn chỉ cần quét mã QR trên bao bì để xem toàn bộ hành trình của sản phẩm."
+    q: "Chè bên bạn có đạt chuẩn hữu cơ không? Có dùng thuốc bảo vệ thực vật không?",
+    a: "Tất cả sản phẩm của ESG Valley đều được trồng theo tiêu chuẩn hữu cơ, không sử dụng thuốc trừ sâu hay phân bón hóa học. Chúng tôi có chứng nhận hữu cơ từ các tổ chức uy tín và tem truy xuất nguồn gốc QR trên mỗi sản phẩm.",
   },
   {
-    q: "ESG Valley có dịch vụ tiệc trà tại nhà không?",
-    a: "Hiện tại chúng tôi cung cấp dịch vụ tiệc trà di sản tại không gian Showroom và nhận tổ chức tại sự kiện doanh nghiệp với quy mô từ 10–50 khách. Vui lòng liên hệ trước ít nhất 3 ngày để được sắp xếp."
+    q: "Khi nào là thời điểm tốt nhất để uống chè để có lợi cho sức khỏe?",
+    a: "Uống chè vào buổi sáng giúp tỉnh táo và tăng cường trao đổi chất. Buổi chiều là thời điểm lý tưởng để thưởng trà và thư giãn. Tránh uống chè quá muộn vào buổi tối để không ảnh hưởng đến giấc ngủ.",
   },
   {
-    q: "Sản phẩm có hạn sử dụng bao lâu?",
-    a: "Trà khô của ESG Valley có hạn sử dụng từ 12–24 tháng tùy loại, nếu được bảo quản đúng cách ở nơi khô thoáng, tránh ánh sáng trực tiếp và mùi lạ. Trà cụ (ấm, tách) không có hạn sử dụng nhưng nên vệ sinh đúng cách sau mỗi lần dùng."
+    q: "Một ấm chè có thể pha được bao nhiêu lần nước? Hương vị có thay đổi không?",
+    a: "Tùy loại trà, có thể pha từ 3–7 lần nước. Mỗi lần pha sẽ mang lại một tầng hương vị khác nhau – ban đầu đậm đà và thơm nồng, về sau nhẹ nhàng và ngọt hậu hơn. Đây chính là nghệ thuật thưởng trà mà ESG Valley muốn chia sẻ.",
   },
   {
-    q: "Tôi có thể mua sỉ không?",
-    a: "ESG Valley có chương trình hợp tác dành cho khách hàng mua số lượng lớn, nhà phân phối và doanh nghiệp. Vui lòng liên hệ qua email b2b@esgvalley.vn hoặc gọi hotline 0969 510 955 để được tư vấn."
+    q: "Tôi nên bảo quản chè như thế nào để giữ được hương vị lâu dài nhất?",
+    a: "Bảo quản chè trong hộp kín, tránh ánh sáng trực tiếp, ẩm và mùi lạ. Không để chè trong tủ lạnh. Nên dùng hộp thiếc hoặc hộp gốm sứ để bảo quản tốt nhất, giúp duy trì hương thơm trong 12–24 tháng.",
   },
   {
-    q: "Làm thế nào để bảo quản trà đúng cách?",
-    a: "Trà nên được bảo quản trong hộp kín, tránh ẩm, ánh sáng và mùi lạ. Không để trà trong tủ lạnh vì độ ẩm cao có thể làm hỏng trà. Nên dùng hộp thiếc hoặc hộp gốm để bảo quản tốt nhất."
+    q: "Chè bên bạn có phù hợp để làm quà tặng không? Có hộp quà không?",
+    a: "Có, ESG Valley có dịch vụ đóng gói quà tặng cao cấp với hộp gift box sang trọng, phù hợp làm quà biếu doanh nghiệp, sự kiện hay quà tặng cá nhân. Vui lòng liên hệ để được tư vấn bộ quà phù hợp.",
+  },
+  {
+    q: "Tôi muốn mua hàng online thì làm thế nào? Có giao hàng toàn quốc không?",
+    a: "Bạn có thể đặt hàng trực tiếp trên website, qua Zalo 0969 510 955 hoặc email. Chúng tôi giao hàng toàn quốc, thời gian 2–5 ngày làm việc. Nội thành Hà Nội có dịch vụ giao nhanh trong ngày.",
   },
 ];
 
 export default function Support() {
   const [activeSection, setActiveSection] = useState("lien-he");
-  const [openFaq, setOpenFaq] = useState<number | null>(null);
+  const [openFaq, setOpenFaq] = useState<number | null>(0);
   const [orderCode, setOrderCode] = useState("");
-  const [foundOrder, setFoundOrder] = useState<ReturnType<typeof lookupOrder> | null>(null);
+  const [foundOrder, setFoundOrder] = useState<ReturnType<ReturnType<typeof useOrders>["lookupOrder"]> | null>(null);
   const [orderNotFound, setOrderNotFound] = useState(false);
+  const [selectedProducts, setSelectedProducts] = useState<string[]>([]);
   const { toast } = useToast();
   const { lookupOrder } = useOrders();
   const [, navigate] = useLocation();
@@ -66,10 +73,7 @@ export default function Support() {
 
   useEffect(() => {
     scrollToHash(window.location.hash.replace("#", ""));
-
-    const onHashChange = () => {
-      scrollToHash(window.location.hash.replace("#", ""));
-    };
+    const onHashChange = () => scrollToHash(window.location.hash.replace("#", ""));
     window.addEventListener("hashchange", onHashChange);
     return () => window.removeEventListener("hashchange", onHashChange);
   }, []);
@@ -84,6 +88,7 @@ export default function Support() {
     e.preventDefault();
     toast({ title: "Gửi thành công", description: "Chúng tôi đã nhận được tin nhắn và sẽ phản hồi trong vòng 24 giờ." });
     (e.target as HTMLFormElement).reset();
+    setSelectedProducts([]);
   };
 
   const handleOrderLookup = (e: React.FormEvent) => {
@@ -98,347 +103,352 @@ export default function Support() {
     }
   };
 
+  const toggleProduct = (p: string) =>
+    setSelectedProducts(prev => prev.includes(p) ? prev.filter(x => x !== p) : [...prev, p]);
+
   return (
-    <div className="w-full bg-background min-h-screen">
-      {/* Hero */}
-      <div className="relative py-28 overflow-hidden">
-        <img
-          src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=1600&q=85"
-          alt="Hỗ trợ khách hàng ESG Valley"
-          className="absolute inset-0 w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-black/60" />
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <p className="text-[#C9A84C] text-sm uppercase tracking-[0.3em] font-semibold mb-3">ESG Valley</p>
-          <h1 className="font-display text-4xl md:text-5xl font-bold text-white mb-4">Hỗ Trợ Khách Hàng</h1>
-          <p className="text-white/80 max-w-2xl mx-auto text-lg">
-            Luôn sẵn sàng lắng nghe và đồng hành cùng bạn trên hành trình thưởng trà.
-          </p>
-        </div>
-      </div>
+    <div className="w-full bg-white min-h-screen">
 
-
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-24">
-
-        {/* ── 1. LIÊN HỆ ── */}
-        <section ref={el => { sectionRefs.current["lien-he"] = el; }} id="lien-he" className="scroll-mt-36">
-          <SectionHeading icon={MessageSquare} title="Liên Hệ Với Chúng Tôi" subtitle="Hãy để lại lời nhắn, chúng tôi sẽ phản hồi trong vòng 24 giờ làm việc." />
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 mt-10">
-            <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-              <form onSubmit={handleContactSubmit} className="space-y-5">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-                  <Field label="Họ và tên *">
-                    <input type="text" required className="w-full px-4 py-3 bg-card border border-border rounded-sm focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all" />
-                  </Field>
-                  <Field label="Số điện thoại">
-                    <input type="tel" className="w-full px-4 py-3 bg-card border border-border rounded-sm focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all" />
-                  </Field>
-                </div>
-                <Field label="Email *">
-                  <input type="email" required className="w-full px-4 py-3 bg-card border border-border rounded-sm focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all" />
-                </Field>
-                <Field label="Chủ đề">
-                  <select className="w-full px-4 py-3 bg-card border border-border rounded-sm focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all">
-                    <option>Tư vấn sản phẩm</option>
-                    <option>Đơn hàng & vận chuyển</option>
-                    <option>Đổi trả & hoàn tiền</option>
-                    <option>Hợp tác kinh doanh</option>
-                    <option>Khác</option>
-                  </select>
-                </Field>
-                <Field label="Nội dung *">
-                  <textarea required rows={5} className="w-full px-4 py-3 bg-card border border-border rounded-sm focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all resize-none"></textarea>
-                </Field>
-                <button type="submit" className="px-8 py-4 bg-primary text-primary-foreground font-bold uppercase tracking-wider hover:bg-primary/90 transition-all shadow-lg rounded-sm">
-                  Gửi Tin Nhắn
-                </button>
-              </form>
-            </motion.div>
-            <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-              <div className="space-y-6 mb-8">
-                {[
-                  { icon: MapPin, label: "Địa chỉ Showroom", value: "123 Đường Trà, Quận Tây Hồ, Hà Nội" },
-                  { icon: Phone, label: "Điện thoại / Zalo", value: "0969 510 955" },
-                  { icon: Mail, label: "Email", value: "info@esgvalley.vn" },
-                  { icon: Clock, label: "Giờ mở cửa", value: "Thứ 2 – Chủ Nhật: 08:00 – 21:00" },
-                ].map(({ icon: Icon, label, value }) => (
-                  <div key={label} className="flex items-start gap-4">
-                    <div className="w-11 h-11 bg-primary/10 rounded-full flex items-center justify-center shrink-0">
-                      <Icon className="w-5 h-5 text-primary" />
-                    </div>
-                    <div>
-                      <p className="font-bold text-sm text-foreground">{label}</p>
-                      <p className="text-muted-foreground mt-0.5">{value}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-              <div className="w-full h-56 bg-muted border border-border rounded-sm flex items-center justify-center overflow-hidden relative group cursor-pointer">
-                <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1524661135-423995f22d0b?w=800&q=80')] opacity-40 bg-cover bg-center grayscale" />
-                <div className="relative z-10 bg-background/80 backdrop-blur-sm px-5 py-2.5 rounded-full flex items-center shadow group-hover:scale-105 transition-transform">
-                  <MapPin className="w-4 h-4 text-primary mr-2" />
-                  <span className="font-semibold text-sm">Xem trên Google Maps</span>
-                </div>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-
-        <Divider />
-
-        {/* ── 2. CHÍNH SÁCH BẢO MẬT ── */}
-        <section ref={el => { sectionRefs.current["chinh-sach-bao-mat"] = el; }} id="chinh-sach-bao-mat" className="scroll-mt-36">
-          <SectionHeading icon={Shield} title="Chính Sách Bảo Mật" subtitle="ESG Valley cam kết bảo vệ thông tin cá nhân của khách hàng theo tiêu chuẩn cao nhất." />
-          <div className="mt-10 max-w-4xl space-y-8">
-            {[
-              {
-                icon: Lock,
-                title: "1. Thu thập thông tin",
-                body: "Chúng tôi chỉ thu thập những thông tin cần thiết để xử lý đơn hàng và cải thiện trải nghiệm của bạn, bao gồm: họ tên, số điện thoại, địa chỉ giao hàng, địa chỉ email. Chúng tôi không thu thập thông tin thẻ ngân hàng — mọi giao dịch thanh toán được xử lý an toàn qua cổng thanh toán được chứng nhận PCI-DSS.",
-              },
-              {
-                icon: Eye,
-                title: "2. Sử dụng thông tin",
-                body: "Thông tin của bạn được sử dụng để: xác nhận và xử lý đơn hàng, giao hàng và thông báo trạng thái vận chuyển, hỗ trợ giải quyết khiếu nại, gửi thông tin khuyến mãi (nếu bạn đồng ý). Chúng tôi không bán, trao đổi hay chia sẻ thông tin cá nhân của bạn với bên thứ ba vì mục đích thương mại.",
-              },
-              {
-                icon: Shield,
-                title: "3. Bảo mật thông tin",
-                body: "ESG Valley áp dụng các biện pháp bảo mật kỹ thuật tiên tiến bao gồm mã hóa SSL 256-bit, xác thực hai yếu tố và kiểm tra bảo mật định kỳ. Dữ liệu được lưu trữ trên máy chủ được bảo vệ bởi tường lửa và hệ thống phát hiện xâm nhập.",
-              },
-              {
-                icon: FileText,
-                title: "4. Quyền của khách hàng",
-                body: "Bạn có quyền yêu cầu xem, chỉnh sửa hoặc xóa thông tin cá nhân của mình bất kỳ lúc nào. Để thực hiện, vui lòng gửi email đến privacy@esgvalley.vn. Yêu cầu sẽ được xử lý trong vòng 5 ngày làm việc.",
-              },
-            ].map(({ icon: Icon, title, body }) => (
-              <motion.div
-                key={title}
-                initial={{ opacity: 0, y: 16 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.4 }}
-                className="flex gap-5 p-6 bg-card border border-border rounded-lg"
-              >
-                <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center shrink-0 mt-0.5">
-                  <Icon className="w-5 h-5 text-primary" />
-                </div>
-                <div>
-                  <h4 className="font-bold text-foreground mb-2">{title}</h4>
-                  <p className="text-muted-foreground leading-relaxed text-sm">{body}</p>
-                </div>
-              </motion.div>
-            ))}
-            <p className="text-xs text-muted-foreground italic">Chính sách có hiệu lực từ ngày 01/01/2025. Mọi thay đổi sẽ được thông báo trên website.</p>
-          </div>
-        </section>
-
-        <Divider />
-
-        {/* ── 3. CHÍNH SÁCH ĐỔI TRẢ ── */}
-        <section ref={el => { sectionRefs.current["chinh-sach-doi-tra"] = el; }} id="chinh-sach-doi-tra" className="scroll-mt-36">
-          <SectionHeading icon={RefreshCw} title="Chính Sách Đổi Trả Hàng" subtitle="Chúng tôi cam kết mang đến sự hài lòng tuyệt đối — đổi trả dễ dàng, minh bạch." />
-          <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
-            {[
-              { icon: CheckCircle, color: "text-green-600", bg: "bg-green-50", border: "border-green-200", title: "Được đổi trả", items: ["Sản phẩm bị lỗi do nhà sản xuất", "Sản phẩm giao sai mẫu mã / size", "Sản phẩm không đúng số lượng đặt hàng", "Sản phẩm bị hỏng do vận chuyển"] },
-              { icon: AlertCircle, color: "text-red-600", bg: "bg-red-50", border: "border-red-200", title: "Không đổi trả", items: ["Sản phẩm đã qua sử dụng, mở niêm phong", "Trà đã được pha / pha chế", "Sản phẩm mua theo chương trình giảm giá đặc biệt", "Hết thời gian đổi trả (sau 7 ngày)"] },
-              { icon: Truck, color: "text-blue-600", bg: "bg-blue-50", border: "border-blue-200", title: "Quy trình đổi trả", items: ["Liên hệ hotline hoặc email trong 7 ngày", "Cung cấp ảnh chụp lỗi sản phẩm", "Chúng tôi gửi hàng mới / hoàn tiền trong 3–5 ngày", "Phí vận chuyển đổi trả: ESG Valley chịu hoàn toàn"] },
-            ].map(({ icon: Icon, color, bg, border, title, items }) => (
-              <motion.div
-                key={title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.4 }}
-                className={`p-6 rounded-lg border ${border} ${bg}`}
-              >
-                <div className={`flex items-center gap-2 mb-4 ${color}`}>
-                  <Icon className="w-5 h-5" />
-                  <h4 className="font-bold">{title}</h4>
-                </div>
-                <ul className="space-y-2">
-                  {items.map(item => (
-                    <li key={item} className="text-sm text-foreground/80 flex gap-2">
-                      <span className="mt-1 shrink-0">•</span> {item}
-                    </li>
-                  ))}
-                </ul>
-              </motion.div>
-            ))}
-          </div>
-          <div className="max-w-4xl bg-card border border-border rounded-lg p-6">
-            <div className="flex items-start gap-4">
-              <RotateCcw className="w-6 h-6 text-primary shrink-0 mt-1" />
+      {/* ── SECTION 1: LIÊN HỆ ── */}
+      <section
+        ref={el => { sectionRefs.current["lien-he"] = el; }}
+        id="lien-he"
+        className="scroll-mt-24 max-w-6xl mx-auto px-6 lg:px-12 py-20"
+      >
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+          {/* Left: Contact Form */}
+          <div>
+            <h2 className="text-2xl font-bold text-foreground mb-8">Gửi tin nhắn cho chúng tôi</h2>
+            <form onSubmit={handleContactSubmit} className="space-y-5">
               <div>
-                <h4 className="font-bold mb-2">Hoàn tiền</h4>
-                <p className="text-sm text-muted-foreground leading-relaxed">Trong trường hợp không có sản phẩm thay thế, chúng tôi sẽ hoàn tiền 100% vào tài khoản ngân hàng hoặc ví điện tử của bạn trong vòng 5–7 ngày làm việc. Liên hệ <strong>0969 510 955</strong> hoặc <strong>support@esgvalley.vn</strong> để được hỗ trợ nhanh nhất.</p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <Divider />
-
-        {/* ── 4. FAQ ── */}
-        <section ref={el => { sectionRefs.current["faq"] = el; }} id="faq" className="scroll-mt-36">
-          <SectionHeading icon={HelpCircle} title="Câu Hỏi Thường Gặp" subtitle="Những thắc mắc phổ biến nhất từ cộng đồng trà nhân ESG Valley." />
-          <div className="mt-10 max-w-3xl space-y-3">
-            {faqs.map((faq, idx) => (
-              <div key={idx} className="border border-border rounded-lg overflow-hidden bg-card">
-                <button
-                  onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
-                  className="w-full px-6 py-5 flex justify-between items-center text-left hover:bg-muted/50 transition-colors"
-                >
-                  <span className="font-semibold text-foreground pr-4">{faq.q}</span>
-                  <ChevronDown className={`w-5 h-5 text-muted-foreground shrink-0 transition-transform duration-300 ${openFaq === idx ? "rotate-180" : ""}`} />
-                </button>
-                <AnimatePresence>
-                  {openFaq === idx && (
-                    <motion.div
-                      initial={{ height: 0, opacity: 0 }}
-                      animate={{ height: "auto", opacity: 1 }}
-                      exit={{ height: 0, opacity: 0 }}
-                      transition={{ duration: 0.28 }}
-                      className="overflow-hidden"
-                    >
-                      <div className="px-6 pb-5 pt-0 border-t border-border/60 text-muted-foreground text-sm leading-relaxed">
-                        <div className="pt-4">{faq.a}</div>
-                      </div>
-                    </motion.div>
-                  )}
-                </AnimatePresence>
-              </div>
-            ))}
-          </div>
-          <div className="mt-8 max-w-3xl p-5 bg-primary/5 border border-primary/20 rounded-lg text-sm text-foreground">
-            Không tìm thấy câu trả lời bạn cần?{" "}
-            <button
-              onClick={() => scrollTo("lien-he")}
-              className="text-primary font-semibold hover:underline"
-            >
-              Liên hệ trực tiếp với chúng tôi →
-            </button>
-          </div>
-        </section>
-
-        <Divider />
-
-        {/* ── 5. TRA CỨU ĐƠN HÀNG ── */}
-        <section ref={el => { sectionRefs.current["tra-cuu-don-hang"] = el; }} id="tra-cuu-don-hang" className="scroll-mt-36">
-          <SectionHeading icon={Package} title="Tra Cứu Đơn Hàng" subtitle="Nhập mã đơn hàng để kiểm tra trạng thái giao hàng của bạn." />
-          <div className="mt-10 max-w-xl">
-            <form onSubmit={handleOrderLookup} className="flex gap-3">
-              <div className="flex-1 relative">
-                <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
+                <label className="block text-sm font-medium text-foreground mb-1.5">Họ tên *</label>
                 <input
                   type="text"
-                  value={orderCode}
-                  onChange={e => { setOrderCode(e.target.value); setFoundOrder(null); setOrderNotFound(false); }}
-                  placeholder="Nhập mã đơn hàng (VD: ESG2026123456)"
-                  className="w-full pl-10 pr-4 py-3 bg-card border border-border rounded-sm focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all"
                   required
+                  placeholder="Nhập..."
+                  className="w-full px-4 py-3 border border-gray-200 rounded focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all text-sm"
                 />
               </div>
-              <button type="submit" className="px-6 py-3 bg-primary text-primary-foreground font-semibold rounded-sm hover:bg-primary/90 transition-all whitespace-nowrap">
-                Tra cứu
+              <div>
+                <label className="block text-sm font-medium text-foreground mb-1.5">Số điện thoại *</label>
+                <input
+                  type="tel"
+                  required
+                  placeholder="Nhập..."
+                  className="w-full px-4 py-3 border border-gray-200 rounded focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all text-sm"
+                />
+              </div>
+              <div>
+                <label className="block text-sm font-medium text-foreground mb-1.5">Lời nhắn của bạn</label>
+                <textarea
+                  rows={4}
+                  placeholder="Nhập tin nhắn..."
+                  className="w-full px-4 py-3 border border-gray-200 rounded focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all text-sm resize-none"
+                />
+              </div>
+              <div>
+                <label className="block text-sm font-medium text-foreground mb-3">Sản phẩm bạn quan tâm *</label>
+                <div className="space-y-2.5">
+                  {PRODUCTS.map(p => (
+                    <label key={p} className="flex items-center gap-3 cursor-pointer group">
+                      <div
+                        onClick={() => toggleProduct(p)}
+                        className={`w-5 h-5 rounded border-2 flex items-center justify-center transition-all shrink-0 ${selectedProducts.includes(p) ? "bg-[#3d7a3d] border-[#3d7a3d]" : "border-gray-300 group-hover:border-[#3d7a3d]"}`}
+                      >
+                        {selectedProducts.includes(p) && <CheckCircle className="w-3 h-3 text-white" />}
+                      </div>
+                      <span className="text-sm text-foreground">{p}</span>
+                    </label>
+                  ))}
+                </div>
+              </div>
+              <button
+                type="submit"
+                className="mt-2 flex items-center gap-2 px-7 py-3 bg-[#3d7a3d] text-white text-sm font-semibold rounded hover:bg-[#2f612f] transition-all"
+              >
+                Gửi tin nhắn <Send className="w-4 h-4" />
               </button>
             </form>
-            <p className="text-xs text-muted-foreground mt-2">Mã đơn hàng được hiển thị sau khi đặt hàng thành công (bắt đầu bằng ESG).</p>
-
-            <AnimatePresence>
-              {foundOrder && (
-                <motion.div
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: 10 }}
-                  className="mt-6 border border-border rounded-lg overflow-hidden"
-                >
-                  <div className="bg-green-50 border-b border-border px-6 py-4 flex items-center gap-3">
-                    <CheckCircle className="w-5 h-5 text-green-600" />
-                    <p className="font-bold text-green-800">Đơn hàng: <span className="font-mono">{foundOrder.code}</span></p>
-                  </div>
-                  <div className="px-6 py-5 space-y-3 bg-card">
-                    <div className="flex justify-between text-sm">
-                      <span className="text-muted-foreground">Trạng thái</span>
-                      <span className="font-semibold text-blue-600 flex items-center gap-1">
-                        <Truck className="w-4 h-4" /> {foundOrder.status}
-                      </span>
-                    </div>
-                    <div className="flex justify-between text-sm">
-                      <span className="text-muted-foreground">Ngày đặt hàng</span>
-                      <span className="font-semibold">
-                        {new Date(foundOrder.createdAt).toLocaleString("vi-VN", { day: "2-digit", month: "2-digit", year: "numeric", hour: "2-digit", minute: "2-digit" })}
-                      </span>
-                    </div>
-                    <div className="flex justify-between text-sm">
-                      <span className="text-muted-foreground">Người đặt</span>
-                      <span className="font-semibold">{foundOrder.buyer.name} — {foundOrder.buyer.phone}</span>
-                    </div>
-                    <div className="flex justify-between text-sm">
-                      <span className="text-muted-foreground">Địa chỉ giao</span>
-                      <span className="font-semibold text-right max-w-[55%]">{foundOrder.buyer.address}</span>
-                    </div>
-
-                    <div className="pt-3 border-t border-border">
-                      <p className="text-xs text-muted-foreground font-semibold uppercase tracking-wider mb-2">Sản phẩm đặt</p>
-                      <ul className="space-y-1">
-                        {foundOrder.items.map(({ product, quantity }) => (
-                          <li key={product.id} className="flex justify-between text-sm">
-                            <span>{product.name}</span>
-                            <span className="font-semibold text-muted-foreground">x{quantity}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-
-                    <div className="pt-3 border-t border-border">
-                      {(() => {
-                        const steps = ["Đã đặt hàng", "Đang xử lý", "Đang vận chuyển", "Hoàn tất"];
-                        const currentIdx = steps.indexOf(foundOrder.status);
-                        return (
-                          <div className="flex items-center gap-0">
-                            {steps.map((s, i) => (
-                              <div key={s} className="flex items-center flex-1">
-                                <div className="flex flex-col items-center flex-1">
-                                  <div className={`w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold ${i <= currentIdx ? "bg-primary text-primary-foreground" : "bg-muted border-2 border-border text-muted-foreground"}`}>
-                                    {i <= currentIdx ? <CheckCircle className="w-3.5 h-3.5" /> : i + 1}
-                                  </div>
-                                  <span className="text-[9px] mt-1 text-center text-muted-foreground leading-tight">{s}</span>
-                                </div>
-                                {i < steps.length - 1 && (
-                                  <div className={`h-0.5 flex-1 mb-4 ${i < currentIdx ? "bg-primary" : "bg-border"}`} />
-                                )}
-                              </div>
-                            ))}
-                          </div>
-                        );
-                      })()}
-                    </div>
-                  </div>
-                </motion.div>
-              )}
-
-              {orderNotFound && (
-                <motion.div
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: 10 }}
-                  className="mt-6 p-5 border border-red-200 bg-red-50 rounded-lg flex items-start gap-3"
-                >
-                  <AlertCircle className="w-5 h-5 text-red-600 shrink-0 mt-0.5" />
-                  <div>
-                    <p className="font-semibold text-red-800">Không tìm thấy đơn hàng</p>
-                    <p className="text-sm text-red-700 mt-1">Vui lòng kiểm tra lại mã đơn hàng hoặc{" "}
-                      <button onClick={() => scrollTo("lien-he")} className="underline font-medium">liên hệ hỗ trợ</button>.
-                    </p>
-                  </div>
-                </motion.div>
-              )}
-            </AnimatePresence>
           </div>
-        </section>
 
-      </div>
+          {/* Right: Contact Info + Map */}
+          <div>
+            <h2 className="text-2xl font-bold text-foreground mb-8">Thông tin liên hệ</h2>
+            <div className="space-y-5 mb-8">
+              {[
+                { icon: MapPin, value: "Số 386, đường Cách mạng tháng Tám, Phường Gia Sàng, Thái Nguyên" },
+                { icon: Mail,   value: "esgvalley.com" },
+                { icon: Phone,  value: "0969 510 955" },
+                { icon: Mail,   value: "contact@esgvalley.vn" },
+              ].map(({ icon: Icon, value }, i) => (
+                <div key={i} className="flex items-start gap-3">
+                  <div className="w-9 h-9 border border-gray-200 rounded-full flex items-center justify-center shrink-0">
+                    <Icon className="w-4 h-4 text-[#3d7a3d]" />
+                  </div>
+                  <p className="text-sm text-foreground pt-2">{value}</p>
+                </div>
+              ))}
+            </div>
+
+            {/* Google Maps */}
+            <div className="w-full h-64 rounded-lg overflow-hidden border border-gray-200">
+              <iframe
+                title="ESG Valley Showroom"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3716.9837604895685!2d105.83844087604!3d21.59256068000!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x313517cb5a0b9ae3%3A0xb30e8c33e2a0d64!2zVGjDoWkgTmd1ecOqbiwgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1710000000000!5m2!1svi!2s"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div className="border-t border-gray-100" />
+
+      {/* ── SECTION 2: FAQ ── */}
+      <section
+        ref={el => { sectionRefs.current["faq"] = el; }}
+        id="faq"
+        className="scroll-mt-24 max-w-6xl mx-auto px-6 lg:px-12 py-20"
+      >
+        <div className="text-center mb-12">
+          <h2 className="text-3xl font-bold text-foreground mb-3">FAQs</h2>
+          <p className="text-muted-foreground max-w-xl mx-auto text-sm leading-relaxed">
+            Tổng hợp những câu hỏi thường gặp từ cộng đồng trà nhân ESG Valley. Không tìm thấy câu trả lời?{" "}
+            <button onClick={() => scrollTo("lien-he")} className="text-[#3d7a3d] hover:underline font-medium">
+              Liên hệ với chúng tôi.
+            </button>
+          </p>
+        </div>
+        <div className="max-w-3xl mx-auto divide-y divide-gray-100 border-y border-gray-100">
+          {faqs.map((faq, idx) => (
+            <div key={idx}>
+              <button
+                onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
+                className="w-full flex justify-between items-center py-5 text-left gap-4 hover:text-[#3d7a3d] transition-colors"
+              >
+                <span className={`text-sm font-medium leading-snug ${openFaq === idx ? "text-[#3d7a3d]" : "text-foreground"}`}>
+                  {faq.q}
+                </span>
+                <ChevronDown className={`w-5 h-5 shrink-0 text-gray-400 transition-transform duration-200 ${openFaq === idx ? "rotate-180 text-[#3d7a3d]" : ""}`} />
+              </button>
+              <AnimatePresence>
+                {openFaq === idx && (
+                  <motion.div
+                    initial={{ height: 0, opacity: 0 }}
+                    animate={{ height: "auto", opacity: 1 }}
+                    exit={{ height: 0, opacity: 0 }}
+                    transition={{ duration: 0.22 }}
+                    className="overflow-hidden"
+                  >
+                    <p className="pb-5 text-sm text-muted-foreground leading-relaxed pr-8">{faq.a}</p>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <div className="border-t border-gray-100" />
+
+      {/* ── SECTION 3: CHÍNH SÁCH BẢO MẬT ── */}
+      <section
+        ref={el => { sectionRefs.current["chinh-sach-bao-mat"] = el; }}
+        id="chinh-sach-bao-mat"
+        className="scroll-mt-24 max-w-6xl mx-auto px-6 lg:px-12 py-20"
+      >
+        <SectionHeading icon={Shield} title="Chính Sách Bảo Mật" subtitle="ESG Valley cam kết bảo vệ thông tin cá nhân của khách hàng theo tiêu chuẩn cao nhất." />
+        <div className="mt-10 max-w-4xl space-y-5">
+          {[
+            { icon: Lock, title: "1. Thu thập thông tin", body: "Chúng tôi chỉ thu thập những thông tin cần thiết để xử lý đơn hàng và cải thiện trải nghiệm của bạn, bao gồm: họ tên, số điện thoại, địa chỉ giao hàng, địa chỉ email. Chúng tôi không thu thập thông tin thẻ ngân hàng — mọi giao dịch thanh toán được xử lý an toàn qua cổng thanh toán được chứng nhận PCI-DSS." },
+            { icon: Eye,  title: "2. Sử dụng thông tin", body: "Thông tin của bạn được sử dụng để: xác nhận và xử lý đơn hàng, giao hàng và thông báo trạng thái vận chuyển, hỗ trợ giải quyết khiếu nại, gửi thông tin khuyến mãi (nếu bạn đồng ý). Chúng tôi không bán, trao đổi hay chia sẻ thông tin cá nhân của bạn với bên thứ ba vì mục đích thương mại." },
+            { icon: Shield, title: "3. Bảo mật thông tin", body: "ESG Valley áp dụng các biện pháp bảo mật kỹ thuật tiên tiến bao gồm mã hóa SSL 256-bit, xác thực hai yếu tố và kiểm tra bảo mật định kỳ. Dữ liệu được lưu trữ trên máy chủ được bảo vệ bởi tường lửa và hệ thống phát hiện xâm nhập." },
+            { icon: FileText, title: "4. Quyền của khách hàng", body: "Bạn có quyền yêu cầu xem, chỉnh sửa hoặc xóa thông tin cá nhân của mình bất kỳ lúc nào. Để thực hiện, vui lòng gửi email đến privacy@esgvalley.vn. Yêu cầu sẽ được xử lý trong vòng 5 ngày làm việc." },
+          ].map(({ icon: Icon, title, body }) => (
+            <motion.div
+              key={title}
+              initial={{ opacity: 0, y: 12 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.35 }}
+              className="flex gap-5 p-6 border border-gray-100 rounded-lg bg-gray-50"
+            >
+              <div className="w-9 h-9 bg-[#3d7a3d]/10 rounded-full flex items-center justify-center shrink-0 mt-0.5">
+                <Icon className="w-4 h-4 text-[#3d7a3d]" />
+              </div>
+              <div>
+                <h4 className="font-semibold text-foreground mb-1.5 text-sm">{title}</h4>
+                <p className="text-muted-foreground leading-relaxed text-sm">{body}</p>
+              </div>
+            </motion.div>
+          ))}
+          <p className="text-xs text-muted-foreground italic pt-2">Chính sách có hiệu lực từ ngày 01/01/2025. Mọi thay đổi sẽ được thông báo trên website.</p>
+        </div>
+      </section>
+
+      <div className="border-t border-gray-100" />
+
+      {/* ── SECTION 4: CHÍNH SÁCH ĐỔI TRẢ ── */}
+      <section
+        ref={el => { sectionRefs.current["chinh-sach-doi-tra"] = el; }}
+        id="chinh-sach-doi-tra"
+        className="scroll-mt-24 max-w-6xl mx-auto px-6 lg:px-12 py-20"
+      >
+        <SectionHeading icon={RefreshCw} title="Chính Sách Đổi Trả Hàng" subtitle="Chúng tôi cam kết mang đến sự hài lòng tuyệt đối — đổi trả dễ dàng, minh bạch." />
+        <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-5 mb-8">
+          {[
+            { icon: CheckCircle, color: "text-green-700", bg: "bg-green-50", border: "border-green-100", title: "Được đổi trả", items: ["Sản phẩm bị lỗi do nhà sản xuất", "Sản phẩm giao sai mẫu mã / size", "Sản phẩm không đúng số lượng đặt hàng", "Sản phẩm bị hỏng do vận chuyển"] },
+            { icon: AlertCircle, color: "text-red-600",   bg: "bg-red-50",   border: "border-red-100",   title: "Không đổi trả", items: ["Sản phẩm đã qua sử dụng, mở niêm phong", "Trà đã được pha / pha chế", "Sản phẩm mua theo chương trình giảm giá đặc biệt", "Hết thời gian đổi trả (sau 7 ngày)"] },
+            { icon: Truck,       color: "text-blue-600",  bg: "bg-blue-50",  border: "border-blue-100",  title: "Quy trình đổi trả", items: ["Liên hệ hotline hoặc email trong 7 ngày", "Cung cấp ảnh chụp lỗi sản phẩm", "Chúng tôi gửi hàng mới / hoàn tiền trong 3–5 ngày", "Phí vận chuyển đổi trả: ESG Valley chịu hoàn toàn"] },
+          ].map(({ icon: Icon, color, bg, border, title, items }) => (
+            <div key={title} className={`p-6 rounded-lg border ${border} ${bg}`}>
+              <div className={`flex items-center gap-2 mb-4 ${color}`}>
+                <Icon className="w-4 h-4" />
+                <h4 className="font-semibold text-sm">{title}</h4>
+              </div>
+              <ul className="space-y-2">
+                {items.map(item => (
+                  <li key={item} className="text-xs text-foreground/75 flex gap-2">
+                    <span className="mt-0.5 shrink-0">•</span> {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+        <div className="max-w-4xl border border-gray-100 rounded-lg p-5 bg-gray-50">
+          <div className="flex items-start gap-4">
+            <RotateCcw className="w-5 h-5 text-[#3d7a3d] shrink-0 mt-0.5" />
+            <div>
+              <h4 className="font-semibold text-sm mb-1.5">Hoàn tiền</h4>
+              <p className="text-sm text-muted-foreground leading-relaxed">Trong trường hợp không có sản phẩm thay thế, chúng tôi sẽ hoàn tiền 100% vào tài khoản ngân hàng hoặc ví điện tử của bạn trong vòng 5–7 ngày làm việc. Liên hệ <strong>0969 510 955</strong> hoặc <strong>support@esgvalley.vn</strong> để được hỗ trợ nhanh nhất.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div className="border-t border-gray-100" />
+
+      {/* ── SECTION 5: TRA CỨU ĐƠN HÀNG ── */}
+      <section
+        ref={el => { sectionRefs.current["tra-cuu-don-hang"] = el; }}
+        id="tra-cuu-don-hang"
+        className="scroll-mt-24 max-w-6xl mx-auto px-6 lg:px-12 py-20"
+      >
+        <SectionHeading icon={Package} title="Tra Cứu Đơn Hàng" subtitle="Nhập mã đơn hàng để kiểm tra trạng thái giao hàng của bạn." />
+        <div className="mt-10 max-w-xl">
+          <form onSubmit={handleOrderLookup} className="flex gap-3">
+            <div className="flex-1 relative">
+              <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
+              <input
+                type="text"
+                value={orderCode}
+                onChange={e => { setOrderCode(e.target.value); setFoundOrder(null); setOrderNotFound(false); }}
+                placeholder="Nhập mã đơn hàng (VD: ESG2026123456)"
+                className="w-full pl-10 pr-4 py-3 border border-gray-200 rounded focus:outline-none focus:border-[#3d7a3d] focus:ring-1 focus:ring-[#3d7a3d] transition-all text-sm"
+                required
+              />
+            </div>
+            <button type="submit" className="px-6 py-3 bg-[#3d7a3d] text-white text-sm font-semibold rounded hover:bg-[#2f612f] transition-all whitespace-nowrap">
+              Tra cứu
+            </button>
+          </form>
+          <p className="text-xs text-muted-foreground mt-2">Mã đơn hàng được hiển thị sau khi đặt hàng thành công (bắt đầu bằng ESG).</p>
+
+          <AnimatePresence>
+            {foundOrder && (
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: 10 }}
+                className="mt-6 border border-gray-200 rounded-lg overflow-hidden"
+              >
+                <div className="bg-green-50 border-b border-gray-100 px-5 py-4 flex items-center gap-3">
+                  <CheckCircle className="w-5 h-5 text-green-600" />
+                  <p className="font-semibold text-green-800 text-sm">Đơn hàng: <span className="font-mono">{foundOrder.code}</span></p>
+                </div>
+                <div className="px-5 py-5 space-y-3 bg-white">
+                  <Row label="Trạng thái">
+                    <span className="font-semibold text-blue-600 flex items-center gap-1 text-sm">
+                      <Truck className="w-3.5 h-3.5" /> {foundOrder.status}
+                    </span>
+                  </Row>
+                  <Row label="Ngày đặt hàng">
+                    <span className="font-semibold text-sm">
+                      {new Date(foundOrder.createdAt).toLocaleString("vi-VN", { day: "2-digit", month: "2-digit", year: "numeric", hour: "2-digit", minute: "2-digit" })}
+                    </span>
+                  </Row>
+                  <Row label="Người đặt">
+                    <span className="font-semibold text-sm">{foundOrder.buyer.name} — {foundOrder.buyer.phone}</span>
+                  </Row>
+                  <Row label="Địa chỉ giao">
+                    <span className="font-semibold text-right text-sm max-w-[55%]">{foundOrder.buyer.address}</span>
+                  </Row>
+
+                  <div className="pt-3 border-t border-gray-100">
+                    <p className="text-xs text-muted-foreground font-semibold uppercase tracking-wider mb-2">Sản phẩm đặt</p>
+                    <ul className="space-y-1">
+                      {foundOrder.items.map(({ product, quantity }) => (
+                        <li key={product.id} className="flex justify-between text-sm">
+                          <span>{product.name}</span>
+                          <span className="font-semibold text-muted-foreground">x{quantity}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  <div className="pt-3 border-t border-gray-100">
+                    {(() => {
+                      const steps = ["Đã đặt hàng", "Đang xử lý", "Đang vận chuyển", "Hoàn tất"];
+                      const currentIdx = steps.indexOf(foundOrder.status);
+                      return (
+                        <div className="flex items-center">
+                          {steps.map((s, i) => (
+                            <div key={s} className="flex items-center flex-1">
+                              <div className="flex flex-col items-center flex-1">
+                                <div className={`w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold ${i <= currentIdx ? "bg-[#3d7a3d] text-white" : "bg-gray-100 border-2 border-gray-200 text-gray-400"}`}>
+                                  {i <= currentIdx ? <CheckCircle className="w-3.5 h-3.5" /> : i + 1}
+                                </div>
+                                <span className="text-[9px] mt-1 text-center text-muted-foreground leading-tight">{s}</span>
+                              </div>
+                              {i < steps.length - 1 && (
+                                <div className={`h-0.5 flex-1 mb-4 ${i < currentIdx ? "bg-[#3d7a3d]" : "bg-gray-200"}`} />
+                              )}
+                            </div>
+                          ))}
+                        </div>
+                      );
+                    })()}
+                  </div>
+                </div>
+              </motion.div>
+            )}
+
+            {orderNotFound && (
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: 10 }}
+                className="mt-6 p-5 border border-red-100 bg-red-50 rounded-lg flex items-start gap-3"
+              >
+                <AlertCircle className="w-5 h-5 text-red-500 shrink-0 mt-0.5" />
+                <div>
+                  <p className="font-semibold text-red-800 text-sm">Không tìm thấy đơn hàng</p>
+                  <p className="text-sm text-red-700 mt-1">Vui lòng kiểm tra lại mã đơn hàng hoặc{" "}
+                    <button onClick={() => scrollTo("lien-he")} className="underline font-medium">liên hệ hỗ trợ</button>.
+                  </p>
+                </div>
+              </motion.div>
+            )}
+          </AnimatePresence>
+        </div>
+      </section>
+
     </div>
   );
 }
@@ -446,25 +456,21 @@ export default function Support() {
 function SectionHeading({ icon: Icon, title, subtitle }: { icon: React.ElementType; title: string; subtitle: string }) {
   return (
     <div className="flex items-start gap-4">
-      <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center shrink-0 mt-1">
-        <Icon className="w-6 h-6 text-primary" />
+      <div className="w-10 h-10 bg-[#3d7a3d]/10 rounded-full flex items-center justify-center shrink-0 mt-0.5">
+        <Icon className="w-5 h-5 text-[#3d7a3d]" />
       </div>
       <div>
-        <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground">{title}</h2>
-        <p className="text-muted-foreground mt-1 max-w-2xl">{subtitle}</p>
+        <h2 className="text-2xl font-bold text-foreground">{title}</h2>
+        <p className="text-muted-foreground mt-1 text-sm max-w-2xl">{subtitle}</p>
       </div>
     </div>
   );
 }
 
-function Divider() {
-  return <div className="border-t border-border/60" />;
-}
-
-function Field({ label, children }: { label: string; children: React.ReactNode }) {
+function Row({ label, children }: { label: string; children: React.ReactNode }) {
   return (
-    <div>
-      <label className="block text-sm font-medium text-foreground mb-1.5">{label}</label>
+    <div className="flex justify-between items-center text-sm">
+      <span className="text-muted-foreground">{label}</span>
       {children}
     </div>
   );
