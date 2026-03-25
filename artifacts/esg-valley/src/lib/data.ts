@@ -90,7 +90,7 @@ export const products = [
     category: "Trà Cụ",
     description: "Đĩa lót tách trà bằng gỗ tự nhiên và gốm sứ, kết hợp hài hòa vẻ đẹp thiên nhiên và nghệ thuật thủ công – điểm nhấn tinh tế cho bộ ấm chén.",
     price: "Liên hệ",
-    image: "https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&q=80&w=800"
+    image: "/images/product-dia-lot.png"
   },
   {
     id: 12,
