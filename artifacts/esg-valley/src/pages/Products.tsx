@@ -21,7 +21,7 @@ export default function Products() {
     : products.filter(p => p.category === activeCategory);
 
   return (
-    <div className="w-full bg-[#f8f8f4] min-h-screen">
+    <div className="w-full bg-white min-h-screen">
       {/* Header */}
       <div className="relative pt-28 pb-16 text-center overflow-hidden">
         <img
@@ -67,27 +67,27 @@ export default function Products() {
 
           {/* Product List */}
           <main className="flex-1">
-            <div className="space-y-6">
+            <div className="divide-y divide-gray-200">
               {filteredProducts.map((product, idx) => (
                 <motion.div
                   key={product.id}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: idx * 0.06, duration: 0.5 }}
-                  className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300 flex gap-0"
+                  className="group flex gap-8 py-10"
                 >
                   {/* Image */}
-                  <div className="w-52 sm:w-64 flex-shrink-0 overflow-hidden">
+                  <div className="w-48 sm:w-56 flex-shrink-0 rounded-xl overflow-hidden">
                     <img
                       src={product.image}
                       alt={product.name}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                      style={{ minHeight: "220px" }}
+                      style={{ minHeight: "200px" }}
                     />
                   </div>
 
                   {/* Content */}
-                  <div className="flex-1 p-6 flex flex-col justify-between">
+                  <div className="flex-1 flex flex-col justify-between py-2">
                     <div>
                       {/* Category + Xem thêm row */}
                       <div className="flex items-center justify-between mb-2">
@@ -112,7 +112,7 @@ export default function Products() {
                       {/* Thumbnails */}
                       <div className="flex gap-2 mb-6">
                         {[0, 1, 2].map(i => (
-                          <div key={i} className="w-14 h-14 rounded-lg overflow-hidden border border-border/40 flex-shrink-0">
+                          <div key={i} className="w-14 h-14 rounded-lg overflow-hidden border border-gray-200 flex-shrink-0">
                             <img
                               src={product.image}
                               alt={product.name}
