@@ -242,7 +242,6 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="text-center mb-12">
-            <p className="text-accent text-sm font-semibold uppercase tracking-widest mb-3">Khám Phá</p>
             <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground">
               Câu chuyện của <em className="not-italic text-primary">chúng tôi</em>
             </h2>
