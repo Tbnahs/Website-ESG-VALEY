@@ -70,7 +70,7 @@ export default function Support() {
   const [orderCode, setOrderCode] = useState("");
   const [foundOrder, setFoundOrder] = useState<ReturnType<ReturnType<typeof useOrders>["lookupOrder"]> | null>(null);
   const [orderNotFound, setOrderNotFound] = useState(false);
-  const [selectedProducts, setSelectedProducts] = useState<string[]>([]);
+  const [selectedProduct, setSelectedProduct] = useState("");
   const { toast } = useToast();
   const { lookupOrder } = useOrders();
   const [, navigate] = useLocation();
@@ -117,8 +117,6 @@ export default function Support() {
     }
   };
 
-  const toggleProduct = (p: string) =>
-    setSelectedProducts(prev => prev.includes(p) ? prev.filter(x => x !== p) : [...prev, p]);
 
   return (
     <div className="w-full bg-white min-h-screen">
@@ -176,19 +174,20 @@ export default function Support() {
                 />
               </div>
               <div>
-                <label className="block text-sm font-medium text-foreground mb-3">Sản phẩm bạn quan tâm *</label>
-                <div className="space-y-2.5">
-                  {PRODUCTS.map(p => (
-                    <label key={p} className="flex items-center gap-3 cursor-pointer group">
-                      <div
-                        onClick={() => toggleProduct(p)}
-                        className={`w-5 h-5 rounded border-2 flex items-center justify-center transition-all shrink-0 ${selectedProducts.includes(p) ? "bg-[#3d7a3d] border-[#3d7a3d]" : "border-gray-300 group-hover:border-[#3d7a3d]"}`}
-                      >
-                        {selectedProducts.includes(p) && <CheckCircle className="w-3 h-3 text-white" />}
-                      </div>
-                      <span className="text-sm text-foreground">{p}</span>
-                    </label>
-                  ))}
+                <label className="block text-sm font-medium text-foreground mb-1.5">Sản phẩm bạn quan tâm *</label>
+                <div className="relative">
+                  <select
+                    value={selectedProduct}
+                    onChange={e => setSelectedProduct(e.target.value)}
+                    required
+                    className="w-full appearance-none px-4 py-3 border border-gray-200 rounded focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all text-sm bg-white pr-10"
+                  >
+                    <option value="" disabled>-- Chọn sản phẩm --</option>
+                    {PRODUCTS.map(p => (
+                      <option key={p} value={p}>{p}</option>
+                    ))}
+                  </select>
+                  <ChevronDown className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" />
                 </div>
               </div>
               <button
