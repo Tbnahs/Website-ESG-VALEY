@@ -5,15 +5,49 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useAuth } from "@/lib/auth";
 import { useLang, LANGUAGES, type Lang } from "@/lib/lang";
 
+const productMenu = [
+  {
+    heading: "Trà",
+    items: [
+      { label: "Mã Đáo Thành Công", cat: "Trà" },
+      { label: "Tản Viên Trà", cat: "Trà" },
+      { label: "Mạc Triều Trà", cat: "Trà" },
+      { label: "Bách Niên Trà", cat: "Trà" },
+      { label: "Thượng Cổ Trà", cat: "Trà" },
+      { label: "Matcha", cat: "Trà" },
+    ],
+  },
+  {
+    heading: "Trà Cụ",
+    items: [
+      { label: "Tách Trà", cat: "Trà Cụ" },
+      { label: "Ấm Trà", cat: "Trà Cụ" },
+      { label: "Tống Trà", cat: "Trà Cụ" },
+      { label: "Ly Nước", cat: "Trà Cụ" },
+      { label: "Đĩa Lót", cat: "Trà Cụ" },
+    ],
+  },
+  {
+    heading: "Dịch Vụ Đặc Biệt",
+    items: [
+      { label: "Tiệc Trà Di Sản", cat: "Dịch Vụ Đặc Biệt" },
+      { label: "Tea Show – Trình Diễn Nghệ Thuật Pha Trà", cat: "Dịch Vụ Đặc Biệt" },
+    ],
+  },
+];
+
 export function Header() {
   const [location] = useLocation();
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [mobileProductOpen, setMobileProductOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
   const [langOpen, setLangOpen] = useState(false);
   const [userMenuOpen, setUserMenuOpen] = useState(false);
+  const [productMenuOpen, setProductMenuOpen] = useState(false);
   const langRef = useRef<HTMLDivElement>(null);
   const userRef = useRef<HTMLDivElement>(null);
+  const productRef = useRef<HTMLDivElement>(null);
 
   const { user, isLoggedIn, logout, openAuthModal } = useAuth();
   const { lang, setLang } = useLang();
@@ -35,6 +69,7 @@ export function Header() {
     const handleClick = (e: MouseEvent) => {
       if (langRef.current && !langRef.current.contains(e.target as Node)) setLangOpen(false);
       if (userRef.current && !userRef.current.contains(e.target as Node)) setUserMenuOpen(false);
+      if (productRef.current && !productRef.current.contains(e.target as Node)) setProductMenuOpen(false);
     };
     document.addEventListener("mousedown", handleClick);
     return () => document.removeEventListener("mousedown", handleClick);
@@ -45,7 +80,6 @@ export function Header() {
   const navLinks = [
     { path: "/", label: "Trang Chủ" },
     { path: "/ve-esg-valley", label: "Câu chuyện ESGValley" },
-    { path: "/san-pham", label: "Sản Phẩm" },
     { path: "/tin-tuc", label: "Tin Tức" },
     { path: "/lien-he", label: "Liên Hệ" },
   ];
@@ -53,9 +87,7 @@ export function Header() {
   const currentLang = LANGUAGES.find(l => l.code === lang)!;
 
   const handleCartClick = () => {
-    if (!isLoggedIn) {
-      openAuthModal();
-    }
+    if (!isLoggedIn) openAuthModal();
   };
 
   return (
@@ -79,7 +111,6 @@ export function Header() {
           </span>
         </div>
 
-        {/* Language Switcher */}
         <div className="relative" ref={langRef}>
           <button
             onClick={() => setLangOpen(v => !v)}
@@ -117,12 +148,10 @@ export function Header() {
 
       {/* Main Nav */}
       <div className="px-4 md:px-8 py-4 flex justify-between items-center">
-        {/* Mobile Menu Toggle */}
         <button className="md:hidden p-2" onClick={() => setMobileMenuOpen(true)}>
           <Menu className="w-6 h-6" />
         </button>
 
-        {/* Logo */}
         <Link href="/" className="flex-shrink-0">
           <img
             src={isTransparent ? "/images/logo-white.png" : "/images/logo-esg-valley.png"}
@@ -133,7 +162,79 @@ export function Header() {
 
         {/* Desktop Nav */}
         <nav className="hidden md:flex items-center space-x-8">
-          {navLinks.map(link => (
+          {/* Regular links before Sản Phẩm */}
+          {navLinks.slice(0, 2).map(link => (
+            <Link
+              key={link.path}
+              href={link.path}
+              className={`text-sm uppercase tracking-wider font-semibold transition-all duration-300 relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-[1px] hover:after:w-full after:transition-all after:duration-300 ${
+                location === link.path ? "after:w-full" : ""
+              } ${isTransparent ? "after:bg-white" : "after:bg-primary"}`}
+            >
+              {link.label}
+            </Link>
+          ))}
+
+          {/* Sản Phẩm mega-menu */}
+          <div className="relative" ref={productRef}>
+            <button
+              onClick={() => setProductMenuOpen(v => !v)}
+              onMouseEnter={() => setProductMenuOpen(true)}
+              className={`text-sm uppercase tracking-wider font-semibold transition-all duration-300 flex items-center gap-1 relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:h-[1px] after:transition-all after:duration-300 ${
+                location.startsWith("/san-pham") ? "after:w-full" : "after:w-0 hover:after:w-full"
+              } ${isTransparent ? "after:bg-white" : "after:bg-primary"}`}
+            >
+              Sản Phẩm
+              <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-200 ${productMenuOpen ? "rotate-180" : ""}`} />
+            </button>
+
+            <AnimatePresence>
+              {productMenuOpen && (
+                <motion.div
+                  initial={{ opacity: 0, y: 8 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: 8 }}
+                  transition={{ duration: 0.18 }}
+                  onMouseLeave={() => setProductMenuOpen(false)}
+                  className="absolute left-1/2 -translate-x-1/2 top-full mt-3 bg-background border border-border rounded-xl shadow-2xl z-[60] overflow-hidden"
+                  style={{ minWidth: "560px" }}
+                >
+                  <div className="grid grid-cols-3 gap-0">
+                    {productMenu.map((col, ci) => (
+                      <div key={ci} className={`p-5 ${ci < productMenu.length - 1 ? "border-r border-border" : ""}`}>
+                        <p className="text-primary text-[10px] font-bold uppercase tracking-widest mb-3">{col.heading}</p>
+                        <ul className="space-y-1">
+                          {col.items.map(item => (
+                            <li key={item.label}>
+                              <Link
+                                href={`/san-pham?category=${encodeURIComponent(item.cat)}`}
+                                onClick={() => setProductMenuOpen(false)}
+                                className="block text-sm text-foreground hover:text-primary hover:bg-primary/5 px-2 py-1.5 rounded-lg transition-colors"
+                              >
+                                {item.label}
+                              </Link>
+                            </li>
+                          ))}
+                        </ul>
+                        {ci === 0 && (
+                          <Link
+                            href="/san-pham"
+                            onClick={() => setProductMenuOpen(false)}
+                            className="mt-3 inline-flex items-center text-xs text-primary font-semibold hover:underline"
+                          >
+                            Xem tất cả →
+                          </Link>
+                        )}
+                      </div>
+                    ))}
+                  </div>
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </div>
+
+          {/* Remaining nav links */}
+          {navLinks.slice(2).map(link => (
             <Link
               key={link.path}
               href={link.path}
@@ -148,7 +249,6 @@ export function Header() {
 
         {/* Right icons */}
         <div className="flex items-center space-x-3 md:space-x-4">
-          {/* Search */}
           <form
             onSubmit={(e) => { e.preventDefault(); }}
             className={`hidden md:flex items-center rounded-full border px-3 py-1.5 transition-all duration-300 ${
@@ -167,7 +267,6 @@ export function Header() {
             />
           </form>
 
-          {/* User / Account */}
           <div className="relative hidden md:block" ref={userRef}>
             {isLoggedIn ? (
               <>
@@ -208,7 +307,6 @@ export function Header() {
             )}
           </div>
 
-          {/* Cart */}
           <button
             onClick={handleCartClick}
             className="relative hover:text-accent transition-colors hover:scale-110 transform duration-200"
@@ -222,7 +320,6 @@ export function Header() {
             )}
           </button>
 
-          {/* Mobile search */}
           <button className="md:hidden hover:text-accent transition-colors">
             <Search className="w-5 h-5" />
           </button>
@@ -250,7 +347,6 @@ export function Header() {
                 </button>
               </div>
 
-              {/* Mobile search */}
               <form onSubmit={e => e.preventDefault()} className="flex items-center mx-4 mt-4 rounded-full border border-border bg-muted/50 px-3 py-2">
                 <Search className="w-4 h-4 flex-shrink-0 text-muted-foreground" />
                 <input
@@ -261,18 +357,55 @@ export function Header() {
               </form>
 
               <nav className="flex flex-col p-4 space-y-1 flex-grow overflow-y-auto mt-2">
-                {navLinks.map(link => (
-                  <Link
-                    key={link.path} href={link.path}
-                    onClick={() => setMobileMenuOpen(false)}
-                    className={`text-base font-medium py-3 px-2 border-b border-border/50 uppercase tracking-wider transition-colors hover:text-primary ${location === link.path ? "text-primary font-semibold" : ""}`}
+                <Link href="/" onClick={() => setMobileMenuOpen(false)}
+                  className={`text-base font-medium py-3 px-2 border-b border-border/50 uppercase tracking-wider transition-colors hover:text-primary ${location === "/" ? "text-primary font-semibold" : ""}`}>
+                  Trang Chủ
+                </Link>
+                <Link href="/ve-esg-valley" onClick={() => setMobileMenuOpen(false)}
+                  className={`text-base font-medium py-3 px-2 border-b border-border/50 uppercase tracking-wider transition-colors hover:text-primary ${location === "/ve-esg-valley" ? "text-primary font-semibold" : ""}`}>
+                  Câu chuyện ESGValley
+                </Link>
+
+                {/* Mobile Sản Phẩm accordion */}
+                <div className="border-b border-border/50">
+                  <button
+                    onClick={() => setMobileProductOpen(v => !v)}
+                    className="w-full flex items-center justify-between text-base font-medium py-3 px-2 uppercase tracking-wider hover:text-primary transition-colors"
                   >
-                    {link.label}
-                  </Link>
-                ))}
+                    Sản Phẩm
+                    <ChevronDown className={`w-4 h-4 transition-transform ${mobileProductOpen ? "rotate-180" : ""}`} />
+                  </button>
+                  {mobileProductOpen && (
+                    <div className="pb-2 pl-3">
+                      {productMenu.map((col) => (
+                        <div key={col.heading} className="mb-3">
+                          <p className="text-primary text-[10px] font-bold uppercase tracking-widest px-2 mb-1">{col.heading}</p>
+                          {col.items.map(item => (
+                            <Link
+                              key={item.label}
+                              href={`/san-pham?category=${encodeURIComponent(item.cat)}`}
+                              onClick={() => setMobileMenuOpen(false)}
+                              className="block text-sm text-foreground hover:text-primary px-2 py-1.5 transition-colors"
+                            >
+                              {item.label}
+                            </Link>
+                          ))}
+                        </div>
+                      ))}
+                    </div>
+                  )}
+                </div>
+
+                <Link href="/tin-tuc" onClick={() => setMobileMenuOpen(false)}
+                  className={`text-base font-medium py-3 px-2 border-b border-border/50 uppercase tracking-wider transition-colors hover:text-primary ${location === "/tin-tuc" ? "text-primary font-semibold" : ""}`}>
+                  Tin Tức
+                </Link>
+                <Link href="/lien-he" onClick={() => setMobileMenuOpen(false)}
+                  className={`text-base font-medium py-3 px-2 border-b border-border/50 uppercase tracking-wider transition-colors hover:text-primary ${location === "/lien-he" ? "text-primary font-semibold" : ""}`}>
+                  Liên Hệ
+                </Link>
               </nav>
 
-              {/* Mobile Language Switcher */}
               <div className="px-4 py-3 border-t border-border">
                 <p className="text-xs text-muted-foreground uppercase tracking-widest mb-2">Ngôn ngữ</p>
                 <div className="grid grid-cols-2 gap-2">

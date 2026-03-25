@@ -6,7 +6,7 @@ import { Link } from "wouter";
 
 export default function Products() {
   const [activeCategory, setActiveCategory] = useState("Tất cả");
-  const categories = ["Tất cả", "Chè Thượng Hạng", "Dịch Vụ", "Bền Vững", "Cộng Đồng", "Sản Phẩm"];
+  const categories = ["Tất cả", "Trà", "Trà Cụ", "Dịch Vụ Đặc Biệt"];
 
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);

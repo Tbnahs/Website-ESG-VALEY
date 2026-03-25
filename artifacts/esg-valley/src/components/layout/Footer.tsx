@@ -5,7 +5,7 @@ export function Footer() {
   return (
     <footer className="bg-primary text-primary-foreground pt-16 pb-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 mb-12">
           
           {/* Brand Info */}
           <div className="space-y-6">
@@ -26,27 +26,26 @@ export function Footer() {
             </div>
           </div>
 
-          {/* Quick Links */}
-          <div>
-            <h3 className="font-display text-xl font-semibold mb-6 uppercase tracking-wider text-[#C9A84C]">Liên Kết</h3>
-            <ul className="space-y-3 text-sm text-primary-foreground/80">
-              <li><Link href="/ve-esg-valley" className="hover:text-white transition-colors">Câu chuyện ESGValley</Link></li>
-              <li><Link href="/he-sinh-thai" className="hover:text-white transition-colors">Hệ Sinh Thái</Link></li>
-              <li><Link href="/tin-tuc" className="hover:text-white transition-colors">Tin Tức & Media</Link></li>
-              <li><Link href="/lien-he" className="hover:text-white transition-colors">Liên Hệ</Link></li>
-              <li><Link href="#" className="hover:text-white transition-colors">Câu Hỏi Thường Gặp (FAQ)</Link></li>
-            </ul>
-          </div>
-
           {/* Products */}
           <div>
             <h3 className="font-display text-xl font-semibold mb-6 uppercase tracking-wider text-[#C9A84C]">Sản Phẩm</h3>
             <ul className="space-y-3 text-sm text-primary-foreground/80">
-              <li><Link href="/san-pham" className="hover:text-white transition-colors">Mã Đáo Thành Công</Link></li>
-              <li><Link href="/san-pham" className="hover:text-white transition-colors">Bách Niên Trà</Link></li>
-              <li><Link href="/san-pham" className="hover:text-white transition-colors">Mạc Triều Trà</Link></li>
-              <li><Link href="/san-pham" className="hover:text-white transition-colors">Trà Cụ Cao Cấp</Link></li>
-              <li><Link href="/san-pham" className="hover:text-white transition-colors">Dịch Vụ Tiệc Trà</Link></li>
+              <li><Link href={`/san-pham?category=${encodeURIComponent("Trà")}`} className="hover:text-white transition-colors">Trà</Link></li>
+              <li><Link href={`/san-pham?category=${encodeURIComponent("Trà Cụ")}`} className="hover:text-white transition-colors">Trà Cụ</Link></li>
+              <li><Link href={`/san-pham?category=${encodeURIComponent("Dịch Vụ Đặc Biệt")}`} className="hover:text-white transition-colors">Dịch Vụ Tiệc Trà Di Sản</Link></li>
+              <li><Link href={`/san-pham?category=${encodeURIComponent("Dịch Vụ Đặc Biệt")}`} className="hover:text-white transition-colors">Tea Show</Link></li>
+            </ul>
+          </div>
+
+          {/* Hỗ trợ khách hàng */}
+          <div>
+            <h3 className="font-display text-xl font-semibold mb-6 uppercase tracking-wider text-[#C9A84C]">Hỗ Trợ Khách Hàng</h3>
+            <ul className="space-y-3 text-sm text-primary-foreground/80">
+              <li><Link href="#" className="hover:text-white transition-colors">Chính sách bảo mật</Link></li>
+              <li><Link href="#" className="hover:text-white transition-colors">Chính sách đổi trả hàng</Link></li>
+              <li><Link href="#" className="hover:text-white transition-colors">Câu hỏi thường gặp</Link></li>
+              <li><Link href="/lien-he" className="hover:text-white transition-colors">Liên hệ</Link></li>
+              <li><Link href="#" className="hover:text-white transition-colors">Tra cứu đơn hàng</Link></li>
             </ul>
           </div>
 
