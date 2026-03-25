@@ -58,7 +58,7 @@ export const products = [
     category: "Trà Cụ",
     description: "Tách trà thủ công bằng gốm sứ cao cấp, dáng thanh thoát – tôn vinh từng ngụm trà thượng hạng. Hoàn hảo cho những buổi thưởng trà trang trọng.",
     price: "Liên hệ",
-    image: "https://images.unsplash.com/photo-1556679343-c7306c1976bc?auto=format&fit=crop&q=80&w=800"
+    image: "/images/product-tach-tra.png"
   },
   {
     id: 8,
