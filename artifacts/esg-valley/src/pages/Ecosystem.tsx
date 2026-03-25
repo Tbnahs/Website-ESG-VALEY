@@ -429,32 +429,32 @@ export default function Ecosystem() {
       </section>
 
       {/* ════════ CTA ════════ */}
-      <section className="py-24 bg-[#1a2e1e] relative overflow-hidden">
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-0 left-0 w-96 h-96 bg-white rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2" />
-          <div className="absolute bottom-0 right-0 w-96 h-96 bg-white rounded-full blur-3xl translate-x-1/3 translate-y-1/3" />
+      <section className="py-24 bg-[#e8f4fd] relative overflow-hidden">
+        <div className="absolute inset-0 opacity-30">
+          <div className="absolute top-0 left-0 w-96 h-96 bg-blue-200 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2" />
+          <div className="absolute bottom-0 right-0 w-96 h-96 bg-sky-200 rounded-full blur-3xl translate-x-1/3 translate-y-1/3" />
         </div>
         <div className="relative z-10 max-w-3xl mx-auto px-4 text-center">
           <motion.div
             variants={fadeUp} initial="hidden" whileInView="show" viewport={{ once: true }}
           >
-            <p className="text-white/60 text-sm uppercase tracking-[0.3em] font-semibold mb-4">Hợp tác & Đầu tư</p>
-            <h2 className="font-display text-3xl md:text-4xl font-bold text-white mb-5">
+            <p className="text-[#C9A84C] text-sm uppercase tracking-[0.3em] font-semibold mb-4">Hợp tác & Đầu tư</p>
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-5">
               Cùng Kiến Tạo Tương Lai Bền Vững
             </h2>
-            <p className="text-white/75 mb-10 text-lg leading-relaxed">
+            <p className="text-muted-foreground mb-10 text-lg leading-relaxed">
               Hệ sinh thái ESGValley đang mở rộng — chúng tôi tìm kiếm những đối tác cùng chung tầm nhìn về phát triển bền vững và di sản văn hóa Việt Nam.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/ho-tro#lien-he"
-                className="inline-flex items-center justify-center gap-2 px-9 py-4 bg-white text-primary font-bold rounded-full hover:bg-white/90 transition-all text-sm shadow-xl"
+                className="inline-flex items-center justify-center gap-2 px-9 py-4 bg-primary text-white font-bold rounded-full hover:bg-primary/90 transition-all text-sm shadow-xl"
               >
                 Liên hệ hợp tác <ArrowRight className="w-4 h-4" />
               </Link>
               <Link
                 href="/ve-esg-valley"
-                className="inline-flex items-center justify-center gap-2 px-9 py-4 border-2 border-white/40 text-white font-semibold rounded-full hover:bg-white/10 transition-all text-sm"
+                className="inline-flex items-center justify-center gap-2 px-9 py-4 border-2 border-primary/40 text-primary font-semibold rounded-full hover:bg-primary/10 transition-all text-sm"
               >
                 Tìm hiểu thêm <ChevronRight className="w-4 h-4" />
               </Link>
