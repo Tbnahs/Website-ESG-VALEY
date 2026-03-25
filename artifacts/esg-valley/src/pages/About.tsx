@@ -30,7 +30,7 @@ const timelineData = [
     title: "Ra Mắt Dòng Sản Phẩm",
     content:
       "Bộ sản phẩm đầu tiên chính thức ra mắt thị trường: Mã Đáo Thành Công, Bách Niên Trà, Mạc Triều Trà. Mỗi dòng sản phẩm là một câu chuyện riêng, mang theo hồn cốt của vùng đất và con người nơi nó được sinh ra.",
-    img: "https://images.unsplash.com/photo-1530831916053-1d9a93ee5e3c?w=700&q=80",
+    img: "/images/mask-group.png",
   },
   {
     year: 2024,
