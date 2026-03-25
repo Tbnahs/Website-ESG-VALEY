@@ -31,6 +31,7 @@ export function Footer() {
             <h3 className="font-display text-xl font-semibold mb-6 uppercase tracking-wider text-[#C9A84C]">Sản Phẩm</h3>
             <ul className="space-y-3 text-sm text-primary-foreground/80">
               <li><Link href={`/san-pham?category=${encodeURIComponent("Trà")}`} className="hover:text-white transition-colors">Trà</Link></li>
+              <li><Link href={`/san-pham?category=${encodeURIComponent("Matcha")}`} className="hover:text-white transition-colors">Matcha</Link></li>
               <li><Link href={`/san-pham?category=${encodeURIComponent("Trà Cụ")}`} className="hover:text-white transition-colors">Trà Cụ</Link></li>
               <li><Link href={`/san-pham?category=${encodeURIComponent("Dịch Vụ Đặc Biệt")}`} className="hover:text-white transition-colors">Dịch Vụ Tiệc Trà Di Sản</Link></li>
               <li><Link href={`/san-pham?category=${encodeURIComponent("Dịch Vụ Đặc Biệt")}`} className="hover:text-white transition-colors">Tea Show</Link></li>

@@ -14,7 +14,12 @@ const productMenu = [
       { label: "Mạc Triều Trà", cat: "Trà" },
       { label: "Bách Niên Trà", cat: "Trà" },
       { label: "Thượng Cổ Trà", cat: "Trà" },
-      { label: "Matcha", cat: "Trà" },
+    ],
+  },
+  {
+    heading: "Matcha",
+    items: [
+      { label: "Matcha", cat: "Matcha" },
     ],
   },
   {
@@ -197,9 +202,9 @@ export function Header() {
                   transition={{ duration: 0.18 }}
                   onMouseLeave={() => setProductMenuOpen(false)}
                   className="absolute left-1/2 -translate-x-1/2 top-full mt-3 bg-background border border-border rounded-xl shadow-2xl z-[60] overflow-hidden"
-                  style={{ minWidth: "560px" }}
+                  style={{ minWidth: "720px" }}
                 >
-                  <div className="grid grid-cols-3 gap-0">
+                  <div className="grid grid-cols-4 gap-0">
                     {productMenu.map((col, ci) => (
                       <div key={ci} className={`p-5 ${ci < productMenu.length - 1 ? "border-r border-border" : ""}`}>
                         <p className="text-primary text-[10px] font-bold uppercase tracking-widest mb-3">{col.heading}</p>
