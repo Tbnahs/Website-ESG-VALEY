@@ -307,6 +307,16 @@ export function Header() {
             </AnimatePresence>
           </div>
 
+          {/* Hệ Sinh Thái */}
+          <Link
+            href="/he-sinh-thai"
+            className={`text-sm uppercase tracking-wider font-semibold transition-all duration-300 relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-[1px] hover:after:w-full after:transition-all after:duration-300 ${
+              location === "/he-sinh-thai" ? "after:w-full" : ""
+            } ${isTransparent ? "after:bg-white" : "after:bg-primary"}`}
+          >
+            Hệ Sinh Thái
+          </Link>
+
           {/* Tin Tức */}
           <Link
             href="/tin-tuc"
@@ -435,6 +445,10 @@ export function Header() {
                 <Link href="/ve-esg-valley" onClick={() => setMobileMenuOpen(false)}
                   className={`text-base font-medium py-3 px-2 border-b border-border/50 uppercase tracking-wider transition-colors hover:text-primary ${location === "/ve-esg-valley" ? "text-primary font-semibold" : ""}`}>
                   Câu chuyện ESGValley
+                </Link>
+                <Link href="/he-sinh-thai" onClick={() => setMobileMenuOpen(false)}
+                  className={`text-base font-medium py-3 px-2 border-b border-border/50 uppercase tracking-wider transition-colors hover:text-primary ${location === "/he-sinh-thai" ? "text-primary font-semibold" : ""}`}>
+                  Hệ Sinh Thái
                 </Link>
 
                 {/* Mobile Sản Phẩm accordion */}
