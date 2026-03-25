@@ -52,16 +52,6 @@ export default function Ecosystem() {
           >
             Mô hình vòng tuần hoàn khép kín — nơi công nghệ, thiên nhiên, văn hóa và con người cùng phát triển bền vững theo chuẩn mực ESG quốc tế.
           </motion.p>
-          <motion.div
-            initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.7, delay: 0.35 }}
-            className="flex flex-wrap justify-center gap-3"
-          >
-            {pillars.map((p, i) => (
-              <span key={i} className="flex items-center gap-1.5 px-4 py-1.5 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full text-white/90 text-xs font-medium">
-                <p.icon className="w-3.5 h-3.5" /> {p.label}
-              </span>
-            ))}
-          </motion.div>
         </div>
       </div>
 
