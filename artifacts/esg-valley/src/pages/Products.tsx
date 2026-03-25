@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronRight, ShoppingCart, CheckCircle } from "lucide-react";
 import { products } from "@/lib/data";
-import { Link } from "wouter";
+import { Link, useLocation } from "wouter";
 import { useCart } from "@/lib/cart";
 import { useAuth } from "@/lib/auth";
 
@@ -11,7 +11,13 @@ export default function Products() {
   const categories = ["Tất cả", "Trà", "Matcha", "Trà Cụ", "Dịch Vụ Đặc Biệt"];
   const { addItem } = useCart();
   const { isLoggedIn, openAuthModal } = useAuth();
+  const [, navigate] = useLocation();
   const [addedId, setAddedId] = useState<number | null>(null);
+
+  const handleContact = () => {
+    navigate("/ho-tro");
+    setTimeout(() => { window.location.hash = "lien-he"; }, 150);
+  };
 
   const handleAddToCart = (product: typeof products[0]) => {
     if (!isLoggedIn) {
@@ -141,42 +147,53 @@ export default function Products() {
                     </div>
 
                     {/* CTA */}
-                    <div className="flex items-center gap-3">
-                      <span className="text-lg font-bold text-primary">
-                        {formatPrice(product.price)}
-                      </span>
-                      <button
-                        onClick={() => handleAddToCart(product)}
-                        className={`flex items-center gap-2 px-5 py-2.5 text-sm font-semibold rounded-full transition-all duration-300 ${
-                          addedId === product.id
-                            ? "bg-green-500 text-white"
-                            : "bg-primary text-white hover:bg-primary/90"
-                        }`}
-                      >
-                        <AnimatePresence mode="wait">
-                          {addedId === product.id ? (
-                            <motion.span
-                              key="done"
-                              initial={{ opacity: 0, scale: 0.8 }}
-                              animate={{ opacity: 1, scale: 1 }}
-                              exit={{ opacity: 0 }}
-                              className="flex items-center gap-2"
-                            >
-                              <CheckCircle className="w-4 h-4" /> Đã thêm
-                            </motion.span>
-                          ) : (
-                            <motion.span
-                              key="add"
-                              initial={{ opacity: 0 }}
-                              animate={{ opacity: 1 }}
-                              className="flex items-center gap-2"
-                            >
-                              <ShoppingCart className="w-4 h-4" /> Thêm vào giỏ
-                            </motion.span>
-                          )}
-                        </AnimatePresence>
-                      </button>
-                    </div>
+                    {product.category === "Dịch Vụ Đặc Biệt" ? (
+                      <div className="flex items-center gap-3">
+                        <button
+                          onClick={handleContact}
+                          className="px-6 py-2.5 border-2 border-primary text-primary text-sm font-semibold rounded-full hover:bg-primary hover:text-white transition-all duration-200"
+                        >
+                          Liên hệ báo giá
+                        </button>
+                      </div>
+                    ) : (
+                      <div className="flex items-center gap-3">
+                        <span className="text-lg font-bold text-primary">
+                          {formatPrice(product.price)}
+                        </span>
+                        <button
+                          onClick={() => handleAddToCart(product)}
+                          className={`flex items-center gap-2 px-5 py-2.5 text-sm font-semibold rounded-full transition-all duration-300 ${
+                            addedId === product.id
+                              ? "bg-green-500 text-white"
+                              : "bg-primary text-white hover:bg-primary/90"
+                          }`}
+                        >
+                          <AnimatePresence mode="wait">
+                            {addedId === product.id ? (
+                              <motion.span
+                                key="done"
+                                initial={{ opacity: 0, scale: 0.8 }}
+                                animate={{ opacity: 1, scale: 1 }}
+                                exit={{ opacity: 0 }}
+                                className="flex items-center gap-2"
+                              >
+                                <CheckCircle className="w-4 h-4" /> Đã thêm
+                              </motion.span>
+                            ) : (
+                              <motion.span
+                                key="add"
+                                initial={{ opacity: 0 }}
+                                animate={{ opacity: 1 }}
+                                className="flex items-center gap-2"
+                              >
+                                <ShoppingCart className="w-4 h-4" /> Thêm vào giỏ
+                              </motion.span>
+                            )}
+                          </AnimatePresence>
+                        </button>
+                      </div>
+                    )}
                   </div>
                 </motion.div>
               ))}
