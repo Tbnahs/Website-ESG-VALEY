@@ -253,7 +253,7 @@ export default function Home() {
             {/* Col 1 — tall */}
             <motion.div
               initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} viewport={{ once: true }}
-              className="relative rounded-sm overflow-hidden group"
+              className="relative rounded-3xl overflow-hidden group"
             >
               <img
                 src="https://images.unsplash.com/photo-1587734195503-904fca47e0e9?auto=format&fit=crop&q=80&w=600"
@@ -276,7 +276,7 @@ export default function Home() {
               initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: 0.1, duration: 0.6 }} viewport={{ once: true }}
               className="flex flex-col gap-4"
             >
-              <div className="relative rounded-sm overflow-hidden group flex-1">
+              <div className="relative rounded-3xl overflow-hidden group flex-1">
                 <img
                   src="https://images.unsplash.com/photo-1558160074-4d7d8bdf4256?auto=format&fit=crop&q=80&w=600"
                   alt="Câu chuyện"
@@ -291,7 +291,7 @@ export default function Home() {
                   <p className="text-white font-display text-base font-bold group-hover:opacity-0 transition-opacity duration-300 absolute bottom-3 left-0">Chế Biến Thủ Công</p>
                 </div>
               </div>
-              <div className="relative rounded-sm overflow-hidden group flex-1">
+              <div className="relative rounded-3xl overflow-hidden group flex-1">
                 <img
                   src="https://images.unsplash.com/photo-1563822249548-9a72b6353cd1?auto=format&fit=crop&q=80&w=600"
                   alt="Câu chuyện 2"
@@ -311,7 +311,7 @@ export default function Home() {
             {/* Col 3 — single */}
             <motion.div
               initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: 0.2, duration: 0.6 }} viewport={{ once: true }}
-              className="relative rounded-sm overflow-hidden group"
+              className="relative rounded-3xl overflow-hidden group"
             >
               <img
                 src="https://images.unsplash.com/photo-1629851608681-3058b76a084c?auto=format&fit=crop&q=80&w=600"
