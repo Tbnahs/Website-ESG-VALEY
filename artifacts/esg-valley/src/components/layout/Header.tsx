@@ -505,7 +505,7 @@ export function Header() {
                 </Link>
                 <Link href="/ve-esg-valley" onClick={() => setMobileMenuOpen(false)}
                   className={`text-base font-medium py-3 px-2 border-b border-border/50 uppercase tracking-wider transition-colors hover:text-primary ${location === "/ve-esg-valley" ? "text-primary font-semibold" : ""}`}>
-                  Câu chuyện ESGValley
+                  Câu chuyện ESG Valley
                 </Link>
                 {/* Mobile Hệ Sinh Thái accordion */}
                 <div className="border-b border-border/50">
