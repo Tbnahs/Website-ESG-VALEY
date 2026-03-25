@@ -24,7 +24,6 @@ const fadeUp = {
 export default function Ecosystem() {
   return (
     <div className="w-full bg-background">
-
       {/* ════════ HERO ════════ */}
       <div className="relative py-28 overflow-hidden">
         <img
@@ -42,7 +41,7 @@ export default function Ecosystem() {
           </motion.p>
           <motion.h1
             initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.1 }}
-            className="font-display text-4xl md:text-6xl font-bold text-white mb-6 leading-tight"
+            className="font-display text-4xl md:text-6xl font-bold text-white leading-tight mb-[0px]"
           >
             Hệ Sinh Thái <span className="text-[#C9A84C]">ESGValley</span>
           </motion.h1>
@@ -54,7 +53,6 @@ export default function Ecosystem() {
           </motion.p>
         </div>
       </div>
-
       {/* ════════ 01 — VIỆN NGHIÊN CỨU ════════ */}
       <section id="vien-nghien-cuu" className="py-24 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -113,7 +111,6 @@ export default function Ecosystem() {
           </div>
         </div>
       </section>
-
       {/* ════════ 02 — VÙNG NGUYÊN LIỆU ════════ */}
       <section id="vung-nguyen-lieu" className="py-24 bg-[#f5f9f4]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -173,7 +170,6 @@ export default function Ecosystem() {
           </div>
         </div>
       </section>
-
       {/* ════════ 03 — BẢO TỒN DI SẢN (full bleed) ════════ */}
       <section id="bao-ton-di-san" className="relative py-32 overflow-hidden">
         <img
@@ -207,7 +203,6 @@ export default function Ecosystem() {
           </div>
         </div>
       </section>
-
       {/* ════════ 04 — R&D SẢN PHẨM ════════ */}
       <section id="nghien-cuu-san-pham" className="py-24 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -270,7 +265,6 @@ export default function Ecosystem() {
           </div>
         </div>
       </section>
-
       {/* ════════ 05 — TRẢI NGHIỆM & DU LỊCH ════════ */}
       <section id="trai-nghiem-van-hoa" className="py-24 bg-[#f5f9f4]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -326,7 +320,6 @@ export default function Ecosystem() {
           </div>
         </div>
       </section>
-
       {/* ════════ 06 — GIÁO DỤC ════════ */}
       <section id="giao-duc" className="py-24 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -395,7 +388,6 @@ export default function Ecosystem() {
           </motion.div>
         </div>
       </section>
-
       {/* ════════ STATS STRIP ════════ */}
       <section className="py-16 bg-[#f5f9f4] border-y border-border">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -417,7 +409,6 @@ export default function Ecosystem() {
           </div>
         </div>
       </section>
-
       {/* ════════ CTA ════════ */}
       <section className="py-24 bg-[#edf7ed] relative overflow-hidden">
         <div className="absolute inset-0 opacity-30">
