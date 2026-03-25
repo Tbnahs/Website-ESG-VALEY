@@ -10,7 +10,7 @@ import { products, news, esgPillars } from "@/lib/data";
 const slides = [
   {
     image: `${import.meta.env.BASE_URL}images/hero-slide-1.png`,
-    title: "Bộ Sưu Tập Quà Tặng Tết 2026",
+    title: "Tiệc Trà Di Sản",
     subtitle: "Tinh Hoa Trà Việt - Trọn Vẹn Tâm Tình",
     cta: "Khám Phá Ngay",
     link: "/san-pham",
