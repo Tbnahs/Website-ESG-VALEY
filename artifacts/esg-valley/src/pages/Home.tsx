@@ -261,10 +261,13 @@ export default function Home() {
                 className="w-full h-72 md:h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 style={{ minHeight: "360px" }}
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-              <div className="absolute bottom-5 left-5 right-5">
-                <p className="text-white font-display text-lg font-bold leading-snug">Vùng Nguyên Liệu</p>
-                <p className="text-white/70 text-xs mt-1">Nơi những búp chè non xanh bắt đầu hành trình</p>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent group-hover:from-black/20 transition-all duration-500" />
+              <div className="absolute bottom-5 left-5 right-5 translate-y-2 group-hover:translate-y-0 transition-transform duration-400">
+                <div className="bg-[#FFF9C4]/95 rounded-xl p-4 shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-400">
+                  <p className="text-primary font-display text-base font-bold leading-snug mb-1">Vùng Nguyên Liệu</p>
+                  <p className="text-foreground/80 text-xs leading-relaxed">Nơi những búp chè non xanh bắt đầu hành trình – đất trời và con người vùng cao cùng nhau nuôi dưỡng từng mầm non xanh mát.</p>
+                </div>
+                <p className="text-white font-display text-lg font-bold leading-snug group-hover:opacity-0 transition-opacity duration-300 absolute bottom-4 left-0">Vùng Nguyên Liệu</p>
               </div>
             </motion.div>
 
@@ -279,9 +282,13 @@ export default function Home() {
                   alt="Câu chuyện"
                   className="w-full h-44 object-cover group-hover:scale-105 transition-transform duration-500"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
-                <div className="absolute bottom-4 left-4">
-                  <p className="text-white font-display text-base font-bold">Chế Biến Thủ Công</p>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent group-hover:from-black/20 transition-all duration-500" />
+                <div className="absolute bottom-3 left-3 right-3 translate-y-1 group-hover:translate-y-0 transition-transform duration-400">
+                  <div className="bg-[#FFF9C4]/95 rounded-xl p-3 shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-400">
+                    <p className="text-primary font-display text-sm font-bold mb-1">Chế Biến Thủ Công</p>
+                    <p className="text-foreground/80 text-xs leading-relaxed">Từng công đoạn được thực hiện tỉ mỉ bởi đôi bàn tay thợ lành nghề, giữ trọn hương vị nguyên bản.</p>
+                  </div>
+                  <p className="text-white font-display text-base font-bold group-hover:opacity-0 transition-opacity duration-300 absolute bottom-3 left-0">Chế Biến Thủ Công</p>
                 </div>
               </div>
               <div className="relative rounded-sm overflow-hidden group flex-1">
@@ -290,9 +297,13 @@ export default function Home() {
                   alt="Câu chuyện 2"
                   className="w-full h-44 object-cover group-hover:scale-105 transition-transform duration-500"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
-                <div className="absolute bottom-4 left-4">
-                  <p className="text-white font-display text-base font-bold">Nghệ Thuật Ướp Hương</p>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent group-hover:from-black/20 transition-all duration-500" />
+                <div className="absolute bottom-3 left-3 right-3 translate-y-1 group-hover:translate-y-0 transition-transform duration-400">
+                  <div className="bg-[#FFF9C4]/95 rounded-xl p-3 shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-400">
+                    <p className="text-primary font-display text-sm font-bold mb-1">Nghệ Thuật Ướp Hương</p>
+                    <p className="text-foreground/80 text-xs leading-relaxed">Bí quyết ướp hương hoa tươi truyền thống tạo nên những tách trà thơm ngát, đậm đà bản sắc Việt.</p>
+                  </div>
+                  <p className="text-white font-display text-base font-bold group-hover:opacity-0 transition-opacity duration-300 absolute bottom-3 left-0">Nghệ Thuật Ướp Hương</p>
                 </div>
               </div>
             </motion.div>
@@ -308,10 +319,13 @@ export default function Home() {
                 className="w-full h-72 md:h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 style={{ minHeight: "360px" }}
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-              <div className="absolute bottom-5 left-5 right-5">
-                <p className="text-white font-display text-lg font-bold leading-snug">Di Sản & Văn Hóa</p>
-                <p className="text-white/70 text-xs mt-1">Gìn giữ bản sắc trà Việt trường tồn</p>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent group-hover:from-black/20 transition-all duration-500" />
+              <div className="absolute bottom-5 left-5 right-5 translate-y-2 group-hover:translate-y-0 transition-transform duration-400">
+                <div className="bg-[#FFF9C4]/95 rounded-xl p-4 shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-400">
+                  <p className="text-primary font-display text-base font-bold leading-snug mb-1">Di Sản & Văn Hóa</p>
+                  <p className="text-foreground/80 text-xs leading-relaxed">Gìn giữ bản sắc trà Việt trường tồn qua từng thế hệ – nơi văn hóa và thiên nhiên hòa quyện thành một.</p>
+                </div>
+                <p className="text-white font-display text-lg font-bold leading-snug group-hover:opacity-0 transition-opacity duration-300 absolute bottom-4 left-0">Di Sản & Văn Hóa</p>
               </div>
             </motion.div>
           </div>
