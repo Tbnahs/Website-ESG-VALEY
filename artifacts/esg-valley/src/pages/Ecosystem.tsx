@@ -219,32 +219,11 @@ export default function Ecosystem() {
             </p>
           </motion.div>
 
-          {/* 2 + 3 layout */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
               { icon: BarChart3, title: "Nghiên cứu đầu tư dự án", desc: "Phân tích thị trường, đánh giá tiềm năng và xây dựng lộ trình đầu tư cho các dự án phát triển hệ sinh thái trà bền vững." },
               { icon: Beaker, title: "Nghiên cứu sản phẩm", desc: "Phát triển các dòng sản phẩm mới từ nguyên liệu trà thuần Việt, kết hợp khoa học hiện đại và tinh hoa truyền thống." },
-            ].map((item, i) => {
-              const Icon = item.icon;
-              return (
-                <motion.div
-                  key={i} variants={fadeUp} initial="hidden" whileInView="show" viewport={{ once: true }} custom={i}
-                  className="flex gap-5 p-7 bg-card border border-border rounded-2xl hover:shadow-lg hover:border-primary/25 transition-all duration-400 group"
-                >
-                  <div className="w-12 h-12 bg-purple-50 rounded-xl flex items-center justify-center flex-shrink-0">
-                    <Icon className="w-6 h-6 text-purple-600" />
-                  </div>
-                  <div>
-                    <h3 className="font-display font-bold text-foreground mb-2">{item.title}</h3>
-                    <p className="text-muted-foreground text-sm leading-relaxed">{item.desc}</p>
-                  </div>
-                </motion.div>
-              );
-            })}
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {[
-              { icon: Cpu, title: "Nghiên cứu quy trình & quản lý chất lượng", desc: "Tối ưu từng công đoạn sản xuất, xây dựng hệ thống kiểm soát chất lượng theo chuẩn quốc tế." },
+              { icon: Cpu, title: "Nghiên cứu quy trình & chất lượng", desc: "Tối ưu từng công đoạn sản xuất, xây dựng hệ thống kiểm soát chất lượng theo chuẩn quốc tế." },
               { icon: Microscope, title: "Nghiên cứu Công nghệ", desc: "Ứng dụng công nghệ tiên tiến trong chiết xuất, bảo quản để giữ nguyên dưỡng chất và hương vị tự nhiên." },
               { icon: Palette, title: "Hệ sinh thái từ Trà", desc: "Mở rộng sang Dược Trà, Mỹ phẩm Trà, Nước cho Trà, Trà Cụ và nhiều sản phẩm phái sinh cao cấp khác." },
             ].map((item, i) => {
@@ -252,13 +231,13 @@ export default function Ecosystem() {
               return (
                 <motion.div
                   key={i} variants={fadeUp} initial="hidden" whileInView="show" viewport={{ once: true }} custom={i}
-                  className="p-7 bg-[#f5f9f4] border border-border rounded-2xl hover:shadow-lg hover:border-primary/25 transition-all duration-400"
+                  className="p-7 bg-card border border-border rounded-2xl hover:shadow-lg hover:border-[#C9A84C]/40 transition-all duration-400 group"
                 >
-                  <div className="w-11 h-11 bg-white rounded-xl flex items-center justify-center mb-4 shadow-sm">
-                    <Icon className="w-5 h-5 text-purple-600" />
+                  <div className="w-12 h-12 bg-[#C9A84C]/10 rounded-xl flex items-center justify-center mb-5">
+                    <Icon className="w-6 h-6 text-[#C9A84C]" />
                   </div>
-                  <h3 className="font-display font-bold text-foreground mb-2 text-sm">{item.title}</h3>
-                  <p className="text-muted-foreground text-xs leading-relaxed">{item.desc}</p>
+                  <h3 className="font-display font-bold text-foreground mb-2">{item.title}</h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed">{item.desc}</p>
                 </motion.div>
               );
             })}
