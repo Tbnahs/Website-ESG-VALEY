@@ -428,43 +428,56 @@ export default function Home() {
           7. TIN TỨC GẦN ĐÂY
           Layout: title + 3-column news cards
       ════════════════════════════════════════ */}
-      <section className="py-20 bg-background">
+      <section className="py-20 bg-[#f5f9f4]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="text-center mb-12">
-            <p className="text-accent text-sm font-semibold uppercase tracking-widest mb-3">Cập Nhật</p>
-            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground">Tin tức gần đây</h2>
+            <p className="text-primary text-sm font-semibold mb-2 flex items-center justify-center gap-1">
+              <span>🌿</span> Tin tức về chúng tôi
+            </p>
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">Tin tức gần đây</h2>
+            <p className="text-muted-foreground max-w-xl mx-auto text-sm leading-relaxed">
+              Cập nhật những câu chuyện mới nhất về ESG Valley – từ hành trình bảo tồn trà cổ đến những dấu ấn trên bản đồ trà thế giới.
+            </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {news.map((item, idx) => (
-              <motion.article
-                key={item.id}
-                initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: idx * 0.12, duration: 0.6 }} viewport={{ once: true }}
-                className="group cursor-pointer"
-              >
-                {/* Image */}
-                <div className="aspect-[16/10] rounded-sm overflow-hidden relative mb-5">
-                  <img
-                    src={item.image} alt={item.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
-                  <div className="absolute top-3 left-3 bg-primary text-primary-foreground text-[10px] font-bold uppercase tracking-wider py-1 px-2.5 rounded-sm">
-                    {item.category}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {news.map((item, idx) => {
+              const [day, month] = item.date.split("/");
+              return (
+                <motion.article
+                  key={item.id}
+                  initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ delay: idx * 0.12, duration: 0.6 }} viewport={{ once: true }}
+                  className="group cursor-pointer bg-white rounded-2xl shadow-sm overflow-hidden hover:shadow-md transition-shadow duration-300"
+                >
+                  {/* Image with date badge */}
+                  <div className="relative">
+                    <div className="aspect-[4/3] overflow-hidden">
+                      <img
+                        src={item.image} alt={item.title}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      />
+                    </div>
+                    <div className="absolute bottom-0 left-5 translate-y-1/2 w-14 h-14 rounded-full bg-[#C9A84C] flex flex-col items-center justify-center shadow-md">
+                      <span className="text-white font-bold text-lg leading-none">{day}</span>
+                      <span className="text-white text-xs leading-none mt-0.5">Th{parseInt(month)}</span>
+                    </div>
                   </div>
-                </div>
-                {/* Meta */}
-                <p className="text-muted-foreground text-xs mb-2">{item.date}</p>
-                <h3 className="font-display text-xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors leading-snug line-clamp-2">
-                  {item.title}
-                </h3>
-                <p className="text-muted-foreground text-sm line-clamp-2">{item.excerpt}</p>
-                <button className="mt-4 flex items-center gap-1 text-primary text-xs font-semibold uppercase tracking-wider group/btn">
-                  Đọc Thêm <ArrowRight className="w-3.5 h-3.5 group-hover/btn:translate-x-1 transition-transform" />
-                </button>
-              </motion.article>
-            ))}
+                  {/* Content */}
+                  <div className="px-5 pt-10 pb-6">
+                    <p className="text-primary text-xs font-semibold uppercase tracking-widest mb-2">{item.category}</p>
+                    <h3 className="font-display text-lg font-bold text-foreground mb-3 group-hover:text-primary transition-colors leading-snug line-clamp-2">
+                      {item.title}
+                    </h3>
+                    <p className="text-muted-foreground text-sm line-clamp-2 mb-5">{item.excerpt}</p>
+                    <button className="inline-flex items-center gap-2 px-5 py-2 bg-primary text-primary-foreground text-sm font-semibold rounded-full hover:bg-primary/90 transition-colors">
+                      Xem chi tiết <ArrowRight className="w-4 h-4" />
+                    </button>
+                  </div>
+                </motion.article>
+              );
+            })}
           </div>
 
           <div className="mt-10 text-center">
