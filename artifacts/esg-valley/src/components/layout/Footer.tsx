@@ -1,5 +1,5 @@
 import { Link } from "wouter";
-import { Facebook, Instagram, Youtube, MapPin, Phone, Mail, Send } from "lucide-react";
+import { Facebook, Instagram, Youtube, MapPin, Phone, Mail } from "lucide-react";
 
 export function Footer() {
   return (
@@ -67,16 +67,6 @@ export function Footer() {
                 <span>info@esgvalley.vn</span>
               </li>
             </ul>
-            <form className="relative">
-              <input 
-                type="email" 
-                placeholder="Đăng ký nhận bản tin..." 
-                className="w-full bg-primary-foreground/10 border border-primary-foreground/20 rounded-sm py-3 pl-4 pr-12 text-sm text-white placeholder:text-white/50 focus:outline-none focus:border-white transition-colors"
-              />
-              <button type="submit" className="absolute right-2 top-1/2 -translate-y-1/2 text-white/70 hover:text-white transition-colors">
-                <Send className="w-5 h-5" />
-              </button>
-            </form>
           </div>
 
         </div>
