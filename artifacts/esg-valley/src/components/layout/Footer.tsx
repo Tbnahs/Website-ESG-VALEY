@@ -83,10 +83,8 @@ export function Footer() {
                 <SiShopee className="w-5 h-5 text-white" />
               </a>
               {/* Lazada */}
-              <a href="#" title="Lazada" className="w-9 h-9 rounded-lg bg-[#F57224] flex items-center justify-center opacity-85 hover:opacity-100 transition-opacity">
-                <svg viewBox="0 0 48 48" className="w-5 h-5" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M8 36V12h6v18h14v6H8z" fill="white"/>
-                </svg>
+              <a href="#" title="Lazada" className="opacity-85 hover:opacity-100 transition-opacity">
+                <img src="/images/lazada-icon.png" alt="Lazada" className="w-9 h-9 object-contain" />
               </a>
               {/* Tiki */}
               <a href="#" title="Tiki" className="w-9 h-9 rounded-lg bg-[#1A94FF] flex items-center justify-center opacity-85 hover:opacity-100 transition-opacity">
