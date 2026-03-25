@@ -341,67 +341,48 @@ export default function Home() {
       </section>
       {/* ════════════════════════════════════════
           5. SẢN PHẨM NỔI BẬT
-          Layout: header row → 2×2 product grid
+          Layout: centered header → 2×2 product grid
       ════════════════════════════════════════ */}
       <section className="py-20 bg-background">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
 
-          {/* Header row */}
-          <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12">
-            <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}>
-              <p className="text-accent text-sm font-semibold uppercase tracking-widest mb-2">Chè Thượng Hạng</p>
-              <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground">
-                Sản phẩm nổi bật<br />
-                <em className="not-italic text-primary">của chúng tôi</em>
-              </h2>
-            </motion.div>
-            <motion.p
-              initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }}
-              className="text-muted-foreground max-w-sm text-sm leading-relaxed mt-4 md:mt-0"
-            >
+          {/* Centered header */}
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="text-center mb-12">
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
+              Sản phẩm nổi bật của chúng tôi
+            </h2>
+            <p className="text-muted-foreground max-w-xl mx-auto text-sm leading-relaxed">
               Những sản phẩm được chắt lọc từ thiên nhiên, mang trong mình lịch sử và tâm huyết của nhiều thế hệ người làm trà Việt.
-            </motion.p>
-          </div>
+            </p>
+          </motion.div>
 
           {/* 2×2 grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
             {featuredProducts.map((product, idx) => (
               <motion.div
                 key={product.id}
                 initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: idx * 0.1, duration: 0.6 }} viewport={{ once: true }}
-                className="group bg-card border border-border/60 rounded-sm overflow-hidden hover:shadow-xl hover:-translate-y-1 transition-all duration-400 flex flex-col"
+                className="group cursor-pointer"
               >
                 {/* Image */}
-                <div className="relative aspect-square overflow-hidden bg-muted">
+                <div className="relative aspect-[4/3] overflow-hidden rounded-2xl bg-muted mb-4">
                   <img
                     src={product.image} alt={product.name}
-                    className="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                   />
-                  <div className="absolute top-3 left-3">
-                    <span className="bg-primary text-primary-foreground text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full">
-                      {product.category}
-                    </span>
-                  </div>
                 </div>
                 {/* Info */}
-                <div className="p-5 flex flex-col flex-grow">
-                  <h3 className="font-display text-xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors">
-                    {product.name}
-                  </h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed line-clamp-3 flex-grow">{product.desc}</p>
-                  <div className="flex justify-between items-center mt-5 pt-4 border-t border-border/50">
-                    <span className="font-bold text-base text-foreground">{product.price}</span>
-                    <button className="flex items-center gap-1 text-primary text-xs font-semibold uppercase tracking-wider group/btn">
-                      Xem Chi Tiết <ArrowRight className="w-3.5 h-3.5 group-hover/btn:translate-x-1 transition-transform" />
-                    </button>
-                  </div>
-                </div>
+                <p className="text-primary text-xs font-semibold uppercase tracking-widest mb-1">{product.category}</p>
+                <h3 className="font-display text-xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors">
+                  {product.name}
+                </h3>
+                <p className="text-muted-foreground text-sm leading-relaxed line-clamp-2">{product.desc}</p>
               </motion.div>
             ))}
           </div>
 
-          <div className="mt-10 text-center">
+          <div className="mt-12 text-center">
             <Link href="/san-pham">
               <button className="inline-flex items-center gap-2 px-8 py-3 border border-primary text-primary font-semibold uppercase tracking-wider hover:bg-primary hover:text-primary-foreground transition-all duration-300 rounded-sm text-sm">
                 Xem Tất Cả Sản Phẩm <ArrowRight className="w-4 h-4" />
