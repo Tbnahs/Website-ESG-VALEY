@@ -52,7 +52,7 @@ const defaultMissionImages = [
   { src: "/images/su-menh-1.jpg", label: "Trà xanh tươi" },
   { src: "/images/su-menh-2.jpg", label: "Trà vàng" },
   { src: "/images/su-menh-3.jpg", label: "Trà đỏ" },
-  { src: "https://images.unsplash.com/photo-1563822249366-3efb23b8e0c9?w=400&q=80", label: "Trà cổ thụ" },
+  { src: "/images/su-menh-4.jpg", label: "Trà cổ thụ" },
 ];
 
 const achievementImages = [
