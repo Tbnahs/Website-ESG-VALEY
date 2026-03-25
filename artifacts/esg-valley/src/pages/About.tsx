@@ -49,7 +49,7 @@ const timelineData = [
 ];
 
 const defaultMissionImages = [
-  { src: "https://images.unsplash.com/photo-1564890369478-c89ca6d9cde9?w=400&q=80", label: "Trà xanh tươi" },
+  { src: "/images/su-menh-1.jpg", label: "Trà xanh tươi" },
   { src: "https://images.unsplash.com/photo-1597318281611-f5e5a7dbef63?w=400&q=80", label: "Trà vàng" },
   { src: "https://images.unsplash.com/photo-1556909172-8c2f041fca1e?w=400&q=80", label: "Trà đỏ" },
   { src: "https://images.unsplash.com/photo-1563822249366-3efb23b8e0c9?w=400&q=80", label: "Trà cổ thụ" },
