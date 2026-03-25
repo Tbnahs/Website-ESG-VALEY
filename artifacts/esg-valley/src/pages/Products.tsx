@@ -77,12 +77,11 @@ export default function Products() {
                   className="group flex gap-8 py-10"
                 >
                   {/* Image */}
-                  <div className="w-48 sm:w-56 flex-shrink-0 rounded-xl overflow-hidden">
+                  <div className="w-48 sm:w-56 h-56 flex-shrink-0 rounded-xl overflow-hidden">
                     <img
                       src={product.image}
                       alt={product.name}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                      style={{ minHeight: "200px" }}
                     />
                   </div>
 
