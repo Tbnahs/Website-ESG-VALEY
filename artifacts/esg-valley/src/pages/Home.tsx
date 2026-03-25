@@ -247,87 +247,21 @@ export default function Home() {
             </h2>
           </motion.div>
 
-          {/* 3-column image mosaic */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-10">
-            {/* Col 1 — tall */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} viewport={{ once: true }}
-              className="relative rounded-3xl overflow-hidden group"
-            >
-              <img
-                src="/images/cau-chuyen-01.jpg"
-                alt="Vùng nguyên liệu"
-                className="w-full h-72 md:h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                style={{ minHeight: "360px" }}
+          {/* Video embed */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }} viewport={{ once: true }}
+            className="rounded-3xl overflow-hidden shadow-xl mb-10"
+          >
+            <div className="relative w-full" style={{ paddingBottom: "56.25%" }}>
+              <iframe
+                src="https://www.youtube.com/embed/08_TGYCQJM8"
+                title="Câu chuyện của ESG Valley"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                className="absolute inset-0 w-full h-full"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent group-hover:from-black/20 transition-all duration-500" />
-              <div className="absolute bottom-5 left-5 right-5 translate-y-2 group-hover:translate-y-0 transition-transform duration-400">
-                <div className="bg-[#FFF9C4]/95 rounded-xl p-4 shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-400">
-                  <p className="text-primary font-display text-base font-bold leading-snug mb-1">Vùng Nguyên Liệu</p>
-                  <p className="text-foreground/80 text-xs leading-relaxed">Nơi những búp chè non xanh bắt đầu hành trình – đất trời và con người vùng cao cùng nhau nuôi dưỡng từng mầm non xanh mát.</p>
-                </div>
-                <p className="text-white font-display text-lg font-bold leading-snug group-hover:opacity-0 transition-opacity duration-300 absolute bottom-4 left-0">Vùng Nguyên Liệu</p>
-              </div>
-            </motion.div>
-
-            {/* Col 2 — 2 images stacked */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: 0.1, duration: 0.6 }} viewport={{ once: true }}
-              className="flex flex-col gap-4"
-            >
-              <div className="relative rounded-3xl overflow-hidden group flex-1">
-                <img
-                  src="/images/cau-chuyen-02.jpg"
-                  alt="Câu chuyện"
-                  className="w-full h-44 object-cover group-hover:scale-105 transition-transform duration-500"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent group-hover:from-black/20 transition-all duration-500" />
-                <div className="absolute bottom-3 left-3 right-3 translate-y-1 group-hover:translate-y-0 transition-transform duration-400">
-                  <div className="bg-[#FFF9C4]/95 rounded-xl p-3 shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-400">
-                    <p className="text-primary font-display text-sm font-bold mb-1">Chế Biến Thủ Công</p>
-                    <p className="text-foreground/80 text-xs leading-relaxed">Từng công đoạn được thực hiện tỉ mỉ bởi đôi bàn tay thợ lành nghề, giữ trọn hương vị nguyên bản.</p>
-                  </div>
-                  <p className="text-white font-display text-base font-bold group-hover:opacity-0 transition-opacity duration-300 absolute bottom-3 left-0">Chế Biến Thủ Công</p>
-                </div>
-              </div>
-              <div className="relative rounded-3xl overflow-hidden group flex-1">
-                <img
-                  src="/images/cau-chuyen-04.jpg"
-                  alt="Câu chuyện 2"
-                  className="w-full h-44 object-cover group-hover:scale-105 transition-transform duration-500"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent group-hover:from-black/20 transition-all duration-500" />
-                <div className="absolute bottom-3 left-3 right-3 translate-y-1 group-hover:translate-y-0 transition-transform duration-400">
-                  <div className="bg-[#FFF9C4]/95 rounded-xl p-3 shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-400">
-                    <p className="text-primary font-display text-sm font-bold mb-1">Nghệ Thuật Ướp Hương</p>
-                    <p className="text-foreground/80 text-xs leading-relaxed">Bí quyết ướp hương hoa tươi truyền thống tạo nên những tách trà thơm ngát, đậm đà bản sắc Việt.</p>
-                  </div>
-                  <p className="text-white font-display text-base font-bold group-hover:opacity-0 transition-opacity duration-300 absolute bottom-3 left-0">Nghệ Thuật Ướp Hương</p>
-                </div>
-              </div>
-            </motion.div>
-
-            {/* Col 3 — single */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: 0.2, duration: 0.6 }} viewport={{ once: true }}
-              className="relative rounded-3xl overflow-hidden group"
-            >
-              <img
-                src="/images/cau-chuyen-05.jpg"
-                alt="Câu chuyện 3"
-                className="w-full h-72 md:h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                style={{ minHeight: "360px" }}
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent group-hover:from-black/20 transition-all duration-500" />
-              <div className="absolute bottom-5 left-5 right-5 translate-y-2 group-hover:translate-y-0 transition-transform duration-400">
-                <div className="bg-[#FFF9C4]/95 rounded-xl p-4 shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-400">
-                  <p className="text-primary font-display text-base font-bold leading-snug mb-1">Di Sản & Văn Hóa</p>
-                  <p className="text-foreground/80 text-xs leading-relaxed">Gìn giữ bản sắc trà Việt trường tồn qua từng thế hệ – nơi văn hóa và thiên nhiên hòa quyện thành một.</p>
-                </div>
-                <p className="text-white font-display text-lg font-bold leading-snug group-hover:opacity-0 transition-opacity duration-300 absolute bottom-4 left-0">Di Sản & Văn Hóa</p>
-              </div>
-            </motion.div>
-          </div>
+            </div>
+          </motion.div>
 
           <div className="text-center">
             <Link href="/ve-esg-valley">
