@@ -13,6 +13,7 @@ import { AppLayout } from "./components/layout/AppLayout";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Products from "./pages/Products";
+import ProductDetail from "./pages/ProductDetail";
 import Ecosystem from "./pages/Ecosystem";
 import News from "./pages/News";
 import Contact from "./pages/Contact";
@@ -27,6 +28,7 @@ function Router() {
       <Route path="/" component={Home} />
       <Route path="/ve-esg-valley" component={About} />
       <Route path="/san-pham" component={Products} />
+      <Route path="/san-pham/:slug" component={ProductDetail} />
       <Route path="/he-sinh-thai" component={Ecosystem} />
       <Route path="/tin-tuc" component={News} />
       <Route path="/lien-he" component={Contact} />

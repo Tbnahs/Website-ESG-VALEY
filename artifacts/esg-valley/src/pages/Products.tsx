@@ -117,7 +117,10 @@ export default function Products() {
                         <span className="text-primary text-xs font-semibold uppercase tracking-widest">
                           {product.category}
                         </span>
-                        <button className="text-muted-foreground text-xs hover:text-primary transition-colors flex items-center gap-0.5">
+                        <button
+                          onClick={() => navigate(`/san-pham/${product.slug}`)}
+                          className="text-muted-foreground text-xs hover:text-primary transition-colors flex items-center gap-0.5"
+                        >
                           Xem thêm <ChevronRight className="w-3.5 h-3.5" />
                         </button>
                       </div>
