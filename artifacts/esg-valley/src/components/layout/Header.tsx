@@ -348,12 +348,12 @@ export function Header() {
                 >
                   <div className="py-2">
                     {[
-                      { label: "01 · Viện Nghiên Cứu & Công Nghệ", hash: "vien-nghien-cuu" },
-                      { label: "02 · Vùng Nguyên Liệu & Sản Xuất", hash: "vung-nguyen-lieu" },
-                      { label: "03 · Bảo Tồn Di Sản", hash: "bao-ton-di-san" },
-                      { label: "04 · Nghiên Cứu & Phát Triển", hash: "nghien-cuu-san-pham" },
-                      { label: "05 · Trải Nghiệm & Du Lịch", hash: "trai-nghiem-van-hoa" },
-                      { label: "06 · Giáo Dục & Đào Tạo", hash: "giao-duc" },
+                      { label: "Viện Nghiên Cứu & Công Nghệ", hash: "vien-nghien-cuu" },
+                      { label: "Vùng Nguyên Liệu & Sản Xuất", hash: "vung-nguyen-lieu" },
+                      { label: "Bảo Tồn Di Sản", hash: "bao-ton-di-san" },
+                      { label: "Nghiên Cứu & Phát Triển", hash: "nghien-cuu-san-pham" },
+                      { label: "Trải Nghiệm & Du Lịch", hash: "trai-nghiem-van-hoa" },
+                      { label: "Giáo Dục & Đào Tạo", hash: "giao-duc" },
                     ].map(item => (
                       <button
                         key={item.hash}
@@ -363,15 +363,6 @@ export function Header() {
                         {item.label}
                       </button>
                     ))}
-                    <div className="border-t border-border mt-1 pt-1">
-                      <Link
-                        href="/he-sinh-thai"
-                        onClick={() => setEcosystemMenuOpen(false)}
-                        className="block text-xs text-primary font-semibold hover:underline px-5 py-2.5"
-                      >
-                        Xem toàn bộ Hệ Sinh Thái →
-                      </Link>
-                    </div>
                   </div>
                 </motion.div>
               )}
