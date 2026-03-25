@@ -309,7 +309,7 @@ export default function About() {
               className="overflow-hidden rounded-[30px]"
             >
               <img
-                src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80"
+                src="/images/tong-quan.jpg"
                 alt="ESG Valley overview"
                 className="w-full h-[420px] object-cover"
               />
