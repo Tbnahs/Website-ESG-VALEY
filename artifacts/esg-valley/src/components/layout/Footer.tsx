@@ -65,12 +65,14 @@ export function Footer() {
           <div>
             <h3 className="font-display text-sm font-semibold mb-4 uppercase tracking-wider text-[#C9A84C]">Liên Kết Nhanh</h3>
             <ul className="space-y-2 text-xs text-white/80">
-              <li><Link href="/" className="hover:text-white transition-colors">Câu chuyện ESG Valley</Link></li>
-              <li><Link href="/san-pham" className="hover:text-white transition-colors">Sản phẩm</Link></li>
-              <li><Link href={`/san-pham?category=${encodeURIComponent("Trà Cụ")}`} className="hover:text-white transition-colors">Trà cụ</Link></li>
-              <li><Link href="/lien-he" className="hover:text-white transition-colors">Liên hệ</Link></li>
-              <li><Link href="#" className="hover:text-white transition-colors">Chính sách bảo mật</Link></li>
-              <li><Link href="#" className="hover:text-white transition-colors">Điều khoản sử dụng</Link></li>
+              <li><Link href="/" className="hover:text-white transition-colors">Trang Chủ</Link></li>
+              <li><Link href="/ve-esg-valley" className="hover:text-white transition-colors">Câu Chuyện ESG Valley</Link></li>
+              <li><Link href="/he-sinh-thai" className="hover:text-white transition-colors">Hệ Sinh Thái</Link></li>
+              <li><Link href="/san-pham" className="hover:text-white transition-colors">Sản Phẩm</Link></li>
+              <li><Link href="/tin-tuc" className="hover:text-white transition-colors">Tin Tức</Link></li>
+              <li><Link href="/ho-tro" className="hover:text-white transition-colors">Hỗ Trợ Khách Hàng</Link></li>
+              <li><Link href="/ho-tro#chinh-sach-bao-mat" className="hover:text-white transition-colors">Chính Sách Bảo Mật</Link></li>
+              <li><Link href="/ho-tro#chinh-sach-doi-tra" className="hover:text-white transition-colors">Chính Sách Đổi Trả</Link></li>
             </ul>
           </div>
 
