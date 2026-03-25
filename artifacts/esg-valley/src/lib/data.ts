@@ -82,7 +82,7 @@ export const products = [
     category: "Trà Cụ",
     description: "Ly uống nước đôi trà, thiết kế tối giản bằng thủy tinh trong suốt – giúp thưởng thức trọn vẹn màu sắc và hương thơm của từng loại trà.",
     price: "Liên hệ",
-    image: "https://images.unsplash.com/photo-1572635148818-ef6fd45eb394?auto=format&fit=crop&q=80&w=800"
+    image: "/images/product-ly-nuoc.png"
   },
   {
     id: 11,
