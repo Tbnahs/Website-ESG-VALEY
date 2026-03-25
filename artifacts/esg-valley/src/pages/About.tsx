@@ -37,7 +37,7 @@ const timelineData = [
     title: "Hệ Sinh Thái ESG",
     content:
       "ESG Valley không chỉ là thương hiệu trà – chúng tôi kiến tạo một hệ sinh thái hoàn chỉnh: từ không gian trải nghiệm trà, dịch vụ tiệc trà cao cấp, đến chương trình giáo dục và kết nối cộng đồng những người yêu trà Việt.",
-    img: "https://images.unsplash.com/photo-1559056199-641a0ac8b55e?w=700&q=80",
+    img: "/images/he-sinh-thai.jpg",
   },
   {
     year: 2025,
