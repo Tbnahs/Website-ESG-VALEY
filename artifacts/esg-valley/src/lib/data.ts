@@ -31,7 +31,8 @@ export const products = [
     category: "Trà",
     description: "Trải qua suốt chiều dài lịch sử, từ thuở dựng nước đến hôm nay, những giá trị văn hóa không ngừng được truyền lại như một báu vật vô giá. Trà – không chỉ là thức uống – đã trở thành món quà tinh thần thiêng liêng.",
     price: "Liên hệ",
-    image: "/images/product-mac-trieu.png"
+    image: "/images/product-mac-trieu.png",
+    thumbnails: ["/images/bach-nien-thumb-1.png", "/images/bach-nien-thumb-2.png"]
   },
   {
     id: 5,
