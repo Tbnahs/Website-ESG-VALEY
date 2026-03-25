@@ -429,7 +429,7 @@ export default function Ecosystem() {
       </section>
 
       {/* ════════ CTA ════════ */}
-      <section className="py-24 bg-primary relative overflow-hidden">
+      <section className="py-24 bg-[#1a2e1e] relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-0 left-0 w-96 h-96 bg-white rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2" />
           <div className="absolute bottom-0 right-0 w-96 h-96 bg-white rounded-full blur-3xl translate-x-1/3 translate-y-1/3" />
