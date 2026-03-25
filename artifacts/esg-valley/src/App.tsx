@@ -13,6 +13,7 @@ import Products from "./pages/Products";
 import Ecosystem from "./pages/Ecosystem";
 import News from "./pages/News";
 import Contact from "./pages/Contact";
+import Support from "./pages/Support";
 import NotFound from "@/pages/not-found";
 
 const queryClient = new QueryClient();
@@ -26,6 +27,7 @@ function Router() {
       <Route path="/he-sinh-thai" component={Ecosystem} />
       <Route path="/tin-tuc" component={News} />
       <Route path="/lien-he" component={Contact} />
+      <Route path="/ho-tro" component={Support} />
       <Route component={NotFound} />
     </Switch>
   );

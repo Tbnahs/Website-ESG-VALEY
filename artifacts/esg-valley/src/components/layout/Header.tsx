@@ -6,11 +6,11 @@ import { useAuth } from "@/lib/auth";
 import { useLang, LANGUAGES, type Lang } from "@/lib/lang";
 
 const supportMenu = [
-  { label: "Chính sách bảo mật", path: "/chinh-sach-bao-mat" },
-  { label: "Chính sách đổi trả hàng", path: "/chinh-sach-doi-tra" },
-  { label: "Câu hỏi thường gặp", path: "/faq" },
-  { label: "Liên hệ", path: "/lien-he" },
-  { label: "Tra cứu đơn hàng", path: "/tra-cuu-don-hang" },
+  { label: "Liên hệ", path: "/ho-tro#lien-he" },
+  { label: "Chính sách bảo mật", path: "/ho-tro#chinh-sach-bao-mat" },
+  { label: "Chính sách đổi trả hàng", path: "/ho-tro#chinh-sach-doi-tra" },
+  { label: "Câu hỏi thường gặp", path: "/ho-tro#faq" },
+  { label: "Tra cứu đơn hàng", path: "/ho-tro#tra-cuu-don-hang" },
 ];
 
 const productMenu = [
@@ -258,7 +258,7 @@ export function Header() {
               onClick={() => setSupportMenuOpen(v => !v)}
               onMouseEnter={() => setSupportMenuOpen(true)}
               className={`text-sm uppercase tracking-wider font-semibold transition-all duration-300 flex items-center gap-1 relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:h-[1px] after:transition-all after:duration-300 ${
-                location.startsWith("/lien-he") || location.startsWith("/chinh-sach") || location.startsWith("/faq") || location.startsWith("/tra-cuu") ? "after:w-full" : "after:w-0 hover:after:w-full"
+                location.startsWith("/ho-tro") || location.startsWith("/lien-he") ? "after:w-full" : "after:w-0 hover:after:w-full"
               } ${isTransparent ? "after:bg-white" : "after:bg-primary"}`}
             >
               Hỗ Trợ Khách Hàng
