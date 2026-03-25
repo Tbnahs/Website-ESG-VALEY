@@ -28,7 +28,7 @@ export default function Ecosystem() {
       {/* ════════ HERO ════════ */}
       <div className="relative pt-44 pb-32 overflow-hidden">
         <img
-          src={`${import.meta.env.BASE_URL}images/ecosystem-banner.png`}
+          src={`${import.meta.env.BASE_URL}images/ecosystem-banner.jpg`}
           alt="Hệ sinh thái ESGValley"
           className="absolute inset-0 w-full h-full object-cover"
         />
