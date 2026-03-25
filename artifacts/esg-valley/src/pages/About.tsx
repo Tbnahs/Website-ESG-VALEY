@@ -112,7 +112,7 @@ export default function About() {
   return (
     <div className="w-full bg-background">
       {/* ── HERO BANNER ── */}
-      <div className="relative py-28 overflow-hidden">
+      <div className="relative pt-44 pb-28 overflow-hidden">
         <img
           src="/images/hanh-trinh.jpg"
           alt="Câu chuyện ESG Valley"
