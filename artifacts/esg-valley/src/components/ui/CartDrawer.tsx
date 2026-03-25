@@ -42,6 +42,9 @@ export function CartDrawer() {
       hour: "2-digit", minute: "2-digit",
     });
 
+  const formatPrice = (n: number) => n.toLocaleString("vi-VN") + "₫";
+  const total = items.reduce((sum, { product, quantity }) => sum + product.price * quantity, 0);
+
   return (
     <AnimatePresence>
       {isOpen && (
@@ -100,7 +103,7 @@ export function CartDrawer() {
                           <div className="flex-1 min-w-0">
                             <p className="text-xs text-primary font-semibold uppercase tracking-wider mb-0.5">{product.category}</p>
                             <p className="font-semibold text-sm text-foreground truncate">{product.name}</p>
-                            <p className="text-xs text-muted-foreground mt-0.5">Liên hệ báo giá</p>
+                            <p className="text-xs font-semibold text-primary mt-0.5">{formatPrice(product.price)}</p>
                             <div className="flex items-center justify-between mt-3">
                               <div className="flex items-center border border-border rounded-full overflow-hidden">
                                 <button
@@ -134,10 +137,13 @@ export function CartDrawer() {
                 {items.length > 0 && (
                   <div className="px-6 py-4 border-t border-border space-y-3">
                     <div className="flex items-center justify-between text-sm text-muted-foreground">
-                      <span>Tổng sản phẩm</span>
+                      <span>Số lượng</span>
                       <span className="font-semibold text-foreground">{items.reduce((s, i) => s + i.quantity, 0)} sản phẩm</span>
                     </div>
-                    <p className="text-xs text-muted-foreground">Giá sẽ được xác nhận qua điện thoại sau khi đặt hàng.</p>
+                    <div className="flex items-center justify-between text-sm font-bold text-foreground">
+                      <span>Tổng tiền</span>
+                      <span className="text-primary text-base">{formatPrice(total)}</span>
+                    </div>
                     <button
                       onClick={() => setStep("form")}
                       className="w-full py-3.5 bg-primary text-primary-foreground font-bold rounded-sm hover:bg-primary/90 transition-all uppercase tracking-wider text-sm"
@@ -156,14 +162,18 @@ export function CartDrawer() {
                   {/* Order summary */}
                   <div className="mb-5 p-4 bg-card border border-border rounded-lg">
                     <p className="text-xs text-muted-foreground uppercase tracking-wider font-semibold mb-2">Sản phẩm đặt hàng</p>
-                    <ul className="space-y-1">
+                    <ul className="space-y-1.5">
                       {items.map(({ product, quantity }) => (
                         <li key={product.id} className="flex justify-between text-sm">
-                          <span className="text-foreground truncate pr-2">{product.name}</span>
-                          <span className="text-muted-foreground font-semibold shrink-0">x{quantity}</span>
+                          <span className="text-foreground truncate pr-2">{product.name} <span className="text-muted-foreground">x{quantity}</span></span>
+                          <span className="font-semibold text-primary shrink-0">{formatPrice(product.price * quantity)}</span>
                         </li>
                       ))}
                     </ul>
+                    <div className="mt-2 pt-2 border-t border-border flex justify-between text-sm font-bold">
+                      <span>Tổng tiền</span>
+                      <span className="text-primary">{formatPrice(total)}</span>
+                    </div>
                   </div>
 
                   <form id="order-form" onSubmit={handleConfirm} className="space-y-4">

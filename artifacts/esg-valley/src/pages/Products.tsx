@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronRight, ShoppingCart, CheckCircle } from "lucide-react";
 import { products } from "@/lib/data";
-import { Link, useLocation } from "wouter";
+import { Link } from "wouter";
 import { useCart } from "@/lib/cart";
 import { useAuth } from "@/lib/auth";
 
@@ -11,7 +11,6 @@ export default function Products() {
   const categories = ["Tất cả", "Trà", "Matcha", "Trà Cụ", "Dịch Vụ Đặc Biệt"];
   const { addItem } = useCart();
   const { isLoggedIn, openAuthModal } = useAuth();
-  const [, navigate] = useLocation();
   const [addedId, setAddedId] = useState<number | null>(null);
 
   const handleAddToCart = (product: typeof products[0]) => {
@@ -24,10 +23,8 @@ export default function Products() {
     setTimeout(() => setAddedId(null), 1500);
   };
 
-  const handleContact = () => {
-    navigate("/ho-tro");
-    setTimeout(() => { window.location.hash = "lien-he"; }, 150);
-  };
+  const formatPrice = (price: number) =>
+    price.toLocaleString("vi-VN") + "₫";
 
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
@@ -145,12 +142,9 @@ export default function Products() {
 
                     {/* CTA */}
                     <div className="flex items-center gap-3">
-                      <button
-                        onClick={handleContact}
-                        className="px-5 py-2.5 border border-primary text-primary text-sm font-semibold rounded-full hover:bg-primary/10 transition-colors"
-                      >
-                        Liên hệ báo giá
-                      </button>
+                      <span className="text-lg font-bold text-primary">
+                        {formatPrice(product.price)}
+                      </span>
                       <button
                         onClick={() => handleAddToCart(product)}
                         className={`flex items-center gap-2 px-5 py-2.5 text-sm font-semibold rounded-full transition-all duration-300 ${

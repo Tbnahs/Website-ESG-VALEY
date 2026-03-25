@@ -4,7 +4,7 @@ export const products = [
     name: "Mã Đáo Thành Công",
     category: "Trà",
     description: "Hộp quà tặng cao cấp Tết 2026, tinh hoa trà Việt – trọn vẹn tâm tình.",
-    price: "Liên hệ",
+    price: 2800000,
     image: "/images/product-ma-dao-chinh.png",
     thumbnails: ["/images/ma-dao-thumb-1.png", "/images/ma-dao-thumb-2.png"]
   },
@@ -13,7 +13,7 @@ export const products = [
     name: "Tản Viên Trà",
     category: "Trà",
     description: "Thuở hồng hoang, khi Thần Nông nếm bách thảo và phát hiện lá trà có thể giải độc, đất Việt cũng bắt đầu ghi dấu sự sống nơi núi Tản Viên – vùng non thiêng hội tụ linh khí đất trời.",
-    price: "Liên hệ",
+    price: 950000,
     image: "/images/product-ma-dao.png",
     thumbnails: ["/images/tan-vien-thumb-1.png", "/images/tan-vien-thumb-2.png"]
   },
@@ -22,7 +22,7 @@ export const products = [
     name: "Mạc Triều Trà",
     category: "Trà",
     description: "Mạc Triều Trà mang trong mình câu chuyện về sự chắt lọc, nâng tầm và gửi gắm của bao thế hệ. Ban đầu, chén trà vốn chỉ là thức uống dân dã, giản dị bên mái nhà sàn, bên nương chè xanh.",
-    price: "Liên hệ",
+    price: 1200000,
     image: "/images/product-tan-vien.png",
     thumbnails: ["/images/mac-trieu-thumb-1.png", "/images/mac-trieu-thumb-2.png"]
   },
@@ -31,7 +31,7 @@ export const products = [
     name: "Bách Niên Trà",
     category: "Trà",
     description: "Trải qua suốt chiều dài lịch sử, từ thuở dựng nước đến hôm nay, những giá trị văn hóa không ngừng được truyền lại như một báu vật vô giá. Trà – không chỉ là thức uống – đã trở thành món quà tinh thần thiêng liêng.",
-    price: "Liên hệ",
+    price: 1500000,
     image: "/images/product-mac-trieu.png",
     thumbnails: ["/images/bach-nien-thumb-1.png", "/images/bach-nien-thumb-2.png"]
   },
@@ -40,7 +40,7 @@ export const products = [
     name: "Thượng Cổ Trà",
     category: "Trà",
     description: "Thuở xưa xa, ở miền đất Thái Nguyên núi non hùng vĩ, có nàng Công – người con gái xinh đẹp, khéo léo, yêu trà như yêu chính cuộc đời mình.",
-    price: "Liên hệ",
+    price: 1800000,
     image: "/images/product-bach-nien.png",
     thumbnails: ["/images/thuong-co-thumb-1.png", "/images/thuong-co-thumb-2.png"]
   },
@@ -49,7 +49,7 @@ export const products = [
     name: "Matcha",
     category: "Matcha",
     description: "Matcha thượng hạng được chọn lọc từ vùng chè đặc sản, chế biến theo phương pháp truyền thống Nhật Bản kết hợp bản sắc Việt – màu xanh ngọc, hương thơm thanh thoát, vị đậm đà.",
-    price: "Liên hệ",
+    price: 650000,
     image: "/images/product-matcha.jpg"
   },
   {
@@ -57,7 +57,7 @@ export const products = [
     name: "Tách Trà",
     category: "Trà Cụ",
     description: "Tách trà thủ công bằng gốm sứ cao cấp, dáng thanh thoát – tôn vinh từng ngụm trà thượng hạng. Hoàn hảo cho những buổi thưởng trà trang trọng.",
-    price: "Liên hệ",
+    price: 380000,
     image: "/images/product-tach-tra.png"
   },
   {
@@ -65,7 +65,7 @@ export const products = [
     name: "Ấm Trà",
     category: "Trà Cụ",
     description: "Ấm pha trà truyền thống bằng đất tử sa, giữ nhiệt lý tưởng và nâng tầm hương vị. Mỗi chiếc ấm là tác phẩm nghệ thuật độc bản từ bàn tay nghệ nhân lành nghề.",
-    price: "Liên hệ",
+    price: 890000,
     image: "/images/product-am-tra.png"
   },
   {
@@ -73,7 +73,7 @@ export const products = [
     name: "Tống Trà",
     category: "Trà Cụ",
     description: "Tống trà (fairness cup) bằng thủy tinh borosilicate cao cấp, giúp chia đều hương vị mỗi lần rót. Thiết kế tối giản, sang trọng.",
-    price: "Liên hệ",
+    price: 450000,
     image: "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&q=80&w=800"
   },
   {
@@ -81,7 +81,7 @@ export const products = [
     name: "Ly Nước",
     category: "Trà Cụ",
     description: "Ly uống nước đôi trà, thiết kế tối giản bằng thủy tinh trong suốt – giúp thưởng thức trọn vẹn màu sắc và hương thơm của từng loại trà.",
-    price: "Liên hệ",
+    price: 280000,
     image: "/images/product-ly-nuoc.png"
   },
   {
@@ -89,7 +89,7 @@ export const products = [
     name: "Đĩa Lót",
     category: "Trà Cụ",
     description: "Đĩa lót tách trà bằng gỗ tự nhiên và gốm sứ, kết hợp hài hòa vẻ đẹp thiên nhiên và nghệ thuật thủ công – điểm nhấn tinh tế cho bộ ấm chén.",
-    price: "Liên hệ",
+    price: 220000,
     image: "/images/product-dia-lot.png"
   },
   {
@@ -97,7 +97,7 @@ export const products = [
     name: "Tiệc Trà Di Sản",
     category: "Dịch Vụ Đặc Biệt",
     description: "Trải nghiệm văn hóa thưởng trà độc bản tại không gian ESG Valley – nơi mỗi tách trà là một hành trình kết nối quá khứ, hiện tại và tương lai bền vững.",
-    price: "Liên hệ",
+    price: 5500000,
     image: "https://images.unsplash.com/photo-1563822249548-9a72b6353cd1?auto=format&fit=crop&q=80&w=800"
   },
   {
@@ -105,7 +105,7 @@ export const products = [
     name: "Tea Show – Trình Diễn Nghệ Thuật Pha Trà",
     category: "Dịch Vụ Đặc Biệt",
     description: "Buổi trình diễn nghệ thuật pha trà độc đáo kết hợp âm nhạc và văn hóa trà Việt, tạo nên trải nghiệm thẩm mỹ tinh tế và khó quên dành cho sự kiện doanh nghiệp, tiệc tư nhân.",
-    price: "Liên hệ",
+    price: 8000000,
     image: "https://images.unsplash.com/photo-1544025162-d76538897a97?auto=format&fit=crop&q=80&w=800"
   }
 ];
