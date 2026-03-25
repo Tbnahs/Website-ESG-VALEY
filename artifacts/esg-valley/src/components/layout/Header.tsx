@@ -325,7 +325,14 @@ export function Header() {
           {/* Hệ Sinh Thái dropdown */}
           <div className="relative" ref={ecosystemRef}>
             <button
-              onClick={() => setEcosystemMenuOpen(v => !v)}
+              onClick={() => {
+                if (ecosystemMenuOpen) {
+                  setEcosystemMenuOpen(false);
+                  navigate("/he-sinh-thai");
+                } else {
+                  setEcosystemMenuOpen(true);
+                }
+              }}
               onMouseEnter={() => setEcosystemMenuOpen(true)}
               className={`text-sm uppercase tracking-wider font-semibold transition-all duration-300 flex items-center gap-1 relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:h-[1px] after:transition-all after:duration-300 ${
                 location.startsWith("/he-sinh-thai") ? "after:w-full" : "after:w-0 hover:after:w-full"
