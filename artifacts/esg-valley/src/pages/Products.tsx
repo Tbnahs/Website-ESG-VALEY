@@ -25,7 +25,7 @@ export default function Products() {
       {/* Header */}
       <div className="relative pt-28 pb-16 text-center overflow-hidden">
         <img
-          src="/images/tong-quan.jpg"
+          src="/images/products-hero.jpg"
           alt="Danh sách sản phẩm"
           className="absolute inset-0 w-full h-full object-cover"
         />
