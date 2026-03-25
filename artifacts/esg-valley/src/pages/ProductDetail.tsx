@@ -4,6 +4,7 @@ import { ChevronRight, ShoppingCart, Phone, ArrowLeft } from "lucide-react";
 import { products } from "@/lib/data";
 import { useCart } from "@/lib/cart";
 import { useAuth } from "@/lib/auth";
+import { useToast } from "@/hooks/use-toast";
 import { useState } from "react";
 
 const formatPrice = (price: number) =>
@@ -15,6 +16,7 @@ export default function ProductDetail() {
   const product = products.find(p => p.slug === slug);
   const { addItem } = useCart();
   const { isLoggedIn, openAuthModal } = useAuth();
+  const { toast } = useToast();
   const [added, setAdded] = useState(false);
 
   if (!product) {
@@ -37,6 +39,10 @@ export default function ProductDetail() {
     addItem(product);
     setAdded(true);
     setTimeout(() => setAdded(false), 2000);
+    toast({
+      title: "Đã thêm vào giỏ hàng",
+      description: product.name,
+    });
   };
 
   const handleContact = () => {

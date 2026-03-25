@@ -5,6 +5,7 @@ import { products } from "@/lib/data";
 import { Link, useLocation } from "wouter";
 import { useCart } from "@/lib/cart";
 import { useAuth } from "@/lib/auth";
+import { useToast } from "@/hooks/use-toast";
 
 export default function Products() {
   const [activeCategory, setActiveCategory] = useState("Tất cả");
@@ -13,6 +14,7 @@ export default function Products() {
   const { isLoggedIn, openAuthModal } = useAuth();
   const [, navigate] = useLocation();
   const [addedId, setAddedId] = useState<number | null>(null);
+  const { toast } = useToast();
 
   const handleContact = () => {
     navigate("/ho-tro");
@@ -27,6 +29,10 @@ export default function Products() {
     addItem(product);
     setAddedId(product.id);
     setTimeout(() => setAddedId(null), 1500);
+    toast({
+      title: "Đã thêm vào giỏ hàng",
+      description: product.name,
+    });
   };
 
   const formatPrice = (price: number) =>
