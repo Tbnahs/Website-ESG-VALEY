@@ -106,7 +106,7 @@ export const esgPillars = [
     textAccent: "text-amber-700",
     description: "Chúng tôi tin rằng một doanh nghiệp bền vững phải đặt con người làm trung tâm. Từ việc hỗ trợ sinh kế người dân trồng chè vùng cao, đến việc gìn giữ và phát huy văn hóa bản địa – mỗi sản phẩm ESG Valley là cầu nối giữa cộng đồng và thế giới.",
     points: ["Hỗ trợ 500+ hộ nông dân", "Bảo tồn văn hóa bản địa", "Phát triển cộng đồng bền vững"],
-    image: "https://images.unsplash.com/photo-1542810634-71277d95dcbb?auto=format&fit=crop&q=80&w=900"
+    image: "/images/social-in-esg.jpg"
   },
   {
     code: "G",
