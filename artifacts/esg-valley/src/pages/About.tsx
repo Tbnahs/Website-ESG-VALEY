@@ -1,6 +1,7 @@
 import { useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { ChevronLeft, ChevronRight, Upload } from "lucide-react";
+import { useAuth } from "@/lib/auth";
 
 const timelineData = [
   {
@@ -74,6 +75,7 @@ const achievementImages = [
 ];
 
 export default function About() {
+  const { isAdmin } = useAuth();
   const [activeYear, setActiveYear] = useState(2021);
   const years = timelineData.map((t) => t.year);
   const activeData = timelineData.find((t) => t.year === activeYear)!;
@@ -259,16 +261,18 @@ export default function About() {
                   className="flex flex-col items-center gap-2"
                 >
                   <div
-                    className="relative overflow-hidden rounded-xl aspect-square w-full max-w-[130px] shadow-md cursor-pointer group"
-                    onClick={() => fileInputRefs[i].current?.click()}
+                    className={`relative overflow-hidden rounded-xl aspect-square w-full max-w-[130px] shadow-md ${isAdmin ? "cursor-pointer group" : ""}`}
+                    onClick={() => isAdmin && fileInputRefs[i].current?.click()}
                   >
                     <img src={item.src} alt={item.label} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-                    <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                      {uploading === i
-                        ? <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin" />
-                        : <Upload className="w-5 h-5 text-white" />
-                      }
-                    </div>
+                    {isAdmin && (
+                      <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        {uploading === i
+                          ? <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin" />
+                          : <Upload className="w-5 h-5 text-white" />
+                        }
+                      </div>
+                    )}
                   </div>
                   <input
                     ref={fileInputRefs[i]}

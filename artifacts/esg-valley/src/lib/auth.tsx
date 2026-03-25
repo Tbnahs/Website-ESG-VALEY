@@ -11,10 +11,13 @@ interface AuthContextType {
   login: (user: User) => void;
   logout: () => void;
   isLoggedIn: boolean;
+  isAdmin: boolean;
   showAuthModal: boolean;
   openAuthModal: () => void;
   closeAuthModal: () => void;
 }
+
+const ADMIN_ID = import.meta.env.VITE_ADMIN_ID ?? "";
 
 const AuthContext = createContext<AuthContextType | null>(null);
 
@@ -40,12 +43,15 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     localStorage.removeItem("esgvalley_user");
   };
 
+  const isAdmin = !!user && !!ADMIN_ID && user.identifier.trim().toLowerCase() === ADMIN_ID.trim().toLowerCase();
+
   return (
     <AuthContext.Provider value={{
       user,
       login,
       logout,
       isLoggedIn: !!user,
+      isAdmin,
       showAuthModal,
       openAuthModal: () => setShowAuthModal(true),
       closeAuthModal: () => setShowAuthModal(false),
