@@ -112,26 +112,43 @@ export function CartDrawer() {
               transition={{ duration: 0.2 }}
               className="overflow-hidden border-t border-border"
             >
-              <div className="px-4 py-3 space-y-2 bg-muted/20">
-                <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-1">Sản phẩm</p>
-                {o.items.map(({ product, quantity }) => (
-                  <div key={product.id} className="flex items-center gap-3">
-                    <img src={product.image} alt={product.name} className="w-10 h-10 object-contain rounded bg-background border border-border flex-shrink-0" />
-                    <div className="flex-1 min-w-0">
-                      <p className="text-xs font-medium text-foreground truncate">{product.name}</p>
-                      <p className="text-xs text-muted-foreground">x{quantity} · {formatPrice(product.price * quantity)}</p>
+              <div className="bg-muted/20">
+                {/* Thông tin đặt hàng */}
+                <div className="px-4 pt-3 pb-2 border-b border-border space-y-1.5">
+                  <p className="text-[10px] font-semibold text-muted-foreground uppercase tracking-widest mb-2">Thông tin đặt hàng</p>
+                  {[
+                    { label: "Ngày đặt", value: formatDate(o.createdAt) },
+                    { label: "Người đặt", value: o.buyer.name },
+                    { label: "Số điện thoại", value: o.buyer.phone },
+                    { label: "Địa chỉ", value: o.buyer.address },
+                    ...(o.buyer.note ? [{ label: "Ghi chú", value: o.buyer.note }] : []),
+                    { label: "Thanh toán", value: PAYMENT_METHODS.find(m => m.id === o.buyer.paymentMethod)?.label ?? o.buyer.paymentMethod },
+                  ].map(({ label, value }) => (
+                    <div key={label} className="flex gap-2 text-xs">
+                      <span className="text-muted-foreground flex-shrink-0 w-24">{label}:</span>
+                      <span className="font-medium text-foreground">{value}</span>
                     </div>
+                  ))}
+                </div>
+                {/* Sản phẩm */}
+                <div className="px-4 pt-3 pb-3">
+                  <p className="text-[10px] font-semibold text-muted-foreground uppercase tracking-widest mb-2">Sản phẩm đặt</p>
+                  <div className="space-y-2">
+                    {o.items.map(({ product, quantity }) => (
+                      <div key={product.id} className="flex items-center gap-3">
+                        <img src={product.image} alt={product.name} className="w-10 h-10 object-contain rounded bg-background border border-border flex-shrink-0" />
+                        <div className="flex-1 min-w-0">
+                          <p className="text-xs font-medium text-foreground truncate">{product.name}</p>
+                          <p className="text-xs text-muted-foreground">x{quantity}</p>
+                        </div>
+                        <span className="text-xs font-semibold text-foreground shrink-0">{formatPrice(product.price * quantity)}</span>
+                      </div>
+                    ))}
                   </div>
-                ))}
-                <div className="pt-2 border-t border-border flex justify-between text-xs font-bold">
-                  <span className="text-muted-foreground">Tổng tiền</span>
-                  <span className="text-primary">{formatPrice(orderTotal)}</span>
-                </div>
-                <div className="text-xs text-muted-foreground">
-                  Thanh toán: <span className="font-medium text-foreground">{PAYMENT_METHODS.find(m => m.id === o.buyer.paymentMethod)?.label ?? o.buyer.paymentMethod}</span>
-                </div>
-                <div className="text-xs text-muted-foreground">
-                  Địa chỉ: <span className="font-medium text-foreground">{o.buyer.address}</span>
+                  <div className="mt-3 pt-3 border-t border-border flex justify-between items-center">
+                    <span className="text-xs font-semibold text-muted-foreground">Tổng tiền</span>
+                    <span className="text-sm font-bold text-primary">{formatPrice(orderTotal)}</span>
+                  </div>
                 </div>
               </div>
             </motion.div>
