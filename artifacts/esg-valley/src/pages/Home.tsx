@@ -10,10 +10,10 @@ import { products, news, esgPillars } from "@/lib/data";
 const slides = [
   {
     image: `${import.meta.env.BASE_URL}images/hero-slide-1.png`,
-    title: "Tiệc Trà Di Sản",
+    title: "Bộ Sưu Tập Quà Tặng Tết 2026",
     subtitle: "Tinh Hoa Trà Việt - Trọn Vẹn Tâm Tình",
     cta: "Khám Phá Ngay",
-    link: "/san-pham?category=Dịch Vụ",
+    link: "/san-pham",
   },
   {
     image: `${import.meta.env.BASE_URL}images/hero-slide-2.png`,
