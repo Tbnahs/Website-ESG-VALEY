@@ -9,9 +9,7 @@ export function Footer() {
           
           {/* Brand Info */}
           <div className="space-y-6">
-            <h2 className="font-display text-3xl font-bold tracking-widest uppercase">
-              ESG VALLEY
-            </h2>
+            <img src="/images/logo-white.png" alt="ESG Valley" className="h-24 w-auto object-contain" />
             <p className="text-primary-foreground/80 text-sm leading-relaxed">
               Thương hiệu trà di sản Việt Nam, cam kết phát triển bền vững theo tiêu chuẩn ESG. Kết nối văn hóa, thiên nhiên và cộng đồng.
             </p>
