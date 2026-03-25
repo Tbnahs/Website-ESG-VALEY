@@ -138,9 +138,9 @@ export default function Support() {
       {/* Hero */}
       <div className="relative py-28 overflow-hidden">
         <img
-          src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=1600&q=85"
+          src="/images/support-hero.png"
           alt="Hỗ trợ khách hàng ESG Valley"
-          className="absolute inset-0 w-full h-full object-cover"
+          className="absolute inset-0 w-full h-full object-cover object-center"
         />
         <div className="absolute inset-0 bg-black/60" />
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mt-[80px]">
