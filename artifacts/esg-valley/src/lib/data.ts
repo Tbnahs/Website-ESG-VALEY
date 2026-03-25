@@ -66,7 +66,7 @@ export const products = [
     category: "Trà Cụ",
     description: "Ấm pha trà truyền thống bằng đất tử sa, giữ nhiệt lý tưởng và nâng tầm hương vị. Mỗi chiếc ấm là tác phẩm nghệ thuật độc bản từ bàn tay nghệ nhân lành nghề.",
     price: "Liên hệ",
-    image: "https://images.unsplash.com/photo-1571441935965-33bfb2dbf73c?auto=format&fit=crop&q=80&w=800"
+    image: "/images/product-am-tra.png"
   },
   {
     id: 9,
