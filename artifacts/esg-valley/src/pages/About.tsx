@@ -181,11 +181,11 @@ export default function About() {
               transition={{ duration: 0.4 }}
               className="flex-1 grid grid-cols-1 md:grid-cols-2 gap-8 items-start"
             >
-              <div className="overflow-hidden rounded-2xl">
+              <div className="overflow-hidden rounded-2xl aspect-square">
                 <img
                   src={activeData.img}
                   alt={activeData.title}
-                  className="w-full h-56 object-cover"
+                  className="w-full h-full object-cover"
                 />
               </div>
               <div>
