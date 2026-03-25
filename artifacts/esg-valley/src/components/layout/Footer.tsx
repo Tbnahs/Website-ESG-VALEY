@@ -28,7 +28,7 @@ export function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h3 className="font-display text-xl font-semibold mb-6 uppercase tracking-wider">Liên Kết</h3>
+            <h3 className="font-display text-xl font-semibold mb-6 uppercase tracking-wider text-[#C9A84C]">Liên Kết</h3>
             <ul className="space-y-3 text-sm text-primary-foreground/80">
               <li><Link href="/ve-esg-valley" className="hover:text-white transition-colors">Câu chuyện ESGValley</Link></li>
               <li><Link href="/he-sinh-thai" className="hover:text-white transition-colors">Hệ Sinh Thái</Link></li>
@@ -40,7 +40,7 @@ export function Footer() {
 
           {/* Products */}
           <div>
-            <h3 className="font-display text-xl font-semibold mb-6 uppercase tracking-wider">Sản Phẩm</h3>
+            <h3 className="font-display text-xl font-semibold mb-6 uppercase tracking-wider text-[#C9A84C]">Sản Phẩm</h3>
             <ul className="space-y-3 text-sm text-primary-foreground/80">
               <li><Link href="/san-pham" className="hover:text-white transition-colors">Mã Đáo Thành Công</Link></li>
               <li><Link href="/san-pham" className="hover:text-white transition-colors">Bách Niên Trà</Link></li>
@@ -52,7 +52,7 @@ export function Footer() {
 
           {/* Contact & Newsletter */}
           <div>
-            <h3 className="font-display text-xl font-semibold mb-6 uppercase tracking-wider">Liên Hệ</h3>
+            <h3 className="font-display text-xl font-semibold mb-6 uppercase tracking-wider text-[#C9A84C]">Liên Hệ</h3>
             <ul className="space-y-4 text-sm text-primary-foreground/80 mb-6">
               <li className="flex items-start">
                 <MapPin className="w-4 h-4 mr-3 flex-shrink-0 mt-0.5" />
