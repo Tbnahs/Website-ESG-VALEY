@@ -13,7 +13,8 @@ export const products = [
     category: "Trà",
     description: "Thuở hồng hoang, khi Thần Nông nếm bách thảo và phát hiện lá trà có thể giải độc, đất Việt cũng bắt đầu ghi dấu sự sống nơi núi Tản Viên – vùng non thiêng hội tụ linh khí đất trời.",
     price: "Liên hệ",
-    image: "/images/product-ma-dao.png"
+    image: "/images/product-ma-dao.png",
+    thumbnails: ["/images/tan-vien-thumb-1.png", "/images/tan-vien-thumb-2.png"]
   },
   {
     id: 3,
