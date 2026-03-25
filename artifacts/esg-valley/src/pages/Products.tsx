@@ -51,8 +51,8 @@ export default function Products() {
     : products.filter(p => p.category === activeCategory);
 
   return (
-    <div className="w-full bg-white min-h-screen">
-      {/* Header */}
+    <div className="w-full bg-white min-h-screen pt-28">
+      {/* Hero */}
       <div className="relative py-28 overflow-hidden">
         <img
           src="/images/products-hero.jpg"
