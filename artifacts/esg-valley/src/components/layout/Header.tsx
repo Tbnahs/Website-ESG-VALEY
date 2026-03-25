@@ -138,11 +138,16 @@ export function Header() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         isTransparent
-          ? "bg-transparent text-white border-b border-white/10 py-2"
-          : "bg-background text-foreground border-b border-border shadow-sm py-1"
+          ? "bg-transparent text-white border-b border-white/10"
+          : "bg-background text-foreground border-b border-border shadow-sm"
       }`}
     >
-      {/* Top Bar */}
+      {/* Top Bar — ẩn dần khi scroll */}
+      <motion.div
+        animate={isScrolled ? { height: 0, opacity: 0 } : { height: "auto", opacity: 1 }}
+        transition={{ duration: 0.35, ease: "easeInOut" }}
+        className="overflow-hidden"
+      >
       <div className={`hidden md:flex justify-between items-center px-8 py-1.5 text-xs border-b ${isTransparent ? "border-white/10" : "border-border/50"} font-medium`}>
         <div className="flex items-center space-x-6">
           <span className="flex items-center hover:text-accent transition-colors cursor-pointer">
@@ -189,9 +194,10 @@ export function Header() {
           </AnimatePresence>
         </div>
       </div>
+      </motion.div>
 
       {/* Main Nav */}
-      <div className="px-4 md:px-8 py-4 flex justify-between items-center">
+      <div className={`px-4 md:px-8 flex justify-between items-center transition-all duration-300 ${isScrolled ? "py-2" : "py-4"}`}>
         <button className="md:hidden p-2" onClick={() => setMobileMenuOpen(true)}>
           <Menu className="w-6 h-6" />
         </button>
@@ -200,7 +206,7 @@ export function Header() {
           <img
             src={isTransparent ? "/images/logo-white.png" : "/images/logo-esg-valley.png"}
             alt="ESG Valley"
-            className="h-14 md:h-16 w-auto object-contain transition-all duration-300"
+            className={`w-auto object-contain transition-all duration-300 ${isScrolled ? "h-9 md:h-11" : "h-14 md:h-16"}`}
           />
         </Link>
 
