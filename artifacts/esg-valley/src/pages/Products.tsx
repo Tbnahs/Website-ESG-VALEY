@@ -36,10 +36,9 @@ export default function Products() {
             <ChevronRight className="w-3.5 h-3.5" />
             <span className="text-white/90">Danh sách sản phẩm</span>
           </p>
-          <h1 className="font-display text-3xl md:text-4xl font-bold text-white">Danh sách sản phẩm</h1>
+          <h1 className="font-display text-3xl md:text-4xl font-bold text-white mt-[100px] mb-[0px]">Danh sách sản phẩm</h1>
         </div>
       </div>
-
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="flex flex-col lg:flex-row gap-8">
 
