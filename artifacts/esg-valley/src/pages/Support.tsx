@@ -17,7 +17,21 @@ const SECTIONS = [
   { id: "tra-cuu-don-hang",   label: "Tra Cứu Đơn Hàng",     icon: Package },
 ];
 
-const PRODUCTS = ["Tản Viên Trà", "Mạc Triều Trà", "Bách Niên Trà", "Thượng Cổ Trà"];
+const PRODUCTS = [
+  "Mã Đáo Thành Công",
+  "Tản Viên Trà",
+  "Mạc Triều Trà",
+  "Bách Niên Trà",
+  "Thượng Cổ Trà",
+  "Matcha",
+  "Tách Trà",
+  "Ấm Trà",
+  "Tống Trà",
+  "Ly Nước",
+  "Đĩa Lót",
+  "Tiệc Trà Di Sản",
+  "Tea Show – Trình Diễn Nghệ Thuật Pha Trà",
+];
 
 const faqs = [
   {
@@ -108,7 +122,6 @@ export default function Support() {
 
   return (
     <div className="w-full bg-white min-h-screen">
-
       {/* Hero */}
       <div className="relative py-28 overflow-hidden">
         <img
@@ -117,7 +130,7 @@ export default function Support() {
           className="absolute inset-0 w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-black/60" />
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mt-[80px]">
           <p className="text-[#C9A84C] text-sm uppercase tracking-[0.3em] font-semibold mb-3">ESG Valley</p>
           <h1 className="font-display text-4xl md:text-5xl font-bold text-white mb-4">Hỗ Trợ Khách Hàng</h1>
           <p className="text-white/80 max-w-2xl mx-auto text-lg">
@@ -125,7 +138,6 @@ export default function Support() {
           </p>
         </div>
       </div>
-
       {/* ── SECTION 1: LIÊN HỆ ── */}
       <section
         ref={el => { sectionRefs.current["lien-he"] = el; }}
@@ -223,9 +235,7 @@ export default function Support() {
           </div>
         </div>
       </section>
-
       <div className="border-t border-gray-100" />
-
       {/* ── SECTION 2: FAQ ── */}
       <section
         ref={el => { sectionRefs.current["faq"] = el; }}
@@ -270,9 +280,7 @@ export default function Support() {
           ))}
         </div>
       </section>
-
       <div className="border-t border-gray-100" />
-
       {/* ── SECTION 3: CHÍNH SÁCH BẢO MẬT ── */}
       <section
         ref={el => { sectionRefs.current["chinh-sach-bao-mat"] = el; }}
@@ -307,9 +315,7 @@ export default function Support() {
           <p className="text-xs text-muted-foreground italic pt-2">Chính sách có hiệu lực từ ngày 01/01/2025. Mọi thay đổi sẽ được thông báo trên website.</p>
         </div>
       </section>
-
       <div className="border-t border-gray-100" />
-
       {/* ── SECTION 4: CHÍNH SÁCH ĐỔI TRẢ ── */}
       <section
         ref={el => { sectionRefs.current["chinh-sach-doi-tra"] = el; }}
@@ -348,9 +354,7 @@ export default function Support() {
           </div>
         </div>
       </section>
-
       <div className="border-t border-gray-100" />
-
       {/* ── SECTION 5: TRA CỨU ĐƠN HÀNG ── */}
       <section
         ref={el => { sectionRefs.current["tra-cuu-don-hang"] = el; }}
@@ -465,7 +469,6 @@ export default function Support() {
           </AnimatePresence>
         </div>
       </section>
-
     </div>
   );
 }
