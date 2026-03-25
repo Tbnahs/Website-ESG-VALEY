@@ -7,6 +7,7 @@ import {
 } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { useLocation } from "wouter";
+import { useOrders } from "@/lib/orders";
 
 const SECTIONS = [
   { id: "lien-he",           label: "Liên Hệ",                icon: MessageSquare },
@@ -47,8 +48,10 @@ export default function Support() {
   const [activeSection, setActiveSection] = useState("lien-he");
   const [openFaq, setOpenFaq] = useState<number | null>(null);
   const [orderCode, setOrderCode] = useState("");
-  const [orderResult, setOrderResult] = useState<null | "found" | "not-found">(null);
+  const [foundOrder, setFoundOrder] = useState<ReturnType<typeof lookupOrder> | null>(null);
+  const [orderNotFound, setOrderNotFound] = useState(false);
   const { toast } = useToast();
+  const { lookupOrder } = useOrders();
   const [, navigate] = useLocation();
   const sectionRefs = useRef<Record<string, HTMLElement | null>>({});
 
@@ -76,7 +79,14 @@ export default function Support() {
 
   const handleOrderLookup = (e: React.FormEvent) => {
     e.preventDefault();
-    setOrderResult(orderCode.startsWith("ESG") ? "found" : "not-found");
+    const result = lookupOrder(orderCode.trim());
+    if (result) {
+      setFoundOrder(result);
+      setOrderNotFound(false);
+    } else {
+      setFoundOrder(null);
+      setOrderNotFound(true);
+    }
   };
 
   return (
@@ -338,8 +348,8 @@ export default function Support() {
                 <input
                   type="text"
                   value={orderCode}
-                  onChange={e => { setOrderCode(e.target.value); setOrderResult(null); }}
-                  placeholder="Nhập mã đơn hàng (VD: ESG2025001)"
+                  onChange={e => { setOrderCode(e.target.value); setFoundOrder(null); setOrderNotFound(false); }}
+                  placeholder="Nhập mã đơn hàng (VD: ESG2026123456)"
                   className="w-full pl-10 pr-4 py-3 bg-card border border-border rounded-sm focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all"
                   required
                 />
@@ -348,10 +358,10 @@ export default function Support() {
                 Tra cứu
               </button>
             </form>
-            <p className="text-xs text-muted-foreground mt-2">Mã đơn hàng được gửi qua email/SMS sau khi đặt hàng thành công.</p>
+            <p className="text-xs text-muted-foreground mt-2">Mã đơn hàng được hiển thị sau khi đặt hàng thành công (bắt đầu bằng ESG).</p>
 
             <AnimatePresence>
-              {orderResult === "found" && (
+              {foundOrder && (
                 <motion.div
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -360,54 +370,70 @@ export default function Support() {
                 >
                   <div className="bg-green-50 border-b border-border px-6 py-4 flex items-center gap-3">
                     <CheckCircle className="w-5 h-5 text-green-600" />
-                    <div>
-                      <p className="font-bold text-green-800">Đã tìm thấy đơn hàng: <span className="font-mono">{orderCode}</span></p>
-                    </div>
+                    <p className="font-bold text-green-800">Đơn hàng: <span className="font-mono">{foundOrder.code}</span></p>
                   </div>
-                  <div className="px-6 py-5 space-y-4 bg-card">
+                  <div className="px-6 py-5 space-y-3 bg-card">
                     <div className="flex justify-between text-sm">
                       <span className="text-muted-foreground">Trạng thái</span>
-                      <span className="font-semibold text-blue-600 flex items-center gap-1"><Truck className="w-4 h-4" /> Đang vận chuyển</span>
+                      <span className="font-semibold text-blue-600 flex items-center gap-1">
+                        <Truck className="w-4 h-4" /> {foundOrder.status}
+                      </span>
                     </div>
                     <div className="flex justify-between text-sm">
                       <span className="text-muted-foreground">Ngày đặt hàng</span>
-                      <span className="font-semibold">20/03/2026</span>
+                      <span className="font-semibold">
+                        {new Date(foundOrder.createdAt).toLocaleString("vi-VN", { day: "2-digit", month: "2-digit", year: "numeric", hour: "2-digit", minute: "2-digit" })}
+                      </span>
                     </div>
                     <div className="flex justify-between text-sm">
-                      <span className="text-muted-foreground">Dự kiến giao</span>
-                      <span className="font-semibold">24/03/2026 – 26/03/2026</span>
+                      <span className="text-muted-foreground">Người đặt</span>
+                      <span className="font-semibold">{foundOrder.buyer.name} — {foundOrder.buyer.phone}</span>
                     </div>
                     <div className="flex justify-between text-sm">
-                      <span className="text-muted-foreground">Đơn vị vận chuyển</span>
-                      <span className="font-semibold">Giao Hàng Nhanh</span>
+                      <span className="text-muted-foreground">Địa chỉ giao</span>
+                      <span className="font-semibold text-right max-w-[55%]">{foundOrder.buyer.address}</span>
                     </div>
+
                     <div className="pt-3 border-t border-border">
-                      <div className="flex items-center gap-2 justify-between">
-                        {[
-                          { label: "Đặt hàng", done: true },
-                          { label: "Xác nhận", done: true },
-                          { label: "Đang giao", done: true },
-                          { label: "Hoàn tất", done: false },
-                        ].map((step, i, arr) => (
-                          <div key={step.label} className="flex items-center flex-1">
-                            <div className="flex flex-col items-center flex-1">
-                              <div className={`w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold ${step.done ? "bg-primary text-primary-foreground" : "bg-muted border-2 border-border text-muted-foreground"}`}>
-                                {step.done ? <CheckCircle className="w-3.5 h-3.5" /> : i + 1}
-                              </div>
-                              <span className="text-[10px] mt-1 text-center text-muted-foreground">{step.label}</span>
-                            </div>
-                            {i < arr.length - 1 && (
-                              <div className={`h-0.5 flex-1 mb-4 ${step.done ? "bg-primary" : "bg-border"}`} />
-                            )}
-                          </div>
+                      <p className="text-xs text-muted-foreground font-semibold uppercase tracking-wider mb-2">Sản phẩm đặt</p>
+                      <ul className="space-y-1">
+                        {foundOrder.items.map(({ product, quantity }) => (
+                          <li key={product.id} className="flex justify-between text-sm">
+                            <span>{product.name}</span>
+                            <span className="font-semibold text-muted-foreground">x{quantity}</span>
+                          </li>
                         ))}
-                      </div>
+                      </ul>
+                    </div>
+
+                    <div className="pt-3 border-t border-border">
+                      {(() => {
+                        const steps = ["Đã đặt hàng", "Đang xử lý", "Đang vận chuyển", "Hoàn tất"];
+                        const currentIdx = steps.indexOf(foundOrder.status);
+                        return (
+                          <div className="flex items-center gap-0">
+                            {steps.map((s, i) => (
+                              <div key={s} className="flex items-center flex-1">
+                                <div className="flex flex-col items-center flex-1">
+                                  <div className={`w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold ${i <= currentIdx ? "bg-primary text-primary-foreground" : "bg-muted border-2 border-border text-muted-foreground"}`}>
+                                    {i <= currentIdx ? <CheckCircle className="w-3.5 h-3.5" /> : i + 1}
+                                  </div>
+                                  <span className="text-[9px] mt-1 text-center text-muted-foreground leading-tight">{s}</span>
+                                </div>
+                                {i < steps.length - 1 && (
+                                  <div className={`h-0.5 flex-1 mb-4 ${i < currentIdx ? "bg-primary" : "bg-border"}`} />
+                                )}
+                              </div>
+                            ))}
+                          </div>
+                        );
+                      })()}
                     </div>
                   </div>
                 </motion.div>
               )}
 
-              {orderResult === "not-found" && (
+              {orderNotFound && (
                 <motion.div
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}

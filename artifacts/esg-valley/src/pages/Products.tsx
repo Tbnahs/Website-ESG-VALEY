@@ -1,12 +1,21 @@
 import { useState, useEffect } from "react";
-import { motion } from "framer-motion";
-import { ChevronRight } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
+import { ChevronRight, ShoppingCart, CheckCircle } from "lucide-react";
 import { products } from "@/lib/data";
 import { Link } from "wouter";
+import { useCart } from "@/lib/cart";
 
 export default function Products() {
   const [activeCategory, setActiveCategory] = useState("Tất cả");
   const categories = ["Tất cả", "Trà", "Matcha", "Trà Cụ", "Dịch Vụ Đặc Biệt"];
+  const { addItem } = useCart();
+  const [addedId, setAddedId] = useState<number | null>(null);
+
+  const handleAddToCart = (product: typeof products[0]) => {
+    addItem(product);
+    setAddedId(product.id);
+    setTimeout(() => setAddedId(null), 1500);
+  };
 
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
@@ -123,9 +132,40 @@ export default function Products() {
                     </div>
 
                     {/* CTA */}
-                    <div>
-                      <button className="px-6 py-2.5 bg-primary text-white text-sm font-semibold rounded-full hover:bg-primary/90 transition-colors">
+                    <div className="flex items-center gap-3">
+                      <button className="px-5 py-2.5 border border-primary text-primary text-sm font-semibold rounded-full hover:bg-primary/10 transition-colors">
                         Liên hệ báo giá
+                      </button>
+                      <button
+                        onClick={() => handleAddToCart(product)}
+                        className={`flex items-center gap-2 px-5 py-2.5 text-sm font-semibold rounded-full transition-all duration-300 ${
+                          addedId === product.id
+                            ? "bg-green-500 text-white"
+                            : "bg-primary text-white hover:bg-primary/90"
+                        }`}
+                      >
+                        <AnimatePresence mode="wait">
+                          {addedId === product.id ? (
+                            <motion.span
+                              key="done"
+                              initial={{ opacity: 0, scale: 0.8 }}
+                              animate={{ opacity: 1, scale: 1 }}
+                              exit={{ opacity: 0 }}
+                              className="flex items-center gap-2"
+                            >
+                              <CheckCircle className="w-4 h-4" /> Đã thêm
+                            </motion.span>
+                          ) : (
+                            <motion.span
+                              key="add"
+                              initial={{ opacity: 0 }}
+                              animate={{ opacity: 1 }}
+                              className="flex items-center gap-2"
+                            >
+                              <ShoppingCart className="w-4 h-4" /> Thêm vào giỏ
+                            </motion.span>
+                          )}
+                        </AnimatePresence>
                       </button>
                     </div>
                   </div>

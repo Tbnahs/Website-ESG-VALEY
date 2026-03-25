@@ -4,6 +4,7 @@ import { MapPin, Phone, Search, ShoppingBag, User, Menu, X, ChevronDown, LogOut 
 import { motion, AnimatePresence } from "framer-motion";
 import { useAuth } from "@/lib/auth";
 import { useLang, LANGUAGES, type Lang } from "@/lib/lang";
+import { useCart } from "@/lib/cart";
 
 const supportMenu = [
   { label: "Liên hệ", path: "/ho-tro#lien-he" },
@@ -67,6 +68,7 @@ export function Header() {
 
   const { user, isLoggedIn, logout, openAuthModal } = useAuth();
   const { lang, setLang } = useLang();
+  const { totalItems, openCart } = useCart();
 
   const isHomePage = location === "/";
 
@@ -100,10 +102,6 @@ export function Header() {
   ];
 
   const currentLang = LANGUAGES.find(l => l.code === lang)!;
-
-  const handleCartClick = () => {
-    if (!isLoggedIn) openAuthModal();
-  };
 
   return (
     <header
@@ -366,14 +364,14 @@ export function Header() {
           </div>
 
           <button
-            onClick={handleCartClick}
+            onClick={openCart}
             className="relative hover:text-accent transition-colors hover:scale-110 transform duration-200"
-            title={isLoggedIn ? "Giỏ hàng" : "Đăng nhập để thêm vào giỏ hàng"}
+            title="Giỏ hàng"
           >
             <ShoppingBag className="w-5 h-5" />
-            {isLoggedIn && (
-              <span className={`absolute -top-2 -right-2 w-4 h-4 text-[10px] flex items-center justify-center rounded-full ${isTransparent ? "bg-white text-primary" : "bg-primary text-white"}`}>
-                0
+            {totalItems > 0 && (
+              <span className={`absolute -top-2 -right-2 w-4 h-4 text-[10px] flex items-center justify-center rounded-full font-bold ${isTransparent ? "bg-white text-primary" : "bg-primary text-white"}`}>
+                {totalItems > 9 ? "9+" : totalItems}
               </span>
             )}
           </button>

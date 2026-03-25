@@ -5,7 +5,10 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 
 import { AuthProvider } from "@/lib/auth";
 import { LangProvider } from "@/lib/lang";
+import { CartProvider } from "@/lib/cart";
+import { OrdersProvider } from "@/lib/orders";
 import { AuthModal } from "@/components/ui/AuthModal";
+import { CartDrawer } from "@/components/ui/CartDrawer";
 import { AppLayout } from "./components/layout/AppLayout";
 import Home from "./pages/Home";
 import About from "./pages/About";
@@ -38,15 +41,20 @@ function App() {
     <QueryClientProvider client={queryClient}>
       <LangProvider>
         <AuthProvider>
-          <TooltipProvider>
-            <WouterRouter base={import.meta.env.BASE_URL.replace(/\/$/, "")}>
-              <AppLayout>
-                <Router />
-              </AppLayout>
-              <AuthModal />
-            </WouterRouter>
-            <Toaster />
-          </TooltipProvider>
+          <OrdersProvider>
+            <CartProvider>
+              <TooltipProvider>
+                <WouterRouter base={import.meta.env.BASE_URL.replace(/\/$/, "")}>
+                  <AppLayout>
+                    <Router />
+                  </AppLayout>
+                  <AuthModal />
+                  <CartDrawer />
+                </WouterRouter>
+                <Toaster />
+              </TooltipProvider>
+            </CartProvider>
+          </OrdersProvider>
         </AuthProvider>
       </LangProvider>
     </QueryClientProvider>
