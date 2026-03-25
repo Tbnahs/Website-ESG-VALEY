@@ -288,54 +288,6 @@ export function Header() {
             </AnimatePresence>
           </div>
 
-          {/* Hỗ Trợ Khách Hàng dropdown */}
-          <div className="relative" ref={supportRef}>
-            <button
-              onClick={() => {
-                if (supportMenuOpen) {
-                  setSupportMenuOpen(false);
-                  navigate("/ho-tro");
-                } else {
-                  setSupportMenuOpen(true);
-                }
-              }}
-              onMouseEnter={() => setSupportMenuOpen(true)}
-              className={`text-sm uppercase tracking-wider font-semibold transition-all duration-300 flex items-center gap-1 relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:h-[1px] after:transition-all after:duration-300 ${
-                location.startsWith("/ho-tro") || location.startsWith("/lien-he") ? "after:w-full" : "after:w-0 hover:after:w-full"
-              } ${isTransparent ? "after:bg-white" : "after:bg-primary"}`}
-            >
-              Hỗ Trợ Khách Hàng
-              <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-200 ${supportMenuOpen ? "rotate-180" : ""}`} />
-            </button>
-
-            <AnimatePresence>
-              {supportMenuOpen && (
-                <motion.div
-                  initial={{ opacity: 0, y: 8 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: 8 }}
-                  transition={{ duration: 0.18 }}
-                  onMouseLeave={() => setSupportMenuOpen(false)}
-                  className="absolute left-1/2 -translate-x-1/2 top-full mt-3 bg-background border border-border rounded-xl shadow-2xl z-[60] overflow-hidden"
-                  style={{ minWidth: "220px" }}
-                >
-                  <ul className="py-2">
-                    {supportMenu.map(item => (
-                      <li key={item.path}>
-                        <button
-                          onClick={() => handleSupportNav(item.path)}
-                          className="w-full text-left block text-sm text-foreground hover:text-primary hover:bg-primary/5 px-5 py-2.5 transition-colors"
-                        >
-                          {item.label}
-                        </button>
-                      </li>
-                    ))}
-                  </ul>
-                </motion.div>
-              )}
-            </AnimatePresence>
-          </div>
-
           {/* Hệ Sinh Thái dropdown */}
           <div className="relative" ref={ecosystemRef}>
             <button
@@ -385,6 +337,54 @@ export function Header() {
                       </button>
                     ))}
                   </div>
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </div>
+
+          {/* Hỗ Trợ Khách Hàng dropdown */}
+          <div className="relative" ref={supportRef}>
+            <button
+              onClick={() => {
+                if (supportMenuOpen) {
+                  setSupportMenuOpen(false);
+                  navigate("/ho-tro");
+                } else {
+                  setSupportMenuOpen(true);
+                }
+              }}
+              onMouseEnter={() => setSupportMenuOpen(true)}
+              className={`text-sm uppercase tracking-wider font-semibold transition-all duration-300 flex items-center gap-1 relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:h-[1px] after:transition-all after:duration-300 ${
+                location.startsWith("/ho-tro") || location.startsWith("/lien-he") ? "after:w-full" : "after:w-0 hover:after:w-full"
+              } ${isTransparent ? "after:bg-white" : "after:bg-primary"}`}
+            >
+              Hỗ Trợ Khách Hàng
+              <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-200 ${supportMenuOpen ? "rotate-180" : ""}`} />
+            </button>
+
+            <AnimatePresence>
+              {supportMenuOpen && (
+                <motion.div
+                  initial={{ opacity: 0, y: 8 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: 8 }}
+                  transition={{ duration: 0.18 }}
+                  onMouseLeave={() => setSupportMenuOpen(false)}
+                  className="absolute left-1/2 -translate-x-1/2 top-full mt-3 bg-background border border-border rounded-xl shadow-2xl z-[60] overflow-hidden"
+                  style={{ minWidth: "220px" }}
+                >
+                  <ul className="py-2">
+                    {supportMenu.map(item => (
+                      <li key={item.path}>
+                        <button
+                          onClick={() => handleSupportNav(item.path)}
+                          className="w-full text-left block text-sm text-foreground hover:text-primary hover:bg-primary/5 px-5 py-2.5 transition-colors"
+                        >
+                          {item.label}
+                        </button>
+                      </li>
+                    ))}
+                  </ul>
                 </motion.div>
               )}
             </AnimatePresence>
