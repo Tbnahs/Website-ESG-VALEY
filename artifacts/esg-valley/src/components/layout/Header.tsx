@@ -128,7 +128,7 @@ export function Header() {
 
   const navLinks = [
     { path: "/", label: "Trang Chủ" },
-    { path: "/ve-esg-valley", label: "Câu chuyện ESGValley" },
+    { path: "/ve-esg-valley", label: "Câu chuyện ESG Valley" },
     { path: "/tin-tuc", label: "Tin Tức" },
   ];
 
