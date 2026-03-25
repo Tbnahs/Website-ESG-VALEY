@@ -6,6 +6,7 @@ export interface BuyerInfo {
   phone: string;
   address: string;
   note: string;
+  paymentMethod: string;
 }
 
 export type OrderStatus = "Đã đặt hàng" | "Đang xử lý" | "Đang vận chuyển" | "Hoàn tất" | "Đã huỷ";

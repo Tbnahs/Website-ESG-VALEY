@@ -11,8 +11,19 @@ export function CartDrawer() {
   const { toast } = useToast();
 
   const [step, setStep] = useState<"cart" | "form" | "success">("cart");
-  const [order, setOrder] = useState<{ code: string; createdAt: string } | null>(null);
-  const [buyer, setBuyer] = useState<BuyerInfo>({ name: "", phone: "", address: "", note: "" });
+  const [order, setOrder] = useState<{ code: string; createdAt: string; paymentMethod: string } | null>(null);
+  const [buyer, setBuyer] = useState<BuyerInfo>({ name: "", phone: "", address: "", note: "", paymentMethod: "cod" });
+
+  const PAYMENT_METHODS = [
+    { id: "cod",      label: "COD",             sub: "Thanh toán khi nhận hàng" },
+    { id: "bank",     label: "Chuyển khoản",    sub: "Ngân hàng / Internet Banking" },
+    { id: "vietqr",  label: "VietQR",           sub: "Quét mã QR nhanh" },
+    { id: "zalopay", label: "Zalo Pay",         sub: "Ví điện tử Zalo" },
+    { id: "visa",    label: "Visa / Mastercard",sub: "Thẻ tín dụng / ghi nợ" },
+    { id: "atm",     label: "ATM nội địa",      sub: "Thẻ ATM / Internet Banking" },
+    { id: "paypal",  label: "PayPal",           sub: "Thanh toán quốc tế" },
+    { id: "momo",    label: "MoMo",             sub: "Ví điện tử MoMo" },
+  ];
 
   const handleClose = () => {
     closeCart();
@@ -25,7 +36,7 @@ export function CartDrawer() {
     e.preventDefault();
     const newOrder = createOrder(items, buyer);
     clearCart();
-    setOrder({ code: newOrder.code, createdAt: newOrder.createdAt });
+    setOrder({ code: newOrder.code, createdAt: newOrder.createdAt, paymentMethod: buyer.paymentMethod });
     setStep("success");
   };
 
@@ -221,6 +232,35 @@ export function CartDrawer() {
                       />
                     </div>
                   </form>
+
+                  {/* Payment Method */}
+                  <div className="mt-5">
+                    <p className="text-sm font-medium text-foreground mb-3">Phương thức thanh toán *</p>
+                    <img
+                      src="/images/payment-methods.png"
+                      alt="Phương thức thanh toán được chấp nhận"
+                      className="w-full rounded-md mb-3 border border-border"
+                    />
+                    <div className="grid grid-cols-2 gap-2">
+                      {PAYMENT_METHODS.map(m => (
+                        <button
+                          key={m.id}
+                          type="button"
+                          onClick={() => setBuyer(b => ({ ...b, paymentMethod: m.id }))}
+                          className={`text-left px-3 py-2.5 rounded-lg border-2 transition-all ${
+                            buyer.paymentMethod === m.id
+                              ? "border-primary bg-primary/5"
+                              : "border-border hover:border-primary/40"
+                          }`}
+                        >
+                          <p className={`text-xs font-bold leading-tight ${buyer.paymentMethod === m.id ? "text-primary" : "text-foreground"}`}>
+                            {m.label}
+                          </p>
+                          <p className="text-[10px] text-muted-foreground mt-0.5 leading-tight">{m.sub}</p>
+                        </button>
+                      ))}
+                    </div>
+                  </div>
                 </div>
 
                 <div className="px-6 py-4 border-t border-border flex gap-3">
@@ -273,6 +313,13 @@ export function CartDrawer() {
                   <p className="text-xs text-muted-foreground mt-2">Đặt lúc {formatDate(order.createdAt)}</p>
                 </div>
 
+                <div className="w-full text-sm text-center text-muted-foreground">
+                  Thanh toán qua:{" "}
+                  <span className="font-semibold text-foreground">
+                    {PAYMENT_METHODS.find(m => m.id === order.paymentMethod)?.label ?? order.paymentMethod}
+                  </span>
+                </div>
+
                 <p className="text-sm text-muted-foreground">
                   Dùng mã này để tra cứu đơn hàng tại mục{" "}
                   <a href="/ho-tro#tra-cuu-don-hang" onClick={handleClose} className="text-primary font-semibold hover:underline">
@@ -281,7 +328,7 @@ export function CartDrawer() {
                 </p>
 
                 <button
-                  onClick={() => { handleClose(); setStep("cart"); setBuyer({ name: "", phone: "", address: "", note: "" }); }}
+                  onClick={() => { handleClose(); setStep("cart"); setBuyer({ name: "", phone: "", address: "", note: "", paymentMethod: "cod" }); }}
                   className="w-full py-3 bg-primary text-primary-foreground font-bold rounded-sm hover:bg-primary/90 transition-all text-sm"
                 >
                   Đóng
