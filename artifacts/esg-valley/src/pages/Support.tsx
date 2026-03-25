@@ -361,8 +361,9 @@ export default function Support() {
         className="scroll-mt-24 max-w-6xl mx-auto px-6 lg:px-12 py-20"
       >
         <SectionHeading icon={Package} title="Tra Cứu Đơn Hàng" subtitle="Nhập mã đơn hàng để kiểm tra trạng thái giao hàng của bạn." />
-        <div className="mt-10 max-w-xl">
-          <form onSubmit={handleOrderLookup} className="flex gap-3">
+
+        <div className="mt-10">
+          <form onSubmit={handleOrderLookup} className="flex gap-3 max-w-2xl">
             <div className="flex-1 relative">
               <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
               <input
@@ -374,80 +375,115 @@ export default function Support() {
                 required
               />
             </div>
-            <button type="submit" className="px-6 py-3 bg-[#3d7a3d] text-white text-sm font-semibold rounded hover:bg-[#2f612f] transition-all whitespace-nowrap">
+            <button type="submit" className="px-7 py-3 bg-[#3d7a3d] text-white text-sm font-semibold rounded hover:bg-[#2f612f] transition-all whitespace-nowrap">
               Tra cứu
             </button>
           </form>
           <p className="text-xs text-muted-foreground mt-2">Mã đơn hàng được hiển thị sau khi đặt hàng thành công (bắt đầu bằng ESG).</p>
 
           <AnimatePresence>
-            {foundOrder && (
-              <motion.div
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: 10 }}
-                className="mt-6 border border-gray-200 rounded-lg overflow-hidden"
-              >
-                <div className="bg-green-50 border-b border-gray-100 px-5 py-4 flex items-center gap-3">
-                  <CheckCircle className="w-5 h-5 text-green-600" />
-                  <p className="font-semibold text-green-800 text-sm">Đơn hàng: <span className="font-mono">{foundOrder.code}</span></p>
-                </div>
-                <div className="px-5 py-5 space-y-3 bg-white">
-                  <Row label="Trạng thái">
-                    <span className="font-semibold text-blue-600 flex items-center gap-1 text-sm">
-                      <Truck className="w-3.5 h-3.5" /> {foundOrder.status}
+            {foundOrder && (() => {
+              const total = foundOrder.items.reduce((sum, { product, quantity }) => sum + product.price * quantity, 0);
+              const fmtPrice = (n: number) => n.toLocaleString("vi-VN") + "₫";
+              const steps = ["Đã đặt hàng", "Đang xử lý", "Đang vận chuyển", "Hoàn tất"];
+              const currentIdx = steps.indexOf(foundOrder.status);
+              const PAYMENT_LABELS: Record<string, string> = {
+                cod: "Thanh toán khi nhận hàng (COD)",
+                bank: "Chuyển khoản ngân hàng",
+                vietqr: "VietQR",
+                zalopay: "ZaloPay",
+                visa: "Visa / Mastercard",
+                atm: "Thẻ ATM nội địa",
+                paypal: "PayPal",
+                momo: "Ví MoMo",
+              };
+              return (
+                <motion.div
+                  initial={{ opacity: 0, y: 14 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: 14 }}
+                  className="mt-8 border border-gray-200 rounded-xl overflow-hidden shadow-sm"
+                >
+                  {/* Header */}
+                  <div className="bg-[#3d7a3d] px-6 py-4 flex items-center justify-between">
+                    <div className="flex items-center gap-3">
+                      <CheckCircle className="w-5 h-5 text-white" />
+                      <div>
+                        <p className="text-xs text-green-100 uppercase tracking-widest font-semibold">Mã đơn hàng</p>
+                        <p className="font-mono text-xl font-bold text-white tracking-wider">{foundOrder.code}</p>
+                      </div>
+                    </div>
+                    <span className={`px-3 py-1.5 rounded-full text-xs font-bold uppercase tracking-wide ${
+                      foundOrder.status === "Hoàn tất" ? "bg-white/20 text-white" :
+                      foundOrder.status === "Đã huỷ"  ? "bg-red-100 text-red-700" :
+                      "bg-white/20 text-white"
+                    }`}>
+                      {foundOrder.status}
                     </span>
-                  </Row>
-                  <Row label="Ngày đặt hàng">
-                    <span className="font-semibold text-sm">
-                      {new Date(foundOrder.createdAt).toLocaleString("vi-VN", { day: "2-digit", month: "2-digit", year: "numeric", hour: "2-digit", minute: "2-digit" })}
-                    </span>
-                  </Row>
-                  <Row label="Người đặt">
-                    <span className="font-semibold text-sm">{foundOrder.buyer.name} — {foundOrder.buyer.phone}</span>
-                  </Row>
-                  <Row label="Địa chỉ giao">
-                    <span className="font-semibold text-right text-sm max-w-[55%]">{foundOrder.buyer.address}</span>
-                  </Row>
-
-                  <div className="pt-3 border-t border-gray-100">
-                    <p className="text-xs text-muted-foreground font-semibold uppercase tracking-wider mb-2">Sản phẩm đặt</p>
-                    <ul className="space-y-1">
-                      {foundOrder.items.map(({ product, quantity }) => (
-                        <li key={product.id} className="flex justify-between text-sm">
-                          <span>{product.name}</span>
-                          <span className="font-semibold text-muted-foreground">x{quantity}</span>
-                        </li>
-                      ))}
-                    </ul>
                   </div>
 
-                  <div className="pt-3 border-t border-gray-100">
-                    {(() => {
-                      const steps = ["Đã đặt hàng", "Đang xử lý", "Đang vận chuyển", "Hoàn tất"];
-                      const currentIdx = steps.indexOf(foundOrder.status);
-                      return (
-                        <div className="flex items-center">
-                          {steps.map((s, i) => (
-                            <div key={s} className="flex items-center flex-1">
-                              <div className="flex flex-col items-center flex-1">
-                                <div className={`w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold ${i <= currentIdx ? "bg-[#3d7a3d] text-white" : "bg-gray-100 border-2 border-gray-200 text-gray-400"}`}>
-                                  {i <= currentIdx ? <CheckCircle className="w-3.5 h-3.5" /> : i + 1}
-                                </div>
-                                <span className="text-[9px] mt-1 text-center text-muted-foreground leading-tight">{s}</span>
-                              </div>
-                              {i < steps.length - 1 && (
-                                <div className={`h-0.5 flex-1 mb-4 ${i < currentIdx ? "bg-[#3d7a3d]" : "bg-gray-200"}`} />
-                              )}
+                  {/* Body: 2 columns */}
+                  <div className="bg-white grid grid-cols-1 md:grid-cols-2 divide-y md:divide-y-0 md:divide-x divide-gray-100">
+                    {/* Left: Thông tin đơn hàng */}
+                    <div className="p-6 space-y-4">
+                      <p className="text-xs text-muted-foreground font-semibold uppercase tracking-widest mb-3">Thông tin đơn hàng</p>
+                      <InfoRow label="Ngày đặt">
+                        {new Date(foundOrder.createdAt).toLocaleString("vi-VN", { day: "2-digit", month: "2-digit", year: "numeric", hour: "2-digit", minute: "2-digit" })}
+                      </InfoRow>
+                      <InfoRow label="Người đặt">{foundOrder.buyer.name}</InfoRow>
+                      <InfoRow label="Số điện thoại">{foundOrder.buyer.phone}</InfoRow>
+                      <InfoRow label="Địa chỉ giao hàng">{foundOrder.buyer.address}</InfoRow>
+                      {foundOrder.buyer.note && (
+                        <InfoRow label="Ghi chú">{foundOrder.buyer.note}</InfoRow>
+                      )}
+                      <InfoRow label="Hình thức thanh toán">
+                        {PAYMENT_LABELS[foundOrder.buyer.paymentMethod] ?? foundOrder.buyer.paymentMethod}
+                      </InfoRow>
+                    </div>
+
+                    {/* Right: Sản phẩm + tổng tiền */}
+                    <div className="p-6 flex flex-col">
+                      <p className="text-xs text-muted-foreground font-semibold uppercase tracking-widest mb-3">Sản phẩm đặt</p>
+                      <ul className="space-y-3 flex-1">
+                        {foundOrder.items.map(({ product, quantity }) => (
+                          <li key={product.id} className="flex items-center justify-between gap-4 text-sm">
+                            <span className="text-foreground font-medium">{product.name}</span>
+                            <div className="flex items-center gap-4 shrink-0">
+                              <span className="text-muted-foreground text-xs">x{quantity}</span>
+                              <span className="font-semibold text-foreground tabular-nums">{fmtPrice(product.price * quantity)}</span>
                             </div>
-                          ))}
-                        </div>
-                      );
-                    })()}
+                          </li>
+                        ))}
+                      </ul>
+                      <div className="mt-4 pt-4 border-t border-gray-100 flex justify-between items-center">
+                        <span className="text-sm font-semibold text-foreground">Tổng tiền</span>
+                        <span className="text-lg font-bold text-[#3d7a3d] tabular-nums">{fmtPrice(total)}</span>
+                      </div>
+                    </div>
                   </div>
-                </div>
-              </motion.div>
-            )}
+
+                  {/* Progress tracker */}
+                  <div className="bg-gray-50 border-t border-gray-100 px-6 py-5">
+                    <p className="text-xs text-muted-foreground font-semibold uppercase tracking-widest mb-4">Trạng thái đơn hàng</p>
+                    <div className="flex items-center">
+                      {steps.map((s, i) => (
+                        <div key={s} className="flex items-center flex-1">
+                          <div className="flex flex-col items-center flex-1">
+                            <div className={`w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold transition-colors ${i <= currentIdx ? "bg-[#3d7a3d] text-white" : "bg-white border-2 border-gray-200 text-gray-400"}`}>
+                              {i <= currentIdx ? <CheckCircle className="w-4 h-4" /> : i + 1}
+                            </div>
+                            <span className="text-[10px] mt-1.5 text-center text-muted-foreground leading-tight font-medium">{s}</span>
+                          </div>
+                          {i < steps.length - 1 && (
+                            <div className={`h-0.5 flex-1 mb-5 transition-colors ${i < currentIdx ? "bg-[#3d7a3d]" : "bg-gray-200"}`} />
+                          )}
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </motion.div>
+              );
+            })()}
 
             {orderNotFound && (
               <motion.div
@@ -491,6 +527,15 @@ function Row({ label, children }: { label: string; children: React.ReactNode }) 
     <div className="flex justify-between items-center text-sm">
       <span className="text-muted-foreground">{label}</span>
       {children}
+    </div>
+  );
+}
+
+function InfoRow({ label, children }: { label: string; children: React.ReactNode }) {
+  return (
+    <div className="flex flex-col gap-0.5">
+      <span className="text-xs text-muted-foreground">{label}</span>
+      <span className="text-sm font-semibold text-foreground">{children}</span>
     </div>
   );
 }
