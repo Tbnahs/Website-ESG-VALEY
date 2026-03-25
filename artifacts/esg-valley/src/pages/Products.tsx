@@ -1,11 +1,12 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { Search, Filter } from "lucide-react";
+import { ChevronRight } from "lucide-react";
 import { products } from "@/lib/data";
+import { Link } from "wouter";
 
 export default function Products() {
   const [activeCategory, setActiveCategory] = useState("Tất cả");
-  const categories = ["Tất cả", "Trà", "Trà Cụ", "Dịch Vụ"];
+  const categories = ["Tất cả", "Chè Thượng Hạng", "Dịch Vụ", "Bền Vững", "Cộng Đồng", "Sản Phẩm"];
 
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
@@ -15,93 +16,121 @@ export default function Products() {
     }
   }, []);
 
-  const filteredProducts = activeCategory === "Tất cả" 
-    ? products 
+  const filteredProducts = activeCategory === "Tất cả"
+    ? products
     : products.filter(p => p.category === activeCategory);
 
   return (
-    <div className="w-full bg-background pt-24 pb-24">
+    <div className="w-full bg-[#f8f8f4] min-h-screen">
       {/* Header */}
-      <div className="relative py-24 mb-12 overflow-hidden">
-        <img
-          src="https://images.unsplash.com/photo-1544787219-7f47ccb76574?w=1600&q=85"
-          alt="Sản phẩm ESG Valley"
-          className="absolute inset-0 w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-black/55" />
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="font-display text-4xl md:text-5xl font-bold text-white mb-4">Sản Phẩm ESG Valley</h1>
-          <p className="text-white/80 max-w-2xl mx-auto">
-            Trải nghiệm bộ sưu tập tinh hoa hội tụ từ thiên nhiên và nghệ thuật thủ công truyền thống.
-          </p>
-        </div>
+      <div className="bg-[#1a2e1a] pt-28 pb-10 text-center">
+        <p className="text-white/60 text-sm mb-2 flex items-center justify-center gap-1.5">
+          <Link href="/" className="hover:text-white/90 transition-colors">Trang chủ</Link>
+          <ChevronRight className="w-3.5 h-3.5" />
+          <span className="text-white/80">Danh sách sản phẩm</span>
+        </p>
+        <h1 className="font-display text-3xl md:text-4xl font-bold text-white">Danh sách sản phẩm</h1>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col lg:flex-row gap-12">
-          {/* Sidebar / Filters */}
-          <aside className="w-full lg:w-1/4">
-            <div className="sticky top-28 bg-card p-6 border border-border rounded-sm">
-              <div className="mb-8">
-                <div className="relative">
-                  <input 
-                    type="text" 
-                    placeholder="Tìm kiếm sản phẩm..." 
-                    className="w-full pl-10 pr-4 py-2 border border-border rounded-sm focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary text-sm"
-                  />
-                  <Search className="w-4 h-4 text-muted-foreground absolute left-3 top-1/2 -translate-y-1/2" />
-                </div>
-              </div>
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="flex flex-col lg:flex-row gap-8">
 
-              <div className="mb-8">
-                <h3 className="font-display text-xl font-bold mb-4 flex items-center">
-                  <Filter className="w-5 h-5 mr-2" /> Danh Mục
-                </h3>
-                <ul className="space-y-2">
-                  {categories.map(cat => (
-                    <li key={cat}>
-                      <button 
-                        onClick={() => setActiveCategory(cat)}
-                        className={`w-full text-left px-3 py-2 rounded-sm text-sm transition-colors ${
-                          activeCategory === cat ? "bg-primary/10 text-primary font-semibold" : "hover:bg-muted text-foreground"
-                        }`}
-                      >
-                        {cat}
-                      </button>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+          {/* Sidebar */}
+          <aside className="w-full lg:w-56 flex-shrink-0">
+            <div className="sticky top-28">
+              <h3 className="font-display text-lg font-bold text-foreground mb-4">Danh mục</h3>
+              <ul className="space-y-1">
+                {categories.map(cat => (
+                  <li key={cat}>
+                    <button
+                      onClick={() => setActiveCategory(cat)}
+                      className={`w-full text-left px-4 py-2.5 rounded-lg text-sm transition-colors ${
+                        activeCategory === cat
+                          ? "bg-primary text-white font-semibold"
+                          : "text-foreground hover:bg-primary/10 hover:text-primary"
+                      }`}
+                    >
+                      {cat}
+                    </button>
+                  </li>
+                ))}
+              </ul>
             </div>
           </aside>
 
-          {/* Product Grid */}
-          <main className="w-full lg:w-3/4">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {/* Product List */}
+          <main className="flex-1">
+            <div className="space-y-6">
               {filteredProducts.map((product, idx) => (
-                <motion.div 
+                <motion.div
                   key={product.id}
-                  initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: idx * 0.05 }}
-                  className="group bg-card border border-border/50 rounded-sm overflow-hidden hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: idx * 0.06, duration: 0.5 }}
+                  className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300 flex gap-0"
                 >
-                  <div className="aspect-square overflow-hidden relative">
-                    <img src={product.image} alt={product.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
-                    <div className="absolute top-3 right-3 bg-background/90 backdrop-blur text-foreground text-[10px] font-bold uppercase tracking-wider py-1 px-2 rounded-sm">
-                      {product.category}
-                    </div>
+                  {/* Image */}
+                  <div className="w-52 sm:w-64 flex-shrink-0 overflow-hidden">
+                    <img
+                      src={product.image}
+                      alt={product.name}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                      style={{ minHeight: "220px" }}
+                    />
                   </div>
-                  <div className="p-5 flex flex-col flex-grow">
-                    <h3 className="font-display text-xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors">{product.name}</h3>
-                    <p className="text-muted-foreground text-sm line-clamp-2 mb-4 flex-grow">{product.description}</p>
-                    <div className="flex justify-between items-center mt-auto pt-4 border-t border-border/50">
-                      <span className="font-semibold text-foreground">{product.price}</span>
-                      <button className="text-primary hover:text-primary/80 font-medium text-sm">
-                        Thêm vào giỏ
+
+                  {/* Content */}
+                  <div className="flex-1 p-6 flex flex-col justify-between">
+                    <div>
+                      {/* Category + Xem thêm row */}
+                      <div className="flex items-center justify-between mb-2">
+                        <span className="text-primary text-xs font-semibold uppercase tracking-widest">
+                          {product.category}
+                        </span>
+                        <button className="text-muted-foreground text-xs hover:text-primary transition-colors flex items-center gap-0.5">
+                          Xem thêm <ChevronRight className="w-3.5 h-3.5" />
+                        </button>
+                      </div>
+
+                      {/* Name */}
+                      <h3 className="font-display text-2xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors leading-snug">
+                        {product.name}
+                      </h3>
+
+                      {/* Description */}
+                      <p className="text-muted-foreground text-sm leading-relaxed line-clamp-3 mb-5">
+                        {product.description}
+                      </p>
+
+                      {/* Thumbnails */}
+                      <div className="flex gap-2 mb-6">
+                        {[0, 1, 2].map(i => (
+                          <div key={i} className="w-14 h-14 rounded-lg overflow-hidden border border-border/40 flex-shrink-0">
+                            <img
+                              src={product.image}
+                              alt={product.name}
+                              className="w-full h-full object-cover"
+                            />
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+
+                    {/* CTA */}
+                    <div>
+                      <button className="px-6 py-2.5 bg-primary text-white text-sm font-semibold rounded-full hover:bg-primary/90 transition-colors">
+                        Liên hệ báo giá
                       </button>
                     </div>
                   </div>
                 </motion.div>
               ))}
+
+              {filteredProducts.length === 0 && (
+                <div className="text-center py-20 text-muted-foreground">
+                  Không có sản phẩm nào trong danh mục này.
+                </div>
+              )}
             </div>
           </main>
         </div>
