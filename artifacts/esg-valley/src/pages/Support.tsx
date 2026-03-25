@@ -415,7 +415,7 @@ export default function Support() {
       <section
         ref={el => { sectionRefs.current["tra-cuu-don-hang"] = el; }}
         id="tra-cuu-don-hang"
-        className="scroll-mt-24 max-w-6xl mx-auto px-6 lg:px-12 py-20"
+        className="scroll-mt-24 max-w-6xl mx-auto px-6 lg:px-12 pt-10 pb-20"
       >
         <SectionHeading icon={Package} title="Tra Cứu Đơn Hàng" subtitle="Nhập mã đơn hàng để kiểm tra trạng thái giao hàng của bạn." />
 
