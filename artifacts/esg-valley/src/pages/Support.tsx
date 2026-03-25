@@ -55,14 +55,23 @@ export default function Support() {
   const [, navigate] = useLocation();
   const sectionRefs = useRef<Record<string, HTMLElement | null>>({});
 
-  useEffect(() => {
-    const hash = window.location.hash.replace("#", "");
+  const scrollToHash = (hash: string) => {
     if (hash && SECTIONS.find(s => s.id === hash)) {
       setActiveSection(hash);
       setTimeout(() => {
         sectionRefs.current[hash]?.scrollIntoView({ behavior: "smooth", block: "start" });
-      }, 100);
+      }, 80);
     }
+  };
+
+  useEffect(() => {
+    scrollToHash(window.location.hash.replace("#", ""));
+
+    const onHashChange = () => {
+      scrollToHash(window.location.hash.replace("#", ""));
+    };
+    window.addEventListener("hashchange", onHashChange);
+    return () => window.removeEventListener("hashchange", onHashChange);
   }, []);
 
   const scrollTo = (id: string) => {

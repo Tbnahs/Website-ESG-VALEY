@@ -51,7 +51,7 @@ const productMenu = [
 ];
 
 export function Header() {
-  const [location] = useLocation();
+  const [location, navigate] = useLocation();
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [mobileProductOpen, setMobileProductOpen] = useState(false);
@@ -69,6 +69,22 @@ export function Header() {
   const { user, isLoggedIn, logout, openAuthModal } = useAuth();
   const { lang, setLang } = useLang();
   const { totalItems, openCart } = useCart();
+
+  const handleSupportNav = (path: string) => {
+    setSupportMenuOpen(false);
+    setMobileMenuOpen(false);
+    const [pagePath, hash] = path.split("#");
+    if (location === pagePath || location === "/ho-tro") {
+      if (hash) {
+        window.location.hash = hash;
+      }
+    } else {
+      navigate(pagePath);
+      if (hash) {
+        setTimeout(() => { window.location.hash = hash; }, 150);
+      }
+    }
+  };
 
   const isHomePage = location === "/";
 
@@ -277,13 +293,12 @@ export function Header() {
                   <ul className="py-2">
                     {supportMenu.map(item => (
                       <li key={item.path}>
-                        <Link
-                          href={item.path}
-                          onClick={() => setSupportMenuOpen(false)}
-                          className="block text-sm text-foreground hover:text-primary hover:bg-primary/5 px-5 py-2.5 transition-colors"
+                        <button
+                          onClick={() => handleSupportNav(item.path)}
+                          className="w-full text-left block text-sm text-foreground hover:text-primary hover:bg-primary/5 px-5 py-2.5 transition-colors"
                         >
                           {item.label}
-                        </Link>
+                        </button>
                       </li>
                     ))}
                   </ul>
@@ -468,14 +483,13 @@ export function Header() {
                   {mobileSupportOpen && (
                     <div className="pb-2 pl-3">
                       {supportMenu.map(item => (
-                        <Link
+                        <button
                           key={item.path}
-                          href={item.path}
-                          onClick={() => setMobileMenuOpen(false)}
-                          className="block text-sm text-foreground hover:text-primary px-2 py-2 transition-colors"
+                          onClick={() => handleSupportNav(item.path)}
+                          className="w-full text-left block text-sm text-foreground hover:text-primary px-2 py-2 transition-colors"
                         >
                           {item.label}
-                        </Link>
+                        </button>
                       ))}
                     </div>
                   )}
