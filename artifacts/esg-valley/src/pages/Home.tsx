@@ -55,25 +55,25 @@ const featuredProducts = [
     id: 2, name: "Tản Viên Trà", category: "Chè Thượng Hạng",
     desc: "Linh khí đất trời hội tụ nơi núi Tản Viên – dòng trà đầu tiên nuôi dưỡng con người Việt.",
     price: "450,000 ₫",
-    image: "https://images.unsplash.com/photo-1594631252845-29fc4cc8c0a1?auto=format&fit=crop&q=80&w=600",
+    image: "/images/product-tan-vien-tra.png",
   },
   {
     id: 3, name: "Mạc Triều Trà", category: "Chè Thượng Hạng",
     desc: "Từ nương chè giản dị đến chén trà dâng vua chúa — hành trình chắt lọc của bao thế hệ.",
     price: "850,000 ₫",
-    image: "https://images.unsplash.com/photo-1564890369478-c89ca6d9cde9?auto=format&fit=crop&q=80&w=600",
+    image: "/images/product-mac-trieu-tra.png",
   },
   {
     id: 4, name: "Bách Niên Trà", category: "Chè Thượng Hạng",
     desc: "Trà Shan Tuyết cổ thụ trên 100 năm tuổi — báu vật văn hóa thiêng liêng qua từng thế hệ.",
     price: "1,500,000 ₫",
-    image: "https://images.unsplash.com/photo-1582793988951-9aed5509eb97?auto=format&fit=crop&q=80&w=600",
+    image: "/images/product-bach-nien-tra.png",
   },
   {
     id: 5, name: "Thượng Cổ Trà", category: "Chè Thượng Hạng",
     desc: "Câu chuyện về nàng Công và những đồi chè cổ xưa nhất vùng đất Thái Nguyên hùng vĩ.",
     price: "2,800,000 ₫",
-    image: "https://images.unsplash.com/photo-1610630747444-245f7823f66c?auto=format&fit=crop&q=80&w=600",
+    image: "/images/product-thuong-co-tra.png",
   },
 ];
 
