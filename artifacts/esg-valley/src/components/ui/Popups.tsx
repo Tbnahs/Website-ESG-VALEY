@@ -61,8 +61,8 @@ export function Popups() {
             {/* ── LEFT: Product showcase ── */}
             <div className="relative w-full md:w-[45%] h-56 md:h-auto flex-shrink-0 overflow-hidden">
               <img
-                src="https://pixabay.com/get/gb752f68cb12bb28e648b9f26361669b9085302487060195262d7ffdf90e66b0c8591e1139325948612677e1ad65ba159eebdb8ec7b4dd30b8cd4669067f982ba_1280.jpg"
-                alt="Trà ESG Valley"
+                src={`${import.meta.env.BASE_URL}images/hero-slide-1.png`}
+                alt="Bộ Sưu Tập Quà Tặng Tết 2026"
                 className="w-full h-full object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-black/70 via-black/30 to-transparent" />
