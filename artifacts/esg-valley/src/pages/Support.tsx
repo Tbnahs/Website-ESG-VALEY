@@ -108,30 +108,6 @@ export default function Support() {
         </div>
       </div>
 
-      {/* Tab nav — mobile horizontal scroll */}
-      <div className="sticky top-16 z-30 bg-background border-b border-border shadow-sm">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex overflow-x-auto scrollbar-hide gap-0">
-            {SECTIONS.map(sec => {
-              const Icon = sec.icon;
-              return (
-                <button
-                  key={sec.id}
-                  onClick={() => scrollTo(sec.id)}
-                  className={`flex items-center gap-2 px-5 py-4 text-sm font-semibold whitespace-nowrap border-b-2 transition-all duration-200 flex-shrink-0 ${
-                    activeSection === sec.id
-                      ? "border-primary text-primary"
-                      : "border-transparent text-muted-foreground hover:text-foreground hover:border-border"
-                  }`}
-                >
-                  <Icon className="w-4 h-4" />
-                  {sec.label}
-                </button>
-              );
-            })}
-          </div>
-        </div>
-      </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-24">
 
