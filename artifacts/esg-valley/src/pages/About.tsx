@@ -369,7 +369,7 @@ export default function About() {
             <img
               src={`${import.meta.env.BASE_URL}images/che-story-nobg.png`}
               alt="Câu chuyện với chè"
-              className="w-full max-w-2xl drop-shadow-2xl"
+              className="w-full drop-shadow-2xl"
             />
           </motion.div>
         </div>
