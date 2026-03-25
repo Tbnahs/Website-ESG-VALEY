@@ -22,7 +22,8 @@ export const products = [
     category: "Trà",
     description: "Mạc Triều Trà mang trong mình câu chuyện về sự chắt lọc, nâng tầm và gửi gắm của bao thế hệ. Ban đầu, chén trà vốn chỉ là thức uống dân dã, giản dị bên mái nhà sàn, bên nương chè xanh.",
     price: "Liên hệ",
-    image: "/images/product-tan-vien.png"
+    image: "/images/product-tan-vien.png",
+    thumbnails: ["/images/mac-trieu-thumb-1.png", "/images/mac-trieu-thumb-2.png"]
   },
   {
     id: 4,
