@@ -40,7 +40,8 @@ export const products = [
     category: "Trà",
     description: "Thuở xưa xa, ở miền đất Thái Nguyên núi non hùng vĩ, có nàng Công – người con gái xinh đẹp, khéo léo, yêu trà như yêu chính cuộc đời mình.",
     price: "Liên hệ",
-    image: "/images/product-bach-nien.png"
+    image: "/images/product-bach-nien.png",
+    thumbnails: ["/images/thuong-co-thumb-1.png", "/images/thuong-co-thumb-2.png"]
   },
   {
     id: 6,
