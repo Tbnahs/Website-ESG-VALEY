@@ -23,7 +23,7 @@ const timelineData = [
     title: "Mở Rộng Vùng Trồng",
     content:
       "ESG Valley mở rộng hợp tác với các hộ nông dân tại Hà Giang, Lai Châu và Lâm Đồng. Các vùng nguyên liệu được chứng nhận hữu cơ, quy trình canh tác bền vững được áp dụng đồng bộ, đảm bảo chất lượng từ gốc rễ đến tách trà.",
-    img: "https://images.unsplash.com/photo-1571934811356-5cc061b6d72a?w=700&q=80",
+    img: "/images/hinh-doi-che.png",
   },
   {
     year: 2023,
