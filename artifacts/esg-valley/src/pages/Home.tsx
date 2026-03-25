@@ -255,7 +255,7 @@ export default function Home() {
               className="relative rounded-3xl overflow-hidden group"
             >
               <img
-                src="https://images.unsplash.com/photo-1587734195503-904fca47e0e9?auto=format&fit=crop&q=80&w=600"
+                src="/images/cau-chuyen-01.jpg"
                 alt="Vùng nguyên liệu"
                 className="w-full h-72 md:h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 style={{ minHeight: "360px" }}
@@ -277,7 +277,7 @@ export default function Home() {
             >
               <div className="relative rounded-3xl overflow-hidden group flex-1">
                 <img
-                  src="https://images.unsplash.com/photo-1558160074-4d7d8bdf4256?auto=format&fit=crop&q=80&w=600"
+                  src="/images/cau-chuyen-02.jpg"
                   alt="Câu chuyện"
                   className="w-full h-44 object-cover group-hover:scale-105 transition-transform duration-500"
                 />
@@ -292,7 +292,7 @@ export default function Home() {
               </div>
               <div className="relative rounded-3xl overflow-hidden group flex-1">
                 <img
-                  src="https://images.unsplash.com/photo-1563822249548-9a72b6353cd1?auto=format&fit=crop&q=80&w=600"
+                  src="/images/cau-chuyen-04.jpg"
                   alt="Câu chuyện 2"
                   className="w-full h-44 object-cover group-hover:scale-105 transition-transform duration-500"
                 />
@@ -313,7 +313,7 @@ export default function Home() {
               className="relative rounded-3xl overflow-hidden group"
             >
               <img
-                src="https://images.unsplash.com/photo-1629851608681-3058b76a084c?auto=format&fit=crop&q=80&w=600"
+                src="/images/cau-chuyen-05.jpg"
                 alt="Câu chuyện 3"
                 className="w-full h-72 md:h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 style={{ minHeight: "360px" }}
