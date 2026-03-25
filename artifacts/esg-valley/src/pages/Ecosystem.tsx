@@ -29,7 +29,7 @@ export default function Ecosystem() {
         <img
           src={`${import.meta.env.BASE_URL}images/ecosystem-banner.jpg`}
           alt="Hệ sinh thái ESGValley"
-          className="absolute inset-0 w-full h-full object-cover"
+          className="absolute inset-0 w-full h-full object-cover object-center"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/55 to-black/70" />
         <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
