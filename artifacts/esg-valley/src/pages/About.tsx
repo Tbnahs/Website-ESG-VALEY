@@ -85,7 +85,7 @@ export default function About() {
   return (
     <div className="w-full bg-background">
       {/* ── HÀNH TRÌNH CÙNG ESG ── */}
-      <section className="pt-24 pb-0 bg-background">
+      <section className="pt-36 pb-0 bg-background">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Title */}
           <div className="text-center mb-6">
