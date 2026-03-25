@@ -13,7 +13,7 @@ export const products = [
     category: "Trà",
     description: "Thuở hồng hoang, khi Thần Nông nếm bách thảo và phát hiện lá trà có thể giải độc, đất Việt cũng bắt đầu ghi dấu sự sống nơi núi Tản Viên – vùng non thiêng hội tụ linh khí đất trời.",
     price: "Liên hệ",
-    image: "/images/product-tan-vien.png"
+    image: "/images/product-ma-dao.png"
   },
   {
     id: 3,
@@ -21,7 +21,7 @@ export const products = [
     category: "Trà",
     description: "Mạc Triều Trà mang trong mình câu chuyện về sự chắt lọc, nâng tầm và gửi gắm của bao thế hệ. Ban đầu, chén trà vốn chỉ là thức uống dân dã, giản dị bên mái nhà sàn, bên nương chè xanh.",
     price: "Liên hệ",
-    image: "/images/product-mac-trieu.png"
+    image: "/images/product-tan-vien.png"
   },
   {
     id: 4,
@@ -29,7 +29,7 @@ export const products = [
     category: "Trà",
     description: "Trải qua suốt chiều dài lịch sử, từ thuở dựng nước đến hôm nay, những giá trị văn hóa không ngừng được truyền lại như một báu vật vô giá. Trà – không chỉ là thức uống – đã trở thành món quà tinh thần thiêng liêng.",
     price: "Liên hệ",
-    image: "/images/product-bach-nien.png"
+    image: "/images/product-mac-trieu.png"
   },
   {
     id: 5,
@@ -37,7 +37,7 @@ export const products = [
     category: "Trà",
     description: "Thuở xưa xa, ở miền đất Thái Nguyên núi non hùng vĩ, có nàng Công – người con gái xinh đẹp, khéo léo, yêu trà như yêu chính cuộc đời mình.",
     price: "Liên hệ",
-    image: "https://images.unsplash.com/photo-1610630747444-245f7823f66c?auto=format&fit=crop&q=80&w=800"
+    image: "/images/product-bach-nien.png"
   },
   {
     id: 6,
