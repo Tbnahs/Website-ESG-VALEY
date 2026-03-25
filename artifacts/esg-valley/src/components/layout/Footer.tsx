@@ -75,16 +75,67 @@ export function Footer() {
           {/* Có trên các sàn TMĐT */}
           <div>
             <h3 className="font-display text-sm font-semibold mb-4 uppercase tracking-wider text-[#C9A84C]">Có Trên Các Sàn TMĐT</h3>
-            <div className="flex flex-wrap gap-2">
-              <a href="#" className="px-2.5 py-1 rounded text-xs font-bold bg-orange-500 hover:bg-orange-400 transition-colors text-white">Shopee</a>
-              <a href="#" className="px-2.5 py-1 rounded text-xs font-bold bg-red-600 hover:bg-red-500 transition-colors text-white">Lazada</a>
-              <a href="#" className="px-2.5 py-1 rounded text-xs font-bold bg-blue-700 hover:bg-blue-600 transition-colors text-white">Tiki</a>
-              <a href="#" className="px-2.5 py-1 rounded text-xs font-bold bg-black border border-white/20 hover:bg-white hover:text-black transition-colors text-white">TikTok Shop</a>
+            <div className="flex flex-wrap gap-3 items-center">
+              {/* Shopee */}
+              <a href="#" title="Shopee" className="opacity-80 hover:opacity-100 transition-opacity">
+                <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="36" height="36" rx="6" fill="#EE4D2D"/>
+                  <path d="M18 7a5 5 0 0 0-4.9 4H13a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V12a1 1 0 0 0-1-1h-.1A5 5 0 0 0 18 7zm0 2a3 3 0 0 1 2.83 2H15.17A3 3 0 0 1 18 9zm-4 5h8v10H14V14z" fill="white"/>
+                  <circle cx="18" cy="19" r="2.5" fill="white"/>
+                </svg>
+              </a>
+              {/* Lazada */}
+              <a href="#" title="Lazada" className="opacity-80 hover:opacity-100 transition-opacity">
+                <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="36" height="36" rx="6" fill="#0F146D"/>
+                  <text x="9" y="26" fontSize="20" fontWeight="bold" fill="#FF6000" fontFamily="Arial">L</text>
+                  <text x="18" y="26" fontSize="20" fontWeight="bold" fill="white" fontFamily="Arial">z</text>
+                </svg>
+              </a>
+              {/* Tiki */}
+              <a href="#" title="Tiki" className="opacity-80 hover:opacity-100 transition-opacity">
+                <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="36" height="36" rx="6" fill="#1A94FF"/>
+                  <text x="5" y="26" fontSize="16" fontWeight="bold" fill="white" fontFamily="Arial">TIKI</text>
+                </svg>
+              </a>
+              {/* TikTok Shop */}
+              <a href="#" title="TikTok Shop" className="opacity-80 hover:opacity-100 transition-opacity">
+                <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="36" height="36" rx="6" fill="#010101"/>
+                  <path d="M23.5 10.5h-3v10a2.5 2.5 0 1 1-2.5-2.5c.17 0 .34.02.5.05V15a5.5 5.5 0 1 0 5.5 5.5V14h2.5a3.5 3.5 0 0 1-3-3.5h.5z" fill="white"/>
+                  <path d="M24 10.5h-.5a3.5 3.5 0 0 0 3 3.5V10.5H24z" fill="#25F4EE"/>
+                  <path d="M18 23a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z" fill="#FE2C55" fillOpacity="0.7"/>
+                </svg>
+              </a>
             </div>
             <p className="text-white/50 text-xs mt-3 mb-2">Quốc tế</p>
-            <div className="flex flex-wrap gap-2">
-              <a href="#" className="px-2.5 py-1 rounded text-xs font-bold bg-[#FF9900] hover:opacity-90 transition-opacity text-black">Amazon</a>
-              <a href="#" className="px-2.5 py-1 rounded text-xs font-bold bg-[#0071CE] hover:opacity-90 transition-opacity text-white">Walmart</a>
+            <div className="flex flex-wrap gap-3 items-center">
+              {/* Amazon */}
+              <a href="#" title="Amazon" className="opacity-80 hover:opacity-100 transition-opacity">
+                <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="36" height="36" rx="6" fill="#232F3E"/>
+                  <text x="6" y="20" fontSize="11" fontWeight="bold" fill="white" fontFamily="Arial">amazon</text>
+                  <path d="M8 23 Q18 28 28 23" stroke="#FF9900" strokeWidth="2" strokeLinecap="round" fill="none"/>
+                  <path d="M26 21 L28 23 L26 25" stroke="#FF9900" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
+                </svg>
+              </a>
+              {/* Walmart */}
+              <a href="#" title="Walmart" className="opacity-80 hover:opacity-100 transition-opacity">
+                <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="36" height="36" rx="6" fill="#0071CE"/>
+                  <g transform="translate(18,18)">
+                    <rect x="-1.5" y="-8" width="3" height="6" rx="1.5" fill="#FFC220"/>
+                    <rect x="-1.5" y="2" width="3" height="6" rx="1.5" fill="#FFC220"/>
+                    <rect x="-8" y="-1.5" width="6" height="3" rx="1.5" fill="#FFC220"/>
+                    <rect x="2" y="-1.5" width="6" height="3" rx="1.5" fill="#FFC220"/>
+                    <rect x="-6.2" y="-6.2" width="3" height="6" rx="1.5" transform="rotate(45)" fill="#FFC220"/>
+                    <rect x="2.8" y="-6.2" width="3" height="6" rx="1.5" transform="rotate(-45)" fill="#FFC220"/>
+                    <rect x="-6.2" y="0.2" width="3" height="6" rx="1.5" transform="rotate(-45)" fill="#FFC220"/>
+                    <rect x="2.8" y="0.2" width="3" height="6" rx="1.5" transform="rotate(45)" fill="#FFC220"/>
+                  </g>
+                </svg>
+              </a>
             </div>
             <div className="mt-4">
               <p className="text-white/50 text-xs mb-2">Phương thức thanh toán</p>
