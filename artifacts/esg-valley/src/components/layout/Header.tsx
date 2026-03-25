@@ -128,7 +128,7 @@ export function Header() {
 
   const navLinks = [
     { path: "/", label: "Trang Chủ" },
-    { path: "/ve-esg-valley", label: "Câu chuyện ESG Valley" },
+    { path: "/ve-esg-valley", label: "Câu chuyện" },
     { path: "/tin-tuc", label: "Tin Tức" },
   ];
 
@@ -517,7 +517,7 @@ export function Header() {
                 </Link>
                 <Link href="/ve-esg-valley" onClick={() => setMobileMenuOpen(false)}
                   className={`text-base font-medium py-3 px-2 border-b border-border/50 uppercase tracking-wider transition-colors hover:text-primary ${location === "/ve-esg-valley" ? "text-primary font-semibold" : ""}`}>
-                  Câu chuyện ESG Valley
+                  Câu chuyện
                 </Link>
                 {/* Mobile Hệ Sinh Thái accordion */}
                 <div className="border-b border-border/50">
