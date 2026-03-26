@@ -323,27 +323,63 @@ export const products: Product[] = [
 export const news = [
   {
     id: 1,
+    slug: "chung-nhan-huu-co-quoc-te",
     title: "ESG Valley chính thức nhận chứng nhận Hữu cơ Quốc tế",
     date: "15/05/2025",
     category: "Bền Vững",
     excerpt: "Dấu mốc quan trọng trong hành trình mang trà Việt vươn tầm thế giới với tiêu chuẩn khắt khe nhất.",
-    image: "https://images.unsplash.com/photo-1558160074-4d7d8bdf4256?auto=format&fit=crop&q=80&w=800"
+    image: "https://images.unsplash.com/photo-1558160074-4d7d8bdf4256?auto=format&fit=crop&q=80&w=1200",
+    content: `Vùng nguyên liệu – nơi thiên nhiên ươm mầm hương vị\n\nGiữa núi rừng Tây Bắc hùng vĩ, nơi sương sớm chưa tan và mặt trời còn ngập ngừng sau rặng núi, những đồi chè hiện ra như một tấm thảm xanh mướt trải dài bất tận. Đây không chỉ là nơi cung cấp nguyên liệu chính cho các sản phẩm chè chất lượng cao, mà còn là vùng đất linh thiêng – nơi con người và thiên nhiên sống chung, cùng nhau tạo nên những búp chè tươi ngon nhất.\n\nESG Valley đã chính thức được trao chứng nhận Hữu cơ Quốc tế (Organic International Certification) sau quá trình kiểm định nghiêm ngặt kéo dài hơn 2 năm. Đây là minh chứng cho cam kết không sử dụng hóa chất, thuốc trừ sâu hay phân bón tổng hợp trong toàn bộ quy trình canh tác.\n\nQuá trình đạt chứng nhận đòi hỏi sự kiên trì và minh bạch tuyệt đối trong từng khâu – từ chăm sóc đất, thu hái đến chế biến và đóng gói. Mỗi lô sản phẩm đều được truy xuất nguồn gốc rõ ràng, đảm bảo người tiêu dùng biết chính xác búp chè đến từ vườn nào, được hái bởi ai và qua những công đoạn gì.\n\nVới chứng nhận này, ESG Valley tự tin đưa sản phẩm trà Việt bước lên thị trường quốc tế, cạnh tranh sòng phẳng với những thương hiệu trà danh tiếng trên thế giới. Đây không chỉ là chiến thắng của ESG Valley mà còn là niềm tự hào của ngành trà Việt Nam.`
   },
   {
     id: 2,
+    slug: "bao-ton-rung-tra-shan-tuyet",
     title: "Dự án bảo tồn rừng trà cổ thụ Shan Tuyết tại Hà Giang",
     date: "02/05/2025",
     category: "Cộng Đồng",
     excerpt: "Hợp tác cùng cộng đồng bản địa nhằm giữ gìn di sản thiên nhiên và cải thiện sinh kế người dân vùng cao.",
-    image: "https://images.unsplash.com/photo-1587734195503-904fca47e0e9?auto=format&fit=crop&q=80&w=800"
+    image: "https://images.unsplash.com/photo-1587734195503-904fca47e0e9?auto=format&fit=crop&q=80&w=1200",
+    content: `Những cây trà cổ thụ Shan Tuyết tại Hà Giang – một số cây tuổi thọ hàng trăm năm – đang đứng trước nguy cơ suy thoái do biến đổi khí hậu và tình trạng khai thác thiếu bền vững. ESG Valley đã phối hợp với cộng đồng người H'Mông địa phương triển khai dự án bảo tồn toàn diện.\n\nDự án bao gồm việc lập bản đồ chi tiết các cây trà cổ thụ, xây dựng quy ước cộng đồng về thu hái bền vững, và đào tạo kỹ thuật phục hồi những cây đang suy yếu. Mỗi hộ gia đình tham gia được hỗ trợ công cụ, kỹ thuật và cam kết thu mua sản phẩm với giá ổn định cao hơn thị trường.\n\nKết quả sau 18 tháng triển khai rất đáng khích lệ: tỷ lệ cây trà phục hồi đạt trên 80%, thu nhập trung bình của các hộ tham gia tăng 35%, và một mô hình du lịch trải nghiệm trà cổ thụ đã được hình thành, thu hút khách tham quan trong và ngoài nước.\n\nĐây là minh chứng rõ ràng cho triết lý kinh doanh của ESG Valley: phát triển không tách rời cộng đồng, và giá trị thương hiệu phải song hành cùng trách nhiệm xã hội.`
   },
   {
     id: 3,
+    slug: "bo-suu-tap-ma-dao-xuan-2026",
     title: "Ra mắt bộ sưu tập 'Mã Đáo' chào Xuân 2026",
     date: "20/04/2025",
     category: "Sản Phẩm",
     excerpt: "Sự kết hợp hoàn hảo giữa nghệ thuật thiết kế đương đại và chất lượng trà thượng hạng ESG Valley.",
-    image: "https://images.unsplash.com/photo-1629851608681-3058b76a084c?auto=format&fit=crop&q=80&w=800"
+    image: "https://images.unsplash.com/photo-1629851608681-3058b76a084c?auto=format&fit=crop&q=80&w=1200",
+    content: `Chào đón Xuân 2026, ESG Valley trân trọng giới thiệu bộ sưu tập giới hạn "Mã Đáo" – lấy cảm hứng từ hình tượng ngựa phi trong tranh dân gian Đông Hồ, kết hợp hài hòa giữa họa tiết truyền thống và ngôn ngữ thiết kế hiện đại.\n\nBộ sưu tập gồm 4 dòng trà đặc biệt được chọn lọc từ những vùng nguyên liệu tinh hoa nhất: Tản Viên Trà từ rừng già Ba Vì, Mạc Triều Trà từ cao nguyên Mộc Châu, Bách Niên Trà từ rừng trà cổ thụ Shan Tuyết, và Thượng Cổ Trà – tinh túy tuyển chọn từ những cây trà ngàn tuổi.\n\nMỗi hộp trà trong bộ sưu tập là một tác phẩm nghệ thuật hoàn chỉnh: vỏ hộp sơn mài truyền thống, giấy lót thủ công từ làng nghề Dương Ô, và chứng chỉ nguồn gốc in trên giấy dó mang chữ ký của nghệ nhân. Số lượng phát hành giới hạn 500 bộ.\n\n"Mã Đáo" không chỉ là quà tặng Tết sang trọng mà còn là câu chuyện về hành trình gìn giữ di sản văn hóa Việt – từ bàn tay người nghệ nhân đến tách trà sáng đầu năm.`
+  },
+  {
+    id: 4,
+    slug: "hoi-cho-nong-san-viet-2025",
+    title: "Hội chợ Nông sản Việt 2025 – ESG Valley góp mặt nổi bật",
+    date: "10/03/2025",
+    category: "Sự Kiện",
+    excerpt: "ESG Valley tham gia hội chợ với gian hàng trà cao cấp, thu hút hàng nghìn lượt khách tham quan và trải nghiệm.",
+    image: "https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&q=80&w=1200",
+    content: `Tại Hội chợ Nông sản Việt Nam 2025 tổ chức tại Hà Nội, gian hàng ESG Valley đã trở thành điểm đến không thể bỏ qua với hơn 8.000 lượt khách ghé thăm trong 5 ngày diễn ra sự kiện.\n\nKhông gian trưng bày được thiết kế như một "trà thất" thu nhỏ – nơi khách hàng có thể trực tiếp thưởng thức 12 loại trà khác nhau, tìm hiểu quy trình chế biến qua màn hình tương tác, và nhận tư vấn từ các chuyên gia trà của ESG Valley.\n\nĐặc biệt, buổi trình diễn pha trà nghệ thuật kết hợp âm nhạc truyền thống diễn ra vào chiều tối mỗi ngày đã thu hút đông đảo người xem và được các tờ báo lớn đưa tin. Nhiều đối tác phân phối quốc tế từ Nhật Bản, Hàn Quốc và Singapore cũng đã tiếp cận ESG Valley để thảo luận hợp tác.\n\nHội chợ Nông sản Việt 2025 một lần nữa khẳng định vị thế ngày càng vững chắc của ESG Valley trong bản đồ trà cao cấp Việt Nam và khu vực.`
+  },
+  {
+    id: 5,
+    slug: "quy-trinh-che-bien-tra-sach",
+    title: "Quy trình chế biến trà sạch – Chuỗi giá trị khép kín từ nương đến cốc",
+    date: "25/02/2025",
+    category: "Bền Vững",
+    excerpt: "Tìm hiểu hành trình từ búp trà tươi đến thành phẩm chuẩn organic theo quy trình nghiêm ngặt của ESG Valley.",
+    image: "https://images.unsplash.com/photo-1558160074-4d7d8bdf4256?auto=format&fit=crop&q=80&w=1200",
+    content: `Hành trình của một búp chè từ khi được hái đến khi đến tay người thưởng thức tại ESG Valley trải qua không dưới 12 công đoạn kiểm soát chất lượng nghiêm ngặt – mỗi bước đều được ghi chép và truy xuất đầy đủ.\n\nThu hái: Chỉ hái búp một tôm hai lá vào buổi sáng sớm, khi chất dinh dưỡng và tinh dầu trong lá đạt đỉnh cao nhất. Người hái phải đeo găng tay sạch và dùng rổ tre thông thoáng để tránh dập nát.\n\nHéo: Lá trà sau khi hái được trải đều trên giàn tre trong nhà héo có kiểm soát nhiệt độ và độ ẩm. Thời gian héo từ 12-16 giờ tùy điều kiện thời tiết.\n\nDiệt men và vò: Sử dụng thiết bị hiện đại kết hợp kỹ thuật thủ công truyền thống để đảm bảo giữ nguyên hương vị đặc trưng của từng loại trà.\n\nSấy và phân loại: Sấy ở nhiệt độ thấp để bảo toàn dưỡng chất, sau đó phân loại thủ công để loại bỏ những lá không đạt tiêu chuẩn.\n\nToàn bộ quy trình được kiểm soát bởi hệ thống phần mềm quản lý chất lượng, đảm bảo mỗi mẻ trà đều đồng đều và đáp ứng tiêu chuẩn organic quốc tế.`
+  },
+  {
+    id: 6,
+    slug: "cau-chuyen-nguoi-nong-dan-tra",
+    title: "Câu chuyện người nông dân – Gìn giữ nghề trà trăm năm",
+    date: "14/02/2025",
+    category: "Cộng Đồng",
+    excerpt: "Những con người bền bỉ gắn bó với cây chè qua nhiều thế hệ, là trái tim của chuỗi giá trị ESG Valley.",
+    image: "https://images.unsplash.com/photo-1587734195503-904fca47e0e9?auto=format&fit=crop&q=80&w=1200",
+    content: `Bà Lò Thị Mai, 67 tuổi, người H'Mông ở xã Lũng Cú, Đồng Văn – Hà Giang, đã gắn bó với những cây chè cổ thụ từ khi còn là đứa trẻ theo mẹ lên nương. Với bà, cây chè không chỉ là nguồn mưu sinh mà là người bạn đồng hành qua mọi thăng trầm cuộc sống.\n\n"Cây chè này của ông nội tôi trồng. Ông nội bảo khi hái phải nhẹ tay, như hái một đứa trẻ đang ngủ" – bà Mai chia sẻ trong buổi trò chuyện với đội ngũ ESG Valley.\n\nTrong hành trình xây dựng chuỗi cung ứng bền vững, ESG Valley đã gặp gỡ hàng trăm gia đình như gia đình bà Mai – những người lưu giữ tri thức bản địa quý giá về trà. Từ cách nhận biết đất phù hợp, thời điểm thu hái tốt nhất theo mùa, đến bí quyết ủ trà giữ hương – tất cả đều được ghi chép, bảo tồn và lồng ghép vào quy trình sản xuất của ESG Valley.\n\nESG Valley cam kết mua trà với giá cao hơn thị trường tối thiểu 20%, đồng thời hỗ trợ các gia đình nông dân xây dựng nhà kho bảo quản và tiếp cận vốn vay ưu đãi. Đây là nền tảng của một mô hình kinh tế tuần hoàn: khi người nông dân phát triển, chất lượng nguyên liệu tốt hơn, và thương hiệu ESG Valley ngày càng vững chắc.`
   }
 ];
 

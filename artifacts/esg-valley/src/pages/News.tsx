@@ -77,7 +77,6 @@ export default function News() {
 
   return (
     <div className="w-full bg-background pb-24">
-
       {/* ── HERO BANNER ── */}
       <div className="relative w-full overflow-hidden" style={{ height: "250px" }}>
         <img
@@ -103,7 +102,6 @@ export default function News() {
           </h1>
         </div>
       </div>
-
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* ── TABS ── */}
@@ -253,7 +251,6 @@ export default function News() {
                             </span>
                           </div>
                         </div>
-
                         {/* Text content */}
                         <div className="mt-8 flex flex-col items-center gap-2 w-full px-2">
                           <span
@@ -277,7 +274,7 @@ export default function News() {
 
                           {/* Button */}
                           <button
-                            className="flex items-center justify-center gap-2 mt-4 font-semibold transition-opacity hover:opacity-80"
+                            className="flex items-center justify-center gap-2 mt-4 font-semibold transition-opacity hover:opacity-80 bg-[#5f9654]"
                             style={{
                               background: "#69CB33",
                               borderRadius: "12px",
