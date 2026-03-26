@@ -555,23 +555,29 @@ export default function Home() {
         </div>
       </section>
       {/* ════════════════════════════════════════
-          7. TIN TỨC GẦN ĐÂY
-          Layout: title + 3-column news cards
+          7. TIN TỨC GẦN ĐÂY — Figma spec
       ════════════════════════════════════════ */}
-      <section className="py-20 bg-[#f5f9f4]">
+      <section className="py-20" style={{ background: "#F9F9F9" }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="text-center mb-12">
-            <p className="text-primary text-sm font-semibold mb-2 flex items-center justify-center gap-1">
-              <span>🌿</span> Tin tức về chúng tôi
-            </p>
-            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">Tin tức gần đây</h2>
-            <p className="text-muted-foreground max-w-xl mx-auto text-sm leading-relaxed">
+          {/* Header */}
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="text-center mb-16">
+            <div className="flex items-center justify-center gap-1 mb-3">
+              <svg width="29" height="26" viewBox="0 0 29 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M14 18C13 27 14 28 13 46C11 65 8 46 6 44C5 43 6 36 4 22C-1 -6 -16 -11 -24 -13C11 -28 24 4 26 20C27 14 28 3 25 -3C9 -21 19 -44 26 -50C25 -37 31 -36 33 -26C35 -17 32 -6 31 1L30 30C33 1 49 -8 60 -14C71 -20 83 -18 92 -14C99 -11 108 -12 112 -14C85 15 72 5 53 14C36 23 35 26 35 33L35 33Z" fill="#69CB33"/>
+              </svg>
+              <span className="font-semibold text-[20px] leading-[25px] text-[#A2A2A2]">Tin tức về chúng tôi</span>
+            </div>
+            <h2 className="font-display font-bold text-[#183806] mb-4" style={{ fontSize: "clamp(28px, 4vw, 48px)", lineHeight: "1.25" }}>
+              Tin tức gần đây
+            </h2>
+            <p className="font-semibold text-[#A2A2A2] max-w-2xl mx-auto text-center leading-[30px]" style={{ fontSize: "20px" }}>
               Cập nhật những câu chuyện mới nhất về ESG Valley – từ hành trình bảo tồn trà cổ đến những dấu ấn trên bản đồ trà thế giới.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {/* 3-column cards */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-[47px]">
             {news.map((item, idx) => {
               const [day, month] = item.date.split("/");
               return (
@@ -579,30 +585,62 @@ export default function Home() {
                   key={item.id}
                   initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }}
                   transition={{ delay: idx * 0.12, duration: 0.6 }} viewport={{ once: true }}
-                  className="group cursor-pointer bg-white rounded-2xl shadow-sm overflow-hidden hover:shadow-md transition-shadow duration-300"
+                  className="group cursor-pointer"
                 >
-                  {/* Image with date badge */}
-                  <div className="relative">
-                    <div className="aspect-[4/3] overflow-hidden">
+                  {/* Image + date badge */}
+                  <div className="relative" style={{ paddingLeft: "19px", paddingBottom: "12px" }}>
+                    {/* Square image */}
+                    <div className="aspect-square overflow-hidden" style={{ borderRadius: "24px" }}>
                       <img
                         src={item.image} alt={item.title}
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                       />
                     </div>
-                    <div className="absolute bottom-0 left-5 translate-y-1/2 w-14 h-14 rounded-full bg-[#C9A84C] flex flex-col items-center justify-center shadow-md">
-                      <span className="text-white font-bold text-lg leading-none">{day}</span>
-                      <span className="text-white text-xs leading-none mt-0.5">Th{parseInt(month)}</span>
+                    {/* Date badge — #FAD478 circle, white border, bottom-left */}
+                    <div
+                      className="absolute flex flex-col items-center justify-center"
+                      style={{
+                        width: "95px", height: "95px",
+                        left: "0px",
+                        bottom: "0px",
+                        background: "#FAD478",
+                        borderRadius: "50%",
+                        border: "8px solid #FFFFFF",
+                      }}
+                    >
+                      <span className="font-bold text-center leading-[28px]" style={{ color: "#B7820B", fontSize: "22px" }}>
+                        {day}<br />Th{parseInt(month)}
+                      </span>
                     </div>
                   </div>
-                  {/* Content */}
-                  <div className="px-5 pt-10 pb-6">
-                    <p className="text-primary text-xs font-semibold uppercase tracking-widest mb-2">{item.category}</p>
-                    <h3 className="font-display text-lg font-bold text-foreground mb-3 group-hover:text-primary transition-colors leading-snug line-clamp-2">
+
+                  {/* Info */}
+                  <div className="mt-6 text-center flex flex-col items-center gap-2">
+                    <p className="font-bold text-[16px] leading-[20px] tracking-tight" style={{ color: "#5F9654" }}>
+                      {item.category}
+                    </p>
+                    <h3 className="font-semibold text-[28px] leading-[35px] line-clamp-2" style={{ color: "#183806" }}>
                       {item.title}
                     </h3>
-                    <p className="text-muted-foreground text-sm line-clamp-2 mb-5">{item.excerpt}</p>
-                    <button className="inline-flex items-center gap-2 px-5 py-2 bg-primary text-primary-foreground text-sm font-semibold rounded-full hover:bg-primary/90 transition-colors">
-                      Xem chi tiết <ArrowRight className="w-4 h-4" />
+                    <p className="font-semibold text-[18px] leading-[30px] line-clamp-2" style={{ color: "#525252" }}>
+                      {item.excerpt}
+                    </p>
+                    <button
+                      className="mt-2 inline-flex items-center gap-[10px] font-semibold hover:brightness-90 transition-all"
+                      style={{
+                        background: "#5F9654",
+                        borderRadius: "12px",
+                        padding: "12px 20px",
+                        height: "48px",
+                        fontSize: "20px",
+                        color: "#FFFFFF",
+                      }}
+                    >
+                      Xem chi tiết
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M16.5 14.25L21 9.75L16.5 5.25" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                        <path d="M3 18.75C3 16.3631 3.94821 14.0739 5.63604 12.386C7.32387 10.6982 9.61305 9.75 12 9.75H21" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                      </svg>
                     </button>
                   </div>
                 </motion.article>
@@ -610,7 +648,7 @@ export default function Home() {
             })}
           </div>
 
-          <div className="mt-10 text-center">
+          <div className="mt-14 text-center">
             <Link href="/tin-tuc">
               <button className="inline-flex items-center gap-2 px-8 py-3 border border-primary text-primary font-semibold uppercase tracking-wider hover:bg-primary hover:text-primary-foreground transition-all duration-300 rounded-sm text-sm">
                 Xem Tất Cả Tin Tức <ArrowRight className="w-4 h-4" />
