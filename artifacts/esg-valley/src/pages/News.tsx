@@ -62,7 +62,7 @@ export default function News() {
         />
         <div className="absolute inset-0" style={{ background: "rgba(21, 40, 29, 0.62)" }} />
 
-        <div className="relative z-10 flex flex-col items-center justify-center h-full">
+        <div className="relative z-10 flex flex-col items-center justify-end h-full pb-10">
           {/* Breadcrumb */}
           <div className="flex items-center gap-1.5 mb-4">
             <span className="font-medium text-white" style={{ fontSize: "24px", lineHeight: "30px" }}>Trang chủ</span>
