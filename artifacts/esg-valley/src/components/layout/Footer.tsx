@@ -13,7 +13,7 @@ export function Footer() {
         backgroundPosition: "center",
       }}
     >
-      <div className="absolute inset-0 bg-black/72" />
+      <div className="absolute inset-0 bg-[#001200e8]" />
       <div className="relative z-10 max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-6">
 
