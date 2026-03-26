@@ -209,38 +209,53 @@ export default function Home() {
                   />
                 </div>
 
-                {/* Calendar widget */}
-                <div className="w-[234px] h-[236px] flex-shrink-0 bg-white rounded-2xl shadow-md overflow-hidden border border-border flex flex-col">
-                  {/* Header */}
-                  <div className="bg-primary text-white text-center py-2.5 px-3">
-                    <p className="text-xs font-semibold uppercase tracking-wider">5th Oct, 2025</p>
+                {/* Calendar widget — Figma spec */}
+                <div
+                  className="w-[234px] h-[234px] flex-shrink-0 flex flex-col rounded-[32px] overflow-hidden relative"
+                  style={{
+                    background: "linear-gradient(180deg, #62B751 0%, #B5ED84 100%)",
+                    boxShadow: "0px 7px 20px rgba(37,64,17,0.19)",
+                  }}
+                >
+                  {/* Date title */}
+                  <div className="px-6 pt-5 pb-2">
+                    <p className="text-white font-bold text-[22px] leading-tight tracking-tight">5th Oct, 2025</p>
                   </div>
-                  {/* Calendar grid */}
-                  <div className="p-3 flex-1 flex flex-col justify-between">
-                    <div className="grid grid-cols-7 text-center mb-1">
-                      {["S","M","T","W","T","F","S"].map((d, i) => (
-                        <span key={i} className="text-[9px] font-bold text-muted-foreground py-0.5">{d}</span>
-                      ))}
-                    </div>
-                    <div className="grid grid-cols-7 text-center gap-y-0.5">
-                      {[28,29,30,1,2,3,4,5,6,7,8,9,10,11].map((d, i) => (
-                        <span
-                          key={i}
-                          className={`text-[10px] py-0.5 rounded-full leading-5 ${
-                            d === 5 && i >= 7
-                              ? "bg-primary text-white font-bold"
-                              : i < 3
-                              ? "text-muted-foreground/50"
-                              : "text-foreground"
-                          }`}
-                        >{d}</span>
-                      ))}
-                    </div>
-                    {/* Time */}
-                    <div className="mt-3 pt-2.5 border-t border-border flex items-center gap-1.5">
-                      <span className="text-primary text-xs">🌿</span>
-                      <span className="text-xs font-semibold text-foreground">9:00 - 12:00</span>
-                    </div>
+
+                  {/* Days of week */}
+                  <div className="grid grid-cols-7 px-5">
+                    {["S","M","T","W","T","F","S"].map((d, i) => (
+                      <span key={i} className="text-white font-bold text-[13px] text-center leading-5">{d}</span>
+                    ))}
+                  </div>
+
+                  {/* Week row 1: 28–04 */}
+                  <div className="grid grid-cols-7 px-5 mt-1">
+                    {["28","29","30","01","02","03","04"].map((d, i) => (
+                      <span key={i} className="text-white/80 text-[14px] font-medium text-center leading-6">{d}</span>
+                    ))}
+                  </div>
+
+                  {/* Week row 2: 05–11 (05 highlighted) */}
+                  <div className="grid grid-cols-7 px-5 mt-1 items-center">
+                    {["05","06","07","08","09","10","11"].map((d, i) => (
+                      i === 0 ? (
+                        <span key={i} className="flex items-center justify-center">
+                          <span
+                            className="w-[30px] h-[30px] rounded-full flex items-center justify-center text-[14px] font-semibold"
+                            style={{ background: "#C6F316", color: "#183806", boxShadow: "0px 1px 5.9px rgba(226,251,81,0.58)" }}
+                          >{d}</span>
+                        </span>
+                      ) : (
+                        <span key={i} className="text-white text-[14px] font-medium text-center leading-6">{d}</span>
+                      )
+                    ))}
+                  </div>
+
+                  {/* White footer */}
+                  <div className="absolute bottom-0 left-0 right-0 h-[54px] bg-white flex items-center px-5 gap-2" style={{ borderRadius: "20px 20px 32px 32px" }}>
+                    <span className="text-[#69CB33] text-lg">🌿</span>
+                    <span className="font-semibold text-[#183806] text-sm">9:00 - 12:00</span>
                   </div>
                 </div>
               </div>

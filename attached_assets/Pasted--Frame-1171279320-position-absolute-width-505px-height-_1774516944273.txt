@@ -1,0 +1,222 @@
+/* Frame 1171279320 */
+
+position: absolute;
+width: 505px;
+height: 116px;
+left: 801px;
+top: 1047px;
+
+
+
+/* Rectangle 9 */
+
+position: absolute;
+width: 505px;
+height: 116px;
+left: 0px;
+top: 0px;
+
+background: #262626;
+box-shadow: 0px 7px 20px rgba(37, 64, 17, 0.19);
+border-radius: 32px;
+
+
+/* 18 */
+
+position: absolute;
+width: 43px;
+height: 60px;
+left: 57px;
+top: 20px;
+
+font-family: 'Quicksand';
+font-style: normal;
+font-weight: 500;
+font-size: 48px;
+line-height: 60px;
+/* identical to box height */
+text-align: center;
+letter-spacing: -0.03em;
+
+color: #FFFFFF;
+
+
+
+/* Days */
+
+position: absolute;
+width: 37px;
+height: 20px;
+left: 60px;
+top: 75px;
+
+font-family: 'Quicksand';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 20px;
+/* identical to box height */
+text-align: center;
+letter-spacing: -0.03em;
+
+color: #FFFFFF;
+
+
+
+/* Hours */
+
+position: absolute;
+width: 43px;
+height: 20px;
+left: 163px;
+top: 75px;
+
+font-family: 'Quicksand';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 20px;
+/* identical to box height */
+text-align: center;
+letter-spacing: -0.03em;
+
+color: #FFFFFF;
+
+
+
+/* Minutes */
+
+position: absolute;
+width: 55px;
+height: 20px;
+left: 272px;
+top: 75px;
+
+font-family: 'Quicksand';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 20px;
+/* identical to box height */
+text-align: center;
+letter-spacing: -0.03em;
+
+color: #FFFFFF;
+
+
+
+/* Seconds */
+
+position: absolute;
+width: 61px;
+height: 20px;
+left: 393px;
+top: 75px;
+
+font-family: 'Quicksand';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 20px;
+/* identical to box height */
+text-align: center;
+letter-spacing: -0.03em;
+
+color: #FFFFFF;
+
+
+
+/* 01 */
+
+position: absolute;
+width: 46px;
+height: 60px;
+left: 161px;
+top: 20px;
+
+font-family: 'Quicksand';
+font-style: normal;
+font-weight: 500;
+font-size: 48px;
+line-height: 60px;
+/* identical to box height */
+text-align: center;
+letter-spacing: -0.03em;
+
+color: #FFFFFF;
+
+
+
+/* 31 */
+
+position: absolute;
+width: 42px;
+height: 60px;
+left: 279px;
+top: 20px;
+
+font-family: 'Quicksand';
+font-style: normal;
+font-weight: 500;
+font-size: 48px;
+line-height: 60px;
+/* identical to box height */
+text-align: center;
+letter-spacing: -0.03em;
+
+color: #FFFFFF;
+
+
+
+/* 03 */
+
+position: absolute;
+width: 53px;
+height: 60px;
+left: 397px;
+top: 20px;
+
+font-family: 'Quicksand';
+font-style: normal;
+font-weight: 500;
+font-size: 48px;
+line-height: 60px;
+/* identical to box height */
+text-align: center;
+letter-spacing: -0.03em;
+
+color: #FFFFFF;
+
+
+
+/* Vector 2 */
+
+position: absolute;
+width: 0px;
+height: 33.5px;
+left: 132px;
+top: 34px;
+
+border: 1px solid #A2A2A2;
+
+
+/* Vector 3 */
+
+position: absolute;
+width: 0px;
+height: 33.5px;
+left: 245px;
+top: 34px;
+
+border: 1px solid #A2A2A2;
+
+
+/* Vector 4 */
+
+position: absolute;
+width: 0px;
+height: 33.5px;
+left: 358px;
+top: 34px;
+
+border: 1px solid #A2A2A2;
