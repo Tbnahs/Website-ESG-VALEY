@@ -1,0 +1,909 @@
+/* Sản phẩm nổi bật của chúng tôi */
+
+position: absolute;
+width: 736px;
+height: 60px;
+left: calc(50% - 736px/2 + 1px);
+top: 3978px;
+
+font-family: 'Quicksand';
+font-style: normal;
+font-weight: 700;
+font-size: 48px;
+line-height: 60px;
+/* identical to box height */
+
+color: #525252;
+
+border: 0.3px solid #525252;
+
+
+/* Sản phẩm nổi bật */
+
+position: absolute;
+width: 169px;
+height: 25px;
+left: calc(50% - 169px/2 + 0.5px);
+top: 3944px;
+
+font-family: 'Quicksand';
+font-style: normal;
+font-weight: 600;
+font-size: 20px;
+line-height: 25px;
+/* identical to box height */
+
+color: #A2A2A2;
+
+
+
+/* Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam */
+
+position: absolute;
+width: 789px;
+height: 60px;
+left: calc(50% - 789px/2 + 0.5px);
+top: 4054px;
+
+font-family: 'Quicksand';
+font-style: normal;
+font-weight: 600;
+font-size: 20px;
+line-height: 30px;
+/* or 150% */
+text-align: center;
+
+color: #525252;
+
+
+
+/* Frame 1171279453 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+justify-content: center;
+align-items: center;
+align-content: center;
+padding: 0px;
+gap: 72px 102px;
+
+position: absolute;
+width: 970px;
+height: 1149px;
+left: calc(50% - 970px/2);
+top: 4186px;
+
+
+
+/* Frame 1171279452 */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 24px;
+
+width: 369.5px;
+height: 538.5px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Mask group */
+
+width: 369.5px;
+height: 369.5px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Rectangle 18342 */
+
+position: absolute;
+width: 369.5px;
+height: 369.5px;
+left: 0px;
+bottom: 169px;
+
+background: url(image.png);
+border-radius: 32px;
+
+
+/* image 2195 */
+
+position: absolute;
+width: 731.09px;
+height: 595.91px;
+left: -5.43px;
+bottom: 109.23px;
+
+background: url(image.png);
+
+
+/* image 2198 */
+
+position: absolute;
+width: 640.16px;
+height: 415.77px;
+left: -16.28px;
+bottom: 169.07px;
+
+background: url(image.png);
+
+
+/* image 2213 */
+
+position: absolute;
+width: 442.83px;
+height: 368.94px;
+left: calc(50% - 442.83px/2 + 0.34px);
+bottom: 169.56px;
+
+background: url(image.png);
+
+
+/* image 2210 */
+
+position: absolute;
+width: 523.36px;
+height: 369.64px;
+left: calc(50% - 523.36px/2 + 0.53px);
+top: calc(50% - 369.64px/2 - 84.43px);
+
+background: url(image.png);
+
+
+/* Frame 1171279450 */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: flex-end;
+align-items: center;
+padding: 0px;
+gap: 8px;
+
+width: 369.5px;
+height: 145px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Frame 1171279399 */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding: 0px;
+gap: 8px;
+
+width: 206px;
+height: 61px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Chè thượng hạng */
+
+width: 206px;
+height: 23px;
+
+font-family: 'Quicksand';
+font-style: normal;
+font-weight: 600;
+font-size: 18px;
+line-height: 22px;
+/* identical to box height */
+text-align: center;
+letter-spacing: -0.03em;
+
+color: #5F9654;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Tản Viên Trà */
+
+width: 137px;
+height: 30px;
+
+font-family: 'Quicksand';
+font-style: normal;
+font-weight: 700;
+font-size: 24px;
+line-height: 30px;
+/* identical to box height */
+letter-spacing: -0.03em;
+
+color: #525252;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Frame 1171279400 */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
+padding: 0px 0px 16px;
+gap: 10px;
+
+width: 369.5px;
+height: 76px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Thuở hồng hoang, khi Thần Nông nếm bách thảo và phát hiện lá trà có thể giải độc, đất Việt cũng bắt đầu ghi dấu sự sống nơi núi Tản Viên - vùng non thiêng hội tụ linh khí đất trời. Giữa núi non hùng vĩ, những cây trà cổ thụ mọc hoang dại, hấp thụ mưa sương tinh khiết và khí thiêng sông núi, trở thành dòng trà đầu tiên nuôi dưỡng con người. */
+
+width: 369.5px;
+height: 60px;
+
+font-family: 'Quicksand';
+font-style: normal;
+font-weight: 600;
+font-size: 18px;
+line-height: 30px;
+/* or 167% */
+
+color: #A2A2A2;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Frame 1171279447 */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 24px;
+
+width: 369.5px;
+height: 538.5px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Mask group */
+
+width: 369.5px;
+height: 369.5px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Rectangle 18342 */
+
+position: absolute;
+width: 369.5px;
+height: 369.5px;
+left: 0px;
+bottom: 169px;
+
+background: url(image.png);
+border-radius: 32px;
+
+
+/* image 2195 */
+
+position: absolute;
+width: 731.09px;
+height: 595.91px;
+left: -5.43px;
+bottom: 109.23px;
+
+background: url(image.png);
+
+
+/* image 2211 */
+
+position: absolute;
+width: 398.59px;
+height: 369.24px;
+left: calc(50% - 398.59px/2 + 0.77px);
+bottom: 169.26px;
+
+background: url(image.png);
+
+
+/* Frame 1171279446 */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: flex-end;
+align-items: center;
+padding: 0px;
+gap: 8px;
+
+width: 369.5px;
+height: 145px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Frame 1171279395 */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding: 0px;
+gap: 8px;
+
+width: 206px;
+height: 61px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Chè thượng hạng */
+
+width: 206px;
+height: 23px;
+
+font-family: 'Quicksand';
+font-style: normal;
+font-weight: 600;
+font-size: 18px;
+line-height: 22px;
+/* identical to box height */
+text-align: center;
+letter-spacing: -0.03em;
+
+color: #5F9654;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Mạc Triều Trà */
+
+width: 149px;
+height: 30px;
+
+font-family: 'Quicksand';
+font-style: normal;
+font-weight: 700;
+font-size: 24px;
+line-height: 30px;
+/* identical to box height */
+letter-spacing: -0.03em;
+
+color: #525252;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Frame 1171279396 */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
+padding: 0px 0px 16px;
+gap: 10px;
+
+width: 369.5px;
+height: 76px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Mạc Triều Trà mang trong mình câu chuyện về sự chắt lọc, nâng tẩm và gửi gắm của bao thế hệ. Ban đầu, chén trà vỗn chỉ là thức uống dân dã, giản dị bên mái nhà sàn, bên nương chè xanh. Nhưng theo thời gian, từ những đổi chè, người dân tuyển chọn những búp non tinh túy nhất, hương vị thanh khiết nhất để dâng lên vua chúa, quan lại. */
+
+width: 369.5px;
+height: 60px;
+
+font-family: 'Quicksand';
+font-style: normal;
+font-weight: 600;
+font-size: 18px;
+line-height: 30px;
+/* or 167% */
+
+color: #A2A2A2;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Frame 1171279451 */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 24px;
+
+width: 369.5px;
+height: 538.5px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+
+
+/* Mask group */
+
+width: 369.5px;
+height: 369.5px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Rectangle 18342 */
+
+position: absolute;
+width: 369.5px;
+height: 369.5px;
+left: 0px;
+bottom: 169px;
+
+background: url(image.png);
+border-radius: 32px;
+
+
+/* image 2195 */
+
+position: absolute;
+width: 731.09px;
+height: 595.91px;
+left: -5.43px;
+bottom: 109.23px;
+
+background: url(image.png);
+
+
+/* image 2198 */
+
+position: absolute;
+width: 640.05px;
+height: 415.84px;
+left: -16.28px;
+bottom: 169px;
+
+background: url(image.png);
+
+
+/* image 2213 */
+
+position: absolute;
+width: 442.15px;
+height: 369.5px;
+left: calc(50% - 442.15px/2);
+bottom: 169px;
+
+background: url(image.png);
+
+
+/* Frame 1171279450 */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: flex-end;
+align-items: center;
+padding: 0px;
+gap: 8px;
+
+width: 369.5px;
+height: 145px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Frame 1171279399 */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding: 0px;
+gap: 8px;
+
+width: 206px;
+height: 61px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Chè thượng hạng */
+
+width: 206px;
+height: 23px;
+
+font-family: 'Quicksand';
+font-style: normal;
+font-weight: 600;
+font-size: 18px;
+line-height: 22px;
+/* identical to box height */
+text-align: center;
+letter-spacing: -0.03em;
+
+color: #5F9654;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Bách Niên Trà */
+
+width: 153px;
+height: 30px;
+
+font-family: 'Quicksand';
+font-style: normal;
+font-weight: 700;
+font-size: 24px;
+line-height: 30px;
+/* identical to box height */
+letter-spacing: -0.03em;
+
+color: #525252;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Frame 1171279400 */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
+padding: 0px 0px 16px;
+gap: 10px;
+
+width: 369.5px;
+height: 76px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Trải qua suốt chiều dài lịch sử, từ thuở dựng nước đến hôm nay, những giá trị văn hóa không ngừng được truyền lại như một báu vật vô giá. Trong đó, trà – không chỉ là thức uống - đã trở thành món qua tinh thần thiêng liêng mà bao thế hệ nghệ nhân dày công gìn giữ. */
+
+width: 369.5px;
+height: 60px;
+
+font-family: 'Quicksand';
+font-style: normal;
+font-weight: 600;
+font-size: 18px;
+line-height: 30px;
+/* or 167% */
+
+color: #A2A2A2;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Frame 1171279449 */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 24px;
+
+width: 369.5px;
+height: 538.5px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 3;
+flex-grow: 0;
+
+
+/* Mask group */
+
+width: 369.5px;
+height: 369.5px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Rectangle 18342 */
+
+position: absolute;
+width: 369.5px;
+height: 369.5px;
+left: 0px;
+bottom: 169px;
+
+background: url(image.png);
+border-radius: 32px;
+
+
+/* image 2195 */
+
+position: absolute;
+width: 731.09px;
+height: 595.91px;
+left: -5.43px;
+bottom: 109.23px;
+
+background: url(image.png);
+
+
+/* image 2196 */
+
+position: absolute;
+width: 514.42px;
+height: 377.29px;
+left: calc(50% - 514.42px/2 - 0.19px);
+bottom: 168.73px;
+
+background: url(image.png);
+
+
+/* image 2214 */
+
+position: absolute;
+width: 396.56px;
+height: 371.22px;
+left: calc(50% - 396.56px/2 - 0.25px);
+bottom: 167.28px;
+
+background: url(image.png);
+
+
+/* Frame 1171279448 */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: flex-end;
+align-items: center;
+padding: 0px;
+gap: 8px;
+
+width: 369.5px;
+height: 145px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Frame 1171279397 */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding: 0px;
+gap: 8px;
+
+width: 206px;
+height: 61px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Chè thượng hạng */
+
+width: 206px;
+height: 23px;
+
+font-family: 'Quicksand';
+font-style: normal;
+font-weight: 600;
+font-size: 18px;
+line-height: 22px;
+/* identical to box height */
+text-align: center;
+letter-spacing: -0.03em;
+
+color: #5F9654;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Thượng Cổ Trà */
+
+width: 162px;
+height: 30px;
+
+font-family: 'Quicksand';
+font-style: normal;
+font-weight: 700;
+font-size: 24px;
+line-height: 30px;
+/* identical to box height */
+letter-spacing: -0.03em;
+
+color: #525252;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Frame 1171279398 */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
+padding: 0px 0px 16px;
+gap: 10px;
+
+width: 369.5px;
+height: 76px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Thuở xa xưa, ở miền đất Thái Nguyên núi non hùng vĩ, có nàng Công - người con gái xinh đẹp, nết na, giọng hát trong như tiếng suối rừng. Nằng đem lòng thương chàng Cốc - một chàng trai khỏe mạnh, dũng căm, tài săn bắn vang danh. Họ gặp nhau, se duyên bằng ánh mắt, gắn bỏ bằng lời hẹn thể. Tình yêu ấy trong sáng như trăng núi, bền chặt như dây rừng quấn quýt. */
+
+width: 369.5px;
+height: 60px;
+
+font-family: 'Quicksand';
+font-style: normal;
+font-weight: 600;
+font-size: 20px;
+line-height: 30px;
+/* or 150% */
+
+color: #A2A2A2;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;

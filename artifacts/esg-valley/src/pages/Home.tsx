@@ -460,48 +460,58 @@ export default function Home() {
       </section>
       {/* ════════════════════════════════════════
           5. SẢN PHẨM NỔI BẬT
-          Layout: centered header → 2×2 product grid
+          Layout: centered header → 2×2 Figma-spec grid
       ════════════════════════════════════════ */}
       <section className="py-20 bg-background">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
 
-          {/* Centered header */}
-          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="text-center mb-12">
-            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
+          {/* Header — Figma spec */}
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="text-center mb-14">
+            <p className="font-semibold text-[20px] leading-[25px] text-[#A2A2A2] mb-3">Sản phẩm nổi bật</p>
+            <h2 className="font-display font-bold text-[#525252] mb-5" style={{ fontSize: "clamp(28px, 4vw, 48px)", lineHeight: "1.25" }}>
               Sản phẩm nổi bật của chúng tôi
             </h2>
-            <p className="text-muted-foreground max-w-xl mx-auto text-sm leading-relaxed">
+            <p className="font-semibold text-[#525252] max-w-2xl mx-auto text-center leading-[30px]" style={{ fontSize: "20px" }}>
               Những sản phẩm được chắt lọc từ thiên nhiên, mang trong mình lịch sử và tâm huyết của nhiều thế hệ người làm trà Việt.
             </p>
           </motion.div>
 
-          {/* 2×2 grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+          {/* 2×2 grid — gap: 72px row, 102px col */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-[102px] gap-y-[72px]">
             {featuredProducts.map((product, idx) => (
               <motion.div
                 key={product.id}
                 initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: idx * 0.1, duration: 0.6 }} viewport={{ once: true }}
-                className="group cursor-pointer"
+                className="group cursor-pointer flex flex-col gap-6"
               >
-                {/* Image */}
-                <div className="relative aspect-[4/3] overflow-hidden rounded-2xl bg-muted mb-4">
+                {/* Square image — border-radius 32px */}
+                <div className="aspect-square overflow-hidden bg-muted" style={{ borderRadius: "32px" }}>
                   <img
                     src={product.image} alt={product.name}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                   />
                 </div>
-                {/* Info */}
-                <p className="text-primary text-xs font-semibold uppercase tracking-widest mb-1">{product.category}</p>
-                <h3 className="font-display text-xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors">
-                  {product.name}
-                </h3>
-                <p className="text-muted-foreground text-sm leading-relaxed line-clamp-2">{product.desc}</p>
+
+                {/* Info — all centered */}
+                <div className="text-center flex flex-col items-center gap-2">
+                  <div className="flex flex-col items-center gap-2">
+                    <p className="font-semibold text-[18px] leading-[22px] tracking-tight text-center" style={{ color: "#5F9654" }}>
+                      {product.category}
+                    </p>
+                    <h3 className="font-bold text-[24px] leading-[30px] tracking-tight" style={{ color: "#525252" }}>
+                      {product.name}
+                    </h3>
+                  </div>
+                  <p className="font-semibold text-[18px] leading-[30px] line-clamp-2" style={{ color: "#A2A2A2" }}>
+                    {product.desc}
+                  </p>
+                </div>
               </motion.div>
             ))}
           </div>
 
-          <div className="mt-12 text-center">
+          <div className="mt-16 text-center">
             <Link href="/san-pham">
               <button className="inline-flex items-center gap-2 px-8 py-3 border border-primary text-primary font-semibold uppercase tracking-wider hover:bg-primary hover:text-primary-foreground transition-all duration-300 rounded-sm text-sm">
                 Xem Tất Cả Sản Phẩm <ArrowRight className="w-4 h-4" />
