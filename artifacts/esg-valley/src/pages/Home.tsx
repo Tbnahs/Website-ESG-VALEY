@@ -361,7 +361,7 @@ export default function Home() {
 
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="text-center mb-6">
             <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-8">
-              Vòng tuần hoàn ESG
+              Vòng tuần hoàn <span className="text-primary">ESG</span>
             </h2>
           </motion.div>
 
