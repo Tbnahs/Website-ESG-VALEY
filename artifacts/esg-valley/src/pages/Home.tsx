@@ -260,17 +260,32 @@ export default function Home() {
                 </div>
               </div>
 
-              {/* Countdown */}
-              <div className="grid grid-cols-4 gap-3">
+              {/* Countdown — Figma spec: single dark pill with dividers */}
+              <div
+                className="flex items-center justify-around h-[116px] px-4"
+                style={{
+                  background: "#262626",
+                  borderRadius: "32px",
+                  boxShadow: "0px 7px 20px rgba(37,64,17,0.19)",
+                }}
+              >
                 {[
                   { val: countdown.days,    label: "Days" },
                   { val: countdown.hours,   label: "Hours" },
                   { val: countdown.minutes, label: "Minutes" },
                   { val: countdown.seconds, label: "Seconds" },
                 ].map(({ val, label }, i) => (
-                  <div key={i} className="bg-foreground text-background rounded-xl py-3 text-center">
-                    <p className="text-2xl font-bold leading-none">{String(val).padStart(2, "0")}</p>
-                    <p className="text-[10px] mt-1 text-background/70 uppercase tracking-wider">{label}</p>
+                  <div key={i} className="flex items-center flex-1">
+                    {/* Divider before items 1-3 */}
+                    {i > 0 && (
+                      <div className="w-px h-[33px] bg-[#A2A2A2] flex-shrink-0 mx-auto" />
+                    )}
+                    <div className="flex-1 flex flex-col items-center justify-center">
+                      <p className="text-white font-medium leading-none tracking-tight" style={{ fontSize: "48px", lineHeight: "60px" }}>
+                        {String(val).padStart(2, "0")}
+                      </p>
+                      <p className="text-white text-base font-medium mt-0.5 tracking-tight">{label}</p>
+                    </div>
                   </div>
                 ))}
               </div>
