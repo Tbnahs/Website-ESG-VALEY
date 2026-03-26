@@ -210,13 +210,13 @@ export default function Home() {
                 </div>
 
                 {/* Calendar widget */}
-                <div className="w-44 flex-shrink-0 bg-white rounded-2xl shadow-md overflow-hidden border border-border">
+                <div className="w-[234px] h-[236px] flex-shrink-0 bg-white rounded-2xl shadow-md overflow-hidden border border-border flex flex-col">
                   {/* Header */}
                   <div className="bg-primary text-white text-center py-2.5 px-3">
                     <p className="text-xs font-semibold uppercase tracking-wider">5th Oct, 2025</p>
                   </div>
                   {/* Calendar grid */}
-                  <div className="p-2.5">
+                  <div className="p-3 flex-1 flex flex-col justify-between">
                     <div className="grid grid-cols-7 text-center mb-1">
                       {["S","M","T","W","T","F","S"].map((d, i) => (
                         <span key={i} className="text-[9px] font-bold text-muted-foreground py-0.5">{d}</span>
