@@ -8,7 +8,7 @@ export function Footer() {
     <footer
       className="relative text-white pt-10 pb-5"
       style={{
-        backgroundImage: "url('/images/hanh-trinh.jpg')",
+        backgroundImage: "url('/images/footer-bg.png')",
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
