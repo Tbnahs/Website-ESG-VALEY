@@ -132,7 +132,7 @@ export default function About() {
               className="font-display font-bold"
               style={{ fontSize: "clamp(36px, 5vw, 64px)", lineHeight: "1.25", color: "#5F9654" }}
             >
-              Hành trình cùng ESG
+              Hành trình <span style={{ color: "#525252" }}>cùng</span> ESG
             </motion.h1>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
