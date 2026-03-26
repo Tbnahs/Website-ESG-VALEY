@@ -177,11 +177,10 @@ export default function Home() {
             </h2>
           </motion.div>
 
-          {/* Dashed border container */}
-          <div className="border-2 border-dashed border-primary rounded-2xl p-6 md:p-10">
-
-            {/* 3 Tab pills */}
-            <div className="flex justify-center flex-wrap gap-2 mb-8">
+          {/* Buttons + dashed border: buttons sit on top edge of border */}
+          <div className="relative mt-4">
+            {/* 3 Tab pills — centred on the top border line */}
+            <div className="relative z-10 flex justify-center flex-wrap gap-2 mb-0">
               {esgPillars.map((p, idx) => (
                 <button
                   key={p.code}
@@ -197,45 +196,48 @@ export default function Home() {
               ))}
             </div>
 
-          {/* Tab content: left text | right image */}
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={activePillar}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              transition={{ duration: 0.4 }}
-              className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center"
-            >
-              {/* Text */}
-              <div className="order-2 lg:order-1">
-                <div className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-primary text-white font-display text-2xl font-bold mb-5 shadow-lg">
-                  {pillar.code}
-                </div>
-                <h3 className={`font-display text-2xl md:text-3xl font-bold mb-2 ${pillar.textAccent}`}>{pillar.subtitle}</h3>
-                <p className="text-muted-foreground text-sm font-medium uppercase tracking-wider mb-5">{pillar.title}</p>
-                <p className="text-foreground/75 leading-relaxed mb-6">{pillar.description}</p>
-                <ul className="space-y-3">
-                  {pillar.points.map(pt => (
-                    <li key={pt} className="flex items-center gap-3 text-sm text-foreground">
-                      <span className="w-2 h-2 rounded-full bg-primary flex-shrink-0" />
-                      {pt}
-                    </li>
-                  ))}
-                </ul>
-              </div>
+            {/* Dashed border box — pulled up to overlap buttons */}
+            <div className="border-[3px] border-dashed border-green-300 rounded-2xl -mt-5 pt-10 pb-8 px-6 md:px-10">
+              {/* Tab content: left text | right image */}
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={activePillar}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -20 }}
+                  transition={{ duration: 0.4 }}
+                  className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center"
+                >
+                  {/* Text */}
+                  <div className="order-2 lg:order-1">
+                    <div className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-primary text-white font-display text-2xl font-bold mb-5 shadow-lg">
+                      {pillar.code}
+                    </div>
+                    <h3 className={`font-display text-2xl md:text-3xl font-bold mb-2 ${pillar.textAccent}`}>{pillar.subtitle}</h3>
+                    <p className="text-muted-foreground text-sm font-medium uppercase tracking-wider mb-5">{pillar.title}</p>
+                    <p className="text-foreground/75 leading-relaxed mb-6">{pillar.description}</p>
+                    <ul className="space-y-3">
+                      {pillar.points.map(pt => (
+                        <li key={pt} className="flex items-center gap-3 text-sm text-foreground">
+                          <span className="w-2 h-2 rounded-full bg-primary flex-shrink-0" />
+                          {pt}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
 
-              {/* Image */}
-              <div className="order-1 lg:order-2 aspect-[4/3] rounded-sm overflow-hidden shadow-xl">
-                <img
-                  src={pillar.image}
-                  alt={pillar.subtitle}
-                  className="w-full h-full object-cover rounded-tl-[30px] rounded-tr-[30px] rounded-br-[30px] rounded-bl-[30px]"
-                />
-              </div>
-            </motion.div>
-          </AnimatePresence>
-          </div>{/* end dashed border */}
+                  {/* Image */}
+                  <div className="order-1 lg:order-2 aspect-[4/3] rounded-sm overflow-hidden shadow-xl">
+                    <img
+                      src={pillar.image}
+                      alt={pillar.subtitle}
+                      className="w-full h-full object-cover rounded-[30px]"
+                    />
+                  </div>
+                </motion.div>
+              </AnimatePresence>
+            </div>
+          </div>
         </div>
       </section>
       {/* ════════════════════════════════════════
