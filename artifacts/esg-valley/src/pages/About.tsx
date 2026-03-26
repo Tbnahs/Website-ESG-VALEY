@@ -360,7 +360,6 @@ export default function About() {
                     e.target.value = "";
                   }}
                 />
-                <span className="text-xs text-[#A2A2A2] font-medium">{item.label}</span>
               </motion.div>
             ))}
           </div>
