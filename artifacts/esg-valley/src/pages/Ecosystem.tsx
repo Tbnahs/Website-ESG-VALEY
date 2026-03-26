@@ -25,25 +25,25 @@ export default function Ecosystem() {
   return (
     <div className="w-full bg-background">
       {/* ════════ HERO ════════ */}
-      <div className="relative py-28 overflow-hidden">
+      <div className="relative w-full overflow-hidden" style={{ height: "380px" }}>
         <img
           src={`${import.meta.env.BASE_URL}images/ecosystem-banner.jpg`}
           alt="Hệ sinh thái ESGValley"
           className="absolute inset-0 w-full h-full object-cover object-center"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/55 to-black/70" />
-        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <motion.p
-            initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.55 }}
-            className="text-[#C9A84C] text-sm uppercase tracking-[0.35em] font-semibold mb-4"
-          >
-            ESG Valley
-          </motion.p>
+        <div className="absolute inset-0" style={{ background: "rgba(21, 40, 29, 0.62)" }} />
+        <div className="relative z-10 flex flex-col items-center justify-end h-full pb-14">
+          <div className="flex items-center gap-1.5 mb-4">
+            <span className="font-medium text-white" style={{ fontSize: "24px", lineHeight: "30px" }}>Trang chủ</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M9 18l6-6-6-6" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+            <span className="font-medium text-white" style={{ fontSize: "24px", lineHeight: "30px" }}>Hệ sinh thái</span>
+          </div>
           <motion.h1
             initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.1 }}
-            className="font-display text-4xl md:text-6xl font-bold text-white leading-tight mb-[0px]"
+            className="font-display font-bold text-white text-center"
+            style={{ fontSize: "48px", lineHeight: "60px", letterSpacing: "-0.03em" }}
           >
-            Hệ Sinh Thái <span className="text-[#C9A84C]">ESG Valley</span>
+            Hệ Sinh Thái ESG Valley
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.2 }}

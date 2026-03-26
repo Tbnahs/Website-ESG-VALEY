@@ -51,22 +51,24 @@ export default function Products() {
     : products.filter(p => p.category === activeCategory);
 
   return (
-    <div className="w-full bg-white min-h-screen pt-28">
+    <div className="w-full bg-white min-h-screen">
       {/* Hero */}
-      <div className="relative py-28 overflow-hidden">
+      <div className="relative w-full overflow-hidden" style={{ height: "380px" }}>
         <img
           src="/images/products-hero.jpg"
           alt="Danh sách sản phẩm"
           className="absolute inset-0 w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-black/60" />
-        <div className="absolute inset-0 flex items-center justify-center z-10">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h1 className="font-display text-4xl md:text-5xl font-bold text-white mb-4">Sản Phẩm</h1>
-            <p className="text-white/80 max-w-2xl mx-auto text-lg">
-              Tinh hoa trà Việt – từ núi rừng Tây Bắc đến tay bạn.
-            </p>
+        <div className="absolute inset-0" style={{ background: "rgba(21, 40, 29, 0.62)" }} />
+        <div className="relative z-10 flex flex-col items-center justify-end h-full pb-14">
+          <div className="flex items-center gap-1.5 mb-4">
+            <span className="font-medium text-white" style={{ fontSize: "24px", lineHeight: "30px" }}>Trang chủ</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M9 18l6-6-6-6" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+            <span className="font-medium text-white" style={{ fontSize: "24px", lineHeight: "30px" }}>Sản phẩm</span>
           </div>
+          <h1 className="font-display font-bold text-white text-center" style={{ fontSize: "48px", lineHeight: "60px", letterSpacing: "-0.03em" }}>
+            Sản Phẩm
+          </h1>
         </div>
       </div>
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
