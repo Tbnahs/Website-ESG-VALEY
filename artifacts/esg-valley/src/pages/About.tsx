@@ -496,7 +496,7 @@ export default function About() {
         </div>
 
         {/* Scrolling strip — full bleed */}
-        <div ref={scrollRef} className="mt-12 overflow-x-auto" style={{ scrollBehavior: "smooth" }}>
+        <div ref={scrollRef} className="mt-12 overflow-x-auto no-scrollbar" style={{ scrollBehavior: "smooth", msOverflowStyle: "none", scrollbarWidth: "none" }}>
           <div className="flex gap-[37px] px-8" style={{ width: "max-content" }}>
             {achievementImages.map((img, i) => (
               <motion.div

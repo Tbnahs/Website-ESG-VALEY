@@ -1,0 +1,2745 @@
+/* Frame 1171278855 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 10px;
+gap: 16px;
+
+position: absolute;
+width: 340px;
+height: 60px;
+left: calc(50% - 340px/2);
+bottom: 381px;
+
+background: #F9F9F9;
+border-radius: 12px;
+
+
+/* Frame 1171278853 */
+
+width: 40px;
+height: 40px;
+
+background: #69CB33;
+border-radius: 8px;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* 1 */
+
+position: absolute;
+width: 8px;
+height: 25px;
+left: calc(50% - 8px/2);
+top: calc(50% - 25px/2 - 0.5px);
+
+font-family: 'Quicksand';
+font-style: normal;
+font-weight: 600;
+font-size: 20px;
+line-height: 25px;
+/* identical to box height */
+
+color: #FFFFFF;
+
+
+
+/* Frame 1171278854 */
+
+width: 40px;
+height: 40px;
+
+background: #FFFFFF;
+border-radius: 8px;
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* 2 */
+
+position: absolute;
+width: 12px;
+height: 25px;
+left: calc(50% - 12px/2 + 1px);
+top: calc(50% - 25px/2 - 0.5px);
+
+font-family: 'Quicksand';
+font-style: normal;
+font-weight: 600;
+font-size: 20px;
+line-height: 25px;
+/* identical to box height */
+
+color: #525252;
+
+
+
+/* Frame 1171278855 */
+
+width: 40px;
+height: 40px;
+
+background: #FFFFFF;
+border-radius: 8px;
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+
+
+/* 3 */
+
+position: absolute;
+width: 11px;
+height: 25px;
+left: calc(50% - 11px/2 + 0.5px);
+top: calc(50% - 25px/2 - 0.5px);
+
+font-family: 'Quicksand';
+font-style: normal;
+font-weight: 600;
+font-size: 20px;
+line-height: 25px;
+/* identical to box height */
+
+color: #525252;
+
+
+
+/* Frame 1171278856 */
+
+width: 40px;
+height: 40px;
+
+background: #FFFFFF;
+border-radius: 8px;
+
+/* Inside auto layout */
+flex: none;
+order: 3;
+flex-grow: 0;
+
+
+/* 4 */
+
+position: absolute;
+width: 12px;
+height: 25px;
+left: calc(50% - 12px/2);
+top: calc(50% - 25px/2 - 0.5px);
+
+font-family: 'Quicksand';
+font-style: normal;
+font-weight: 600;
+font-size: 20px;
+line-height: 25px;
+/* identical to box height */
+
+color: #525252;
+
+
+
+/* Frame 1171278857 */
+
+width: 40px;
+height: 40px;
+
+background: #FFFFFF;
+border-radius: 8px;
+
+/* Inside auto layout */
+flex: none;
+order: 4;
+flex-grow: 0;
+
+
+/* 5 */
+
+position: absolute;
+width: 12px;
+height: 25px;
+left: calc(50% - 12px/2 + 1px);
+top: calc(50% - 25px/2 - 0.5px);
+
+font-family: 'Quicksand';
+font-style: normal;
+font-weight: 600;
+font-size: 20px;
+line-height: 25px;
+/* identical to box height */
+
+color: #525252;
+
+
+
+/* Frame 1171278858 */
+
+width: 40px;
+height: 40px;
+
+background: #FFFFFF;
+border-radius: 8px;
+
+/* Inside auto layout */
+flex: none;
+order: 5;
+flex-grow: 0;
+
+
+/* Vector 7035 */
+
+position: absolute;
+width: 6px;
+height: 12.5px;
+left: calc(50% - 6px/2 + 1px);
+top: calc(50% - 12.5px/2 + 0.25px);
+
+border: 2px solid #525252;
+border-radius: 1px;
+
+
+/* Frame 1171279412 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 10px;
+gap: 16px;
+
+position: absolute;
+width: 340px;
+height: 60px;
+left: calc(50% - 340px/2);
+bottom: 381px;
+
+background: #F9F9F9;
+border-radius: 12px;
+
+
+/* Frame 1171278853 */
+
+width: 40px;
+height: 40px;
+
+background: #5F9654;
+border-radius: 8px;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* 1 */
+
+position: absolute;
+width: 8px;
+height: 25px;
+left: calc(50% - 8px/2);
+top: calc(50% - 25px/2 - 0.5px);
+
+font-family: 'Quicksand';
+font-style: normal;
+font-weight: 600;
+font-size: 20px;
+line-height: 25px;
+/* identical to box height */
+
+color: #FFFFFF;
+
+
+
+/* Frame 1171278854 */
+
+width: 40px;
+height: 40px;
+
+background: #FFFFFF;
+border-radius: 8px;
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* 2 */
+
+position: absolute;
+width: 12px;
+height: 25px;
+left: calc(50% - 12px/2 + 1px);
+top: calc(50% - 25px/2 - 0.5px);
+
+font-family: 'Quicksand';
+font-style: normal;
+font-weight: 600;
+font-size: 20px;
+line-height: 25px;
+/* identical to box height */
+
+color: #525252;
+
+
+
+/* Frame 1171278855 */
+
+width: 40px;
+height: 40px;
+
+background: #FFFFFF;
+border-radius: 8px;
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+
+
+/* 3 */
+
+position: absolute;
+width: 11px;
+height: 25px;
+left: calc(50% - 11px/2 + 0.5px);
+top: calc(50% - 25px/2 - 0.5px);
+
+font-family: 'Quicksand';
+font-style: normal;
+font-weight: 600;
+font-size: 20px;
+line-height: 25px;
+/* identical to box height */
+
+color: #525252;
+
+
+
+/* Frame 1171278856 */
+
+width: 40px;
+height: 40px;
+
+background: #FFFFFF;
+border-radius: 8px;
+
+/* Inside auto layout */
+flex: none;
+order: 3;
+flex-grow: 0;
+
+
+/* 4 */
+
+position: absolute;
+width: 12px;
+height: 25px;
+left: calc(50% - 12px/2);
+top: calc(50% - 25px/2 - 0.5px);
+
+font-family: 'Quicksand';
+font-style: normal;
+font-weight: 600;
+font-size: 20px;
+line-height: 25px;
+/* identical to box height */
+
+color: #525252;
+
+
+
+/* Frame 1171278857 */
+
+width: 40px;
+height: 40px;
+
+background: #FFFFFF;
+border-radius: 8px;
+
+/* Inside auto layout */
+flex: none;
+order: 4;
+flex-grow: 0;
+
+
+/* 5 */
+
+position: absolute;
+width: 12px;
+height: 25px;
+left: calc(50% - 12px/2 + 1px);
+top: calc(50% - 25px/2 - 0.5px);
+
+font-family: 'Quicksand';
+font-style: normal;
+font-weight: 600;
+font-size: 20px;
+line-height: 25px;
+/* identical to box height */
+
+color: #525252;
+
+
+
+/* Frame 1171278858 */
+
+width: 40px;
+height: 40px;
+
+background: #FFFFFF;
+border-radius: 8px;
+
+/* Inside auto layout */
+flex: none;
+order: 5;
+flex-grow: 0;
+
+
+/* Vector 7035 */
+
+position: absolute;
+width: 6px;
+height: 12.5px;
+left: calc(50% - 6px/2 + 1px);
+top: calc(50% - 12.5px/2 + 0.25px);
+
+border: 2px solid #525252;
+border-radius: 1px;
+
+
+/* Frame 1171279407 */
+
+position: absolute;
+width: 1440px;
+height: 250px;
+left: calc(50% - 1440px/2);
+top: 153px;
+
+
+
+/* Rectangle 18348 */
+
+position: absolute;
+visibility: hidden;
+width: 1440px;
+height: 250px;
+left: 0px;
+top: 0px;
+
+background: linear-gradient(0deg, rgba(29, 53, 29, 0.62), rgba(29, 53, 29, 0.62)), url(image.png);
+
+
+/* _A730097 1 */
+
+position: absolute;
+width: 1892.11px;
+height: 1261.41px;
+left: calc(50% - 1892.11px/2 + 38.67px);
+top: calc(50% - 1261.41px/2 + 204.42px);
+
+background: linear-gradient(0deg, rgba(21, 38, 22, 0.7), rgba(21, 38, 22, 0.7)), url(_A730097.jpg);
+
+
+/* _A730091 1 */
+
+position: absolute;
+width: 1565px;
+height: 1043px;
+left: -64px;
+top: -82px;
+
+background: linear-gradient(0deg, rgba(21, 40, 29, 0.59), rgba(21, 40, 29, 0.59)), url(_A730091.jpg);
+
+
+/* Tin tức mới nhất */
+
+position: absolute;
+width: 354px;
+height: 60px;
+left: calc(50% - 354px/2);
+top: 110px;
+
+font-family: 'Quicksand';
+font-style: normal;
+font-weight: 700;
+font-size: 48px;
+line-height: 60px;
+/* identical to box height */
+letter-spacing: -0.03em;
+
+color: #FFFFFF;
+
+
+
+/* Frame 1171279393 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+gap: 6px;
+
+position: absolute;
+width: 226px;
+height: 30px;
+left: calc(50% - 226px/2);
+top: 80px;
+
+
+
+/* Trang chủ */
+
+width: 114px;
+height: 30px;
+
+font-family: 'Quicksand';
+font-style: normal;
+font-weight: 500;
+font-size: 24px;
+line-height: 30px;
+/* identical to box height, or 125% */
+
+color: #FFFFFF;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* u:angle-double-right */
+
+width: 24px;
+height: 24px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Vector */
+
+position: absolute;
+left: 27.94%;
+right: 28.01%;
+top: 33.26%;
+bottom: 33.31%;
+
+background: #FFFFFF;
+
+
+/* Tin tức */
+
+width: 76px;
+height: 30px;
+
+font-family: 'Quicksand';
+font-style: normal;
+font-weight: 500;
+font-size: 24px;
+line-height: 30px;
+/* identical to box height, or 125% */
+
+color: #FFFFFF;
+
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+
+
+/* Frame 1171279410 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+gap: 16px;
+
+position: absolute;
+width: 1168px;
+height: 54px;
+left: 153px;
+top: 457px;
+
+
+
+/* Frame 1171279410 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 10px 32px;
+gap: 10px;
+
+width: 178px;
+height: 54px;
+
+background: #F9F9F9;
+border-radius: 16px;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Gần đây */
+
+width: 80px;
+height: 25px;
+
+font-family: 'Quicksand';
+font-style: normal;
+font-weight: 500;
+font-size: 20px;
+line-height: 25px;
+/* identical to box height */
+
+color: #525252;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* u:sort-amount-down */
+
+width: 24px;
+height: 24px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Vector */
+
+position: absolute;
+left: 8.32%;
+right: 8.33%;
+top: 25%;
+bottom: 25%;
+
+background: #B7820B;
+
+
+/* Frame 1171279409 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 10px 32px;
+gap: 10px;
+
+width: 255px;
+height: 54px;
+
+background: #F9F9F9;
+border-radius: 16px;
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Tất cả danh mục */
+
+width: 157px;
+height: 25px;
+
+font-family: 'Quicksand';
+font-style: normal;
+font-weight: 500;
+font-size: 20px;
+line-height: 25px;
+/* identical to box height */
+
+color: #525252;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* fi:chevron-down */
+
+width: 24px;
+height: 24px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Vector */
+
+position: absolute;
+left: 25%;
+right: 25%;
+top: 37.5%;
+bottom: 37.5%;
+
+border: 2px solid #B7820B;
+
+
+/* Frame 1171279408 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 10px 32px;
+gap: 10px;
+
+width: 703px;
+height: 54px;
+
+background: #F9F9F9;
+border-radius: 16px;
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 1;
+
+
+/* fi:search */
+
+width: 24px;
+height: 24px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Vector */
+
+position: absolute;
+left: 12.5%;
+right: 20.83%;
+top: 12.5%;
+bottom: 20.83%;
+
+border: 2px solid #B7820B;
+
+
+/* Vector */
+
+position: absolute;
+left: 69.38%;
+right: 12.5%;
+top: 69.38%;
+bottom: 12.5%;
+
+border: 2px solid #B7820B;
+
+
+/* Tìm kiếm theo chủ đề */
+
+width: 202px;
+height: 25px;
+
+font-family: 'Quicksand';
+font-style: normal;
+font-weight: 500;
+font-size: 20px;
+line-height: 25px;
+/* identical to box height */
+
+color: #525252;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Frame 1171279386 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+padding: 0px;
+gap: 47px;
+
+position: absolute;
+width: 1187px;
+height: 556px;
+left: 134px;
+top: 565px;
+
+
+
+/* Frame 1171279383 */
+
+margin: 0 auto;
+width: 369px;
+height: 556px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Lorem ipsum dolor sit amet, conse adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam */
+
+position: absolute;
+width: 342px;
+height: 60px;
+left: 27px;
+top: 432px;
+
+font-family: 'Quicksand';
+font-style: normal;
+font-weight: 600;
+font-size: 20px;
+line-height: 30px;
+/* or 150% */
+
+color: #525252;
+
+
+
+/* Rectangle 18337 */
+
+position: absolute;
+width: 350px;
+height: 350px;
+left: 19px;
+top: 0px;
+
+background: url(image.png);
+border-radius: 24px;
+
+
+/* Ellipse 6 */
+
+position: absolute;
+width: 100px;
+height: 100px;
+left: 0px;
+top: 267px;
+
+background: #FAD478;
+border: 8px solid #FFFFFF;
+
+
+/* 05 Th10 */
+
+position: absolute;
+width: 54px;
+height: 56px;
+left: 22px;
+top: 289px;
+
+font-family: 'Quicksand';
+font-style: normal;
+font-weight: 700;
+font-size: 24px;
+line-height: 28px;
+/* or 117% */
+text-align: center;
+
+color: #B7820B;
+
+
+
+/* Thành phẩm */
+
+position: absolute;
+width: 93px;
+height: 20px;
+left: 147px;
+top: 367px;
+
+/* Body/16px bold */
+font-family: 'Quicksand';
+font-style: normal;
+font-weight: 700;
+font-size: 16px;
+line-height: 20px;
+/* identical to box height */
+text-align: center;
+letter-spacing: -0.03em;
+
+color: #5F9654;
+
+
+
+/* Chè tươi thượng hạng */
+
+position: absolute;
+width: 288px;
+height: 35px;
+left: 50px;
+top: 387px;
+
+/* Heading/28px */
+font-family: 'Quicksand';
+font-style: normal;
+font-weight: 600;
+font-size: 28px;
+line-height: 35px;
+/* identical to box height */
+text-align: center;
+
+color: #183806;
+
+
+
+/* Frame 1171279318 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 12px 20px;
+gap: 10px;
+
+position: absolute;
+width: 189px;
+height: 48px;
+left: 99px;
+top: 508px;
+
+background: #69CB33;
+border-radius: 12px;
+
+
+/* Xem chi tiết */
+
+width: 115px;
+height: 24px;
+
+/* Heading/20px */
+font-family: 'Inter';
+font-style: normal;
+font-weight: 600;
+font-size: 20px;
+line-height: 24px;
+
+color: #FFFFFF;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* ArrowBendUpRight */
+
+width: 24px;
+height: 24px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* ArrowBendUpRight */
+
+position: absolute;
+width: 24px;
+height: 24px;
+left: 0px;
+top: 0px;
+
+
+
+/* Vector */
+
+position: absolute;
+left: 0%;
+right: 0%;
+top: 0%;
+bottom: 0%;
+
+
+
+/* Vector */
+
+position: absolute;
+left: 68.75%;
+right: 12.5%;
+top: 21.88%;
+bottom: 40.62%;
+
+border: 2px solid #FFFFFF;
+
+
+/* Vector */
+
+position: absolute;
+left: 12.5%;
+right: 12.5%;
+top: 40.62%;
+bottom: 21.88%;
+
+border: 2px solid #FFFFFF;
+
+
+/* Frame 1171279385 */
+
+margin: 0 auto;
+width: 369px;
+height: 556px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Lorem ipsum dolor sit amet, conse adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam */
+
+position: absolute;
+width: 342px;
+height: 60px;
+left: 27px;
+top: 432px;
+
+font-family: 'Quicksand';
+font-style: normal;
+font-weight: 600;
+font-size: 20px;
+line-height: 30px;
+/* or 150% */
+
+color: #525252;
+
+
+
+/* Rectangle 18338 */
+
+position: absolute;
+width: 350px;
+height: 350px;
+left: 19px;
+top: 0px;
+
+background: url(image.png);
+border-radius: 24px;
+
+
+/* Ellipse 7 */
+
+position: absolute;
+width: 100px;
+height: 100px;
+left: 0px;
+top: 267px;
+
+background: #FAD478;
+border: 8px solid #FFFFFF;
+
+
+/* 05 Th10 */
+
+position: absolute;
+width: 54px;
+height: 56px;
+left: 22px;
+top: 289px;
+
+font-family: 'Quicksand';
+font-style: normal;
+font-weight: 700;
+font-size: 24px;
+line-height: 28px;
+/* or 117% */
+text-align: center;
+
+color: #B7820B;
+
+
+
+/* Thành phẩm */
+
+position: absolute;
+width: 93px;
+height: 20px;
+left: 147px;
+top: 367px;
+
+/* Body/16px bold */
+font-family: 'Quicksand';
+font-style: normal;
+font-weight: 700;
+font-size: 16px;
+line-height: 20px;
+/* identical to box height */
+text-align: center;
+letter-spacing: -0.03em;
+
+color: #5F9654;
+
+
+
+/* Chè tươi thượng hạng */
+
+position: absolute;
+width: 288px;
+height: 35px;
+left: 50px;
+top: 387px;
+
+/* Heading/28px */
+font-family: 'Quicksand';
+font-style: normal;
+font-weight: 600;
+font-size: 28px;
+line-height: 35px;
+/* identical to box height */
+text-align: center;
+
+color: #183806;
+
+
+
+/* Frame 1171279379 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 12px 20px;
+gap: 10px;
+
+position: absolute;
+width: 189px;
+height: 48px;
+left: 99px;
+top: 508px;
+
+background: #69CB33;
+border-radius: 12px;
+
+
+/* Xem chi tiết */
+
+width: 115px;
+height: 24px;
+
+/* Heading/20px */
+font-family: 'Inter';
+font-style: normal;
+font-weight: 600;
+font-size: 20px;
+line-height: 24px;
+
+color: #FFFFFF;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* ArrowBendUpRight */
+
+width: 24px;
+height: 24px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* ArrowBendUpRight */
+
+position: absolute;
+width: 24px;
+height: 24px;
+left: 0px;
+top: 0px;
+
+
+
+/* Vector */
+
+position: absolute;
+left: 0%;
+right: 0%;
+top: 0%;
+bottom: 0%;
+
+
+
+/* Vector */
+
+position: absolute;
+left: 68.75%;
+right: 12.5%;
+top: 21.88%;
+bottom: 40.62%;
+
+border: 2px solid #FFFFFF;
+
+
+/* Vector */
+
+position: absolute;
+left: 12.5%;
+right: 12.5%;
+top: 40.62%;
+bottom: 21.88%;
+
+border: 2px solid #FFFFFF;
+
+
+/* Frame 1171279384 */
+
+margin: 0 auto;
+width: 369px;
+height: 556px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+
+
+/* Lorem ipsum dolor sit amet, conse adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam */
+
+position: absolute;
+width: 342px;
+height: 60px;
+left: 27px;
+top: 432px;
+
+font-family: 'Quicksand';
+font-style: normal;
+font-weight: 600;
+font-size: 20px;
+line-height: 30px;
+/* or 150% */
+
+color: #525252;
+
+
+
+/* Rectangle 18339 */
+
+position: absolute;
+width: 350px;
+height: 350px;
+left: 19px;
+top: 0px;
+
+background: url(image.png);
+border-radius: 24px;
+
+
+/* Ellipse 8 */
+
+position: absolute;
+width: 100px;
+height: 100px;
+left: 0px;
+top: 267px;
+
+background: #FAD478;
+border: 8px solid #FFFFFF;
+
+
+/* 05 Th10 */
+
+position: absolute;
+width: 54px;
+height: 56px;
+left: 22px;
+top: 289px;
+
+font-family: 'Quicksand';
+font-style: normal;
+font-weight: 700;
+font-size: 24px;
+line-height: 28px;
+/* or 117% */
+text-align: center;
+
+color: #B7820B;
+
+
+
+/* Thành phẩm */
+
+position: absolute;
+width: 93px;
+height: 20px;
+left: 147px;
+top: 367px;
+
+/* Body/16px bold */
+font-family: 'Quicksand';
+font-style: normal;
+font-weight: 700;
+font-size: 16px;
+line-height: 20px;
+/* identical to box height */
+text-align: center;
+letter-spacing: -0.03em;
+
+color: #5F9654;
+
+
+
+/* Chè tươi thượng hạng */
+
+position: absolute;
+width: 288px;
+height: 35px;
+left: 50px;
+top: 387px;
+
+/* Heading/28px */
+font-family: 'Quicksand';
+font-style: normal;
+font-weight: 600;
+font-size: 28px;
+line-height: 35px;
+/* identical to box height */
+text-align: center;
+
+color: #183806;
+
+
+
+/* Frame 1171279380 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 12px 20px;
+gap: 10px;
+
+position: absolute;
+width: 189px;
+height: 48px;
+left: 99px;
+top: 508px;
+
+background: #69CB33;
+border-radius: 12px;
+
+
+/* Xem chi tiết */
+
+width: 115px;
+height: 24px;
+
+/* Heading/20px */
+font-family: 'Inter';
+font-style: normal;
+font-weight: 600;
+font-size: 20px;
+line-height: 24px;
+
+color: #FFFFFF;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* ArrowBendUpRight */
+
+width: 24px;
+height: 24px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* ArrowBendUpRight */
+
+position: absolute;
+width: 24px;
+height: 24px;
+left: 0px;
+top: 0px;
+
+
+
+/* Vector */
+
+position: absolute;
+left: 0%;
+right: 0%;
+top: 0%;
+bottom: 0%;
+
+
+
+/* Vector */
+
+position: absolute;
+left: 68.75%;
+right: 12.5%;
+top: 21.88%;
+bottom: 40.62%;
+
+border: 2px solid #FFFFFF;
+
+
+/* Vector */
+
+position: absolute;
+left: 12.5%;
+right: 12.5%;
+top: 40.62%;
+bottom: 21.88%;
+
+border: 2px solid #FFFFFF;
+
+
+/* Frame 1171279411 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+justify-content: space-between;
+align-items: center;
+align-content: flex-start;
+padding: 0px;
+gap: 48px 47px;
+
+position: absolute;
+width: 1187px;
+height: 1160px;
+left: 134px;
+top: 565px;
+
+
+
+/* Frame 1171279385 */
+
+width: 369px;
+height: 556px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Lorem ipsum dolor sit amet, conse adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam */
+
+position: absolute;
+width: 342px;
+height: 60px;
+left: 27px;
+top: 432px;
+
+font-family: 'Quicksand';
+font-style: normal;
+font-weight: 600;
+font-size: 20px;
+line-height: 30px;
+/* or 150% */
+
+color: #525252;
+
+
+
+/* Rectangle 18337 */
+
+position: absolute;
+width: 350px;
+height: 350px;
+left: 19px;
+top: 0px;
+
+background: url(image.png);
+border-radius: 24px;
+
+
+/* Ellipse 6 */
+
+position: absolute;
+width: 95px;
+height: 95px;
+left: 5px;
+top: 267px;
+
+background: #FAD478;
+border: 8px solid #FFFFFF;
+
+
+/* 05 Th10 */
+
+position: absolute;
+width: 54px;
+height: 56px;
+left: 26px;
+top: 287px;
+
+font-family: 'Quicksand';
+font-style: normal;
+font-weight: 700;
+font-size: 24px;
+line-height: 28px;
+/* or 117% */
+text-align: center;
+
+color: #B7820B;
+
+
+
+/* Thành phẩm */
+
+position: absolute;
+width: 93px;
+height: 20px;
+left: 147px;
+top: 367px;
+
+/* Body/16px bold */
+font-family: 'Quicksand';
+font-style: normal;
+font-weight: 700;
+font-size: 16px;
+line-height: 20px;
+/* identical to box height */
+text-align: center;
+letter-spacing: -0.03em;
+
+color: #5F9654;
+
+
+
+/* Chè tươi thượng hạng */
+
+position: absolute;
+width: 288px;
+height: 35px;
+left: 50px;
+top: 387px;
+
+/* Heading/28px */
+font-family: 'Quicksand';
+font-style: normal;
+font-weight: 600;
+font-size: 28px;
+line-height: 35px;
+/* identical to box height */
+text-align: center;
+
+color: #183806;
+
+
+
+/* Frame 1171279318 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 12px 20px;
+gap: 10px;
+
+position: absolute;
+width: 189px;
+height: 48px;
+left: 99px;
+top: 508px;
+
+background: #5F9654;
+border-radius: 12px;
+
+
+/* Xem chi tiết */
+
+width: 115px;
+height: 24px;
+
+/* Heading/20px */
+font-family: 'Inter';
+font-style: normal;
+font-weight: 600;
+font-size: 20px;
+line-height: 24px;
+
+color: #FFFFFF;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* ArrowBendUpRight */
+
+width: 24px;
+height: 24px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* ArrowBendUpRight */
+
+position: absolute;
+width: 24px;
+height: 24px;
+left: 0px;
+top: 0px;
+
+
+
+/* Vector */
+
+position: absolute;
+left: 0%;
+right: 0%;
+top: 0%;
+bottom: 0%;
+
+
+
+/* Vector */
+
+position: absolute;
+left: 68.75%;
+right: 12.5%;
+top: 21.88%;
+bottom: 40.62%;
+
+border: 2px solid #FFFFFF;
+
+
+/* Vector */
+
+position: absolute;
+left: 12.5%;
+right: 12.5%;
+top: 40.62%;
+bottom: 21.88%;
+
+border: 2px solid #FFFFFF;
+
+
+/* Frame 1171279389 */
+
+width: 369px;
+height: 556px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Lorem ipsum dolor sit amet, conse adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam */
+
+position: absolute;
+width: 342px;
+height: 60px;
+left: 27px;
+top: 432px;
+
+font-family: 'Quicksand';
+font-style: normal;
+font-weight: 600;
+font-size: 20px;
+line-height: 30px;
+/* or 150% */
+
+color: #525252;
+
+
+
+/* Rectangle 18337 */
+
+position: absolute;
+width: 350px;
+height: 350px;
+left: 19px;
+top: 0px;
+
+background: url(image.png);
+border-radius: 24px;
+
+
+/* Ellipse 6 */
+
+position: absolute;
+width: 95px;
+height: 95px;
+left: 5px;
+top: 267px;
+
+background: #FAD478;
+border: 8px solid #FFFFFF;
+
+
+/* 05 Th10 */
+
+position: absolute;
+width: 54px;
+height: 56px;
+left: 26px;
+top: 287px;
+
+font-family: 'Quicksand';
+font-style: normal;
+font-weight: 700;
+font-size: 24px;
+line-height: 28px;
+/* or 117% */
+text-align: center;
+
+color: #B7820B;
+
+
+
+/* Thành phẩm */
+
+position: absolute;
+width: 93px;
+height: 20px;
+left: 147px;
+top: 367px;
+
+/* Body/16px bold */
+font-family: 'Quicksand';
+font-style: normal;
+font-weight: 700;
+font-size: 16px;
+line-height: 20px;
+/* identical to box height */
+text-align: center;
+letter-spacing: -0.03em;
+
+color: #5F9654;
+
+
+
+/* Chè tươi thượng hạng */
+
+position: absolute;
+width: 288px;
+height: 35px;
+left: 50px;
+top: 387px;
+
+/* Heading/28px */
+font-family: 'Quicksand';
+font-style: normal;
+font-weight: 600;
+font-size: 28px;
+line-height: 35px;
+/* identical to box height */
+text-align: center;
+
+color: #183806;
+
+
+
+/* Frame 1171279318 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 12px 20px;
+gap: 10px;
+
+position: absolute;
+width: 189px;
+height: 48px;
+left: 99px;
+top: 508px;
+
+background: #5F9654;
+border-radius: 12px;
+
+
+/* Xem chi tiết */
+
+width: 115px;
+height: 24px;
+
+/* Heading/20px */
+font-family: 'Inter';
+font-style: normal;
+font-weight: 600;
+font-size: 20px;
+line-height: 24px;
+
+color: #FFFFFF;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* ArrowBendUpRight */
+
+width: 24px;
+height: 24px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* ArrowBendUpRight */
+
+position: absolute;
+width: 24px;
+height: 24px;
+left: 0px;
+top: 0px;
+
+
+
+/* Vector */
+
+position: absolute;
+left: 0%;
+right: 0%;
+top: 0%;
+bottom: 0%;
+
+
+
+/* Vector */
+
+position: absolute;
+left: 68.75%;
+right: 12.5%;
+top: 21.88%;
+bottom: 40.62%;
+
+border: 2px solid #FFFFFF;
+
+
+/* Vector */
+
+position: absolute;
+left: 12.5%;
+right: 12.5%;
+top: 40.62%;
+bottom: 21.88%;
+
+border: 2px solid #FFFFFF;
+
+
+/* Frame 1171279390 */
+
+width: 369px;
+height: 556px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+
+
+/* Lorem ipsum dolor sit amet, conse adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam */
+
+position: absolute;
+width: 342px;
+height: 60px;
+left: 27px;
+top: 432px;
+
+font-family: 'Quicksand';
+font-style: normal;
+font-weight: 600;
+font-size: 20px;
+line-height: 30px;
+/* or 150% */
+
+color: #525252;
+
+
+
+/* Rectangle 18337 */
+
+position: absolute;
+width: 350px;
+height: 350px;
+left: 19px;
+top: 0px;
+
+background: url(image.png);
+border-radius: 24px;
+
+
+/* Ellipse 6 */
+
+position: absolute;
+width: 95px;
+height: 95px;
+left: 5px;
+top: 267px;
+
+background: #FAD478;
+border: 8px solid #FFFFFF;
+
+
+/* 05 Th10 */
+
+position: absolute;
+width: 54px;
+height: 56px;
+left: 26px;
+top: 287px;
+
+font-family: 'Quicksand';
+font-style: normal;
+font-weight: 700;
+font-size: 24px;
+line-height: 28px;
+/* or 117% */
+text-align: center;
+
+color: #B7820B;
+
+
+
+/* Thành phẩm */
+
+position: absolute;
+width: 93px;
+height: 20px;
+left: 147px;
+top: 367px;
+
+/* Body/16px bold */
+font-family: 'Quicksand';
+font-style: normal;
+font-weight: 700;
+font-size: 16px;
+line-height: 20px;
+/* identical to box height */
+text-align: center;
+letter-spacing: -0.03em;
+
+color: #5F9654;
+
+
+
+/* Chè tươi thượng hạng */
+
+position: absolute;
+width: 288px;
+height: 35px;
+left: 50px;
+top: 387px;
+
+/* Heading/28px */
+font-family: 'Quicksand';
+font-style: normal;
+font-weight: 600;
+font-size: 28px;
+line-height: 35px;
+/* identical to box height */
+text-align: center;
+
+color: #183806;
+
+
+
+/* Frame 1171279318 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 12px 20px;
+gap: 10px;
+
+position: absolute;
+width: 189px;
+height: 48px;
+left: 99px;
+top: 508px;
+
+background: #5F9654;
+border-radius: 12px;
+
+
+/* Xem chi tiết */
+
+width: 115px;
+height: 24px;
+
+/* Heading/20px */
+font-family: 'Inter';
+font-style: normal;
+font-weight: 600;
+font-size: 20px;
+line-height: 24px;
+
+color: #FFFFFF;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* ArrowBendUpRight */
+
+width: 24px;
+height: 24px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* ArrowBendUpRight */
+
+position: absolute;
+width: 24px;
+height: 24px;
+left: 0px;
+top: 0px;
+
+
+
+/* Vector */
+
+position: absolute;
+left: 0%;
+right: 0%;
+top: 0%;
+bottom: 0%;
+
+
+
+/* Vector */
+
+position: absolute;
+left: 68.75%;
+right: 12.5%;
+top: 21.88%;
+bottom: 40.62%;
+
+border: 2px solid #FFFFFF;
+
+
+/* Vector */
+
+position: absolute;
+left: 12.5%;
+right: 12.5%;
+top: 40.62%;
+bottom: 21.88%;
+
+border: 2px solid #FFFFFF;
+
+
+/* Frame 1171279391 */
+
+width: 369px;
+height: 556px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 3;
+flex-grow: 0;
+
+
+/* Lorem ipsum dolor sit amet, conse adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam */
+
+position: absolute;
+width: 342px;
+height: 60px;
+left: 27px;
+top: 432px;
+
+font-family: 'Quicksand';
+font-style: normal;
+font-weight: 600;
+font-size: 20px;
+line-height: 30px;
+/* or 150% */
+
+color: #525252;
+
+
+
+/* Rectangle 18337 */
+
+position: absolute;
+width: 350px;
+height: 350px;
+left: 19px;
+top: 0px;
+
+background: url(image.png);
+border-radius: 24px;
+
+
+/* Ellipse 6 */
+
+position: absolute;
+width: 95px;
+height: 95px;
+left: 5px;
+top: 267px;
+
+background: #FAD478;
+border: 8px solid #FFFFFF;
+
+
+/* 05 Th10 */
+
+position: absolute;
+width: 54px;
+height: 56px;
+left: 26px;
+top: 287px;
+
+font-family: 'Quicksand';
+font-style: normal;
+font-weight: 700;
+font-size: 24px;
+line-height: 28px;
+/* or 117% */
+text-align: center;
+
+color: #B7820B;
+
+
+
+/* Thành phẩm */
+
+position: absolute;
+width: 93px;
+height: 20px;
+left: 147px;
+top: 367px;
+
+/* Body/16px bold */
+font-family: 'Quicksand';
+font-style: normal;
+font-weight: 700;
+font-size: 16px;
+line-height: 20px;
+/* identical to box height */
+text-align: center;
+letter-spacing: -0.03em;
+
+color: #5F9654;
+
+
+
+/* Chè tươi thượng hạng */
+
+position: absolute;
+width: 288px;
+height: 35px;
+left: 50px;
+top: 387px;
+
+/* Heading/28px */
+font-family: 'Quicksand';
+font-style: normal;
+font-weight: 600;
+font-size: 28px;
+line-height: 35px;
+/* identical to box height */
+text-align: center;
+
+color: #183806;
+
+
+
+/* Frame 1171279318 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 12px 20px;
+gap: 10px;
+
+position: absolute;
+width: 189px;
+height: 48px;
+left: 99px;
+top: 508px;
+
+background: #5F9654;
+border-radius: 12px;
+
+
+/* Xem chi tiết */
+
+width: 115px;
+height: 24px;
+
+/* Heading/20px */
+font-family: 'Inter';
+font-style: normal;
+font-weight: 600;
+font-size: 20px;
+line-height: 24px;
+
+color: #FFFFFF;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* ArrowBendUpRight */
+
+width: 24px;
+height: 24px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* ArrowBendUpRight */
+
+position: absolute;
+width: 24px;
+height: 24px;
+left: 0px;
+top: 0px;
+
+
+
+/* Vector */
+
+position: absolute;
+left: 0%;
+right: 0%;
+top: 0%;
+bottom: 0%;
+
+
+
+/* Vector */
+
+position: absolute;
+left: 68.75%;
+right: 12.5%;
+top: 21.88%;
+bottom: 40.62%;
+
+border: 2px solid #FFFFFF;
+
+
+/* Vector */
+
+position: absolute;
+left: 12.5%;
+right: 12.5%;
+top: 40.62%;
+bottom: 21.88%;
+
+border: 2px solid #FFFFFF;
+
+
+/* Frame 1171279392 */
+
+width: 369px;
+height: 556px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 4;
+flex-grow: 0;
+
+
+/* Lorem ipsum dolor sit amet, conse adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam */
+
+position: absolute;
+width: 342px;
+height: 60px;
+left: 27px;
+top: 432px;
+
+font-family: 'Quicksand';
+font-style: normal;
+font-weight: 600;
+font-size: 20px;
+line-height: 30px;
+/* or 150% */
+
+color: #525252;
+
+
+
+/* Rectangle 18337 */
+
+position: absolute;
+width: 350px;
+height: 350px;
+left: 19px;
+top: 0px;
+
+background: url(image.png);
+border-radius: 24px;
+
+
+/* Ellipse 6 */
+
+position: absolute;
+width: 95px;
+height: 95px;
+left: 5px;
+top: 267px;
+
+background: #FAD478;
+border: 8px solid #FFFFFF;
+
+
+/* 05 Th10 */
+
+position: absolute;
+width: 54px;
+height: 56px;
+left: 26px;
+top: 287px;
+
+font-family: 'Quicksand';
+font-style: normal;
+font-weight: 700;
+font-size: 24px;
+line-height: 28px;
+/* or 117% */
+text-align: center;
+
+color: #B7820B;
+
+
+
+/* Thành phẩm */
+
+position: absolute;
+width: 93px;
+height: 20px;
+left: 147px;
+top: 367px;
+
+/* Body/16px bold */
+font-family: 'Quicksand';
+font-style: normal;
+font-weight: 700;
+font-size: 16px;
+line-height: 20px;
+/* identical to box height */
+text-align: center;
+letter-spacing: -0.03em;
+
+color: #5F9654;
+
+
+
+/* Chè tươi thượng hạng */
+
+position: absolute;
+width: 288px;
+height: 35px;
+left: 50px;
+top: 387px;
+
+/* Heading/28px */
+font-family: 'Quicksand';
+font-style: normal;
+font-weight: 600;
+font-size: 28px;
+line-height: 35px;
+/* identical to box height */
+text-align: center;
+
+color: #183806;
+
+
+
+/* Frame 1171279318 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 12px 20px;
+gap: 10px;
+
+position: absolute;
+width: 189px;
+height: 48px;
+left: 99px;
+top: 508px;
+
+background: #5F9654;
+border-radius: 12px;
+
+
+/* Xem chi tiết */
+
+width: 115px;
+height: 24px;
+
+/* Heading/20px */
+font-family: 'Inter';
+font-style: normal;
+font-weight: 600;
+font-size: 20px;
+line-height: 24px;
+
+color: #FFFFFF;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* ArrowBendUpRight */
+
+width: 24px;
+height: 24px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* ArrowBendUpRight */
+
+position: absolute;
+width: 24px;
+height: 24px;
+left: 0px;
+top: 0px;
+
+
+
+/* Vector */
+
+position: absolute;
+left: 0%;
+right: 0%;
+top: 0%;
+bottom: 0%;
+
+
+
+/* Vector */
+
+position: absolute;
+left: 68.75%;
+right: 12.5%;
+top: 21.88%;
+bottom: 40.62%;
+
+border: 2px solid #FFFFFF;
+
+
+/* Vector */
+
+position: absolute;
+left: 12.5%;
+right: 12.5%;
+top: 40.62%;
+bottom: 21.88%;
+
+border: 2px solid #FFFFFF;
+
+
+/* Frame 1171279393 */
+
+width: 369px;
+height: 556px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 5;
+flex-grow: 0;
+
+
+/* Lorem ipsum dolor sit amet, conse adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam */
+
+position: absolute;
+width: 342px;
+height: 60px;
+left: 27px;
+top: 432px;
+
+font-family: 'Quicksand';
+font-style: normal;
+font-weight: 600;
+font-size: 20px;
+line-height: 30px;
+/* or 150% */
+
+color: #525252;
+
+
+
+/* Rectangle 18337 */
+
+position: absolute;
+width: 350px;
+height: 350px;
+left: 19px;
+top: 0px;
+
+background: url(image.png);
+border-radius: 24px;
+
+
+/* Ellipse 6 */
+
+position: absolute;
+width: 95px;
+height: 95px;
+left: 5px;
+top: 267px;
+
+background: #FAD478;
+border: 8px solid #FFFFFF;
+
+
+/* 05 Th10 */
+
+position: absolute;
+width: 54px;
+height: 56px;
+left: 26px;
+top: 287px;
+
+font-family: 'Quicksand';
+font-style: normal;
+font-weight: 700;
+font-size: 24px;
+line-height: 28px;
+/* or 117% */
+text-align: center;
+
+color: #B7820B;
+
+
+
+/* Thành phẩm */
+
+position: absolute;
+width: 93px;
+height: 20px;
+left: 147px;
+top: 367px;
+
+/* Body/16px bold */
+font-family: 'Quicksand';
+font-style: normal;
+font-weight: 700;
+font-size: 16px;
+line-height: 20px;
+/* identical to box height */
+text-align: center;
+letter-spacing: -0.03em;
+
+color: #5F9654;
+
+
+
+/* Chè tươi thượng hạng */
+
+position: absolute;
+width: 288px;
+height: 35px;
+left: 50px;
+top: 387px;
+
+/* Heading/28px */
+font-family: 'Quicksand';
+font-style: normal;
+font-weight: 600;
+font-size: 28px;
+line-height: 35px;
+/* identical to box height */
+text-align: center;
+
+color: #183806;
+
+
+
+/* Frame 1171279318 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 12px 20px;
+gap: 10px;
+
+position: absolute;
+width: 189px;
+height: 48px;
+left: 99px;
+top: 508px;
+
+background: #5F9654;
+border-radius: 12px;
+
+
+/* Xem chi tiết */
+
+width: 115px;
+height: 24px;
+
+/* Heading/20px */
+font-family: 'Inter';
+font-style: normal;
+font-weight: 600;
+font-size: 20px;
+line-height: 24px;
+
+color: #FFFFFF;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* ArrowBendUpRight */
+
+width: 24px;
+height: 24px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* ArrowBendUpRight */
+
+position: absolute;
+width: 24px;
+height: 24px;
+left: 0px;
+top: 0px;
+
+
+
+/* Vector */
+
+position: absolute;
+left: 0%;
+right: 0%;
+top: 0%;
+bottom: 0%;
+
+
+
+/* Vector */
+
+position: absolute;
+left: 68.75%;
+right: 12.5%;
+top: 21.88%;
+bottom: 40.62%;
+
+border: 2px solid #FFFFFF;
+
+
+/* Vector */
+
+position: absolute;
+left: 12.5%;
+right: 12.5%;
+top: 40.62%;
+bottom: 21.88%;
+
+border: 2px solid #FFFFFF;
