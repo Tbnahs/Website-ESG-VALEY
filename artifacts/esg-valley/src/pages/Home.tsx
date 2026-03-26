@@ -244,27 +244,41 @@ export default function Home() {
                     boxShadow: "0px 7px 20px rgba(37,64,17,0.19)",
                   }}
                 >
+                  {/* Vector 3 — decorative background shape */}
+                  <div
+                    className="absolute pointer-events-none"
+                    style={{
+                      width: "213px",
+                      height: "175.54px",
+                      left: "14px",
+                      top: "58px",
+                      background: "#52963E",
+                      opacity: 0.5,
+                      borderRadius: "12px",
+                    }}
+                  />
+
                   {/* Date title */}
-                  <div className="px-6 pt-5 pb-2">
+                  <div className="px-6 pt-5 pb-2 relative z-10">
                     <p className="text-white font-bold text-[22px] leading-tight tracking-tight">5th Oct, 2025</p>
                   </div>
 
                   {/* Days of week */}
-                  <div className="grid grid-cols-7 px-5">
+                  <div className="grid grid-cols-7 px-5 relative z-10">
                     {["S","M","T","W","T","F","S"].map((d, i) => (
                       <span key={i} className="text-white font-bold text-[13px] text-center leading-5">{d}</span>
                     ))}
                   </div>
 
                   {/* Week row 1: 28–04 */}
-                  <div className="grid grid-cols-7 px-5 mt-1">
+                  <div className="grid grid-cols-7 px-5 mt-1 relative z-10">
                     {["28","29","30","01","02","03","04"].map((d, i) => (
                       <span key={i} className="text-white/80 text-[14px] font-medium text-center leading-6">{d}</span>
                     ))}
                   </div>
 
                   {/* Week row 2: 05–11 (05 highlighted) */}
-                  <div className="grid grid-cols-7 px-5 mt-1 items-center">
+                  <div className="grid grid-cols-7 px-5 mt-1 items-center relative z-10">
                     {["05","06","07","08","09","10","11"].map((d, i) => (
                       i === 0 ? (
                         <span key={i} className="flex items-center justify-center">
