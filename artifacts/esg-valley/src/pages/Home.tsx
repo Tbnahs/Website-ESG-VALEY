@@ -200,13 +200,40 @@ export default function Home() {
             <div className="space-y-4">
               {/* Photo + Calendar row */}
               <div className="flex gap-4 items-stretch">
-                {/* Photo */}
-                <div className="flex-1 rounded-2xl overflow-hidden aspect-[4/3]">
+                {/* Photo card — Figma spec: 245×234px, dark overlay, white badge */}
+                <div
+                  className="flex-1 relative overflow-hidden"
+                  style={{
+                    height: "234px",
+                    borderRadius: "32px",
+                    boxShadow: "0px 7px 20px rgba(37,64,17,0.19)",
+                  }}
+                >
+                  {/* Image with dark overlay */}
                   <img
                     src="/images/footer-bg.png"
                     alt="Sự kiện ESG Valley"
-                    className="w-full h-full object-cover object-top"
+                    className="absolute inset-0 w-full h-full object-cover object-top"
                   />
+                  <div className="absolute inset-0" style={{ background: "rgba(0,0,0,0.2)" }} />
+
+                  {/* White info badge */}
+                  <div
+                    className="absolute flex flex-col items-center justify-center"
+                    style={{
+                      left: "32px",
+                      top: "158px",
+                      width: "169px",
+                      height: "54px",
+                      background: "#FFFFFF",
+                      borderRadius: "24px",
+                      boxShadow: "0px 4px 4.6px rgba(0,0,0,0.25)",
+                      padding: "6px 24px",
+                    }}
+                  >
+                    <span className="font-semibold text-[#525252] leading-tight" style={{ fontSize: "20px" }}>Lễ hội trà 2025</span>
+                    <span className="font-semibold text-[#A2A2A2]" style={{ fontSize: "12px" }}>Hà Giang, Việt Nam</span>
+                  </div>
                 </div>
 
                 {/* Calendar widget — Figma spec */}
