@@ -2,7 +2,7 @@ import { useState, useEffect, useCallback } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 import { motion, AnimatePresence } from "framer-motion";
-import { Link } from "wouter";
+import { Link, useLocation } from "wouter";
 import { ArrowRight, Play } from "lucide-react";
 import { products, news, esgPillars } from "@/lib/data";
 
@@ -95,6 +95,7 @@ const stats = [
 ];
 
 export default function Home() {
+  const [, navigate] = useLocation();
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [Autoplay({ delay: 5000 })]);
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [activePillar, setActivePillar] = useState(0);
@@ -594,6 +595,7 @@ export default function Home() {
                   initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }}
                   transition={{ delay: idx * 0.12, duration: 0.6 }} viewport={{ once: true }}
                   className="group cursor-pointer"
+                  onClick={() => navigate(`/tin-tuc/${(item as any).slug || item.id}`)}
                 >
                   {/* Image + date badge */}
                   <div className="relative" style={{ paddingLeft: "19px", paddingBottom: "12px" }}>
@@ -643,6 +645,7 @@ export default function Home() {
                         fontSize: "20px",
                         color: "#FFFFFF",
                       }}
+                      onClick={e => { e.stopPropagation(); navigate(`/tin-tuc/${(item as any).slug || item.id}`); }}
                     >
                       Xem chi tiết
                       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
