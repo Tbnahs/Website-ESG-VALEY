@@ -164,7 +164,6 @@ export default function Home() {
           ))}
         </div>
       </section>
-
       {/* ════════════════════════════════════════
           2. SỰ KIỆN SẮP DIỄN RA
           Layout: left (label+title+desc+btn) | right (photo + calendar + countdown)
@@ -231,7 +230,7 @@ export default function Home() {
                       padding: "6px 24px",
                     }}
                   >
-                    <span className="font-semibold text-[#525252] leading-tight" style={{ fontSize: "20px" }}>Lễ hội trà 2025</span>
+                    <span className="font-semibold text-[#525252] text-[16px]" style={{ fontSize: "20px" }}>Lễ hội trà 2025</span>
                     <span className="font-semibold text-[#A2A2A2]" style={{ fontSize: "12px" }}>Hà Giang, Việt Nam</span>
                   </div>
                 </div>
@@ -334,7 +333,6 @@ export default function Home() {
           </motion.div>
         </div>
       </section>
-
       {/* ════════════════════════════════════════
           3. VÒNG TUẦN HOÀN ESG
           Layout: centered title → 3 tab pills → left text | right image
