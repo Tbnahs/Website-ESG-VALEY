@@ -1,0 +1,1687 @@
+/* Hành trình cùng ESG */
+
+position: absolute;
+width: 630px;
+height: 80px;
+left: calc(50% - 630px/2);
+top: 177px;
+
+font-family: 'Quicksand';
+font-style: normal;
+font-weight: 700;
+font-size: 64px;
+line-height: 80px;
+/* identical to box height */
+
+color: #5F9654;
+
+
+
+/* Mask group */
+
+position: absolute;
+width: 1312px;
+height: 503px;
+left: calc(50% - 1312px/2);
+top: 343px;
+
+
+
+/* Rectangle 18358 */
+
+position: absolute;
+width: 1312px;
+height: 503px;
+left: 64px;
+top: 343px;
+
+background: url(.jpg), #D9D9D9;
+border-radius: 20px;
+
+
+/* image_2025-07-29_17-17-58 1 */
+
+position: absolute;
+width: 1338.87px;
+height: 1336.62px;
+left: 51.45px;
+top: 104.76px;
+
+background: url(image_2025-07-29_17-17-58.png);
+border-radius: 20px;
+
+
+/* _A730091 1 */
+
+position: absolute;
+width: 1439px;
+height: 959px;
+left: 0px;
+top: 303px;
+
+background: url(_A730091.jpg);
+
+
+/* Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore */
+
+position: absolute;
+width: 1172px;
+height: 30px;
+left: calc(50% - 1172px/2 + 34px);
+top: 273px;
+
+font-family: 'Quicksand';
+font-style: normal;
+font-weight: 600;
+font-size: 20px;
+line-height: 30px;
+/* identical to box height, or 150% */
+text-align: center;
+
+color: #A2A2A2;
+
+
+
+/* Frame 1171279439 */
+
+position: absolute;
+width: 1440px;
+height: 552px;
+left: calc(50% - 1440px/2);
+top: 845px;
+
+background: #FFFFFF;
+
+
+/* Rectangle 18360 */
+
+position: absolute;
+width: 105px;
+height: 51px;
+left: 406px;
+top: 53px;
+
+background: #183806;
+border-radius: 32px;
+
+
+/* Frame 1171279438 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+gap: 32px;
+
+position: absolute;
+width: 927px;
+height: 25px;
+left: calc(50% - 927px/2 + 0.5px);
+top: 66px;
+
+
+
+/* 2020 */
+
+width: 56px;
+height: 30px;
+
+font-family: 'Quicksand';
+font-style: normal;
+font-weight: 500;
+font-size: 24px;
+line-height: 30px;
+/* identical to box height */
+text-align: center;
+
+color: #525252;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Vector 7040 */
+
+width: 56px;
+height: 0px;
+
+border: 1px solid #E4E4E4;
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* 2021 */
+
+width: 52px;
+height: 30px;
+
+font-family: 'Quicksand';
+font-style: normal;
+font-weight: 700;
+font-size: 24px;
+line-height: 30px;
+/* identical to box height */
+text-align: center;
+
+color: #FFFFFF;
+
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+
+
+/* Vector 7039 */
+
+width: 56px;
+height: 0px;
+
+border: 1px solid #E4E4E4;
+
+/* Inside auto layout */
+flex: none;
+order: 3;
+flex-grow: 0;
+
+
+/* 2022 */
+
+width: 55px;
+height: 30px;
+
+font-family: 'Quicksand';
+font-style: normal;
+font-weight: 500;
+font-size: 24px;
+line-height: 30px;
+/* identical to box height */
+text-align: center;
+
+color: #525252;
+
+
+/* Inside auto layout */
+flex: none;
+order: 4;
+flex-grow: 0;
+
+
+/* Vector 7038 */
+
+width: 56px;
+height: 0px;
+
+border: 1px solid #E4E4E4;
+
+/* Inside auto layout */
+flex: none;
+order: 5;
+flex-grow: 0;
+
+
+/* 2023 */
+
+width: 54px;
+height: 30px;
+
+font-family: 'Quicksand';
+font-style: normal;
+font-weight: 500;
+font-size: 24px;
+line-height: 30px;
+/* identical to box height */
+text-align: center;
+
+color: #525252;
+
+
+/* Inside auto layout */
+flex: none;
+order: 6;
+flex-grow: 0;
+
+
+/* Vector 7036 */
+
+width: 56px;
+height: 0px;
+
+border: 1px solid #E4E4E4;
+
+/* Inside auto layout */
+flex: none;
+order: 7;
+flex-grow: 0;
+
+
+/* 2024 */
+
+width: 55px;
+height: 30px;
+
+font-family: 'Quicksand';
+font-style: normal;
+font-weight: 500;
+font-size: 24px;
+line-height: 30px;
+/* identical to box height */
+text-align: center;
+
+color: #525252;
+
+
+/* Inside auto layout */
+flex: none;
+order: 8;
+flex-grow: 0;
+
+
+/* Vector 7037 */
+
+width: 56px;
+height: 0px;
+
+border: 1px solid #E4E4E4;
+
+/* Inside auto layout */
+flex: none;
+order: 9;
+flex-grow: 0;
+
+
+/* 2025 */
+
+width: 55px;
+height: 30px;
+
+font-family: 'Quicksand';
+font-style: normal;
+font-weight: 500;
+font-size: 24px;
+line-height: 30px;
+/* identical to box height */
+text-align: center;
+
+color: #525252;
+
+
+/* Inside auto layout */
+flex: none;
+order: 10;
+flex-grow: 0;
+
+
+/* Điểm khởi đầu */
+
+position: absolute;
+width: 248px;
+height: 45px;
+left: 622px;
+top: 175px;
+
+font-family: 'Quicksand';
+font-style: normal;
+font-weight: 700;
+font-size: 36px;
+line-height: 45px;
+/* identical to box height */
+text-align: center;
+
+color: #525252;
+
+
+
+/* Ý tưởng về một thương hiệu chè tử tế được nhen nhóm từ những lần rong đuổi qua bản làng, ngồi cùng bà con uống chén trà nồng, nghe họ kể chuyện mùa vụ và chứng kiến búp chè non được nâng niu như báu vật. Năm đó, giữa sự thô ráp của núi rừng và ước mơ mang hương vị quê hương đến gần hơn với mọi người, thương hiệu (giả định: .... */
+
+position: absolute;
+width: 559px;
+height: 196px;
+left: calc(50% - 559px/2 + 181.5px);
+top: 228px;
+
+font-family: 'Quicksand';
+font-style: normal;
+font-weight: 600;
+font-size: 18px;
+line-height: 28px;
+/* or 156% */
+text-align: justify;
+
+color: #525252;
+
+
+
+/* ArrowRight */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 10px;
+gap: 10px;
+
+position: absolute;
+width: 52px;
+height: 52px;
+left: 1254px;
+top: calc(50% - 52px/2);
+
+border: 2px solid #5F9654;
+border-radius: 50px;
+
+
+/* ArrowRight */
+
+width: 32px;
+height: 32px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Vector */
+
+position: absolute;
+left: 19.23%;
+right: 19.23%;
+top: 19.23%;
+bottom: 19.23%;
+
+
+
+/* Vector */
+
+position: absolute;
+left: 23.08%;
+right: 23.08%;
+top: 50%;
+bottom: 50%;
+
+border: 2px solid #5F9654;
+
+
+/* Vector */
+
+position: absolute;
+left: 59.62%;
+right: 23.08%;
+top: 32.69%;
+bottom: 32.69%;
+
+border: 2px solid #5F9654;
+
+
+/* ArrowRight */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 10px;
+gap: 10px;
+
+position: absolute;
+width: 52px;
+height: 52px;
+left: 134px;
+top: calc(50% - 52px/2);
+
+border: 2px solid #5F9654;
+border-radius: 50px;
+transform: matrix(-1, 0, 0, 1, 0, 0);
+
+
+/* ArrowRight */
+
+width: 32px;
+height: 32px;
+
+transform: matrix(-1, 0, 0, 1, 0, 0);
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Vector */
+
+position: absolute;
+left: 19.23%;
+right: 19.23%;
+top: 19.23%;
+bottom: 19.23%;
+
+transform: matrix(-1, 0, 0, 1, 0, 0);
+
+
+/* Vector */
+
+position: absolute;
+left: 23.08%;
+right: 23.08%;
+top: 50%;
+bottom: 50%;
+
+border: 2px solid #5F9654;
+transform: matrix(-1, 0, 0, 1, 0, 0);
+
+
+/* Vector */
+
+position: absolute;
+left: 23.08%;
+right: 59.62%;
+top: 32.69%;
+bottom: 32.69%;
+
+border: 2px solid #5F9654;
+transform: matrix(-1, 0, 0, 1, 0, 0);
+
+
+/* Rectangle 18359 */
+
+position: absolute;
+width: 6px;
+height: 41px;
+left: 1202px;
+top: 259px;
+
+background: #E4E4E4;
+border-radius: 10px;
+
+
+/* Mask group */
+
+position: absolute;
+width: 298px;
+height: 298px;
+left: 268px;
+top: 153px;
+
+
+
+/* Rectangle 18383 */
+
+position: absolute;
+width: 298px;
+height: 298px;
+left: 268px;
+top: 153px;
+
+background: #D9D9D9;
+border-radius: 32px;
+
+
+/* _A739990 1 */
+
+position: absolute;
+width: 1110px;
+height: 740px;
+left: -268px;
+top: -271px;
+
+background: url(_A739990.jpg);
+
+
+/* _A738076 1 */
+
+position: absolute;
+width: 702px;
+height: 468px;
+left: calc(50% - 702px/2 - 303px);
+top: calc(50% - 468px/2 + 26px);
+
+background: url(_A738076.jpg);
+
+
+/* _A730091 1 */
+
+position: absolute;
+width: 576px;
+height: 384px;
+left: calc(50% - 576px/2 - 303px);
+top: calc(50% - 384px/2 + 69px);
+
+background: url(_A730091.jpg);
+
+
+/* Tổng quan */
+
+position: absolute;
+width: 188px;
+height: 45px;
+left: 641px;
+top: 2044px;
+
+font-family: 'Quicksand';
+font-style: normal;
+font-weight: 700;
+font-size: 36px;
+line-height: 45px;
+/* identical to box height */
+text-align: center;
+
+color: #525252;
+
+
+
+/* Về chúng tôi */
+
+position: absolute;
+width: 95px;
+height: 20px;
+left: 641px;
+top: 2020px;
+
+font-family: 'Quicksand';
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 20px;
+/* identical to box height */
+text-align: center;
+
+color: #5F9654;
+
+
+
+/* Tại chúng tôi, làm chè không chỉ là một công việc – đó là một sứ mệnh, một cách sống, và là niềm tin rằng từng búp chè, nếu được chăm sóc tử tế từ gốc, sẽ mang đến điều tốt đẹp cho người thưởng thức. Chúng tôi tin rằng chè ngon bắt đầu từ đất. Không hóa chất, không thúc ép, không can thiệp thô bạo – chỉ có nắng, mưa, khí lạnh vùng cao và sự chăm sóc kiên nhẫn của người nông dân. Mỗi đồi chè là một hệ sinh thái sống, nơi cây cỏ, côn trùng và con người cùng tồn tại hài hòa. */
+
+position: absolute;
+width: 665px;
+height: 224px;
+left: calc(50% - 665px/2 + 253.5px);
+top: 2097px;
+
+font-family: 'Quicksand';
+font-style: normal;
+font-weight: 600;
+font-size: 18px;
+line-height: 28px;
+/* or 156% */
+text-align: justify;
+
+color: #525252;
+
+
+
+/* Rectangle 18351 */
+
+position: absolute;
+width: 368px;
+height: 31px;
+left: 729px;
+top: 3534px;
+
+background: #FFF7E4;
+border-radius: 24px;
+
+
+/* Rectangle 18352 */
+
+position: absolute;
+width: 92px;
+height: 31px;
+left: 1036px;
+top: 3503px;
+
+background: #FFF7E4;
+border-radius: 24px;
+
+
+/* Rectangle 18353 */
+
+position: absolute;
+width: 209px;
+height: 31px;
+left: 263px;
+top: 3854px;
+
+background: #FFF7E4;
+border-radius: 24px;
+
+
+/* Rectangle 18354 */
+
+position: absolute;
+width: 286px;
+height: 31px;
+left: 612px;
+top: 4146px;
+
+background: #FFF7E4;
+border-radius: 24px;
+
+
+/* Rectangle 18355 */
+
+position: absolute;
+width: 62px;
+height: 31px;
+left: 1076px;
+top: 4115px;
+
+background: #FFF7E4;
+border-radius: 24px;
+
+
+/* Rectangle 18349 */
+
+position: absolute;
+width: 121px;
+height: 31px;
+left: 1006px;
+top: 2847px;
+
+background: #FFF7E4;
+border-radius: 24px;
+
+
+/* Rectangle 18350 */
+
+position: absolute;
+width: 267px;
+height: 31px;
+left: 419px;
+top: 3170px;
+
+background: #FFF7E4;
+border-radius: 24px;
+
+
+/* Vector */
+
+position: absolute;
+width: 344px;
+height: 305px;
+left: 784px;
+top: 3009px;
+
+border: 3px dashed #69CB33;
+
+
+/* Vector */
+
+position: absolute;
+width: 349px;
+height: 349px;
+left: 273px;
+top: 2736px;
+
+border: 3px dashed #69CB33;
+
+
+/* Vector */
+
+position: absolute;
+width: 356.62px;
+height: 370.02px;
+left: 215.57px;
+top: 3294px;
+
+background: #FFFFFF;
+border: 3px dashed #69CB33;
+transform: rotate(40.31deg);
+
+
+/* Vector */
+
+box-sizing: border-box;
+
+position: absolute;
+width: 350px;
+height: 332px;
+left: 846px;
+top: 3643.94px;
+
+background: #FFFFFF;
+border: 3px dashed #69CB33;
+
+
+/* Vector */
+
+position: absolute;
+width: 381px;
+height: 354px;
+left: 214px;
+top: 3917.94px;
+
+background: #FFFFFF;
+border: 3px dashed #69CB33;
+
+
+/* Giữa làn sương mỏng manh của buổi sớm, những đồi chè xanh mướt hiện ra như tấm thảm thiên nhiên trải dài bất tận. Đây là nơi bắt đầu hành trình của những búp chè – nơi đất trời và con người vùng cao cùng nhau nuôi dưỡng từng mầm non xanh mát. */
+
+position: absolute;
+width: 461px;
+height: 180px;
+left: 680px;
+top: 2786px;
+
+font-family: 'Quicksand';
+font-style: normal;
+font-weight: 600;
+font-size: 20px;
+line-height: 30px;
+/* or 150% */
+
+color: #525252;
+
+
+
+/* Từng búp chè non được hái vào buổi sáng sớm – khi hương vị còn nguyên vẹn nhất. Những người phụ nữ vùng cao tay thoăn thoắt, miệng cười tươi – như thể niềm vui cũng đang thấm vào từng lá chè non vừa kịp đón ánh mặt trời đầu tiên. */
+
+position: absolute;
+width: 406px;
+height: 180px;
+left: 735px;
+top: 3412.94px;
+
+font-family: 'Quicksand';
+font-style: normal;
+font-weight: 600;
+font-size: 20px;
+line-height: 30px;
+/* or 150% */
+
+color: #525252;
+
+
+
+/* Sau khi rời khỏi đồi xanh, những búp chè bước vào hành trình mới – nơi lửa và thời gian làm nên vị. Mỗi công đoạn sao, sấy, lên men đều được thực hiện cẩn trọng để giữ lại cái hồn của núi rừng trong từng cánh chè khô. */
+
+position: absolute;
+width: 570px;
+height: 120px;
+left: 271px;
+top: 3762.94px;
+
+font-family: 'Quicksand';
+font-style: normal;
+font-weight: 600;
+font-size: 20px;
+line-height: 30px;
+/* or 150% */
+
+color: #525252;
+
+
+
+/* Từ bàn tay người nông dân đến dây chuyền hiện đại, chè được đóng gói và chuẩn bị lên đường. Nhưng dù đi đâu, mỗi gói chè vẫn mang theo hương vị của quê hương, mang theo nụ cười của người vùng cao – giản dị, chân thành mà sâu sắc. */
+
+position: absolute;
+width: 512px;
+height: 150px;
+left: 625px;
+top: 4024.94px;
+
+font-family: 'Quicksand';
+font-style: normal;
+font-weight: 600;
+font-size: 20px;
+line-height: 30px;
+/* or 150% */
+
+color: #525252;
+
+
+
+/* Chè không chỉ sống nhờ nắng và mưa, mà còn lớn lên nhờ bàn tay chăm bón đầy yêu thương của những người nông dân. Mỗi nhát cuốc, mỗi lần tưới tắm đều mang theo sự kiên nhẫn, sự hiểu cây như hiểu con – cần mẫn và không đòi hỏi điều gì ngoài những mầm xanh khỏe mạnh. */
+
+position: absolute;
+width: 479px;
+height: 180px;
+left: 272px;
+top: 3139px;
+
+font-family: 'Quicksand';
+font-style: normal;
+font-weight: 600;
+font-size: 20px;
+line-height: 30px;
+/* or 150% */
+
+color: #525252;
+
+
+
+/* Câu chuyện với “chè” */
+
+position: absolute;
+width: 651px;
+height: 80px;
+left: 380px;
+top: 2580px;
+
+font-family: 'Quicksand';
+font-style: normal;
+font-weight: 700;
+font-size: 64px;
+line-height: 80px;
+/* identical to box height */
+
+color: #525252;
+
+
+
+/* Thành tựu */
+
+position: absolute;
+width: 313px;
+height: 80px;
+left: calc(50% - 313px/2 + 0.5px);
+top: 4317px;
+
+font-family: 'Quicksand';
+font-style: normal;
+font-weight: 700;
+font-size: 64px;
+line-height: 80px;
+/* identical to box height */
+
+color: #525252;
+
+
+
+/* Vector */
+
+position: absolute;
+width: 338px;
+height: 338px;
+left: 278px;
+top: 2742px;
+
+background: url(.jpg), #C4C4C4;
+border: 7px solid #FFFFFF;
+
+
+/* Vector */
+
+position: absolute;
+width: 328px;
+height: 292px;
+left: 792px;
+top: 3014px;
+
+background: url(.jpg), #C4C4C4;
+border: 7px solid #FFFFFF;
+
+
+/* Vector */
+
+position: absolute;
+width: 345.01px;
+height: 357.97px;
+left: 224px;
+top: 3301.94px;
+
+background: url(.jpg), #C4C4C4;
+border: 7px solid #FFFFFF;
+transform: rotate(40.31deg);
+
+
+/* Vector */
+
+position: absolute;
+width: 326px;
+height: 308px;
+left: 857px;
+top: 3655.94px;
+
+background: url(.jpg), #C4C4C4;
+border: 7px solid #FFFFFF;
+
+
+/* Vector */
+
+position: absolute;
+width: 358px;
+height: 333px;
+left: 226px;
+top: 3928.94px;
+
+background: url(.jpg), #C4C4C4;
+border: 7px solid #FFFFFF;
+
+
+/* Vector 6683 */
+
+position: absolute;
+width: 225.5px;
+height: 82.64px;
+left: 535px;
+top: 2715px;
+
+border: 3px dashed #69CB33;
+
+
+/* Vector 6684 */
+
+position: absolute;
+width: 183.5px;
+height: 91.86px;
+left: 637px;
+top: 3029.14px;
+
+border: 3px dashed #69CB33;
+
+
+/* Vector 6685 */
+
+position: absolute;
+width: 105px;
+height: 53.21px;
+left: 774.5px;
+top: 3882.44px;
+
+border: 3px dashed #69CB33;
+
+
+/* Vector 6686 */
+
+position: absolute;
+width: 134.5px;
+height: 34.3px;
+left: 666.5px;
+top: 3604.94px;
+
+border: 3px dashed #69CB33;
+
+
+/* Vector 6687 */
+
+position: absolute;
+width: 140px;
+height: 46.86px;
+left: 565.5px;
+top: 3952.58px;
+
+border: 3px dashed #69CB33;
+
+
+/* Frame 1171279441 */
+
+position: absolute;
+width: 1440px;
+height: 535px;
+left: calc(50% - 1440px/2);
+top: 1396px;
+
+background: #E9F8EB;
+
+
+/* Sứ mệnh của chúng tôi */
+
+position: absolute;
+width: 700px;
+height: 80px;
+left: calc(50% - 700px/2 + 34px);
+top: 88px;
+
+font-family: 'Quicksand';
+font-style: normal;
+font-weight: 700;
+font-size: 64px;
+line-height: 80px;
+/* identical to box height */
+
+color: #5F9654;
+
+
+
+/* Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam */
+
+position: absolute;
+width: 803px;
+height: 60px;
+left: calc(50% - 803px/2 + 9.5px);
+top: 184px;
+
+font-family: 'Quicksand';
+font-style: normal;
+font-weight: 600;
+font-size: 20px;
+line-height: 30px;
+/* or 150% */
+text-align: center;
+
+color: #525252;
+
+
+
+/* Rectangle 18365 */
+
+position: absolute;
+width: 171px;
+height: 171px;
+left: 344px;
+top: 276px;
+
+background: url(.jpg), #D9D9D9;
+border-radius: 8px;
+
+
+/* Rectangle 18366 */
+
+position: absolute;
+width: 171px;
+height: 171px;
+left: 539px;
+top: 276px;
+
+background: url(.jpg), #D9D9D9;
+border-radius: 8px;
+
+
+/* Rectangle 18367 */
+
+position: absolute;
+width: 171px;
+height: 171px;
+left: 734px;
+top: 276px;
+
+background: url(.jpg), #D9D9D9;
+border-radius: 8px;
+
+
+/* Rectangle 18368 */
+
+position: absolute;
+width: 171px;
+height: 171px;
+left: 929px;
+top: 276px;
+
+background: url(.jpg), #D9D9D9;
+border-radius: 8px;
+
+
+/* Group 6 */
+
+position: absolute;
+width: 436.37px;
+height: 291.06px;
+left: 1181px;
+top: 325px;
+
+opacity: 0.3;
+transform: rotate(-102.84deg);
+
+
+/* Vector 5 */
+
+position: absolute;
+width: 323.27px;
+height: 187.91px;
+left: 1295.57px;
+bottom: 4583.28px;
+
+border: 1px solid #5F9654;
+transform: rotate(-102.84deg);
+
+
+/* Vector 6 */
+
+position: absolute;
+width: 60.44px;
+height: 101.27px;
+left: 1278.39px;
+bottom: 4541.21px;
+
+border: 1px solid #5F9654;
+transform: rotate(-102.84deg);
+
+
+/* Vector 7 */
+
+position: absolute;
+width: 69.13px;
+height: 89.55px;
+left: 1240.16px;
+bottom: 4622.12px;
+
+border: 1px solid #5F9654;
+transform: rotate(-102.84deg);
+
+
+/* Vector 8 */
+
+position: absolute;
+width: 64.8px;
+height: 100.99px;
+left: 1208.27px;
+bottom: 4663.4px;
+
+border: 1px solid #5F9654;
+transform: matrix(0.05, -1, 1, 0.01, 0, 0);
+
+
+/* Vector 9 */
+
+position: absolute;
+width: 68.61px;
+height: 95.53px;
+left: 1229.32px;
+bottom: 4741.4px;
+
+border: 1px solid #5F9654;
+transform: matrix(-0.97, -0.24, -0.3, 0.95, 0, 0);
+
+
+/* Vector 10 */
+
+position: absolute;
+width: 66.3px;
+height: 98.91px;
+left: 1264.74px;
+bottom: 4708.41px;
+
+border: 1px solid #5F9654;
+transform: matrix(-0.77, -0.63, -0.69, 0.72, 0, 0);
+
+
+/* Vector 11 */
+
+position: absolute;
+width: 54.36px;
+height: 97.94px;
+left: 1307.51px;
+bottom: 4647.96px;
+
+border: 1px solid #5F9654;
+transform: matrix(-0.85, -0.53, -0.59, 0.8, 0, 0);
+
+
+/* Vector 12 */
+
+position: absolute;
+width: 66.71px;
+height: 102.59px;
+left: 1342.37px;
+bottom: 4599.97px;
+
+border: 1px solid #5F9654;
+transform: matrix(-0.85, -0.53, -0.59, 0.8, 0, 0);
+
+
+/* Vector 13 */
+
+position: absolute;
+width: 79.13px;
+height: 116.2px;
+left: 1388.07px;
+bottom: 4548.56px;
+
+border: 1px solid #5F9654;
+transform: matrix(-0.85, -0.53, -0.59, 0.8, 0, 0);
+
+
+/* Rectangle 18369 */
+
+position: absolute;
+width: 450px;
+height: 450px;
+left: 134px;
+top: 2003px;
+
+background: url(.jpg), #D9D9D9;
+border-radius: 40px;
+
+
+/* Frame 1171279445 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+padding: 0px;
+gap: 54px;
+
+position: absolute;
+width: 648px;
+height: 105px;
+left: 640px;
+top: 2340px;
+
+
+
+/* Frame 1171279444 */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+
+margin: 0 auto;
+width: 126px;
+height: 105px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* 18k+ */
+
+width: 126px;
+height: 80px;
+
+font-family: 'Quicksand';
+font-style: normal;
+font-weight: 600;
+font-size: 64px;
+line-height: 80px;
+/* identical to box height */
+text-align: center;
+letter-spacing: -0.03em;
+
+color: #5F9654;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Đánh giá tốt */
+
+width: 126px;
+height: 25px;
+
+font-family: 'Quicksand';
+font-style: normal;
+font-weight: 500;
+font-size: 20px;
+line-height: 25px;
+/* identical to box height */
+letter-spacing: -0.03em;
+
+color: #A2A2A2;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Frame 1171279443 */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 0px;
+
+margin: 0 auto;
+width: 96px;
+height: 105px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* 10k */
+
+width: 96px;
+height: 80px;
+
+font-family: 'Quicksand';
+font-style: normal;
+font-weight: 600;
+font-size: 64px;
+line-height: 80px;
+/* identical to box height */
+text-align: center;
+letter-spacing: -0.03em;
+
+color: #5F9654;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Nhân viên */
+
+width: 96px;
+height: 25px;
+
+font-family: 'Quicksand';
+font-style: normal;
+font-weight: 500;
+font-size: 20px;
+line-height: 25px;
+/* identical to box height */
+text-align: center;
+letter-spacing: -0.03em;
+
+color: #A2A2A2;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Frame 1171279445 */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 0px;
+
+margin: 0 auto;
+width: 96px;
+height: 105px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+
+
+/* 5k */
+
+width: 96px;
+height: 80px;
+
+font-family: 'Quicksand';
+font-style: normal;
+font-weight: 600;
+font-size: 64px;
+line-height: 80px;
+/* identical to box height */
+text-align: center;
+letter-spacing: -0.03em;
+
+color: #5F9654;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Chuyên gia */
+
+width: 100px;
+height: 25px;
+
+font-family: 'Quicksand';
+font-style: normal;
+font-weight: 500;
+font-size: 20px;
+line-height: 25px;
+/* identical to box height */
+text-align: center;
+letter-spacing: -0.03em;
+
+color: #A2A2A2;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Frame 1171279442 */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding: 0px;
+
+margin: 0 auto;
+width: 102px;
+height: 105px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 3;
+flex-grow: 0;
+
+
+/* 31 */
+
+width: 102px;
+height: 80px;
+
+font-family: 'Quicksand';
+font-style: normal;
+font-weight: 600;
+font-size: 64px;
+line-height: 80px;
+/* identical to box height */
+text-align: center;
+letter-spacing: -0.03em;
+
+color: #5F9654;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Giải thưởng */
+
+width: 102px;
+height: 25px;
+
+font-family: 'Quicksand';
+font-style: normal;
+font-weight: 500;
+font-size: 20px;
+line-height: 25px;
+/* identical to box height */
+text-align: center;
+letter-spacing: -0.03em;
+
+color: #A2A2A2;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam */
+
+position: absolute;
+width: 803px;
+height: 60px;
+left: calc(50% - 803px/2 + 0.5px);
+top: 4413px;
+
+font-family: 'Quicksand';
+font-style: normal;
+font-weight: 600;
+font-size: 20px;
+line-height: 30px;
+/* or 150% */
+text-align: center;
+
+color: #A2A2A2;
+
+
+
+/* Frame 1171279454 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+gap: 37px;
+
+position: absolute;
+width: 2323px;
+height: 258px;
+left: -865px;
+top: 4513px;
+
+
+
+/* Rectangle 18370 */
+
+width: 258px;
+height: 258px;
+
+background: url(image);
+filter: drop-shadow(0px 10px 21px rgba(0, 0, 0, 0.25));
+border-radius: 8px;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Rectangle 18371 */
+
+width: 258px;
+height: 258px;
+
+background: url(image);
+filter: drop-shadow(0px 10px 21px rgba(0, 0, 0, 0.25));
+border-radius: 8px;
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Rectangle 18372 */
+
+width: 258px;
+height: 258px;
+
+background: url(image.png);
+box-shadow: 0px 10px 21px rgba(0, 0, 0, 0.25);
+border-radius: 8px;
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+
+
+/* Rectangle 18373 */
+
+width: 258px;
+height: 258px;
+
+background: url(image.png);
+box-shadow: 0px 10px 21px rgba(0, 0, 0, 0.25);
+border-radius: 8px;
+
+/* Inside auto layout */
+flex: none;
+order: 3;
+flex-grow: 0;
+
+
+/* Rectangle 18374 */
+
+width: 258px;
+height: 258px;
+
+background: url(image.png);
+box-shadow: 0px 10px 21px rgba(0, 0, 0, 0.25);
+border-radius: 8px;
+
+/* Inside auto layout */
+flex: none;
+order: 4;
+flex-grow: 0;
+
+
+/* Rectangle 18375 */
+
+width: 258px;
+height: 258px;
+
+background: url(image.png);
+box-shadow: 0px 10px 21px rgba(0, 0, 0, 0.25);
+border-radius: 8px;
+
+/* Inside auto layout */
+flex: none;
+order: 5;
+flex-grow: 0;
+
+
+/* Rectangle 18376 */
+
+width: 258px;
+height: 258px;
+
+background: url(image.png);
+box-shadow: 0px 10px 21px rgba(0, 0, 0, 0.25);
+border-radius: 8px;
+
+/* Inside auto layout */
+flex: none;
+order: 6;
+flex-grow: 0;
+
+
+/* Rectangle 18377 */
+
+width: 258px;
+height: 258px;
+
+background: url(image.png);
+box-shadow: 0px 10px 21px rgba(0, 0, 0, 0.25);
+border-radius: 8px;
+
+/* Inside auto layout */
+flex: none;
+order: 7;
+flex-grow: 0;
