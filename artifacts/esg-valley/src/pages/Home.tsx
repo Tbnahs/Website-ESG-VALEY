@@ -514,7 +514,7 @@ export default function Home() {
           6. CHỨNG NHẬN CHẤT LƯỢNG
           Layout: title + description | cert logos row | stats
       ════════════════════════════════════════ */}
-      <section className="py-20 bg-muted border-y border-border">
+      <section className="py-20 bg-white border-y border-border">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="text-center mb-10">
