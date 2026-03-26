@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Upload } from "lucide-react";
 import { useAuth } from "@/lib/auth";
@@ -83,6 +83,23 @@ export default function About() {
   const prev = () => activeIndex > 0 && setActiveYear(years[activeIndex - 1]);
   const next = () =>
     activeIndex < years.length - 1 && setActiveYear(years[activeIndex + 1]);
+
+  const scrollRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const el = scrollRef.current;
+    if (!el) return;
+    const cardWidth = 258 + 37;
+    const interval = setInterval(() => {
+      const maxScroll = el.scrollWidth - el.clientWidth;
+      if (el.scrollLeft >= maxScroll - 10) {
+        el.scrollTo({ left: 0, behavior: "smooth" });
+      } else {
+        el.scrollBy({ left: cardWidth, behavior: "smooth" });
+      }
+    }, 5000);
+    return () => clearInterval(interval);
+  }, []);
 
   const [missionImages, setMissionImages] = useState(defaultMissionImages);
   const [uploading, setUploading] = useState<number | null>(null);
@@ -480,7 +497,7 @@ export default function About() {
         </div>
 
         {/* Scrolling strip — full bleed */}
-        <div className="mt-12 overflow-x-auto">
+        <div ref={scrollRef} className="mt-12 overflow-x-auto" style={{ scrollBehavior: "smooth" }}>
           <div className="flex gap-[37px] px-8" style={{ width: "max-content" }}>
             {achievementImages.map((img, i) => (
               <motion.div
