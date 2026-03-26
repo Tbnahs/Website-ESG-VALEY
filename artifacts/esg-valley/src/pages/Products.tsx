@@ -107,11 +107,11 @@ export default function Products() {
                   className="group bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden flex flex-col"
                 >
                   {/* Image */}
-                  <div className="relative aspect-square overflow-hidden bg-muted">
+                  <div className="relative aspect-square overflow-hidden bg-muted rounded-2xl">
                     <img
                       src={product.image}
                       alt={product.name}
-                      className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-700 p-4"
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                     />
                     <button
                       onClick={() => navigate(`/san-pham/${product.slug}`)}
