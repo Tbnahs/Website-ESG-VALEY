@@ -203,8 +203,8 @@ export default function Home() {
                 >
                   Chi tiết sự kiện
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M15 9L20 4M20 4H15M20 4V9" stroke="#262626" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                    <path d="M20 14V19C20 19.5304 19.7893 20.0391 19.4142 20.4142C19.0391 20.7893 18.5304 21 18 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V6C3 5.46957 3.21071 4.96086 3.58579 4.58579C3.96086 4.21071 4.46957 4 5 4H10" stroke="#262626" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    <path d="M16.5 14.25L21 9.75L16.5 5.25" stroke="#262626" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    <path d="M3 18.75C3 16.3631 3.94821 14.0739 5.63604 12.386C7.32387 10.6982 9.61305 9.75 12 9.75H21" stroke="#262626" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                   </svg>
                 </button>
               </Link>
