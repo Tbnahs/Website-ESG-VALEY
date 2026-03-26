@@ -171,13 +171,17 @@ export default function Home() {
       <section className="py-20 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="text-center mb-10">
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="text-center mb-6">
             <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-8">
               Vòng tuần hoàn ESG
             </h2>
+          </motion.div>
+
+          {/* Dashed border container */}
+          <div className="border-2 border-dashed border-primary rounded-2xl p-6 md:p-10">
 
             {/* 3 Tab pills */}
-            <div className="flex justify-center flex-wrap gap-2">
+            <div className="flex justify-center flex-wrap gap-2 mb-8">
               {esgPillars.map((p, idx) => (
                 <button
                   key={p.code}
@@ -192,7 +196,6 @@ export default function Home() {
                 </button>
               ))}
             </div>
-          </motion.div>
 
           {/* Tab content: left text | right image */}
           <AnimatePresence mode="wait">
@@ -202,7 +205,7 @@ export default function Home() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.4 }}
-              className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center mt-4"
+              className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center"
             >
               {/* Text */}
               <div className="order-2 lg:order-1">
@@ -232,6 +235,7 @@ export default function Home() {
               </div>
             </motion.div>
           </AnimatePresence>
+          </div>{/* end dashed border */}
         </div>
       </section>
       {/* ════════════════════════════════════════
