@@ -10,8 +10,9 @@ function formatDateBadge(dateStr: string) {
 
 function ArrowBendUpRight() {
   return (
-    <svg width="20" height="20" viewBox="0 0 256 256" fill="none">
-      <path d="M200,168a8,8,0,0,1-8,8H128a80.09,80.09,0,0,1-80-80V88H32a8,8,0,0,1,0-16H56a8,8,0,0,1,8,8v16a64.07,64.07,0,0,0,64,64h64A8,8,0,0,1,200,168ZM152,48a8,8,0,0,0,0,16h28.69L152,92.69a8,8,0,0,0,11.31,11.31L192,75.31V104a8,8,0,0,0,16,0V56a8,8,0,0,0-8-8Z" fill="white"/>
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M16.5 14.25L21 9.75L16.5 5.25" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+      <path d="M3 18.75C3 16.3631 3.94821 14.0739 5.63604 12.386C7.32387 10.6982 9.61305 9.75 12 9.75H21" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
     </svg>
   );
 }
