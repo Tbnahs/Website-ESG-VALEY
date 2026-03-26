@@ -95,84 +95,60 @@ export default function Products() {
             </div>
           </aside>
 
-          {/* Product List */}
+          {/* Product Grid — 2 columns */}
           <main className="flex-1">
-            <div className="divide-y divide-gray-200">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               {filteredProducts.map((product, idx) => (
                 <motion.div
                   key={product.id}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: idx * 0.06, duration: 0.5 }}
-                  className="group flex gap-8 py-10"
+                  className="group bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden flex flex-col"
                 >
                   {/* Image */}
-                  <div className="w-48 sm:w-56 h-56 flex-shrink-0 rounded-xl overflow-hidden">
+                  <div className="relative aspect-square overflow-hidden bg-muted">
                     <img
                       src={product.image}
                       alt={product.name}
-                      className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-700"
+                      className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-700 p-4"
                     />
+                    <button
+                      onClick={() => navigate(`/san-pham/${product.slug}`)}
+                      className="absolute top-3 right-3 text-muted-foreground text-xs hover:text-primary transition-colors flex items-center gap-0.5 bg-white/80 backdrop-blur-sm px-2 py-1 rounded-full"
+                    >
+                      Xem thêm <ChevronRight className="w-3 h-3" />
+                    </button>
                   </div>
 
                   {/* Content */}
-                  <div className="flex-1 flex flex-col justify-between py-2">
-                    <div>
-                      {/* Category + Xem thêm row */}
-                      <div className="flex items-center justify-between mb-2">
-                        <span className="text-primary text-xs font-semibold uppercase tracking-widest">
-                          {product.category}
-                        </span>
-                        <button
-                          onClick={() => navigate(`/san-pham/${product.slug}`)}
-                          className="text-muted-foreground text-xs hover:text-primary transition-colors flex items-center gap-0.5"
-                        >
-                          Xem thêm <ChevronRight className="w-3.5 h-3.5" />
-                        </button>
-                      </div>
-
-                      {/* Name */}
-                      <h3 className="font-display text-2xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors leading-snug">
-                        {product.name}
-                      </h3>
-
-                      {/* Description */}
-                      <p className="text-muted-foreground text-sm leading-relaxed line-clamp-3 mb-5">
-                        {product.description}
-                      </p>
-
-                      {/* Thumbnails */}
-                      <div className="flex gap-2 mb-6">
-                        {(product.thumbnails ?? [product.image, product.image]).map((src, i) => (
-                          <div key={i} className="w-14 h-14 rounded-lg overflow-hidden border border-gray-200 flex-shrink-0">
-                            <img
-                              src={src}
-                              alt={product.name}
-                              className="w-full h-full object-cover"
-                            />
-                          </div>
-                        ))}
-                      </div>
-                    </div>
+                  <div className="flex flex-col flex-1 p-5">
+                    <span className="text-primary text-xs font-semibold uppercase tracking-widest mb-1">
+                      {product.category}
+                    </span>
+                    <h3 className="font-display text-lg font-bold text-foreground mb-2 group-hover:text-primary transition-colors leading-snug line-clamp-2">
+                      {product.name}
+                    </h3>
+                    <p className="text-muted-foreground text-sm leading-relaxed line-clamp-2 mb-4 flex-1">
+                      {product.description}
+                    </p>
 
                     {/* CTA */}
                     {product.category === "Dịch Vụ Đặc Biệt" ? (
-                      <div className="flex items-center gap-3">
-                        <button
-                          onClick={handleContact}
-                          className="px-6 py-2.5 border-2 border-primary text-primary text-sm font-semibold rounded-full hover:bg-primary hover:text-white transition-all duration-200"
-                        >
-                          Liên hệ báo giá
-                        </button>
-                      </div>
+                      <button
+                        onClick={handleContact}
+                        className="w-full py-2.5 border-2 border-primary text-primary text-sm font-semibold rounded-full hover:bg-primary hover:text-white transition-all duration-200"
+                      >
+                        Liên hệ báo giá
+                      </button>
                     ) : (
-                      <div className="flex items-center gap-3">
+                      <div className="flex items-center justify-between gap-3">
                         <span className="text-lg font-bold text-primary">
                           {formatPrice(product.price)}
                         </span>
                         <button
                           onClick={() => handleAddToCart(product)}
-                          className={`flex items-center gap-2 px-5 py-2.5 text-sm font-semibold rounded-full transition-all duration-300 ${
+                          className={`flex items-center gap-2 px-4 py-2 text-sm font-semibold rounded-full transition-all duration-300 ${
                             addedId === product.id
                               ? "bg-green-500 text-white"
                               : "bg-primary text-white hover:bg-primary/90"
@@ -180,22 +156,11 @@ export default function Products() {
                         >
                           <AnimatePresence mode="wait">
                             {addedId === product.id ? (
-                              <motion.span
-                                key="done"
-                                initial={{ opacity: 0, scale: 0.8 }}
-                                animate={{ opacity: 1, scale: 1 }}
-                                exit={{ opacity: 0 }}
-                                className="flex items-center gap-2"
-                              >
+                              <motion.span key="done" initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0 }} className="flex items-center gap-2">
                                 <CheckCircle className="w-4 h-4" /> Đã thêm
                               </motion.span>
                             ) : (
-                              <motion.span
-                                key="add"
-                                initial={{ opacity: 0 }}
-                                animate={{ opacity: 1 }}
-                                className="flex items-center gap-2"
-                              >
+                              <motion.span key="add" initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="flex items-center gap-2">
                                 <ShoppingCart className="w-4 h-4" /> Thêm vào giỏ
                               </motion.span>
                             )}
@@ -208,7 +173,7 @@ export default function Products() {
               ))}
 
               {filteredProducts.length === 0 && (
-                <div className="text-center py-20 text-muted-foreground">
+                <div className="col-span-2 text-center py-20 text-muted-foreground">
                   Không có sản phẩm nào trong danh mục này.
                 </div>
               )}
