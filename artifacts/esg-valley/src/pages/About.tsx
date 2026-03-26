@@ -439,7 +439,7 @@ export default function About() {
               className="font-display font-bold"
               style={{ fontSize: "clamp(36px, 5vw, 64px)", lineHeight: "1.25", color: "#525252" }}
             >
-              Câu chuyện với "chè"
+              Câu chuyện với "<span style={{ color: "#5F9654" }}>chè</span>"
             </h2>
           </div>
           <motion.div
