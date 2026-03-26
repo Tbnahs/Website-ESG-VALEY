@@ -104,7 +104,8 @@ export default function Products() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: idx * 0.06, duration: 0.5 }}
-                  className="group bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden flex flex-col"
+                  className="group bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden flex flex-col cursor-pointer"
+                  onClick={() => navigate(`/san-pham/${product.slug}`)}
                 >
                   {/* Image */}
                   <div className="relative aspect-square overflow-hidden bg-muted rounded-2xl">
@@ -114,7 +115,7 @@ export default function Products() {
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                     />
                     <button
-                      onClick={() => navigate(`/san-pham/${product.slug}`)}
+                      onClick={e => { e.stopPropagation(); navigate(`/san-pham/${product.slug}`); }}
                       className="absolute top-3 right-3 text-muted-foreground text-xs hover:text-primary transition-colors flex items-center gap-0.5 bg-white/80 backdrop-blur-sm px-2 py-1 rounded-full"
                     >
                       Xem thêm <ChevronRight className="w-3 h-3" />
@@ -136,7 +137,7 @@ export default function Products() {
                     {/* CTA */}
                     {product.category === "Dịch Vụ Đặc Biệt" ? (
                       <button
-                        onClick={handleContact}
+                        onClick={e => { e.stopPropagation(); handleContact(); }}
                         className="w-full py-2.5 border-2 border-primary text-primary text-sm font-semibold rounded-full hover:bg-primary hover:text-white transition-all duration-200"
                       >
                         Liên hệ báo giá
@@ -147,7 +148,7 @@ export default function Products() {
                           {formatPrice(product.price)}
                         </span>
                         <button
-                          onClick={() => handleAddToCart(product)}
+                          onClick={e => { e.stopPropagation(); handleAddToCart(product); }}
                           className={`flex items-center gap-2 px-4 py-2 text-sm font-semibold rounded-full transition-all duration-300 ${
                             addedId === product.id
                               ? "bg-green-500 text-white"
