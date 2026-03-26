@@ -586,7 +586,7 @@ export default function Home() {
 
           {/* 3-column cards */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-[47px]">
-            {news.map((item, idx) => {
+            {news.slice(0, 3).map((item, idx) => {
               const [day, month] = item.date.split("/");
               return (
                 <motion.article
