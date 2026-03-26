@@ -16,6 +16,7 @@ import Products from "./pages/Products";
 import ProductDetail from "./pages/ProductDetail";
 import Ecosystem from "./pages/Ecosystem";
 import News from "./pages/News";
+import NewsDetail from "./pages/NewsDetail";
 import Contact from "./pages/Contact";
 import Support from "./pages/Support";
 import NotFound from "@/pages/not-found";
@@ -31,6 +32,7 @@ function Router() {
       <Route path="/san-pham/:slug" component={ProductDetail} />
       <Route path="/he-sinh-thai" component={Ecosystem} />
       <Route path="/tin-tuc" component={News} />
+      <Route path="/tin-tuc/:slug" component={NewsDetail} />
       <Route path="/lien-he" component={Contact} />
       <Route path="/ho-tro" component={Support} />
       <Route component={NotFound} />

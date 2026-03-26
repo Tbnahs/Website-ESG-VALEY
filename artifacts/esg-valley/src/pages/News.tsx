@@ -1,37 +1,12 @@
 import { useState } from "react";
+import { useLocation } from "wouter";
 import { motion } from "framer-motion";
 import { Play, Search, ChevronDown, ArrowUpDown, ChevronRight } from "lucide-react";
 import { news } from "@/lib/data";
 
 const ITEMS_PER_PAGE = 6;
 
-const allArticles = [
-  ...news,
-  {
-    id: 4,
-    title: "Hội chợ Nông sản Việt 2025 – ESG Valley góp mặt nổi bật",
-    date: "10/03/2025",
-    category: "Sự Kiện",
-    excerpt: "ESG Valley tham gia hội chợ với gian hàng trà cao cấp, thu hút hàng nghìn lượt khách tham quan và trải nghiệm.",
-    image: "https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&q=80&w=800"
-  },
-  {
-    id: 5,
-    title: "Quy trình chế biến trà sạch – Chuỗi giá trị khép kín từ nương đến cốc",
-    date: "25/02/2025",
-    category: "Bền Vững",
-    excerpt: "Tìm hiểu hành trình từ búp trà tươi đến thành phẩm chuẩn organic theo quy trình nghiêm ngặt của ESG Valley.",
-    image: "https://images.unsplash.com/photo-1558160074-4d7d8bdf4256?auto=format&fit=crop&q=80&w=800"
-  },
-  {
-    id: 6,
-    title: "Câu chuyện người nông dân – Gìn giữ nghề trà trăm năm",
-    date: "14/02/2025",
-    category: "Cộng Đồng",
-    excerpt: "Những con người bền bỉ gắn bó với cây chè qua nhiều thế hệ, là trái tim của chuỗi giá trị ESG Valley.",
-    image: "https://images.unsplash.com/photo-1587734195503-904fca47e0e9?auto=format&fit=crop&q=80&w=800"
-  },
-];
+const allArticles = news;
 
 function parseDate(dateStr: string) {
   const [d, m, y] = dateStr.split("/").map(Number);
@@ -52,6 +27,7 @@ function ArrowBendUpRight() {
 }
 
 export default function News() {
+  const [, navigate] = useLocation();
   const [activeTab, setActiveTab] = useState("Bài viết");
   const [currentPage, setCurrentPage] = useState(1);
   const [sortOrder, setSortOrder] = useState<"recent" | "oldest">("recent");
@@ -218,6 +194,7 @@ export default function News() {
                         transition={{ duration: 0.4, delay: idx * 0.07 }}
                         className="cursor-pointer group flex flex-col items-center"
                         style={{ width: "100%", maxWidth: "369px", margin: "0 auto" }}
+                        onClick={() => navigate(`/tin-tuc/${(item as any).slug || item.id}`)}
                       >
                         {/* Image + badge */}
                         <div className="relative w-full" style={{ paddingBottom: "95%" }}>
@@ -274,14 +251,15 @@ export default function News() {
 
                           {/* Button */}
                           <button
-                            className="flex items-center justify-center gap-2 mt-4 font-semibold transition-opacity hover:opacity-80 bg-[#5f9654]"
+                            className="flex items-center justify-center gap-2 mt-4 font-semibold transition-opacity hover:opacity-80"
                             style={{
-                              background: "#69CB33",
+                              background: "#5F9654",
                               borderRadius: "12px",
                               padding: "12px 20px",
                               fontSize: "20px",
                               color: "#FFFFFF",
                             }}
+                            onClick={e => { e.stopPropagation(); navigate(`/tin-tuc/${(item as any).slug || item.id}`); }}
                           >
                             <span>Xem chi tiết</span>
                             <ArrowBendUpRight />
