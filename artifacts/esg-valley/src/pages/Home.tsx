@@ -164,6 +164,106 @@ export default function Home() {
           ))}
         </div>
       </section>
+
+      {/* ════════════════════════════════════════
+          2. SỰ KIỆN SẮP DIỄN RA
+          Layout: left (label+title+desc+btn) | right (photo + calendar + countdown)
+      ════════════════════════════════════════ */}
+      <section className="py-16 bg-background">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}
+            className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"
+          >
+            {/* ── LEFT: Text ── */}
+            <div>
+              <div className="flex items-center gap-1.5 mb-4">
+                <span className="text-primary text-sm">🌿</span>
+                <span className="text-primary text-sm font-semibold">Sự kiện sắp diễn ra</span>
+              </div>
+              <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground leading-tight mb-4 uppercase">
+                Khởi Động Dự Án Le Mont Resort &amp; Golf — Công Bố{" "}
+                <span className="text-primary">ESGVALLEY</span>{" "}
+                — Khánh Thành Đường Vành Đai V
+              </h2>
+              <p className="text-muted-foreground leading-relaxed mb-6 text-sm">
+                Sự kiện đánh dấu cột mốc quan trọng trong hành trình phát triển bền vững của ESG Valley — kết nối nông nghiệp xanh, du lịch sinh thái và cộng đồng địa phương trên vùng đất Thái Nguyên.
+              </p>
+              <Link href="/he-sinh-thai">
+                <button className="inline-flex items-center gap-2 px-6 py-3 bg-[#C9A84C] text-white font-semibold rounded-full hover:bg-[#b8973e] transition-colors text-sm">
+                  Chi tiết sự kiện <ArrowRight className="w-4 h-4" />
+                </button>
+              </Link>
+            </div>
+
+            {/* ── RIGHT: Photo + Calendar + Countdown ── */}
+            <div className="space-y-4">
+              {/* Photo + Calendar row */}
+              <div className="flex gap-4 items-stretch">
+                {/* Photo */}
+                <div className="flex-1 rounded-2xl overflow-hidden aspect-[4/3]">
+                  <img
+                    src="/images/footer-bg.png"
+                    alt="Sự kiện ESG Valley"
+                    className="w-full h-full object-cover object-top"
+                  />
+                </div>
+
+                {/* Calendar widget */}
+                <div className="w-44 flex-shrink-0 bg-white rounded-2xl shadow-md overflow-hidden border border-border">
+                  {/* Header */}
+                  <div className="bg-primary text-white text-center py-2.5 px-3">
+                    <p className="text-xs font-semibold uppercase tracking-wider">5th Oct, 2025</p>
+                  </div>
+                  {/* Calendar grid */}
+                  <div className="p-2.5">
+                    <div className="grid grid-cols-7 text-center mb-1">
+                      {["S","M","T","W","T","F","S"].map((d, i) => (
+                        <span key={i} className="text-[9px] font-bold text-muted-foreground py-0.5">{d}</span>
+                      ))}
+                    </div>
+                    <div className="grid grid-cols-7 text-center gap-y-0.5">
+                      {[28,29,30,1,2,3,4,5,6,7,8,9,10,11].map((d, i) => (
+                        <span
+                          key={i}
+                          className={`text-[10px] py-0.5 rounded-full leading-5 ${
+                            d === 5 && i >= 7
+                              ? "bg-primary text-white font-bold"
+                              : i < 3
+                              ? "text-muted-foreground/50"
+                              : "text-foreground"
+                          }`}
+                        >{d}</span>
+                      ))}
+                    </div>
+                    {/* Time */}
+                    <div className="mt-3 pt-2.5 border-t border-border flex items-center gap-1.5">
+                      <span className="text-primary text-xs">🌿</span>
+                      <span className="text-xs font-semibold text-foreground">9:00 - 12:00</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Countdown */}
+              <div className="grid grid-cols-4 gap-3">
+                {[
+                  { val: countdown.days,    label: "Days" },
+                  { val: countdown.hours,   label: "Hours" },
+                  { val: countdown.minutes, label: "Minutes" },
+                  { val: countdown.seconds, label: "Seconds" },
+                ].map(({ val, label }, i) => (
+                  <div key={i} className="bg-foreground text-background rounded-xl py-3 text-center">
+                    <p className="text-2xl font-bold leading-none">{String(val).padStart(2, "0")}</p>
+                    <p className="text-[10px] mt-1 text-background/70 uppercase tracking-wider">{label}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
       {/* ════════════════════════════════════════
           3. VÒNG TUẦN HOÀN ESG
           Layout: centered title → 3 tab pills → left text | right image
