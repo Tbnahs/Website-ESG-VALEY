@@ -197,7 +197,7 @@ export default function Home() {
             </div>
 
             {/* Dashed border box — pulled up to overlap buttons */}
-            <div className="border-[3px] border-dashed border-green-300 rounded-2xl -mt-5 pt-10 pb-8 px-6 md:px-10">
+            <div className="border-[3px] border-dashed border-green-300 rounded-2xl -mt-5 pt-10 pb-8 px-6 md:px-10 border-t-[#57bd7e] border-r-[#57bd7e] border-b-[#57bd7e] border-l-[#57bd7e]">
               {/* Tab content: left text | right image */}
               <AnimatePresence mode="wait">
                 <motion.div
