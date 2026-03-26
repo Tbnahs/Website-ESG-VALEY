@@ -55,7 +55,7 @@ export default function News() {
   return (
     <div className="w-full bg-background pb-24">
       {/* ── HERO BANNER ── */}
-      <div className="relative w-full overflow-hidden" style={{ height: "250px" }}>
+      <div className="relative w-full overflow-hidden" style={{ height: "380px" }}>
         <img
           src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=1600&q=85"
           alt="Tin tức ESG Valley"
@@ -63,7 +63,7 @@ export default function News() {
         />
         <div className="absolute inset-0" style={{ background: "rgba(21, 40, 29, 0.62)" }} />
 
-        <div className="relative z-10 flex flex-col items-center justify-end h-full pb-10">
+        <div className="relative z-10 flex flex-col items-center justify-end h-full pb-14">
           {/* Breadcrumb */}
           <div className="flex items-center gap-1.5 mb-4">
             <span className="font-medium text-white" style={{ fontSize: "24px", lineHeight: "30px" }}>Trang chủ</span>
