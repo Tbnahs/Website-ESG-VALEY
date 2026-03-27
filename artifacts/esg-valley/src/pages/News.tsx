@@ -63,17 +63,17 @@ export default function News() {
         />
         <div className="absolute inset-0" style={{ background: "rgba(21, 40, 29, 0.62)" }} />
 
-        <div className="relative z-10 flex flex-col items-center justify-end h-full pb-14">
+        <div className="relative z-10 flex flex-col items-center justify-end h-full pb-8 md:pb-14">
           {/* Breadcrumb */}
-          <div className="flex items-center gap-1.5 mb-4">
-            <span className="font-medium text-white" style={{ fontSize: "24px", lineHeight: "30px" }}>Trang chủ</span>
-            <ChevronRight className="w-5 h-5 text-white" />
-            <span className="font-medium text-white" style={{ fontSize: "24px", lineHeight: "30px" }}>Tin tức</span>
+          <div className="flex items-center gap-1.5 mb-3">
+            <span className="font-medium text-white text-base md:text-2xl">Trang chủ</span>
+            <ChevronRight className="w-4 h-4 md:w-5 md:h-5 text-white" />
+            <span className="font-medium text-white text-base md:text-2xl">Tin tức</span>
           </div>
           {/* Title */}
           <h1
-            className="font-display font-bold text-white text-center"
-            style={{ fontSize: "48px", lineHeight: "60px", letterSpacing: "-0.03em" }}
+            className="font-display font-bold text-white text-center text-3xl md:text-5xl"
+            style={{ letterSpacing: "-0.03em" }}
           >
             Tin tức mới nhất
           </h1>

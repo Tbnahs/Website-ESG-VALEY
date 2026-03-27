@@ -143,15 +143,15 @@ export default function Support() {
           className="absolute inset-0 w-full h-full object-cover object-center"
         />
         <div className="absolute inset-0" style={{ background: "rgba(21, 40, 29, 0.62)" }} />
-        <div className="relative z-10 flex flex-col items-center justify-end h-full pb-14">
-          <div className="flex items-center gap-1.5 mb-4">
-            <span className="font-medium text-white" style={{ fontSize: "24px", lineHeight: "30px" }}>Trang chủ</span>
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M9 18l6-6-6-6" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
-            <span className="font-medium text-white" style={{ fontSize: "24px", lineHeight: "30px" }}>Hỗ trợ khách hàng</span>
+        <div className="relative z-10 flex flex-col items-center justify-end h-full pb-8 md:pb-14">
+          <div className="flex items-center gap-1.5 mb-3">
+            <span className="font-medium text-white text-base md:text-2xl">Trang chủ</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M9 18l6-6-6-6" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+            <span className="font-medium text-white text-base md:text-2xl">Hỗ trợ khách hàng</span>
           </div>
           <h1
-            className="font-display font-bold text-white text-center"
-            style={{ fontSize: "48px", lineHeight: "60px", letterSpacing: "-0.03em" }}
+            className="font-display font-bold text-white text-center text-3xl md:text-5xl"
+            style={{ letterSpacing: "-0.03em" }}
           >
             Hỗ Trợ Khách Hàng
           </h1>
