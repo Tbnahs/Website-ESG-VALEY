@@ -146,7 +146,7 @@ export function Header() {
       <motion.div
         animate={isScrolled ? { height: 0, opacity: 0 } : { height: "auto", opacity: 1 }}
         transition={{ duration: 0.35, ease: "easeInOut" }}
-        className="overflow-hidden"
+        className={langOpen ? "" : "overflow-hidden"}
       >
       <div className={`hidden md:flex justify-between items-center px-8 py-1.5 text-xs border-b ${isTransparent ? "border-white/10" : "border-border/50"} font-medium`}>
         <div className="flex items-center space-x-6">
