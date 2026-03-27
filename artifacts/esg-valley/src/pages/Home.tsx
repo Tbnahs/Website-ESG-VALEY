@@ -139,7 +139,8 @@ export default function Home() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={selectedIndex === idx ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                     transition={{ delay: 0.4, duration: 0.8 }}
-                    className="text-white font-display text-2xl sm:text-4xl md:text-6xl lg:text-7xl font-bold mb-8 text-center leading-tight"
+                    className="text-white font-display font-bold mb-8 text-center whitespace-nowrap"
+                    style={{ fontSize: "clamp(16px, 5vw, 72px)" }}
                   >{slide.title}</motion.h2>
                   <motion.div
                     initial={{ opacity: 0, y: 20 }}
