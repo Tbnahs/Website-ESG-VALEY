@@ -62,14 +62,14 @@ const defaultMissionImages = [
 ];
 
 const achievementImages = [
-  { src: "/images/thanh-tuu-1.png", label: "Triển lãm quốc tế 2023" },
-  { src: "/images/thanh-tuu-2.png", label: "Giải thưởng ESG xuất sắc" },
-  { src: "/images/thanh-tuu-3.png", label: "Hội chợ Nông sản Việt" },
-  { src: "/images/thanh-tuu-4.png", label: "Cộng đồng nông dân bền vững" },
-  { src: "/images/thanh-tuu-1.png", label: "Chứng nhận hữu cơ" },
-  { src: "/images/thanh-tuu-2.png", label: "Top thương hiệu xanh" },
-  { src: "/images/thanh-tuu-3.png", label: "Đối tác bền vững" },
-  { src: "/images/thanh-tuu-4.png", label: "Sản phẩm tiêu biểu" },
+  { src: "/images/achievement-1.jpg", label: "" },
+  { src: "/images/achievement-2.jpg", label: "" },
+  { src: "/images/achievement-3.jpg", label: "" },
+  { src: "/images/achievement-4.jpg", label: "" },
+  { src: "/images/achievement-5.jpg", label: "" },
+  { src: "/images/achievement-6.jpg", label: "" },
+  { src: "/images/achievement-7.jpg", label: "" },
+  { src: "/images/achievement-8.jpg", label: "" },
 ];
 
 const stats = [
