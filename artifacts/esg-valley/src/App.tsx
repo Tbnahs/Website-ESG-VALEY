@@ -19,6 +19,7 @@ import News from "./pages/News";
 import NewsDetail from "./pages/NewsDetail";
 import Contact from "./pages/Contact";
 import Support from "./pages/Support";
+import Events from "./pages/Events";
 import NotFound from "@/pages/not-found";
 
 const queryClient = new QueryClient();
@@ -35,6 +36,7 @@ function Router() {
       <Route path="/tin-tuc/:slug" component={NewsDetail} />
       <Route path="/lien-he" component={Contact} />
       <Route path="/ho-tro" component={Support} />
+      <Route path="/su-kien" component={Events} />
       <Route component={NotFound} />
     </Switch>
   );

@@ -188,7 +188,7 @@ export default function Home() {
               <p className="text-muted-foreground leading-relaxed mb-6 text-sm">
                 Sự kiện đánh dấu cột mốc quan trọng trong hành trình phát triển bền vững của ESG Valley - kết nối nông nghiệp xanh, du lịch sinh thái và cộng đồng địa phương trên vùng đất Thái Nguyên.
               </p>
-              <Link href="/he-sinh-thai">
+              <Link href="/su-kien">
                 <button
                   className="inline-flex items-center gap-[10px] font-semibold hover:brightness-95 transition-all"
                   style={{
