@@ -161,7 +161,7 @@ export function Footer() {
           {/* Liên Kết Nhanh */}
           <div>
             <h3 className="font-display text-sm font-semibold mb-4 uppercase tracking-wider text-[#C9A84C]">Liên Kết Nhanh</h3>
-            <ul className="space-y-2 text-xs text-white/80">
+            <ul className="space-y-2 text-xs text-[#ffffff]">
               <li><Link href="/" className="hover:text-white transition-colors">Trang Chủ</Link></li>
               <li><Link href="/ve-esg-valley" className="hover:text-white transition-colors">Câu Chuyện ESG Valley</Link></li>
               <li><Link href="/he-sinh-thai" className="hover:text-white transition-colors">Hệ Sinh Thái</Link></li>
