@@ -118,7 +118,7 @@ export function Footer() {
           {/* Câu chuyện ESG Valley */}
           <div className="sm:col-span-2 lg:col-span-1 space-y-3">
             <img src="/images/logo-white.png" alt="ESG Valley" className="h-14 w-auto object-contain" />
-            <p className="text-white/75 text-xs leading-relaxed max-w-xs">
+            <p className="text-xs leading-relaxed max-w-xs text-[#ffffff]">
               Thương hiệu trà di sản Việt Nam, cam kết phát triển bền vững theo tiêu chuẩn ESG. Kết nối văn hóa, thiên nhiên và cộng đồng.
             </p>
             <div className="flex items-center gap-2 flex-wrap pt-1">
