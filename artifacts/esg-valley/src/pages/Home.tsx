@@ -245,7 +245,7 @@ export default function Home() {
                       padding: "6px 24px",
                     }}
                   >
-                    <span className="font-semibold text-[#525252] whitespace-nowrap" style={{ fontSize: "15px" }}>Lễ hội trà 2025</span>
+                    <span className="font-semibold text-[#525252] whitespace-nowrap" style={{ fontSize: "15px" }}>Lễ xuống giống</span>
                     <span className="font-semibold text-[#A2A2A2]" style={{ fontSize: "12px" }}>Hà Giang, Việt Nam</span>
                   </div>
                 </div>
