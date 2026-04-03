@@ -219,7 +219,7 @@ export function Footer() {
 
         {/* Bottom Bar */}
         <div className="pt-4 border-t border-white/10 flex flex-col sm:flex-row justify-between items-center text-xs text-white/50 gap-2 text-center sm:text-left">
-          <p>&copy; {new Date().getFullYear()} ESG Valley. Bảo lưu mọi quyền.</p>
+          <p className="text-[#ffffff]">&copy; {new Date().getFullYear()} ESG Valley. Bảo lưu mọi quyền.</p>
           <p className="text-[#ffffff]">Thương hiệu trà di sản Việt Nam</p>
         </div>
       </div>
