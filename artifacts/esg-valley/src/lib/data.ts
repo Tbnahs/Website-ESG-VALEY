@@ -402,18 +402,18 @@ export const products: Product[] = [
     tagline: "Nghệ thuật pha trà – Biểu diễn sống động",
     description: "Buổi trình diễn nghệ thuật pha trà độc đáo kết hợp âm nhạc và văn hóa trà Việt, tạo nên trải nghiệm thẩm mỹ tinh tế và khó quên dành cho sự kiện doanh nghiệp, tiệc tư nhân.",
     price: 8000000,
-    image: "https://images.unsplash.com/photo-1544025162-d76538897a97?auto=format&fit=crop&q=80&w=800",
+    image: "/images/tea-show.jpg",
     story: [
       {
         title: "Khi trà trở thành nghệ thuật biểu diễn",
         text: "Tea Show là sự kết hợp độc đáo giữa nghệ thuật pha trà truyền thống và biểu diễn sân khấu hiện đại. Trà sư của ESG Valley không chỉ pha trà – họ kể câu chuyện về văn hóa, lịch sử và con người Việt Nam thông qua từng động tác uyển chuyển, từng âm thanh của nước rót, từng làn hương trà bay lên.",
-        image: "https://images.unsplash.com/photo-1544025162-d76538897a97?auto=format&fit=crop&q=80&w=800",
+        image: "/images/tea-show.jpg",
         imagePosition: "right"
       },
       {
         title: "Phù hợp cho mọi sự kiện",
         text: "Tea Show của ESG Valley phù hợp cho sự kiện doanh nghiệp, lễ khai trương, tiệc tư nhân, hội thảo văn hóa và các buổi gặp gỡ đặc biệt. Đội ngũ trà sư sẽ tùy chỉnh nội dung chương trình theo chủ đề và yêu cầu riêng của từng sự kiện.",
-        image: "https://images.unsplash.com/photo-1544025162-d76538897a97?auto=format&fit=crop&q=80&w=800",
+        image: "/images/tea-show.jpg",
         imagePosition: "left"
       }
     ]
