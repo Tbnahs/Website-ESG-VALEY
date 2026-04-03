@@ -21,20 +21,12 @@ const timelineData = [
     img: "/images/1978.png",
   },
   {
-    year: 2000,
+    year: 2000 - 2005 ,
     yearLabel: "2000–2005",
     title: "Cổ phần hóa – Chuyển mình sang mô hình mới",
     content:
       "Thực hiện chủ trương của Nhà nước, Nông trường chè Quân Chu tiến hành cổ phần hóa, chính thức chuyển đổi mô hình hoạt động thành Công ty Cổ phần Chè Quân Chu.",
     img: "/images/2000-2005.png",
-  },
-  {
-    year: 2004,
-    yearLabel: "2004",
-    title: "Hạt Giống ESGValley Được Gieo",
-    content:
-      "Khái niệm ESG chính thức ra đời trong báo cáo \"Who Cares Wins\" của Liên Hợp Quốc. Cùng thời điểm đó, tại Quân Chu, ý tưởng về một thương hiệu Trà bền vững bắt đầu nhen nhóm. Trong những lần rong đuổi cùng bà con, ngồi bên chén trà nồng và nghe chuyện mùa vụ, chúng tôi đã trăn trở về một mô hình phát triển vượt xa khỏi lợi nhuận thuần túy – đó là sự thấu cảm về việc bảo vệ hệ sinh thái địa phương, nâng cao đời sống người nông dân và quản trị bằng sự minh bạch.",
-    img: "/images/2004.jpg",
   },
   {
     year: 2011,
@@ -207,7 +199,7 @@ export default function About() {
                   )}
                   <button
                     onClick={() => setActiveYear(t.year)}
-                    className="relative font-semibold leading-[30px] transition-all whitespace-nowrap"
+                    className="relative font-semibold leading-[30px] transition-all whitespace-nowrap px-4 py-1"
                     style={{
                       fontSize: "clamp(14px, 1.8vw, 22px)",
                       color: t.year === activeYear ? "#FFFFFF" : "#525252",
@@ -216,11 +208,11 @@ export default function About() {
                   >
                     {t.year === activeYear && (
                       <span
-                        className="absolute inset-0 -mx-4 -my-1 rounded-[32px] z-0"
+                        className="absolute inset-0 rounded-[32px] z-0"
                         style={{ background: "#183806" }}
                       />
                     )}
-                    <span className="relative z-10 px-3 py-1">{t.yearLabel}</span>
+                    <span className="relative z-10">{t.yearLabel}</span>
                   </button>
                 </div>
               ))}
