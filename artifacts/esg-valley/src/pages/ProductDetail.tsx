@@ -70,6 +70,16 @@ export default function ProductDetail() {
 
       {/* ── HERO ── */}
       <section className="max-w-7xl mx-auto px-6 lg:px-16 pt-32 pb-16">
+
+        {/* ── BACK BUTTON ── */}
+        <button
+          onClick={() => navigate("/san-pham")}
+          className="inline-flex items-center gap-1.5 mb-5 text-sm font-medium text-[#525252] hover:text-[#3d7a3d] transition-colors"
+        >
+          <ArrowLeft className="w-4 h-4" />
+          Quay lại
+        </button>
+
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-start">
 
           {/* Left: Info */}
