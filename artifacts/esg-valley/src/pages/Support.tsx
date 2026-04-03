@@ -36,31 +36,31 @@ const PRODUCTS = [
 const faqs = [
   {
     q: "Chè của bạn được trồng ở đâu? Có gì đặc biệt so với các vùng khác?",
-    a: "Chè của chúng tôi được trồng tại các vùng nguyên liệu nổi tiếng như Tản Viên, Mộc Châu, Hà Giang – nơi có khí hậu quanh năm mát mẻ, đất đỏ bazan giàu dưỡng chất và sương mù bao phủ vào mỗi sáng tinh mơ. Chính những điều kiện tự nhiên đặc biệt này đã tạo ra hương vị chè thanh thuần, tinh tế và sắc vị đậm đà mà ít nơi nào có được. Chúng chỉ là vùng chè tinh anh nhất, nơi chúng tôi áp dụng kỹ thuật canh tác truyền thống, kết hợp giữa thiên nhiên và bàn tay cần mẫn của người dân bản địa.",
+    a: "Chè của chúng tôi được trồng tại vùng nguyên liệu nghiên cứu chuyên sâu của Công ty Cổ phần Chè Quân Chu, nằm ngay dưới chân dãy núi Tam Đảo, Thái Nguyên. Điểm đặc biệt nằm ở địa thế thung lũng mù sương với khí hậu mát mẻ quanh năm và nguồn nước tinh khiết từ đại ngàn, tạo nên hương vị trà có độ chát dịu, hậu ngọt sâu và hương thơm cốm non đặc trưng mà hiếm vùng nào có được. Đây cũng là vùng chè có lịch sử canh tác lâu đời, gắn liền với tri thức bản địa và kỹ thuật chế biến thủ công truyền thống.",
   },
   {
-    q: "Chè bên bạn có đạt chuẩn hữu cơ không? Có dùng thuốc bảo vệ thực vật không?",
-    a: "Tất cả sản phẩm của ESG Valley đều được trồng theo tiêu chuẩn hữu cơ, không sử dụng thuốc trừ sâu hay phân bón hóa học. Chúng tôi có chứng nhận hữu cơ từ các tổ chức uy tín và tem truy xuất nguồn gốc QR trên mỗi sản phẩm.",
+    q: "Chè của ESGValley có đạt chuẩn hữu cơ không? Có dùng thuốc bảo vệ thực vật không?",
+    a: 'Với định hướng ESG, chúng tôi cam kết canh tác theo hướng hữu cơ và chuẩn VietGAP. ESGValley nói không với thuốc bảo vệ thực vật độc hại và phân bón hóa học dư lượng cao. Mọi quy trình đều được kiểm soát nghiêm ngặt từ khâu chăm sóc đến nhà máy để đảm bảo sản phẩm "Trà sạch từ tâm".',
   },
   {
     q: "Khi nào là thời điểm tốt nhất để uống chè để có lợi cho sức khỏe?",
-    a: "Uống chè vào buổi sáng giúp tỉnh táo và tăng cường trao đổi chất. Buổi chiều là thời điểm lý tưởng để thưởng trà và thư giãn. Tránh uống chè quá muộn vào buổi tối để không ảnh hưởng đến giấc ngủ.",
+    a: "Thời điểm vàng để thưởng trà là vào buổi sáng (sau khi ăn sáng khoảng 30–60 phút) giúp tinh thần minh mẫn, hoặc sau bữa ăn trưa để hỗ trợ tiêu hóa. Tránh uống trà khi bụng quá đói hoặc ngay trước khi đi ngủ để không ảnh hưởng đến giấc ngủ.",
   },
   {
     q: "Một ấm chè có thể pha được bao nhiêu lần nước? Hương vị có thay đổi không?",
-    a: "Tùy loại trà, có thể pha từ 3–7 lần nước. Mỗi lần pha sẽ mang lại một tầng hương vị khác nhau – ban đầu đậm đà và thơm nồng, về sau nhẹ nhàng và ngọt hậu hơn. Đây chính là nghệ thuật thưởng trà mà ESG Valley muốn chia sẻ.",
+    a: "Nhờ phẩm cấp lá trà chất lượng cao từ vùng Quân Chu, một ấm trà ESGValley có thể pha từ 4–5 lần nước mà vẫn giữ được dư vị. Hương vị sẽ chuyển biến tinh tế: nước đầu thơm nồng nàn, các nước sau vị ngọt hậu sẽ càng đậm đà và thanh khiết hơn.",
   },
   {
     q: "Tôi nên bảo quản chè như thế nào để giữ được hương vị lâu dài nhất?",
-    a: "Bảo quản chè trong hộp kín, tránh ánh sáng trực tiếp, ẩm và mùi lạ. Không để chè trong tủ lạnh. Nên dùng hộp thiếc hoặc hộp gốm sứ để bảo quản tốt nhất, giúp duy trì hương thơm trong 12–24 tháng.",
+    a: "Quý khách nên dùng hộp thiếc hoặc hộp gốm sứ để bảo quản tốt nhất, giúp duy trì hương thơm trong 12–24 tháng, để ở nơi khô ráo, thoáng mát, tránh ánh nắng trực tiếp và các mùi mạnh (như nước hoa, gia vị). Sau khi mở gói, nên sử dụng hết trong vòng 1–2 tháng để tận hưởng hương vị tốt nhất.",
   },
   {
     q: "Chè bên bạn có phù hợp để làm quà tặng không? Có hộp quà không?",
-    a: "Có, ESG Valley có dịch vụ đóng gói quà tặng cao cấp với hộp gift box sang trọng, phù hợp làm quà biếu doanh nghiệp, sự kiện hay quà tặng cá nhân. Vui lòng liên hệ để được tư vấn bộ quà phù hợp.",
+    a: "Rất phù hợp. ESGValley định vị là dòng trà Di sản cao cấp. Chúng tôi có các thiết kế hộp quà tinh tế, sang trọng, mang đậm nét văn hóa Việt nhưng vẫn hiện đại, rất thích hợp để biếu tặng đối tác, doanh nhân hoặc người thân trong các dịp lễ Tết, sự kiện đặc biệt. Vui lòng liên hệ để được tư vấn bộ quà phù hợp.",
   },
   {
     q: "Tôi muốn mua hàng online thì làm thế nào? Có giao hàng toàn quốc không?",
-    a: "Bạn có thể đặt hàng trực tiếp trên website, qua Zalo 0969 510 955 hoặc email. Chúng tôi giao hàng toàn quốc, thời gian 2–5 ngày làm việc. Nội thành Hà Nội có dịch vụ giao nhanh trong ngày.",
+    a: "Quý khách có thể đặt hàng trực tiếp tại Website, Fanpage và các kênh TMĐT của chúng tôi. ESGValley hỗ trợ giao hàng toàn quốc, đóng gói chuyên nghiệp để đảm bảo Trà đến tay bạn vẫn giữ nguyên hương vị và hình thức hoàn hảo nhất.",
   },
 ];
 
