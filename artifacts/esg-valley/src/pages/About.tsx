@@ -42,7 +42,7 @@ const timelineData = [
     title: "Kỷ niệm 45 năm – Quy hoạch vùng chè chất lượng cao",
     content:
       "Công ty tổ chức kỷ niệm 45 năm ngày thành lập, khẳng định vị thế là doanh nghiệp có bề dày lịch sử bậc nhất vùng chè Đại Từ; tập trung vào việc bàn giao đất về địa phương để quản lý hiệu quả hơn, đồng thời bắt đầu quy hoạch lại các vùng chè chất lượng cao để chuyển từ chè đen sang chè xanh đặc sản.",
-    img: "/images/he-sinh-thai.jpg",
+    img: "/images/2011.png",
   },
   {
     year: 2025,
