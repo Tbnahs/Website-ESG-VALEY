@@ -48,7 +48,7 @@ export default function NewsDetail() {
     .filter(Boolean);
 
   return (
-    <div className="bg-white min-h-screen pb-24 pt-28">
+    <div className="bg-white min-h-screen pb-24 pt-36">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* ── HERO IMAGE + DATE BADGE ── */}
