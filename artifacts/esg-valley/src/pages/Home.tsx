@@ -225,9 +225,9 @@ export default function Home() {
                 >
                   {/* Image with dark overlay */}
                   <img
-                    src="/images/footer-bg.png"
+                    src="/images/su-kien.jpg"
                     alt="Sự kiện ESG Valley"
-                    className="absolute inset-0 w-full h-full object-cover object-top"
+                    className="absolute inset-0 w-full h-full object-cover object-center"
                   />
                   <div className="absolute inset-0" style={{ background: "rgba(0,0,0,0.2)" }} />
 
