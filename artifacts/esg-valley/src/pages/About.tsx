@@ -327,7 +327,7 @@ export default function About() {
             </h2>
             <p
               className="font-semibold text-[20px] leading-[30px] text-center max-w-2xl mx-auto mt-4"
-              style={{ color: "#525252" }}
+              style={{ color: "#525252", textWrap: "balance" } as React.CSSProperties}
             >
               Hiện thực hóa hệ sinh thái ESGValley để bảo tồn tinh hoa và đưa thương hiệu trà Việt vươn tầm thế giới. Chúng tôi cam kết kiến tạo môi trường sinh thái bền vững, nâng tầm giá trị cộng đồng và là đơn vị tiên phong thực hiện hóa các chủ trương chiến lược của Trung ương (Nghị quyết 68-NQ/TW) và Tỉnh ủy Thái Nguyên (Nghị quyết 11-NQ/TU) về phát triển ngành chè theo định hướng ESG giai đoạn 2025 - 2030.
             </p>
