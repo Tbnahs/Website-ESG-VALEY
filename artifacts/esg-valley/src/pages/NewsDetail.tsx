@@ -25,7 +25,7 @@ export default function NewsDetail() {
 
   if (!article) {
     return (
-      <div className="min-h-screen flex flex-col items-center justify-center gap-4 pt-24">
+      <div style={{ isolation: "isolate" }} className="min-h-screen flex flex-col items-center justify-center gap-4 pt-24">
         <p className="text-muted-foreground text-lg">Không tìm thấy bài viết.</p>
         <button
           onClick={() => navigate("/tin-tuc")}

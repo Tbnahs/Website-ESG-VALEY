@@ -51,7 +51,7 @@ export default function Products() {
     : products.filter(p => p.category === activeCategory);
 
   return (
-    <div className="w-full bg-white min-h-screen">
+    <div style={{ isolation: "isolate" }} className="w-full bg-white min-h-screen">
       {/* Hero */}
       <div className="relative w-full overflow-hidden" style={{ height: "380px" }}>
         <img

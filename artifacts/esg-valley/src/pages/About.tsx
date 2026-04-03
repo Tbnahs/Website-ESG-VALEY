@@ -138,7 +138,7 @@ export default function About() {
   };
 
   return (
-    <div className="w-full bg-white">
+    <div style={{ isolation: "isolate" }} className="w-full bg-white">
       {/* ══════════════════════════════════════
           1. HÀNH TRÌNH CÙNG ESG — Hero
       ══════════════════════════════════════ */}
@@ -199,7 +199,7 @@ export default function About() {
                   )}
                   <button
                     onClick={() => setActiveYear(t.year)}
-                    className="relative font-semibold leading-[30px] transition-all whitespace-nowrap px-4 py-1"
+                    className="relative font-semibold leading-[30px] transition-all whitespace-nowrap"
                     style={{
                       fontSize: "clamp(14px, 1.8vw, 22px)",
                       color: t.year === activeYear ? "#FFFFFF" : "#525252",
@@ -208,11 +208,11 @@ export default function About() {
                   >
                     {t.year === activeYear && (
                       <span
-                        className="absolute inset-0 rounded-[32px] z-0"
+                        className="absolute inset-0 -mx-4 -my-1 rounded-[32px] z-0"
                         style={{ background: "#183806" }}
                       />
                     )}
-                    <span className="relative z-10">{t.yearLabel}</span>
+                    <span className="relative z-10 px-3 py-1">{t.yearLabel}</span>
                   </button>
                 </div>
               ))}

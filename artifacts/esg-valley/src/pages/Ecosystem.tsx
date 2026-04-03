@@ -23,7 +23,7 @@ const fadeUp = {
 
 export default function Ecosystem() {
   return (
-    <div className="w-full bg-background">
+    <div style={{ isolation: "isolate" }} className="w-full bg-background">
       {/* ════════ HERO ════════ */}
       <div className="relative w-full overflow-hidden" style={{ height: "380px" }}>
         <img

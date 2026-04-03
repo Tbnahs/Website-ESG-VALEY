@@ -53,7 +53,7 @@ export default function News() {
   const paginated = filtered.slice((currentPage - 1) * ITEMS_PER_PAGE, currentPage * ITEMS_PER_PAGE);
 
   return (
-    <div className="w-full bg-background pb-24">
+    <div className="w-full bg-background pb-24" style={{ isolation: "isolate" }}>
       {/* ── HERO BANNER ── */}
       <div className="relative w-full overflow-hidden" style={{ height: "380px" }}>
         <img

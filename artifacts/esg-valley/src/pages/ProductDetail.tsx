@@ -31,7 +31,7 @@ export default function ProductDetail() {
 
   if (!product) {
     return (
-      <div className="min-h-screen flex flex-col items-center justify-center gap-4">
+      <div style={{ isolation: "isolate" }} className="min-h-screen flex flex-col items-center justify-center gap-4">
         <p className="text-muted-foreground text-lg">Không tìm thấy sản phẩm.</p>
         <button onClick={() => navigate("/san-pham")} className="text-primary font-semibold hover:underline flex items-center gap-1">
           <ArrowLeft className="w-4 h-4" /> Quay lại danh sách

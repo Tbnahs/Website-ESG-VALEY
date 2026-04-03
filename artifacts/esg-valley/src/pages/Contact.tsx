@@ -32,7 +32,7 @@ export default function Contact() {
   };
 
   return (
-    <div className="w-full bg-background pt-24 pb-24">
+    <div style={{ isolation: "isolate" }} className="w-full bg-background pt-24 pb-24">
       {/* Header */}
       <div className="relative py-24 mb-12 overflow-hidden">
         <img
