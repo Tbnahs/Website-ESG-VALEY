@@ -199,20 +199,16 @@ export default function About() {
                   )}
                   <button
                     onClick={() => setActiveYear(t.year)}
-                    className="relative font-semibold leading-[30px] transition-all whitespace-nowrap"
+                    className="font-semibold leading-[30px] transition-all whitespace-nowrap rounded-[32px]"
                     style={{
                       fontSize: "clamp(14px, 1.8vw, 22px)",
                       color: t.year === activeYear ? "#FFFFFF" : "#525252",
                       fontWeight: t.year === activeYear ? 700 : 500,
+                      background: t.year === activeYear ? "#183806" : "transparent",
+                      padding: "4px 16px",
                     }}
                   >
-                    {t.year === activeYear && (
-                      <span
-                        className="absolute inset-0 -mx-4 -my-1 rounded-[32px] z-0"
-                        style={{ background: "#183806" }}
-                      />
-                    )}
-                    <span className="relative z-10 px-3 py-1">{t.yearLabel}</span>
+                    {t.yearLabel}
                   </button>
                 </div>
               ))}
