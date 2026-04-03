@@ -5,46 +5,60 @@ import { useAuth } from "@/lib/auth";
 
 const timelineData = [
   {
-    year: 2020,
-    title: "Khởi Nguồn Ý Tưởng",
+    year: 1966,
+    yearLabel: "1966",
+    title: "Thành lập Nông trường Chè Quân Chu",
     content:
-      "Từ những chuyến đi thực địa lên các vùng chè cổ thụ Thái Nguyên, Hà Giang, một nhóm những người trẻ yêu trà đã ấp ủ giấc mơ về một thương hiệu trà di sản mang tinh thần ESG – kết nối bền vững giữa con người, thiên nhiên và cộng đồng.",
-    img: "/images/khoi-nguon.jpg",
-  },
-  {
-    year: 2021,
-    title: "Điểm Khởi Đầu",
-    content:
-      "Ý tưởng về một thương hiệu chè tử tế được nhen nhóm từ những lần rong đuổi qua bản làng, ngồi cùng bà con uống chén trà nồng, nghe họ kể chuyện mùa vụ và chứng kiến búp chè non được nâng niu như báu vật. Năm đó, giữa sự thô ráp của núi rừng và ước mơ mang hương vị quê hương đến gần hơn với mọi người, thương hiệu ESG Valley chính thức ra đời.",
-    img: "/images/hanh-trinh.jpg",
-  },
-  {
-    year: 2022,
-    title: "Mở Rộng Vùng Trồng",
-    content:
-      "ESG Valley mở rộng hợp tác với các hộ nông dân tại Hà Giang, Lai Châu và Lâm Đồng. Các vùng nguyên liệu được chứng nhận hữu cơ, quy trình canh tác bền vững được áp dụng đồng bộ, đảm bảo chất lượng từ gốc rễ đến tách trà.",
+      "Tiền thân là Nông trường chè Quân Chu được thành lập vào ngày 26/04/1966. Đây là một trong những đơn vị kinh tế quốc doanh đặt nền móng đầu tiên cho ngành chè tại khu vực chân núi Tam Đảo, huyện Đại Từ, Thái Nguyên.",
     img: "/images/hinh-doi-che.png",
   },
   {
-    year: 2023,
-    title: "Ra Mắt Dòng Sản Phẩm",
+    year: 1978,
+    yearLabel: "1978",
+    title: "Vùng Nguyên Liệu Trọng Điểm",
     content:
-      "Bộ sản phẩm đầu tiên chính thức ra mắt thị trường: Mã Đáo Thành Công, Bách Niên Trà, Mạc Triều Trà. Mỗi dòng sản phẩm là một câu chuyện riêng, mang theo hồn cốt của vùng đất và con người nơi nó được sinh ra.",
-    img: "/images/mask-group.png",
+      "Nông trường được giao quản lý hơn 2.000 ha đất, trở thành vùng nguyên liệu trọng điểm cung cấp chè đen xuất khẩu cho các thị trường Đông Âu và Liên Xô cũ.",
+    img: "/images/hinh-doi-che.png",
   },
   {
-    year: 2024,
-    title: "Hệ Sinh Thái ESG",
+    year: 2000,
+    yearLabel: "2000–2005",
+    title: "Cổ phần hóa – Chuyển mình sang mô hình mới",
     content:
-      "ESG Valley không chỉ là thương hiệu trà – chúng tôi kiến tạo một hệ sinh thái hoàn chỉnh: từ không gian trải nghiệm trà, dịch vụ tiệc trà cao cấp, đến chương trình giáo dục và kết nối cộng đồng những người yêu trà Việt.",
+      "Thực hiện chủ trương của Nhà nước, Nông trường chè Quân Chu tiến hành cổ phần hóa, chính thức chuyển đổi mô hình hoạt động thành Công ty Cổ phần Chè Quân Chu.",
+    img: "/images/hanh-trinh.jpg",
+  },
+  {
+    year: 2004,
+    yearLabel: "2004",
+    title: "Hạt Giống ESGValley Được Gieo",
+    content:
+      "Khái niệm ESG chính thức ra đời trong báo cáo \"Who Cares Wins\" của Liên Hợp Quốc. Cùng thời điểm đó, tại Quân Chu, ý tưởng về một thương hiệu Trà bền vững bắt đầu nhen nhóm. Trong những lần rong đuổi cùng bà con, ngồi bên chén trà nồng và nghe chuyện mùa vụ, chúng tôi đã trăn trở về một mô hình phát triển vượt xa khỏi lợi nhuận thuần túy – đó là sự thấu cảm về việc bảo vệ hệ sinh thái địa phương, nâng cao đời sống người nông dân và quản trị bằng sự minh bạch.",
+    img: "/images/toan-cau.jpg",
+  },
+  {
+    year: 2011,
+    yearLabel: "2011",
+    title: "Kỷ niệm 45 năm – Quy hoạch vùng chè chất lượng cao",
+    content:
+      "Công ty tổ chức kỷ niệm 45 năm ngày thành lập, khẳng định vị thế là doanh nghiệp có bề dày lịch sử bậc nhất vùng chè Đại Từ; tập trung vào việc bàn giao đất về địa phương để quản lý hiệu quả hơn, đồng thời bắt đầu quy hoạch lại các vùng chè chất lượng cao để chuyển từ chè đen sang chè xanh đặc sản.",
     img: "/images/he-sinh-thai.jpg",
   },
   {
     year: 2025,
-    title: "Tầm Nhìn Toàn Cầu",
+    yearLabel: "2025",
+    title: "Ra mắt thương hiệu ESGValley",
     content:
-      "Đưa trà Việt ra thế giới theo đúng nghĩa: không chỉ xuất khẩu nguyên liệu mà tôn vinh câu chuyện, văn hóa và bản sắc. ESG Valley hướng tới trở thành đại sứ của trà di sản Việt Nam trên bản đồ trà thế giới.",
-    img: "/images/toan-cau.jpg",
+      "Đánh dấu bước chuyển mình mang tính lịch sử khi Công ty Cổ phần Chè Quân Chu chính thức sáng tạo và ra mắt thương hiệu ESGValley, chuyển mình từ một nhà máy truyền thống sang một doanh nghiệp xanh, gắn sản phẩm chè, hoạt động sản xuất với các tiêu chuẩn bền vững toàn cầu với trách nhiệm bảo vệ hệ sinh thái và phát triển cộng đồng; đóng vai trò quan trọng trong việc hỗ trợ sinh kế cho bà con nông dân xã Quân Chu nói riêng và trên địa bàn tỉnh nói chung.",
+    img: "/images/mask-group.png",
+  },
+  {
+    year: 2026,
+    yearLabel: "2026",
+    title: "ESGValley – Hệ Sinh Thái Văn Hóa & Kinh Tế",
+    content:
+      "ESGValley bắt đầu xuất hiện mạnh mẽ hơn trong các hoạt động xúc tiến thương mại và kết nối doanh nghiệp tỉnh Thái Nguyên. Định vị là đơn vị tiên phong với mô hình \"Tiệc Trà Di sản\" tại Thái Nguyên. Ngày 22/03/2026, Công ty Cổ phần Chè Quân Chu hoàn tất công đoạn xuống giống cho vùng chè đầu tiên – một cột mốc quan trọng trong lộ trình bảo tồn và nâng tầm giá trị Trà gắn liền với phát triển du lịch bền vững tại xã Quân Chu, Thái Nguyên.",
+    img: "/images/su-kien.jpg",
   },
 ];
 
@@ -75,7 +89,7 @@ const stats = [
 
 export default function About() {
   const { isAdmin } = useAuth();
-  const [activeYear, setActiveYear] = useState(2021);
+  const [activeYear, setActiveYear] = useState(1966);
   const years = timelineData.map((t) => t.year);
   const activeData = timelineData.find((t) => t.year === activeYear)!;
   const activeIndex = years.indexOf(activeYear);
@@ -186,28 +200,29 @@ export default function About() {
         <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
 
           {/* Year rail */}
-          <div className="flex items-center justify-center mb-12">
-            <div className="relative flex items-center gap-8">
-              {years.map((y, i) => (
-                <div key={y} className="flex items-center gap-8">
+          <div className="flex items-center justify-center mb-12 overflow-x-auto pb-2">
+            <div className="relative flex items-center gap-4 flex-nowrap">
+              {timelineData.map((t, i) => (
+                <div key={t.year} className="flex items-center gap-4 flex-shrink-0">
                   {i > 0 && (
-                    <div className="w-14 h-px" style={{ background: "#E4E4E4" }} />
+                    <div className="w-8 h-px" style={{ background: "#E4E4E4" }} />
                   )}
                   <button
-                    onClick={() => setActiveYear(y)}
-                    className="relative font-semibold text-[24px] leading-[30px] transition-all"
+                    onClick={() => setActiveYear(t.year)}
+                    className="relative font-semibold leading-[30px] transition-all whitespace-nowrap"
                     style={{
-                      color: y === activeYear ? "#FFFFFF" : "#525252",
-                      fontWeight: y === activeYear ? 700 : 500,
+                      fontSize: "clamp(14px, 1.8vw, 22px)",
+                      color: t.year === activeYear ? "#FFFFFF" : "#525252",
+                      fontWeight: t.year === activeYear ? 700 : 500,
                     }}
                   >
-                    {y === activeYear && (
+                    {t.year === activeYear && (
                       <span
                         className="absolute inset-0 -mx-4 -my-1 rounded-[32px] z-0"
                         style={{ background: "#183806" }}
                       />
                     )}
-                    <span className="relative z-10 px-4 py-1">{y}</span>
+                    <span className="relative z-10 px-3 py-1">{t.yearLabel}</span>
                   </button>
                 </div>
               ))}
@@ -314,7 +329,7 @@ export default function About() {
               className="font-semibold text-[20px] leading-[30px] text-center max-w-2xl mx-auto mt-4"
               style={{ color: "#525252" }}
             >
-              Gìn giữ và tôn vinh những giá trị trà di sản Việt Nam, kiến tạo hệ sinh thái bền vững kết nối con người, thiên nhiên và cộng đồng theo chuẩn mực ESG quốc tế.
+              Hiện thực hóa hệ sinh thái ESGValley để bảo tồn tinh hoa và đưa thương hiệu trà Việt vươn tầm thế giới. Chúng tôi cam kết kiến tạo môi trường sinh thái bền vững, nâng tầm giá trị cộng đồng và là đơn vị tiên phong thực hiện hóa các chủ trương chiến lược của Trung ương (Nghị quyết 68-NQ/TW) và Tỉnh ủy Thái Nguyên (Nghị quyết 11-NQ/TU) về phát triển ngành chè theo định hướng ESG giai đoạn 2025 - 2030.
             </p>
           </div>
 
