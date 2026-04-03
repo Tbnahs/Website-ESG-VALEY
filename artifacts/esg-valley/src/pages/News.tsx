@@ -337,15 +337,9 @@ export default function News() {
           {/* THU VIEN ANH */}
           {activeTab === "Thư viện ảnh" && (
             <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="columns-1 sm:columns-2 md:columns-3 gap-4 space-y-4">
-              {[
-                "https://images.unsplash.com/photo-1594631252845-29fc4cc8c0a1?auto=format&fit=crop&q=80&w=600",
-                "https://images.unsplash.com/photo-1576092762791-dd9e2220afa1?auto=format&fit=crop&q=80&w=600",
-                "https://images.unsplash.com/photo-1582793988951-9aed5509eb97?auto=format&fit=crop&q=80&w=600",
-                "https://images.unsplash.com/photo-1563822249548-9a72b6353cd1?auto=format&fit=crop&q=80&w=600",
-                "https://images.unsplash.com/photo-1610630747444-245f7823f66c?auto=format&fit=crop&q=80&w=600",
-              ].map((src, i) => (
+              {Array.from({ length: 24 }, (_, i) => `/images/news-${i + 1}.jpg`).map((src, i) => (
                 <div key={i} className="break-inside-avoid overflow-hidden rounded-2xl cursor-pointer group">
-                  <img src={src} className="w-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Gallery item" />
+                  <img src={src} className="w-full object-cover group-hover:scale-105 transition-transform duration-500" alt={`Ảnh tin tức ${i + 1}`} />
                 </div>
               ))}
             </motion.div>
