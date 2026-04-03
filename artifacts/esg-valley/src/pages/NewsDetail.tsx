@@ -51,6 +51,15 @@ export default function NewsDetail() {
     <div className="bg-white min-h-screen pb-24 pt-36">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
+        {/* ── BACK BUTTON ── */}
+        <button
+          onClick={() => navigate("/tin-tuc")}
+          className="inline-flex items-center gap-1.5 mb-5 text-sm font-medium text-[#525252] hover:text-[#3d7a3d] transition-colors"
+        >
+          <ArrowLeft className="w-4 h-4" />
+          Quay lại
+        </button>
+
         {/* ── HERO IMAGE + DATE BADGE ── */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
