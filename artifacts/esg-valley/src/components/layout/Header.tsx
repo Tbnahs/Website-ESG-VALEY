@@ -227,7 +227,7 @@ export function Header() {
           ))}
 
           {/* Sản Phẩm mega-menu */}
-          <div className="relative" ref={productRef}>
+          <div className="relative" ref={productRef} onMouseLeave={() => setProductMenuOpen(false)}>
             <button
               onClick={() => {
                 if (productMenuOpen) {
@@ -246,6 +246,8 @@ export function Header() {
               <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-200 ${productMenuOpen ? "rotate-180" : ""}`} />
             </button>
 
+            {/* invisible bridge: fills the mt-3 gap so onMouseLeave doesn't fire mid-path */}
+            {productMenuOpen && <div className="absolute top-full left-0 right-0 h-3 z-[59]" />}
             <AnimatePresence>
               {productMenuOpen && (
                 <motion.div
@@ -295,7 +297,7 @@ export function Header() {
           </div>
 
           {/* Hệ Sinh Thái dropdown */}
-          <div className="relative" ref={ecosystemRef}>
+          <div className="relative" ref={ecosystemRef} onMouseLeave={() => setEcosystemMenuOpen(false)}>
             <button
               onClick={() => {
                 if (ecosystemMenuOpen) {
@@ -314,6 +316,7 @@ export function Header() {
               <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-200 ${ecosystemMenuOpen ? "rotate-180" : ""}`} />
             </button>
 
+            {ecosystemMenuOpen && <div className="absolute top-full left-0 right-0 h-3 z-[59]" />}
             <AnimatePresence>
               {ecosystemMenuOpen && (
                 <motion.div
@@ -348,7 +351,7 @@ export function Header() {
           </div>
 
           {/* Hỗ Trợ Khách Hàng dropdown */}
-          <div className="relative" ref={supportRef}>
+          <div className="relative" ref={supportRef} onMouseLeave={() => setSupportMenuOpen(false)}>
             <button
               onClick={() => {
                 if (supportMenuOpen) {
@@ -367,6 +370,7 @@ export function Header() {
               <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-200 ${supportMenuOpen ? "rotate-180" : ""}`} />
             </button>
 
+            {supportMenuOpen && <div className="absolute top-full left-0 right-0 h-3 z-[59]" />}
             <AnimatePresence>
               {supportMenuOpen && (
                 <motion.div
