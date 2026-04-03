@@ -358,20 +358,6 @@ export function AuthModal() {
                   Vui lòng nhập mã gồm 6 chữ số.
                 </p>
 
-                {/* Demo OTP display */}
-                {generatedOtp && (
-                  <div className="rounded-lg p-3 text-sm flex items-start gap-2.5" style={{ background: "#FFF8E1", border: "1px solid #FAD478" }}>
-                    <span className="text-lg leading-none mt-0.5">🔑</span>
-                    <div>
-                      <p className="font-semibold text-[#8B6914] text-xs uppercase tracking-wide mb-0.5">Demo — Mã OTP của bạn</p>
-                      <p className="font-bold text-[#5C4209] text-2xl tracking-[0.3em]">{generatedOtp}</p>
-                      <p className="text-[#A2820D] text-[11px] mt-1">
-                        Trong ứng dụng thực, mã sẽ được gửi qua SMS / Email.
-                      </p>
-                    </div>
-                  </div>
-                )}
-
                 {/* 6-box OTP input */}
                 <div className="flex justify-center gap-2.5" onPaste={handleOtpPaste}>
                   {otp.map((digit, idx) => (
