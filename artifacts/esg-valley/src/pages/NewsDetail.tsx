@@ -1,7 +1,7 @@
 import { useParams, useLocation } from "wouter";
 import { motion } from "framer-motion";
-import { ArrowLeft, Share2 } from "lucide-react";
-import { news } from "@/lib/data";
+import { ArrowLeft, Share2, ExternalLink, Images } from "lucide-react";
+import { news, NewsArticle } from "@/lib/data";
 
 function formatDateBadge(dateStr: string) {
   const [d, m] = dateStr.split("/");
@@ -128,6 +128,31 @@ export default function NewsDetail() {
             </p>
           ))}
         </motion.div>
+
+        {/* ── SOURCE LINK ── */}
+        {article.sourceUrl && (
+          <div className="flex justify-center mb-10">
+            <a
+              href={article.sourceUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-3 font-semibold transition-all hover:opacity-80 hover:scale-105"
+              style={{
+                background: article.sourceUrl.includes("drive.google.com") ? "#5F9654" : "#C9A84C",
+                color: "#FFFFFF",
+                borderRadius: "12px",
+                padding: "14px 28px",
+                fontSize: "18px",
+              }}
+            >
+              {article.sourceUrl.includes("drive.google.com") ? (
+                <><Images className="w-5 h-5" /> Xem hình ảnh</>
+              ) : (
+                <><ExternalLink className="w-5 h-5" /> Đọc bài báo gốc</>
+              )}
+            </a>
+          </div>
+        )}
 
         {/* ── SHARE ── */}
         <div className="flex justify-center mb-20">

@@ -5,6 +5,18 @@ export interface ProductStory {
   imagePosition?: "left" | "right";
 }
 
+export interface NewsArticle {
+  id: number;
+  slug: string;
+  title: string;
+  date: string;
+  category: string;
+  excerpt: string;
+  image: string;
+  content?: string;
+  sourceUrl?: string;
+}
+
 export interface Product {
   id: number;
   name: string;
@@ -420,7 +432,7 @@ export const products: Product[] = [
   }
 ];
 
-export const news = [
+export const news: NewsArticle[] = [
   {
     id: 1,
     slug: "che-shan-tuyet-bang-phuc-lang-nghe",
@@ -429,7 +441,8 @@ export const news = [
     category: "Bền Vững",
     excerpt: "Xã Đồng Phúc (Thái Nguyên) vừa chính thức đón nhận quyết định công nhận Làng nghề chè Shan tuyết Bằng Phúc – vùng nguyên liệu trọng điểm của ESGValley.",
     image: "https://images.unsplash.com/photo-1587734195503-904fca47e0e9?auto=format&fit=crop&q=80&w=1200",
-    content: `Chúc mừng xã Đồng Phúc (Thái Nguyên) vừa chính thức đón nhận quyết định công nhận Làng nghề chè Shan tuyết Bằng Phúc.\n\nNằm trong danh sách "ngũ đại danh trà" nức tiếng của Thái Nguyên, chè Shan tuyết Bằng Phúc không chỉ là một sản phẩm nông nghiệp mà còn là di sản văn hóa với những gốc trà cổ thụ hàng trăm năm tuổi, thấm đượm tinh hoa đất trời.\n\nĐây cũng chính là vùng nguyên liệu trọng điểm mà ESGValley đang tập trung nghiên cứu và phát triển. Với định hướng phát triển bền vững (ESG), chúng tôi tin rằng việc nâng tầm giá trị trà Shan tuyết không chỉ dừng lại ở chất lượng chén trà, mà còn là câu chuyện bảo tồn hệ sinh thái và nâng cao sinh kế cho bà con địa phương.\n\nCùng ESGValley chờ đón những bước tiến mới cho đặc sản trà Shan tuyết Bằng Phúc vươn xa hơn trên bản đồ trà thế giới!`
+    content: `Chúc mừng xã Đồng Phúc (Thái Nguyên) vừa chính thức đón nhận quyết định công nhận Làng nghề chè Shan tuyết Bằng Phúc.\n\nNằm trong danh sách "ngũ đại danh trà" nức tiếng của Thái Nguyên, chè Shan tuyết Bằng Phúc không chỉ là một sản phẩm nông nghiệp mà còn là di sản văn hóa với những gốc trà cổ thụ hàng trăm năm tuổi, thấm đượm tinh hoa đất trời.\n\nĐây cũng chính là vùng nguyên liệu trọng điểm mà ESGValley đang tập trung nghiên cứu và phát triển. Với định hướng phát triển bền vững (ESG), chúng tôi tin rằng việc nâng tầm giá trị trà Shan tuyết không chỉ dừng lại ở chất lượng chén trà, mà còn là câu chuyện bảo tồn hệ sinh thái và nâng cao sinh kế cho bà con địa phương.\n\nCùng ESGValley chờ đón những bước tiến mới cho đặc sản trà Shan tuyết Bằng Phúc vươn xa hơn trên bản đồ trà thế giới!`,
+    sourceUrl: "https://drive.google.com/drive/folders/1PXENehKDGH7jTDn1pv78iNRkl7Ui6F7W?usp=drive_link"
   },
   {
     id: 2,
@@ -439,7 +452,8 @@ export const news = [
     category: "Cộng Đồng",
     excerpt: "ESG Valley phối hợp cùng UBND xã Đồng Phúc tổ chức chương trình thiện nguyện \"Sữa Kun cho em\", trao tặng 400 thùng sữa đến 7 điểm trường trên địa bàn.",
     image: "https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&q=80&w=1200",
-    content: `Vừa qua, ESG Valley đã phối hợp cùng UBND xã Đồng Phúc và các đơn vị đồng hành tổ chức chương trình thiện nguyện đầy ý nghĩa mang tên "Sữa Kun cho em". Trong khuôn khổ chương trình, đoàn đã tận tay trao tặng 400 thùng sữa đến các em nhỏ tại 7 điểm trường Mầm non và Tiểu học trên địa bàn xã Đồng Phúc, Thái Nguyên.\n\nĐây không chỉ là món quà về vật chất mà còn là sự chia sẻ, đồng hành của ESG Valley cùng cộng đồng trong việc chăm sóc sức khỏe và dinh dưỡng cho trẻ em vùng cao. Hy vọng những ly sữa ngọt ngào sẽ tiếp thêm năng lượng, giúp các em vui bước đến trường.\n\nHoạt động này càng trở nên ý nghĩa hơn khi Đồng Phúc không chỉ là điểm dừng chân thiện nguyện mà còn là vùng nguyên liệu trọng điểm đang được ESGValley tập trung nghiên cứu và phát triển dòng sản phẩm Chè Shan Tuyết.\n\nCông ty Cổ phần Chè Quân Chu chân thành cảm ơn chính quyền địa phương và các đối tác đã cùng chung tay để chuyến xe yêu thương này cập bến thành công!`
+    content: `Vừa qua, ESG Valley đã phối hợp cùng UBND xã Đồng Phúc và các đơn vị đồng hành tổ chức chương trình thiện nguyện đầy ý nghĩa mang tên "Sữa Kun cho em". Trong khuôn khổ chương trình, đoàn đã tận tay trao tặng 400 thùng sữa đến các em nhỏ tại 7 điểm trường Mầm non và Tiểu học trên địa bàn xã Đồng Phúc, Thái Nguyên.\n\nĐây không chỉ là món quà về vật chất mà còn là sự chia sẻ, đồng hành của ESG Valley cùng cộng đồng trong việc chăm sóc sức khỏe và dinh dưỡng cho trẻ em vùng cao. Hy vọng những ly sữa ngọt ngào sẽ tiếp thêm năng lượng, giúp các em vui bước đến trường.\n\nHoạt động này càng trở nên ý nghĩa hơn khi Đồng Phúc không chỉ là điểm dừng chân thiện nguyện mà còn là vùng nguyên liệu trọng điểm đang được ESGValley tập trung nghiên cứu và phát triển dòng sản phẩm Chè Shan Tuyết.\n\nCông ty Cổ phần Chè Quân Chu chân thành cảm ơn chính quyền địa phương và các đối tác đã cùng chung tay để chuyến xe yêu thương này cập bến thành công!`,
+    sourceUrl: "https://drive.google.com/drive/folders/1zkAlxroYL3uiVLM_SL18RuFQX5KdUNyy"
   },
   {
     id: 3,
@@ -449,7 +463,8 @@ export const news = [
     category: "Sự Kiện",
     excerpt: "Hội nghị \"Doanh nghiệp góp phần vào tăng trưởng hai con số\" ghi dấu sự gắn kết giữa Chính phủ và cộng đồng doanh nhân, với sự tham dự của Chủ tịch HĐQT Công ty Cổ phần Chè Quân Chu.",
     image: "https://images.unsplash.com/photo-1559136555-9303baea8ebd?auto=format&fit=crop&q=80&w=1200",
-    content: `Hội nghị "Doanh nghiệp góp phần vào tăng trưởng hai con số và Thủ tướng Chính phủ tri ân doanh nghiệp" ngày 27/3 ghi dấu sự gắn kết giữa Chính phủ và cộng đồng doanh nhân.\n\nTại sự kiện, Bà Nguyễn Thị Vinh – Chủ tịch Hội nữ doanh nhân tỉnh Thái Nguyên, Chủ tịch HĐQT Công ty Cổ phần Chè Quân Chu đã tham dự cùng nhiều lãnh đạo doanh nghiệp tiêu biểu cả nước, thể hiện quyết tâm đưa kinh tế Việt Nam vươn xa.`
+    content: `Hội nghị "Doanh nghiệp góp phần vào tăng trưởng hai con số và Thủ tướng Chính phủ tri ân doanh nghiệp" ngày 27/3 ghi dấu sự gắn kết giữa Chính phủ và cộng đồng doanh nhân.\n\nTại sự kiện, Bà Nguyễn Thị Vinh – Chủ tịch Hội nữ doanh nhân tỉnh Thái Nguyên, Chủ tịch HĐQT Công ty Cổ phần Chè Quân Chu đã tham dự cùng nhiều lãnh đạo doanh nghiệp tiêu biểu cả nước, thể hiện quyết tâm đưa kinh tế Việt Nam vươn xa.`,
+    sourceUrl: "https://baochinhphu.vn/tang-toc-khoi-nghiep-doanh-nghiep-tro-thanh-tru-cot-tang-truong-10226032711072608.htm"
   },
   {
     id: 4,
@@ -459,7 +474,8 @@ export const news = [
     category: "Bền Vững",
     excerpt: "Nằm ở độ cao hơn 1.200m, những gốc chè Shan tuyết cổ thụ hàng trăm năm tuổi tại xã Đồng Phúc là \"kho báu\" xanh mà ESGValley đang tập trung nghiên cứu.",
     image: "https://images.unsplash.com/photo-1558160074-4d7d8bdf4256?auto=format&fit=crop&q=80&w=1200",
-    content: `Nằm ở độ cao hơn 1.200m, những gốc chè Shan tuyết cổ thụ hàng trăm năm tuổi tại xã Đồng Phúc, Thái Nguyên chính là "kho báu" xanh mà ESGValley đang tập trung nghiên cứu.\n\nĐây không chỉ là vùng nguyên liệu sạch, thuần khiết mà còn là trọng tâm trong chiến lược phát triển nông nghiệp bền vững và bảo tồn giá trị di sản của chúng tôi.`
+    content: `Nằm ở độ cao hơn 1.200m, những gốc chè Shan tuyết cổ thụ hàng trăm năm tuổi tại xã Đồng Phúc, Thái Nguyên chính là "kho báu" xanh mà ESGValley đang tập trung nghiên cứu.\n\nĐây không chỉ là vùng nguyên liệu sạch, thuần khiết mà còn là trọng tâm trong chiến lược phát triển nông nghiệp bền vững và bảo tồn giá trị di sản của chúng tôi.`,
+    sourceUrl: "https://drive.google.com/drive/folders/1rliZFw7um-oEj85Mbu7h4depZdQFJUjh?usp=drive_link"
   },
   {
     id: 5,
@@ -469,7 +485,8 @@ export const news = [
     category: "Văn Hóa",
     excerpt: "Nghệ thuật thưởng Trà không chỉ là việc giải khát – đó là sự hội tụ của kỹ năng pha chế tinh xảo và những triết lý nhân sinh sâu sắc.",
     image: "https://images.unsplash.com/photo-1564890369478-c89ca6d9cde9?auto=format&fit=crop&q=80&w=1200",
-    content: `Bạn có biết tại sao thưởng Trà lại trở thành một môn nghệ thuật đặc biệt không? Bởi nó không chỉ đơn thuần là việc giải khát, mà là sự hội tụ của kỹ năng pha chế tinh xảo, thẩm mỹ Trà cụ và những triết lý nhân sinh sâu sắc.\n\nNghệ thuật thưởng Trà bắt đầu từ việc lựa chọn những nguyên liệu tốt nhất. Người xưa đúc kết quy tắc "Nhất thủy - Nhì Trà - Tam pha - Tứ ấm" để tạo ra một chén Trà hoàn hảo.\n\nNước pha Trà: Phải là nước tinh khiết, lý tưởng nhất là nước suối đầu nguồn hoặc nước sương đọng trên lá sen buổi sớm.\n\nLựa chọn loại trà: Cánh Trà khô phải săn chắc, nhỏ gọn, đều màu. Khi pha ra phải có vị chát dịu đầu lưỡi và hậu ngọt sâu.\n\nKỹ thuật pha: Người pha trà phải khéo léo kiểm soát nhiệt độ nước và thời gian hãm Trà để chiết xuất được hương vị tinh túy nhất.\n\nTrà cụ: Các bộ ấm, chén không chỉ là dụng cụ mà còn là tác phẩm điêu khắc, hội họa.\n\nTại ESGValley, chúng tôi không chỉ trân trọng những giá trị tinh túy của Trà, mà còn khát khao trở thành cầu nối đưa di sản văn hóa Trà vươn xa, gắn kết con người qua từng tách trà nồng đượm.`
+    content: `Bạn có biết tại sao thưởng Trà lại trở thành một môn nghệ thuật đặc biệt không? Bởi nó không chỉ đơn thuần là việc giải khát, mà là sự hội tụ của kỹ năng pha chế tinh xảo, thẩm mỹ Trà cụ và những triết lý nhân sinh sâu sắc.\n\nNghệ thuật thưởng Trà bắt đầu từ việc lựa chọn những nguyên liệu tốt nhất. Người xưa đúc kết quy tắc "Nhất thủy - Nhì Trà - Tam pha - Tứ ấm" để tạo ra một chén Trà hoàn hảo.\n\nNước pha Trà: Phải là nước tinh khiết, lý tưởng nhất là nước suối đầu nguồn hoặc nước sương đọng trên lá sen buổi sớm.\n\nLựa chọn loại trà: Cánh Trà khô phải săn chắc, nhỏ gọn, đều màu. Khi pha ra phải có vị chát dịu đầu lưỡi và hậu ngọt sâu.\n\nKỹ thuật pha: Người pha trà phải khéo léo kiểm soát nhiệt độ nước và thời gian hãm Trà để chiết xuất được hương vị tinh túy nhất.\n\nTrà cụ: Các bộ ấm, chén không chỉ là dụng cụ mà còn là tác phẩm điêu khắc, hội họa.\n\nTại ESGValley, chúng tôi không chỉ trân trọng những giá trị tinh túy của Trà, mà còn khát khao trở thành cầu nối đưa di sản văn hóa Trà vươn xa, gắn kết con người qua từng tách trà nồng đượm.`,
+    sourceUrl: "https://drive.google.com/drive/folders/1UVMu6ClmUK7doaKmn0W3-NhQPRim68uK?usp=drive_link"
   },
   {
     id: 6,
@@ -479,7 +496,8 @@ export const news = [
     category: "Bền Vững",
     excerpt: "ESGValley lựa chọn thời điểm xuân về để xuống giống cây chè – tận dụng tối đa sự giao thoa tuyệt vời của tiết trời, thuận theo tự nhiên và tiết kiệm nguồn lực.",
     image: "/images/su-kien.jpg",
-    content: `ESGValley lựa chọn thời điểm này để bắt đầu xuống giống cây chè với mong muốn tận dụng tối đa sự giao thoa tuyệt vời của tiết trời xuân. Đây không chỉ là việc trồng cây, mà là sự tính toán kỹ lưỡng để:\n\nThuận theo tự nhiên: Độ ẩm và nhiệt độ lý tưởng của mùa xuân giúp cây chè bén rễ nhanh, tỷ lệ sống cao nhất.\n\nTiết kiệm nguồn lực: Giảm thiểu tối đa việc tưới tiêu nhân tạo, tận dụng nguồn nước mưa tự nhiên – đúng tinh thần canh tác bền vững.\n\nKhởi đầu vững chắc: Tạo nền tảng cho những búp chè đạt tiêu chuẩn chất lượng cao nhất trong tương lai.\n\nMỗi mầm xanh xuống đất hôm nay là một cam kết của ESGValley cho một hệ sinh thái nông nghiệp xanh và bền bỉ!`
+    content: `ESGValley lựa chọn thời điểm này để bắt đầu xuống giống cây chè với mong muốn tận dụng tối đa sự giao thoa tuyệt vời của tiết trời xuân. Đây không chỉ là việc trồng cây, mà là sự tính toán kỹ lưỡng để:\n\nThuận theo tự nhiên: Độ ẩm và nhiệt độ lý tưởng của mùa xuân giúp cây chè bén rễ nhanh, tỷ lệ sống cao nhất.\n\nTiết kiệm nguồn lực: Giảm thiểu tối đa việc tưới tiêu nhân tạo, tận dụng nguồn nước mưa tự nhiên – đúng tinh thần canh tác bền vững.\n\nKhởi đầu vững chắc: Tạo nền tảng cho những búp chè đạt tiêu chuẩn chất lượng cao nhất trong tương lai.\n\nMỗi mầm xanh xuống đất hôm nay là một cam kết của ESGValley cho một hệ sinh thái nông nghiệp xanh và bền bỉ!`,
+    sourceUrl: "https://drive.google.com/drive/folders/1UVMu6ClmUK7doaKmn0W3-NhQPRim68uK?usp=drive_link"
   },
   {
     id: 7,
@@ -489,7 +507,8 @@ export const news = [
     category: "Bền Vững",
     excerpt: "Công ty Cổ phần Chè Quân Chu hoàn tất xuống giống cho vùng chè đầu tiên – cột mốc trong lộ trình bảo tồn và nâng tầm giá trị Trà gắn liền với phát triển du lịch bền vững.",
     image: "/images/su-kien.jpg",
-    content: `Công ty Cổ phần Chè Quân Chu vừa hoàn tất công đoạn xuống giống cho vùng chè đầu tiên - một cột mốc quan trọng trong lộ trình bảo tồn và nâng tầm giá trị Trà gắn liền với phát triển du lịch bền vững tại xã Quân Chu, Thái Nguyên.\n\nTại sao chúng tôi chọn sự "tỉ mỉ" làm kim chỉ nam?\n\nGìn giữ nguyên bản: Bảo tồn những giá trị văn hóa Trà truyền thống trước làn sóng công nghiệp hóa.\n\nQuy trình chuẩn mực: Mỗi hố trồng, mỗi bầu cây đều được thực hiện dưới sự giám sát kỹ thuật khắt khe, hướng tới tiêu chuẩn chất lượng cao nhất.\n\nHệ sinh thái Du lịch - Trà: Biến những đồi chè thành điểm đến văn hóa, nơi mỗi nhấp trà đều kể một câu chuyện về sự chăm sóc tận tâm.\n\nESGValley tin rằng, chỉ có sự đầu tư nghiêm túc và trân trọng Di sản mới có thể đưa cây chè vươn xa, không chỉ trên bản đồ nông sản mà còn là điểm sáng trên bản đồ du lịch.`
+    content: `Công ty Cổ phần Chè Quân Chu vừa hoàn tất công đoạn xuống giống cho vùng chè đầu tiên - một cột mốc quan trọng trong lộ trình bảo tồn và nâng tầm giá trị Trà gắn liền với phát triển du lịch bền vững tại xã Quân Chu, Thái Nguyên.\n\nTại sao chúng tôi chọn sự "tỉ mỉ" làm kim chỉ nam?\n\nGìn giữ nguyên bản: Bảo tồn những giá trị văn hóa Trà truyền thống trước làn sóng công nghiệp hóa.\n\nQuy trình chuẩn mực: Mỗi hố trồng, mỗi bầu cây đều được thực hiện dưới sự giám sát kỹ thuật khắt khe, hướng tới tiêu chuẩn chất lượng cao nhất.\n\nHệ sinh thái Du lịch - Trà: Biến những đồi chè thành điểm đến văn hóa, nơi mỗi nhấp trà đều kể một câu chuyện về sự chăm sóc tận tâm.\n\nESGValley tin rằng, chỉ có sự đầu tư nghiêm túc và trân trọng Di sản mới có thể đưa cây chè vươn xa, không chỉ trên bản đồ nông sản mà còn là điểm sáng trên bản đồ du lịch.`,
+    sourceUrl: "https://drive.google.com/drive/folders/13Sx2XOpYqBKwhjOSDYvL71V60G9FCfzo?usp=drive_link"
   },
   {
     id: 8,
@@ -499,7 +518,8 @@ export const news = [
     category: "Bền Vững",
     excerpt: "Nằm dưới chân dãy núi Tam Đảo hùng vĩ, những đồi chè ESGValley tại Phú Xuyên được tưới mát bởi nguồn nước tinh khiết – từ vùng chè đến chén Trà, một hành trình mang đậm ESG.",
     image: "https://images.unsplash.com/photo-1518495973542-4542c06a5843?auto=format&fit=crop&q=80&w=1200",
-    content: `Nằm kiêu hãnh dưới chân dãy núi Tam Đảo hùng vĩ, những đồi chè của ESGValley tại Phú Xuyên được tưới mát quanh năm bởi nguồn nước tinh khiết và trong lành. Từng búp Trà non được nuôi lớn bởi sương sớm, bởi nắng nhẹ, bởi đất lành và còn bởi sự kiên nhẫn của người trồng.\n\nĐi giữa đồi chè Phú Xuyên mới thấm thía và càng thêm tự hào về hành trình của trà Việt, của đất và người Thái Nguyên để cho ra đời những tách Trà thơm đậm vị, mộc mạc và thanh khiết.\n\nTừ vùng chè đến chén Trà - một hành trình mang đậm ESG.`
+    content: `Nằm kiêu hãnh dưới chân dãy núi Tam Đảo hùng vĩ, những đồi chè của ESGValley tại Phú Xuyên được tưới mát quanh năm bởi nguồn nước tinh khiết và trong lành. Từng búp Trà non được nuôi lớn bởi sương sớm, bởi nắng nhẹ, bởi đất lành và còn bởi sự kiên nhẫn của người trồng.\n\nĐi giữa đồi chè Phú Xuyên mới thấm thía và càng thêm tự hào về hành trình của trà Việt, của đất và người Thái Nguyên để cho ra đời những tách Trà thơm đậm vị, mộc mạc và thanh khiết.\n\nTừ vùng chè đến chén Trà - một hành trình mang đậm ESG.`,
+    sourceUrl: "https://drive.google.com/drive/folders/11XWGAnbHwB4th74Sp5k7gxjUj4c_P3S4?usp=drive_link"
   },
   {
     id: 9,
@@ -509,7 +529,8 @@ export const news = [
     category: "Sự Kiện",
     excerpt: "Ngày 11/03/2026, tại UBND xã Quân Chu diễn ra buổi làm việc thống nhất kế hoạch triển khai các dự án đầu tư phát triển vùng chè hữu cơ quy mô lớn.",
     image: "https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&q=80&w=1200",
-    content: `Ngày 11/03/2026, tại UBND xã Quân Chu đã diễn ra buổi làm việc giữa lãnh đạo địa phương và đại diện Công ty Cổ phần Chè Quân Chu (đơn vị sở hữu thương hiệu ESGValley) nhằm thống nhất kế hoạch triển khai các dự án đầu tư, phát triển vùng chè trên địa bàn.\n\nTại buổi làm việc, đại diện Công ty đã báo cáo chi tiết định hướng đầu tư và lộ trình thực hiện các dự án trọng điểm. Lãnh đạo Đảng ủy, UBND xã Quân Chu đánh giá cao năng lực và tâm huyết của doanh nghiệp. Đồng thời, địa phương cam kết sẽ tạo mọi điều kiện thuận lợi về thủ tục và khảo sát thực địa để dự án sớm đi vào vận hành.\n\nViệc hợp tác chặt chẽ giữa chính quyền và doanh nghiệp là bước tiến quan trọng để hình thành vùng nguyên liệu chè hữu cơ quy mô lớn, nâng cao giá trị thương hiệu chè Quân Chu và cải thiện thu nhập bền vững cho người dân vùng dự án.`
+    content: `Ngày 11/03/2026, tại UBND xã Quân Chu đã diễn ra buổi làm việc giữa lãnh đạo địa phương và đại diện Công ty Cổ phần Chè Quân Chu (đơn vị sở hữu thương hiệu ESGValley) nhằm thống nhất kế hoạch triển khai các dự án đầu tư, phát triển vùng chè trên địa bàn.\n\nTại buổi làm việc, đại diện Công ty đã báo cáo chi tiết định hướng đầu tư và lộ trình thực hiện các dự án trọng điểm. Lãnh đạo Đảng ủy, UBND xã Quân Chu đánh giá cao năng lực và tâm huyết của doanh nghiệp. Đồng thời, địa phương cam kết sẽ tạo mọi điều kiện thuận lợi về thủ tục và khảo sát thực địa để dự án sớm đi vào vận hành.\n\nViệc hợp tác chặt chẽ giữa chính quyền và doanh nghiệp là bước tiến quan trọng để hình thành vùng nguyên liệu chè hữu cơ quy mô lớn, nâng cao giá trị thương hiệu chè Quân Chu và cải thiện thu nhập bền vững cho người dân vùng dự án.`,
+    sourceUrl: "https://drive.google.com/drive/folders/1eTTZjAXCTGxbYCfFlDSQphr-pQ08E6A8?usp=drive_link"
   },
   {
     id: 10,
@@ -519,7 +540,8 @@ export const news = [
     category: "Sự Kiện",
     excerpt: "ESGValley hân hạnh đồng hành cùng tiệc Trà Di sản tại sự kiện \"Trà sáng cùng Doanh nhân\" số đầu tiên năm 2026.",
     image: "https://images.unsplash.com/photo-1559136555-9303baea8ebd?auto=format&fit=crop&q=80&w=1200",
-    content: `ESGValley hân hạnh đồng hành cùng tiệc Trà Di sản tại sự kiện "Trà sáng cùng Doanh nhân" số đầu tiên năm 2026 – một buổi sáng kết nối văn hóa Trà và cộng đồng doanh nhân Thái Nguyên.`
+    content: `ESGValley hân hạnh đồng hành cùng tiệc Trà Di sản tại sự kiện "Trà sáng cùng Doanh nhân" số đầu tiên năm 2026 – một buổi sáng kết nối văn hóa Trà và cộng đồng doanh nhân Thái Nguyên.`,
+    sourceUrl: "https://drive.google.com/drive/folders/1tQglN4H_Jror_ke4LAXy0YXxiqeMZRCr?usp=drive_link"
   },
   {
     id: 11,
@@ -529,7 +551,8 @@ export const news = [
     category: "Sự Kiện",
     excerpt: "Tại \"Trà sáng cùng Doanh nhân\" số đầu năm 2026, ESGValley không chỉ là đơn vị đồng hành mà còn là nhà kiến tạo không gian văn hóa Trà, đưa trà Việt thành biểu tượng sang trọng trong giới doanh nhân.",
     image: "https://images.unsplash.com/photo-1564890369478-c89ca6d9cde9?auto=format&fit=crop&q=80&w=1200",
-    content: `Được tổ chức số đầu tiên năm 2026, chương trình "Trà sáng cùng Doanh nhân" với chủ đề "Quy hoạch tỉnh, phát triển đô thị" đã diễn ra trong không gian văn hóa Trà đậm nét đặc trưng của vùng đất danh trà Thái Nguyên vào sáng ngày 07/03/2026 vừa qua.\n\nTại sự kiện, ESGValley không chỉ xuất hiện với tư cách đơn vị đồng hành mà còn đóng vai trò là nhà kiến tạo không gian văn hóa, đưa trà Việt từ thức uống truyền thống trở thành biểu tượng của sự sang trọng và tinh tế trong giới Doanh nhân.\n\nTrong vai trò đơn vị đăng cai tiệc Trà Di sản, ESGValley đã mang đến nghi thức Khai trà đặc biệt với Hồng Trà Shan Tuyết Quýt cổ hữu cơ - sản phẩm nghiên cứu độc quyền của ESGValley và phục vụ xuyên suốt sự kiện với sản phẩm Mạc Triều Trà - Trà xanh hữu cơ thượng hạng.\n\nSự thành công của tiệc Trà Di sản đã chứng minh vai trò tiên phong của ESGValley trong việc định vị lại giá trị Trà Việt – không chỉ là câu chuyện về hương vị mà là chiến lược nâng tầm nông sản địa phương trở thành Đại sứ văn hóa.`
+    content: `Được tổ chức số đầu tiên năm 2026, chương trình "Trà sáng cùng Doanh nhân" với chủ đề "Quy hoạch tỉnh, phát triển đô thị" đã diễn ra trong không gian văn hóa Trà đậm nét đặc trưng của vùng đất danh trà Thái Nguyên vào sáng ngày 07/03/2026 vừa qua.\n\nTại sự kiện, ESGValley không chỉ xuất hiện với tư cách đơn vị đồng hành mà còn đóng vai trò là nhà kiến tạo không gian văn hóa, đưa trà Việt từ thức uống truyền thống trở thành biểu tượng của sự sang trọng và tinh tế trong giới Doanh nhân.\n\nTrong vai trò đơn vị đăng cai tiệc Trà Di sản, ESGValley đã mang đến nghi thức Khai trà đặc biệt với Hồng Trà Shan Tuyết Quýt cổ hữu cơ - sản phẩm nghiên cứu độc quyền của ESGValley và phục vụ xuyên suốt sự kiện với sản phẩm Mạc Triều Trà - Trà xanh hữu cơ thượng hạng.\n\nSự thành công của tiệc Trà Di sản đã chứng minh vai trò tiên phong của ESGValley trong việc định vị lại giá trị Trà Việt – không chỉ là câu chuyện về hương vị mà là chiến lược nâng tầm nông sản địa phương trở thành Đại sứ văn hóa.`,
+    sourceUrl: "https://drive.google.com/drive/folders/1-QHZ-NHThi8o0eO5YCd2XNJBvv5WDkQB?usp=drive_link"
   },
   {
     id: 12,
@@ -539,7 +562,8 @@ export const news = [
     category: "Sản Phẩm",
     excerpt: "Từ độ cao hơn 1.200m trên những đỉnh núi mù sương của xã Đồng Phúc, quần thể chè cổ thụ hàng trăm năm tuổi chắt chiu tinh túy từ đất lành và gió lạnh.",
     image: "https://images.unsplash.com/photo-1558160074-4d7d8bdf4256?auto=format&fit=crop&q=80&w=1200",
-    content: `Từ độ cao hơn 1.200m trên những đỉnh núi mù sương của xã Đồng Phúc, quần thể chè cổ thụ hàng trăm năm tuổi âm thầm bén rễ, chắt chiu tinh túy từ đất lành và gió lạnh. Những búp trà to, phủ lớp lông tơ mịn trắng như tuyết – dấu ấn của sự tinh khiết và sức sống bền bỉ qua bao thế kỷ.\n\nNhấp chén trà đầu, vị tiền chát thanh tao như hơi thở của rừng già; rồi ngay sau đó là vị ngọt hậu sâu lắng, nước trà vàng sánh hương thơm dịu đặc trưng len qua khứu giác rồi lắng lại nơi tâm trí.\n\nTại ESGValley, chúng tôi trân trọng gìn giữ những giá trị di sản ấy trong từng phẩm Trà - để bạn gửi trao không chỉ là một thức uống quý, mà là cả một câu chuyện bảo tồn nguồn gen quý giá của đại ngàn Việt Nam.`
+    content: `Từ độ cao hơn 1.200m trên những đỉnh núi mù sương của xã Đồng Phúc, quần thể chè cổ thụ hàng trăm năm tuổi âm thầm bén rễ, chắt chiu tinh túy từ đất lành và gió lạnh. Những búp trà to, phủ lớp lông tơ mịn trắng như tuyết – dấu ấn của sự tinh khiết và sức sống bền bỉ qua bao thế kỷ.\n\nNhấp chén trà đầu, vị tiền chát thanh tao như hơi thở của rừng già; rồi ngay sau đó là vị ngọt hậu sâu lắng, nước trà vàng sánh hương thơm dịu đặc trưng len qua khứu giác rồi lắng lại nơi tâm trí.\n\nTại ESGValley, chúng tôi trân trọng gìn giữ những giá trị di sản ấy trong từng phẩm Trà - để bạn gửi trao không chỉ là một thức uống quý, mà là cả một câu chuyện bảo tồn nguồn gen quý giá của đại ngàn Việt Nam.`,
+    sourceUrl: "https://drive.google.com/drive/folders/1FJruKa_k4lNnMjHihR_LnkfffTsGuIH9?usp=drive_link"
   },
   {
     id: 13,
@@ -549,7 +573,8 @@ export const news = [
     category: "Sản Phẩm",
     excerpt: "Héo nắng, lên men, sao nhẹ… từng công đoạn thủ công là cách ESGValley giữ trọn vị ngọt hậu và hương thơm tự nhiên trong mỗi tách Trà.",
     image: "https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&q=80&w=1200",
-    content: `Mỗi búp Trà ESGValley được hái tay khi sương sớm còn vương trên lá là khởi đầu cho hương vị đậm sâu.\n\nHéo nắng, lên men, sao nhẹ… từng công đoạn thủ công là cách ESGValley giữ trọn vị ngọt hậu và hương thơm tự nhiên trong mỗi tách Trà.\n\nĐây là cam kết của chúng tôi: mỗi sản phẩm ESGValley là kết tinh của sự tận tâm, từ đồi chè đến tay bạn.`
+    content: `Mỗi búp Trà ESGValley được hái tay khi sương sớm còn vương trên lá là khởi đầu cho hương vị đậm sâu.\n\nHéo nắng, lên men, sao nhẹ… từng công đoạn thủ công là cách ESGValley giữ trọn vị ngọt hậu và hương thơm tự nhiên trong mỗi tách Trà.\n\nĐây là cam kết của chúng tôi: mỗi sản phẩm ESGValley là kết tinh của sự tận tâm, từ đồi chè đến tay bạn.`,
+    sourceUrl: "https://drive.google.com/drive/folders/1Fncl3GBNxiOTf4j1LcgxIaRNyHNqg57e?usp=drive_link"
   },
   {
     id: 14,
@@ -559,7 +584,8 @@ export const news = [
     category: "Bền Vững",
     excerpt: "Kết thúc hành trình tìm hiểu tại vùng trà Shan tuyết cổ thụ Đồng Phúc – những người trẻ làm trà cổ chia sẻ câu chuyện về di sản đầy bí ẩn đang chờ được đánh thức.",
     image: "https://images.unsplash.com/photo-1587734195503-904fca47e0e9?auto=format&fit=crop&q=80&w=1200",
-    content: `Kết thúc hành trình tìm hiểu và trải nghiệm tại vùng trà Shan tuyết cổ thụ Đồng Phúc. Chúng tôi, những người trẻ làm trà cổ, đã đi qua những vườn chè vắt vẻo lưng chừng núi, lắng nghe những câu chuyện đời, chuyện Trà từ chính hơi thở của người dân bản địa.\n\nNếu La Bằng là bản hùng ca dưới chân núi Tam Đảo, thì Đồng Phúc lại mang vẻ đẹp trầm mặc của một vùng trà Di sản đầy bí ẩn. Nơi đây, những gốc chè cổ thụ hàng trăm năm tuổi vẫn âm thầm cắm sâu rễ vào đất đá, chắt chiu tinh túy từ sương gió Thái Nguyên để tạo nên những búp trà phủ lớp lông tuyết trắng mờ ảo.\n\nTại ESGValley, chúng tôi đang hàng ngày viết tiếp những câu chuyện để lưu giữ và phát huy những giá trị văn hóa truyền thống. Để mỗi tách trà trao đi, không chỉ là thức uống, mà còn là linh hồn của núi rừng và tâm huyết của thế hệ kế thừa.`
+    content: `Kết thúc hành trình tìm hiểu và trải nghiệm tại vùng trà Shan tuyết cổ thụ Đồng Phúc. Chúng tôi, những người trẻ làm trà cổ, đã đi qua những vườn chè vắt vẻo lưng chừng núi, lắng nghe những câu chuyện đời, chuyện Trà từ chính hơi thở của người dân bản địa.\n\nNếu La Bằng là bản hùng ca dưới chân núi Tam Đảo, thì Đồng Phúc lại mang vẻ đẹp trầm mặc của một vùng trà Di sản đầy bí ẩn. Nơi đây, những gốc chè cổ thụ hàng trăm năm tuổi vẫn âm thầm cắm sâu rễ vào đất đá, chắt chiu tinh túy từ sương gió Thái Nguyên để tạo nên những búp trà phủ lớp lông tuyết trắng mờ ảo.\n\nTại ESGValley, chúng tôi đang hàng ngày viết tiếp những câu chuyện để lưu giữ và phát huy những giá trị văn hóa truyền thống. Để mỗi tách trà trao đi, không chỉ là thức uống, mà còn là linh hồn của núi rừng và tâm huyết của thế hệ kế thừa.`,
+    sourceUrl: "https://drive.google.com/drive/folders/1SPXoDU6Q-L6Ke0p6-pHbvumIGaYi4PK8?usp=drive_link"
   },
   {
     id: 15,
@@ -569,7 +595,8 @@ export const news = [
     category: "Sự Kiện",
     excerpt: "ESGValley gửi lời chúc năm mới an yên, đủ đầy đến Quý khách hàng và đối tác – mong bạn vẫn có khoảng lặng để ngồi bên một chén Trà ấm, lắng nghe chính mình.",
     image: "https://images.unsplash.com/photo-1564890369478-c89ca6d9cde9?auto=format&fit=crop&q=80&w=1200",
-    content: `Năm mới gõ cửa, mang theo những hy vọng mới, những dự định mới và thật nhiều điều tốt đẹp đang chờ phía trước.\n\nESGValley xin gửi tới Quý khách hàng và Quý đối tác lời chúc một năm mới an yên, đủ đầy và vững vàng trên mọi hành trình.\n\nGiữa nhịp sống hối hả, mong rằng bạn vẫn có cho mình những khoảng lặng để ngồi lại bên một chén Trà ấm, để lắng nghe chính mình và để bắt đầu năm mới thật nhẹ nhàng.\n\nMột chén Trà đầu năm không chỉ để uống mà để chúc nhau bình an, khai mở năng lượng tốt và giữ tâm thế an hòa cho cả chặng đường dài phía trước.\n\nCảm ơn bạn đã lựa chọn và đồng hành cùng ESGValley trong suốt thời gian qua.`
+    content: `Năm mới gõ cửa, mang theo những hy vọng mới, những dự định mới và thật nhiều điều tốt đẹp đang chờ phía trước.\n\nESGValley xin gửi tới Quý khách hàng và Quý đối tác lời chúc một năm mới an yên, đủ đầy và vững vàng trên mọi hành trình.\n\nGiữa nhịp sống hối hả, mong rằng bạn vẫn có cho mình những khoảng lặng để ngồi lại bên một chén Trà ấm, để lắng nghe chính mình và để bắt đầu năm mới thật nhẹ nhàng.\n\nMột chén Trà đầu năm không chỉ để uống mà để chúc nhau bình an, khai mở năng lượng tốt và giữ tâm thế an hòa cho cả chặng đường dài phía trước.\n\nCảm ơn bạn đã lựa chọn và đồng hành cùng ESGValley trong suốt thời gian qua.`,
+    sourceUrl: "https://drive.google.com/drive/folders/16O6sPAvmDlBS5bpF_QwBsWNH3dHSYQR1?usp=drive_link"
   },
   {
     id: 16,
@@ -589,7 +616,8 @@ export const news = [
     category: "Sản Phẩm",
     excerpt: "Tết này, ESGValley mang đến 3 set Trà chế biến thủ công từ Nghệ nhân để cả nhà cùng thưởng trà sum vầy những ngày đầu năm.",
     image: "https://images.unsplash.com/photo-1558160074-4d7d8bdf4256?auto=format&fit=crop&q=80&w=1200",
-    content: `Tết này, bạn chọn phẩm Trà nào để cùng gia đình sum vầy, nhâm nhi thưởng Trà và tâm sự những ngày đầu năm?\n\nESGValley mang đến cho bạn 3 set Trà chế biến thủ công hoàn toàn từ Nghệ nhân được thiết kế riêng theo hương vị Trà yêu thích:\n\nSet Tản Viên Trà: Trà xanh hữu cơ thượng hạng tiết Lập Xuân (360g & 120g)\n\nSet Mạc Triều Trà: Trà xanh hữu cơ thượng hạng tiết Cốc Vũ (320g & 120g)\n\nSet Bách Niên Trà: Trà xanh hữu cơ thượng hạng tiết Thu phân Hàn Lộ (320g & 120g)\n\nTết đến, đừng để bàn Trà thiếu đi một vị ngon. Nhắn ESGValley để chọn vị ưng ý nhé!`
+    content: `Tết này, bạn chọn phẩm Trà nào để cùng gia đình sum vầy, nhâm nhi thưởng Trà và tâm sự những ngày đầu năm?\n\nESGValley mang đến cho bạn 3 set Trà chế biến thủ công hoàn toàn từ Nghệ nhân được thiết kế riêng theo hương vị Trà yêu thích:\n\nSet Tản Viên Trà: Trà xanh hữu cơ thượng hạng tiết Lập Xuân (360g & 120g)\n\nSet Mạc Triều Trà: Trà xanh hữu cơ thượng hạng tiết Cốc Vũ (320g & 120g)\n\nSet Bách Niên Trà: Trà xanh hữu cơ thượng hạng tiết Thu phân Hàn Lộ (320g & 120g)\n\nTết đến, đừng để bàn Trà thiếu đi một vị ngon. Nhắn ESGValley để chọn vị ưng ý nhé!`,
+    sourceUrl: "https://drive.google.com/drive/folders/1BJTZ9zOluP9VxUK7xk-5JXzo0iDdyBuK?usp=drive_link"
   },
   {
     id: 18,
@@ -599,7 +627,8 @@ export const news = [
     category: "Văn Hóa",
     excerpt: "Ở ESGValley, thưởng trà là cách ta bước chậm để nghe nhịp thở của đất trời. Mỗi mùa có một sắc thái riêng – chọn đúng trà, lòng người cũng nhẹ.",
     image: "https://images.unsplash.com/photo-1564890369478-c89ca6d9cde9?auto=format&fit=crop&q=80&w=1200",
-    content: `Ở ESGValley, thưởng trà là cách ta bước chậm để nghe nhịp thở của đất trời. Mỗi mùa có một sắc thái riêng; chọn đúng trà, lòng người cũng nhẹ.\n\nXuân: Sớm xuân còn se – một chén Hồng trà ấm nồng cho ngày mới hanh thông. Thích sự tinh khiết, mời Bạch trà – vị nhẹ, lay thức vị giác như mầm non vừa tỉnh.\n\nHạ: Nắng rộn ràng, tìm về những thức trà thanh: Trà xanh hoặc Trà hoa. Hương trong, vị mát, giữ tinh thần tươi rói suốt ngày dài.\n\nThu: Gió hanh khô, hợp nhất là Ô long. Trà ôn hòa, không nóng không lạnh, hương dịu, hậu ngọt nhẹ nhàng.\n\nĐông: Tiết lạnh, cần ấm lòng: Hồng trà hoặc Phổ Nhĩ. Vị dầy, ủ ấm cơ thể, cho buổi chiều chậm lại bên ấm trà nghi ngút.\n\nTrà không chỉ để uống - trà là cách ta thuận mùa, thuận mình.`
+    content: `Ở ESGValley, thưởng trà là cách ta bước chậm để nghe nhịp thở của đất trời. Mỗi mùa có một sắc thái riêng; chọn đúng trà, lòng người cũng nhẹ.\n\nXuân: Sớm xuân còn se – một chén Hồng trà ấm nồng cho ngày mới hanh thông. Thích sự tinh khiết, mời Bạch trà – vị nhẹ, lay thức vị giác như mầm non vừa tỉnh.\n\nHạ: Nắng rộn ràng, tìm về những thức trà thanh: Trà xanh hoặc Trà hoa. Hương trong, vị mát, giữ tinh thần tươi rói suốt ngày dài.\n\nThu: Gió hanh khô, hợp nhất là Ô long. Trà ôn hòa, không nóng không lạnh, hương dịu, hậu ngọt nhẹ nhàng.\n\nĐông: Tiết lạnh, cần ấm lòng: Hồng trà hoặc Phổ Nhĩ. Vị dầy, ủ ấm cơ thể, cho buổi chiều chậm lại bên ấm trà nghi ngút.\n\nTrà không chỉ để uống - trà là cách ta thuận mùa, thuận mình.`,
+    sourceUrl: "https://drive.google.com/drive/folders/179bpxZOr2H437OlxmzgaX2KPgDLE1_G2?usp=drive_link"
   },
   {
     id: 19,
@@ -609,7 +638,8 @@ export const news = [
     category: "Sự Kiện",
     excerpt: "Tại Lễ ra mắt Sigma International Bilingual School, ESGValley vinh dự đồng hành tổ chức không gian Tiệc Trà Di sản – điểm nhấn độc đáo đưa tinh hoa văn hóa Trà đến gần giáo dục hiện đại.",
     image: "https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&q=80&w=1200",
-    content: `Vừa qua, tại Lễ ra mắt Sigma International Bilingual School, ESGValley vinh dự đồng hành tổ chức không gian Tiệc Trà Di sản – một điểm nhấn độc đáo và mới mẻ trong văn hóa sự kiện tại Thái Nguyên.\n\nThay vì những tiệc trà nhanh thường thấy, ESGValley mang đến một trải nghiệm tĩnh tại, nơi tinh hoa văn hoá Trà được kết nối cùng hơi thở giáo dục hiện đại. Từng chén Trà thơm nồng được khơi nguồn từ những vùng chè hữu cơ đã trở thành cầu nối văn hóa, đưa Di sản dân tộc đến gần hơn với cộng đồng quốc tế và thế hệ trẻ.\n\nSự hiện diện của Trà Di sản tại Sigma School không chỉ tôn vinh giá trị bản địa mà còn khẳng định sứ mệnh của ESGValley: Đưa văn hóa Trà Việt len lỏi vào mọi không gian sống, từ những bản làng xa xôi đến môi trường giáo dục hiện đại.`
+    content: `Vừa qua, tại Lễ ra mắt Sigma International Bilingual School, ESGValley vinh dự đồng hành tổ chức không gian Tiệc Trà Di sản – một điểm nhấn độc đáo và mới mẻ trong văn hóa sự kiện tại Thái Nguyên.\n\nThay vì những tiệc trà nhanh thường thấy, ESGValley mang đến một trải nghiệm tĩnh tại, nơi tinh hoa văn hoá Trà được kết nối cùng hơi thở giáo dục hiện đại. Từng chén Trà thơm nồng được khơi nguồn từ những vùng chè hữu cơ đã trở thành cầu nối văn hóa, đưa Di sản dân tộc đến gần hơn với cộng đồng quốc tế và thế hệ trẻ.\n\nSự hiện diện của Trà Di sản tại Sigma School không chỉ tôn vinh giá trị bản địa mà còn khẳng định sứ mệnh của ESGValley: Đưa văn hóa Trà Việt len lỏi vào mọi không gian sống, từ những bản làng xa xôi đến môi trường giáo dục hiện đại.`,
+    sourceUrl: "https://drive.google.com/drive/folders/1UjbgRSU2BA9LvHgjWr2n4NkfSUbFzKJE?usp=drive_link"
   },
   {
     id: 20,
@@ -619,7 +649,8 @@ export const news = [
     category: "Sản Phẩm",
     excerpt: "Hương vị trà xanh thuần khiết không đến từ sự ngẫu nhiên – đó là hành trình bền bỉ từ vùng trồng lý tưởng, khí hậu và nguồn nước, đến lá trà tuyển chọn thủ công.",
     image: "https://images.unsplash.com/photo-1518495973542-4542c06a5843?auto=format&fit=crop&q=80&w=1200",
-    content: `Hương vị trà xanh thuần khiết không đến từ sự ngẫu nhiên. Đó là một hành trình bền bỉ, nơi ESGValley trân trọng từng món quà mà thiên nhiên ban tặng:\n\nVùng trồng lý tưởng: Từ những đồi chè xanh mướt tại vùng nguyên liệu hữu cơ, nơi thổ nhưỡng giàu dưỡng chất nuôi lớn từng mầm xanh.\n\nKhí hậu và nguồn nước: Sự kết hợp hoàn hảo giữa khí hậu mát lành và những giọt sương sớm tinh khôi tạo nên Trà trong trẻo, không vẩn đục.\n\nLá trà tuyển chọn: Chỉ những búp chè tươi ngon nhất mới được thu hái thủ công để giữ trọn vẹn lớp lông tơ và dưỡng chất quý giá.\n\nMỗi sản phẩm ESGValley là một lời cam kết về chất lượng: sạch từ nguồn gốc, chuẩn từ quy trình và trọn vẹn ở hậu vị.`
+    content: `Hương vị trà xanh thuần khiết không đến từ sự ngẫu nhiên. Đó là một hành trình bền bỉ, nơi ESGValley trân trọng từng món quà mà thiên nhiên ban tặng:\n\nVùng trồng lý tưởng: Từ những đồi chè xanh mướt tại vùng nguyên liệu hữu cơ, nơi thổ nhưỡng giàu dưỡng chất nuôi lớn từng mầm xanh.\n\nKhí hậu và nguồn nước: Sự kết hợp hoàn hảo giữa khí hậu mát lành và những giọt sương sớm tinh khôi tạo nên Trà trong trẻo, không vẩn đục.\n\nLá trà tuyển chọn: Chỉ những búp chè tươi ngon nhất mới được thu hái thủ công để giữ trọn vẹn lớp lông tơ và dưỡng chất quý giá.\n\nMỗi sản phẩm ESGValley là một lời cam kết về chất lượng: sạch từ nguồn gốc, chuẩn từ quy trình và trọn vẹn ở hậu vị.`,
+    sourceUrl: "https://drive.google.com/drive/folders/1CGXqgo0e3EZXM8wX_ZOZfxeA8S-CMAbY?usp=drive_link"
   },
   {
     id: 21,
@@ -629,7 +660,8 @@ export const news = [
     category: "Sự Kiện",
     excerpt: "Tại Hội nghị liên kết 3 tỉnh Thái Nguyên – Bắc Ninh – Phú Thọ, ESGValley vinh dự là đơn vị đồng hành phục vụ không gian tiệc Trà Di sản cho các đại biểu.",
     image: "https://images.unsplash.com/photo-1559136555-9303baea8ebd?auto=format&fit=crop&q=80&w=1200",
-    content: `Tại Hội nghị liên kết 3 tỉnh Thái Nguyên – Bắc Ninh – Phú Thọ vừa diễn ra tại phường Vạn Xuân, ESGValley vinh dự là đơn vị đồng hành, phục vụ không gian tiệc Trà Di sản cho các đại biểu.\n\nGiữa những phiên thảo luận quan trọng, một tách Trà nóng hổi với hương thơm thanh tao không chỉ giúp làm dịu tinh thần mà còn là cầu nối gắn kết tình thân giữa các tỉnh bạn. Chúng tôi tin rằng, sự chỉn chu trong từng tách Trà chính là lời chào nồng hậu nhất, minh chứng cho tầm vóc của "Đệ nhất danh trà" trong kỷ nguyên mới.\n\nESGValley tự hào được góp phần quảng bá thương hiệu trà Thái Nguyên vươn xa, khẳng định giá trị Di sản trong các sự kiện ngoại giao và kinh tế trọng điểm.`
+    content: `Tại Hội nghị liên kết 3 tỉnh Thái Nguyên – Bắc Ninh – Phú Thọ vừa diễn ra tại phường Vạn Xuân, ESGValley vinh dự là đơn vị đồng hành, phục vụ không gian tiệc Trà Di sản cho các đại biểu.\n\nGiữa những phiên thảo luận quan trọng, một tách Trà nóng hổi với hương thơm thanh tao không chỉ giúp làm dịu tinh thần mà còn là cầu nối gắn kết tình thân giữa các tỉnh bạn. Chúng tôi tin rằng, sự chỉn chu trong từng tách Trà chính là lời chào nồng hậu nhất, minh chứng cho tầm vóc của "Đệ nhất danh trà" trong kỷ nguyên mới.\n\nESGValley tự hào được góp phần quảng bá thương hiệu trà Thái Nguyên vươn xa, khẳng định giá trị Di sản trong các sự kiện ngoại giao và kinh tế trọng điểm.`,
+    sourceUrl: "https://drive.google.com/drive/folders/1jZ8tt2jm4K4lFZOqLWy70kGpZbvLPrmD?usp=drive_link"
   },
   {
     id: 22,
@@ -639,7 +671,8 @@ export const news = [
     category: "Bền Vững",
     excerpt: "10 tiếng đồng hồ. 10km rừng dốc ngược. 1.350 mét độ cao – hành trình của đoàn công tác ESGValley tìm về cội nguồn Di sản chè cổ thụ La Bằng, Thái Nguyên.",
     image: "https://images.unsplash.com/photo-1518495973542-4542c06a5843?auto=format&fit=crop&q=80&w=1200",
-    content: `10 tiếng đồng hồ. 10km rừng dốc ngược. 1.350 mét độ cao. Những con số ấy không chỉ đo đạc quãng đường, mà đo độ bền bỉ của những trái tim khao khát tìm về cội nguồn của Di sản.\n\nĐoàn công tác của chúng tôi đã bước đi từ chân suối Kẹm, vượt qua những con đường trở đầy thách thức: vách đá cheo leo, thác nước ầm ào, đất rừng ẩm ướt trơn trượt.\n\nNhưng khi đứng trước quần thể chè Tổ tại xã La Bằng, mọi mệt mỏi dường như tan biến. Trên dãy Tam Đảo hùng vĩ, giữa tầng sương mù bao phủ, những cây chè cổ thụ hàng trăm năm tuổi đứng đó như những vị thần gác rừng. Thân cây xù xì, rêu phong phủ đầy, cành lá vươn cao ngạo nghễ.\n\nĐể giữ được giấc mơ xanh này, ESGValley đang thiết lập các cơ chế giám sát và nghiên cứu khoa học chuyên sâu, đảm bảo nguồn gen chè Tổ không bao giờ bị mất đi. Giữ được rừng chè là giữ được văn hóa, giữ được sinh thái và giữ được một biểu tượng đặc biệt ý nghĩa đối với ngành chè Thái Nguyên.`
+    content: `10 tiếng đồng hồ. 10km rừng dốc ngược. 1.350 mét độ cao. Những con số ấy không chỉ đo đạc quãng đường, mà đo độ bền bỉ của những trái tim khao khát tìm về cội nguồn của Di sản.\n\nĐoàn công tác của chúng tôi đã bước đi từ chân suối Kẹm, vượt qua những con đường trở đầy thách thức: vách đá cheo leo, thác nước ầm ào, đất rừng ẩm ướt trơn trượt.\n\nNhưng khi đứng trước quần thể chè Tổ tại xã La Bằng, mọi mệt mỏi dường như tan biến. Trên dãy Tam Đảo hùng vĩ, giữa tầng sương mù bao phủ, những cây chè cổ thụ hàng trăm năm tuổi đứng đó như những vị thần gác rừng. Thân cây xù xì, rêu phong phủ đầy, cành lá vươn cao ngạo nghễ.\n\nĐể giữ được giấc mơ xanh này, ESGValley đang thiết lập các cơ chế giám sát và nghiên cứu khoa học chuyên sâu, đảm bảo nguồn gen chè Tổ không bao giờ bị mất đi. Giữ được rừng chè là giữ được văn hóa, giữ được sinh thái và giữ được một biểu tượng đặc biệt ý nghĩa đối với ngành chè Thái Nguyên.`,
+    sourceUrl: "https://drive.google.com/drive/folders/1R8-VwtjGqik-4Dh2ayFVkrjds3Fz7uee?usp=drive_link"
   },
   {
     id: 23,
@@ -649,7 +682,8 @@ export const news = [
     category: "Văn Hóa",
     excerpt: "Thứ nhất là để giữ hương Trà. Thứ hai là để dễ thưởng Trà hơn. Và còn một điều khá hay nữa trong Văn hóa Trà mà ít người biết...",
     image: "https://images.unsplash.com/photo-1564890369478-c89ca6d9cde9?auto=format&fit=crop&q=80&w=1200",
-    content: `Nhiều người lần đầu ngồi uống Trà thường hỏi một câu khá thú vị: "Vì sao chén Trà lúc nào cũng chỉ rót lưng lưng, không rót đầy?"\n\nThật ra đây là một thói quen rất lâu trong Văn hoá uống Trà.\n\nThứ nhất là để giữ hương Trà. Khi rót vừa chén, phần hương sẽ còn khoảng trống để lan lên. Cầm chén Trà lên, mình sẽ cảm nhận được mùi thơm trước rồi mới đến vị trà. Nếu rót đầy quá thì hương sẽ khó thoát ra.\n\nThứ hai là để dễ thưởng Trà hơn. Chén Trà thường nhỏ và nước khá nóng, rót vừa phải giúp mình cầm chén thoải mái, nhấp từng ngụm nhỏ để cảm nhận vị Trà rõ hơn.\n\nVà một điều nữa khá hay: trong Văn hoá Trà, chén Trà không cần đầy nhưng câu chuyện thì luôn đầy. Người ta ngồi lại với nhau vì chén Trà, nhưng thứ ở lại lâu hơn thường là những cuộc trò chuyện.\n\nNếu có dịp, bạn ghé ESGValley ngồi uống một chén Trà nhé. Có khi chỉ cần một chén Trà nhỏ thôi là đủ để bắt đầu một câu chuyện hay.`
+    content: `Nhiều người lần đầu ngồi uống Trà thường hỏi một câu khá thú vị: "Vì sao chén Trà lúc nào cũng chỉ rót lưng lưng, không rót đầy?"\n\nThật ra đây là một thói quen rất lâu trong Văn hoá uống Trà.\n\nThứ nhất là để giữ hương Trà. Khi rót vừa chén, phần hương sẽ còn khoảng trống để lan lên. Cầm chén Trà lên, mình sẽ cảm nhận được mùi thơm trước rồi mới đến vị trà. Nếu rót đầy quá thì hương sẽ khó thoát ra.\n\nThứ hai là để dễ thưởng Trà hơn. Chén Trà thường nhỏ và nước khá nóng, rót vừa phải giúp mình cầm chén thoải mái, nhấp từng ngụm nhỏ để cảm nhận vị Trà rõ hơn.\n\nVà một điều nữa khá hay: trong Văn hoá Trà, chén Trà không cần đầy nhưng câu chuyện thì luôn đầy. Người ta ngồi lại với nhau vì chén Trà, nhưng thứ ở lại lâu hơn thường là những cuộc trò chuyện.\n\nNếu có dịp, bạn ghé ESGValley ngồi uống một chén Trà nhé. Có khi chỉ cần một chén Trà nhỏ thôi là đủ để bắt đầu một câu chuyện hay.`,
+    sourceUrl: "https://drive.google.com/drive/folders/1kDi01ZpcXVW4hBwoCWsAO_nUHvPleyFA?usp=drive_link"
   },
   {
     id: 24,
@@ -659,7 +693,8 @@ export const news = [
     category: "Sự Kiện",
     excerpt: "Tại ViPEL 2025, UBND tỉnh Thái Nguyên trao văn kiện hợp tác thí điểm mô hình Công - Tư đồng kiến quốc cho dự án phát triển nông nghiệp hữu cơ và bảo tồn di sản chè của Công ty Cổ phần Chè Quân Chu.",
     image: "https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&q=80&w=1200",
-    content: `Một chương mới cho ngành trà Thái Nguyên đã chính thức mở ra trong khuôn khổ Chương trình Toàn cảnh Kinh tế tư nhân Việt Nam (ViPEL 2025) diễn ra vào ngày 10/10/2025.\n\nUBND tỉnh Thái Nguyên đã chính thức trao văn kiện hợp tác thí điểm mô hình "Công - Tư đồng kiến quốc" cho dự án: "Phát triển nông nghiệp hữu cơ, bảo tồn di sản và du lịch văn hóa gắn với cây chè của tỉnh Thái Nguyên" thuộc Công ty Cổ phần Chè Quân Chu – đơn vị đầu tiên trong khuôn khổ ViPEL 2025.\n\nDự án ESGValley không chỉ dừng lại ở phát triển kinh tế mà còn là hành trình bảo tồn những "di sản sống" ngàn năm. Với sự dẫn dắt của TS. Nguyễn Thị Vinh – Chủ tịch HĐQT Công ty Cổ phần Chè Quân Chu, ESG Valley cam kết:\n\nPhát triển nông nghiệp hữu cơ và chuyển đổi số toàn diện, tích hợp công nghệ IoT và AI, minh bạch hóa hành trình của búp trà từ đồi xanh đến bàn trà quốc tế.\n\nXây dựng mô hình kinh tế nhân văn, hỗ trợ 200.000 nông hộ và HTX do phụ nữ làm chủ chuyển đổi sang mô hình doanh nghiệp bền vững ESG.\n\nESG Valley và Đề án ViPEL 2025 chính là minh chứng cho một Việt Nam tự hào, nơi trí tuệ và lòng nhân ái hòa quyện để đưa giá trị xanh – thông minh – giàu bản sắc vươn tầm thế giới.`
+    content: `Một chương mới cho ngành trà Thái Nguyên đã chính thức mở ra trong khuôn khổ Chương trình Toàn cảnh Kinh tế tư nhân Việt Nam (ViPEL 2025) diễn ra vào ngày 10/10/2025.\n\nUBND tỉnh Thái Nguyên đã chính thức trao văn kiện hợp tác thí điểm mô hình "Công - Tư đồng kiến quốc" cho dự án: "Phát triển nông nghiệp hữu cơ, bảo tồn di sản và du lịch văn hóa gắn với cây chè của tỉnh Thái Nguyên" thuộc Công ty Cổ phần Chè Quân Chu – đơn vị đầu tiên trong khuôn khổ ViPEL 2025.\n\nDự án ESGValley không chỉ dừng lại ở phát triển kinh tế mà còn là hành trình bảo tồn những "di sản sống" ngàn năm. Với sự dẫn dắt của TS. Nguyễn Thị Vinh – Chủ tịch HĐQT Công ty Cổ phần Chè Quân Chu, ESG Valley cam kết:\n\nPhát triển nông nghiệp hữu cơ và chuyển đổi số toàn diện, tích hợp công nghệ IoT và AI, minh bạch hóa hành trình của búp trà từ đồi xanh đến bàn trà quốc tế.\n\nXây dựng mô hình kinh tế nhân văn, hỗ trợ 200.000 nông hộ và HTX do phụ nữ làm chủ chuyển đổi sang mô hình doanh nghiệp bền vững ESG.\n\nESG Valley và Đề án ViPEL 2025 chính là minh chứng cho một Việt Nam tự hào, nơi trí tuệ và lòng nhân ái hòa quyện để đưa giá trị xanh – thông minh – giàu bản sắc vươn tầm thế giới.`,
+    sourceUrl: "https://drive.google.com/drive/folders/1kDmxGxYmcjv3WLNUMV80zvhEvgiqOjJY?usp=drive_link"
   }
 ];
 
