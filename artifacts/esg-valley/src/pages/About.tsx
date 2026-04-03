@@ -147,7 +147,6 @@ export default function About() {
 
   return (
     <div className="w-full bg-white">
-
       {/* ══════════════════════════════════════
           1. HÀNH TRÌNH CÙNG ESG — Hero
       ══════════════════════════════════════ */}
@@ -192,7 +191,6 @@ export default function About() {
           </motion.div>
         </div>
       </section>
-
       {/* ══════════════════════════════════════
           2. TIMELINE — Year rail + content
       ══════════════════════════════════════ */}
@@ -311,7 +309,6 @@ export default function About() {
           </div>
         </div>
       </section>
-
       {/* ══════════════════════════════════════
           3. SỨ MỆNH CỦA CHÚNG TÔI
       ══════════════════════════════════════ */}
@@ -326,10 +323,10 @@ export default function About() {
               Sứ mệnh của chúng tôi
             </h2>
             <p
-              className="font-semibold text-[20px] leading-[30px] text-center max-w-2xl mx-auto mt-4"
+              className="font-semibold max-w-2xl mx-auto mt-4 text-center text-[18px]"
               style={{ color: "#525252", textWrap: "balance" } as React.CSSProperties}
             >
-              Hiện thực hóa hệ sinh thái ESGValley để bảo tồn tinh hoa và đưa thương hiệu trà Việt vươn tầm thế giới. Chúng tôi cam kết kiến tạo môi trường sinh thái bền vững, nâng tầm giá trị cộng đồng và là đơn vị tiên phong thực hiện hóa các chủ trương chiến lược của Trung ương (Nghị quyết 68-NQ/TW) và Tỉnh ủy Thái Nguyên (Nghị quyết 11-NQ/TU) về phát triển ngành chè theo định hướng ESG giai đoạn 2025 - 2030.
+Hiện thực hóa hệ sinh thái ESGValley để bảo tồn tinh hoa và đưa thương hiệu trà Việt vươn tầm thế giới. Chúng tôi cam kết kiến tạo môi trường sinh thái bền vững, nâng tầm giá trị cộng đồng và là đơn vị tiên phong thực hiện hóa các chủ trương chiến lược của Trung ương (Nghị quyết 68-NQ/TW) và Tỉnh ủy Thái Nguyên (Nghị quyết 11-NQ/TU) về phát triển ngành chè theo định hướng ESG giai đoạn 2025-2030.
             </p>
           </div>
 
@@ -380,7 +377,6 @@ export default function About() {
           </div>
         </div>
       </section>
-
       {/* ══════════════════════════════════════
           4. TỔNG QUAN
       ══════════════════════════════════════ */}
@@ -459,7 +455,6 @@ export default function About() {
           </div>
         </div>
       </section>
-
       {/* ══════════════════════════════════════
           5. CÂU CHUYỆN VỚI "CHÈ"
       ══════════════════════════════════════ */}
@@ -488,7 +483,6 @@ export default function About() {
           </motion.div>
         </div>
       </section>
-
       {/* ══════════════════════════════════════
           6. THÀNH TỰU
       ══════════════════════════════════════ */}
