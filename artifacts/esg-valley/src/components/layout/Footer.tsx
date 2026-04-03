@@ -206,7 +206,7 @@ export function Footer() {
               </a>
             </div>
             <div className="mt-4">
-              <p className="text-white/50 text-xs mb-2">Phương thức thanh toán</p>
+              <p className="text-xs mb-2 text-[#ffffff]">Phương thức thanh toán</p>
               <img
                 src="/images/payment-methods.png"
                 alt="Phương thức thanh toán"
