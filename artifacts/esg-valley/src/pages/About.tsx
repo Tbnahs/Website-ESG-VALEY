@@ -18,7 +18,7 @@ const timelineData = [
     title: "Vùng Nguyên Liệu Trọng Điểm",
     content:
       "Nông trường được giao quản lý hơn 2.000 ha đất, trở thành vùng nguyên liệu trọng điểm cung cấp chè đen xuất khẩu cho các thị trường Đông Âu và Liên Xô cũ.",
-    img: "/images/hinh-doi-che.png",
+    img: "/images/1978.png",
   },
   {
     year: 2000,
