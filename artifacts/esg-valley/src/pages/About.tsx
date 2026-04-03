@@ -26,7 +26,7 @@ const timelineData = [
     title: "Cổ phần hóa – Chuyển mình sang mô hình mới",
     content:
       "Thực hiện chủ trương của Nhà nước, Nông trường chè Quân Chu tiến hành cổ phần hóa, chính thức chuyển đổi mô hình hoạt động thành Công ty Cổ phần Chè Quân Chu.",
-    img: "/images/hanh-trinh.jpg",
+    img: "/images/2000-2005.png",
   },
   {
     year: 2004,
