@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useLocation } from "wouter";
 import { motion } from "framer-motion";
-import { Play, Search, ChevronDown, ArrowUpDown, ChevronRight } from "lucide-react";
+import { Search, ChevronDown, ArrowUpDown, ChevronRight } from "lucide-react";
 import { news } from "@/lib/data";
 
 const ITEMS_PER_PAGE = 6;
@@ -317,18 +317,20 @@ export default function News() {
           {/* VIDEO */}
           {activeTab === "Video" && (
             <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {[1, 2].map((i) => (
-                <div key={i} className="relative aspect-video bg-muted rounded-2xl overflow-hidden group cursor-pointer">
-                  <img
-                    src="https://images.unsplash.com/photo-1587734195503-904fca47e0e9?auto=format&fit=crop&q=80&w=800"
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                    alt="Video"
+              {[
+                "MNus4F7AFoM",
+                "aTF4bV5ROZA",
+                "InuWszomk0M",
+                "CCQn3QRXIZk",
+              ].map((id) => (
+                <div key={id} className="relative aspect-video rounded-2xl overflow-hidden bg-black">
+                  <iframe
+                    src={`https://www.youtube.com/embed/${id}`}
+                    title={`Video ESG Valley ${id}`}
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    className="absolute inset-0 w-full h-full border-0"
                   />
-                  <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
-                    <div className="w-16 h-16 rounded-full bg-white/30 backdrop-blur-md flex items-center justify-center border border-white/50 group-hover:scale-110 transition-transform">
-                      <Play className="w-6 h-6 text-white fill-white ml-1" />
-                    </div>
-                  </div>
                 </div>
               ))}
             </motion.div>
