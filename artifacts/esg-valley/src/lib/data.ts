@@ -473,7 +473,7 @@ export const news: NewsArticle[] = [
     date: "10/03/2026",
     category: "Bền Vững",
     excerpt: "Nằm ở độ cao hơn 1.200m, những gốc chè Shan tuyết cổ thụ hàng trăm năm tuổi tại xã Đồng Phúc là \"kho báu\" xanh mà ESGValley đang tập trung nghiên cứu.",
-    image: "https://images.unsplash.com/photo-1558160074-4d7d8bdf4256?auto=format&fit=crop&q=80&w=1200",
+    image: "/images/news-4.jpg",
     content: `Nằm ở độ cao hơn 1.200m, những gốc chè Shan tuyết cổ thụ hàng trăm năm tuổi tại xã Đồng Phúc, Thái Nguyên chính là "kho báu" xanh mà ESGValley đang tập trung nghiên cứu.\n\nĐây không chỉ là vùng nguyên liệu sạch, thuần khiết mà còn là trọng tâm trong chiến lược phát triển nông nghiệp bền vững và bảo tồn giá trị di sản của chúng tôi.`,
     sourceUrl: "https://drive.google.com/drive/folders/1rliZFw7um-oEj85Mbu7h4depZdQFJUjh?usp=drive_link"
   },
@@ -605,7 +605,7 @@ export const news: NewsArticle[] = [
     date: "25/01/2026",
     category: "Sản Phẩm",
     excerpt: "Mượn một chút hương Trà dịu nhẹ để mở ra chương mới cho năm tháng, ESGValley gửi đến bạn lời chúc một năm mới vạn sự hanh thông, viên mãn và thành công.",
-    image: "/images/news-placeholder.png",
+    image: "/images/news-16.jpg",
     content: `Tiễn năm cũ qua, đón năm Mã Đáo.\n\nĐón mừng một năm mới đang gõ cửa. Mượn một chút hương Trà dịu nhẹ để mở ra chương mới cho năm tháng, ESGValley xin gửi đến bạn trọn vẹn tâm ý cùng lời chúc một năm mới vạn sự hanh thông, viên mãn và thành công.`
   },
   {
