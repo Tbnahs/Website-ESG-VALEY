@@ -157,6 +157,106 @@ export const products: Product[] = [
     ]
   },
   {
+    id: 9,
+    name: "Diệp Trà Shan",
+    slug: "diep-tra-shan",
+    category: "Trà",
+    tagline: "Tinh khôi sương sớm Đồng Phúc",
+    description: "Giữa đỉnh ngàn Đồng Phúc mờ sương, nơi thời gian như ngưng đọng, những gốc trà Shan Tuyết cổ thụ hàng trăm năm tuổi vẫn âm thầm cắm rễ sâu, chắt lọc linh khí đất trời để kết tinh thành Di sản.",
+    price: 850000,
+    image: "/images/product-bach-nien.png",
+    thumbnails: [],
+    story: [
+      {
+        title: "DIỆP TRÀ SHAN – TINH KHÔI SƯƠNG SỚM ĐỒNG PHÚC",
+        text: "Giữa đỉnh ngàn Đồng Phúc mờ sương, nơi thời gian như ngưng đọng, những gốc trà Shan Tuyết cổ thụ hàng trăm năm tuổi vẫn âm thầm cắm rễ sâu, chắt lọc linh khí đất trời để kết tinh thành Di sản. Với người dân bản địa, mỗi cây chè là một sinh linh, một chứng nhân sống động cho bản sắc văn hóa vùng cao tự bao đời.\n\nTiếp nối hành trình Di sản ấy, ESGValley cùng các Nghệ nhân đã tận tâm tuyển chọn những búp trà Shan tuyết cổ thụ được hái tay thủ công, nâng niu như báu vật của thiên nhiên. Qua đôi bàn tay tài hoa và phương thức sao chế truyền thừa, linh hồn của trà được \"đánh thức\" trọn vẹn: giữ nguyên sắc xanh nguyên thủy, mang đến dòng nước vàng óng tự nhiên cùng vị chát thanh tao và hậu vị ngọt sâu trầm mặc.",
+        image: "/images/product-bach-nien.png",
+        imagePosition: "right"
+      },
+      {
+        title: "Nguyên liệu & Hương vị",
+        text: "Do không trải qua công đoạn oxy hóa, Diệp Trà Shan giữ trọn vẹn màu sắc xanh tươi nguyên thủy của lá trà, mang lại thứ nước trà xanh ngọc hoặc vàng óng, tự nhiên và vô cùng hấp dẫn. Khi thưởng thức, bạn sẽ cảm nhận được vị trà đậm đà, vị chát nhẹ nhàng như sương sớm và hậu vị ngọt sâu.\n\n100% búp chè Shan Tuyết cổ thụ từ vùng nguyên liệu ESGValley tại xã Đồng Phúc, Thái Nguyên, được hái bằng tay bởi người dân tộc bản địa. Không hương liệu, không phụ gia, không chất bảo quản. Khối lượng tịnh: 200g.",
+        image: "/images/product-bach-nien.png",
+        imagePosition: "left"
+      }
+    ]
+  },
+  {
+    id: 10,
+    name: "Hồng Trà Shan",
+    slug: "hong-tra-shan",
+    category: "Trà",
+    tagline: "Nội lực sâu lắng của Di sản Đồng Phúc",
+    description: "Nếu Diệp Trà Shan là hơi thở tinh khôi của buổi sớm, thì Hồng Trà Shan lại mang nội lực thâm trầm từ những cây trà Di sản tại xã Đồng Phúc, Thái Nguyên.",
+    price: 900000,
+    image: "/images/product-mac-trieu.png",
+    thumbnails: [],
+    story: [
+      {
+        title: "HỒNG TRÀ SHAN – NỘI LỰC SÂU LẮNG CỦA DI SẢN ĐỒNG PHÚC",
+        text: "Nếu Diệp Trà Shan là hơi thở tinh khôi của buổi sớm, thì Hồng Trà Shan lại mang nội lực thâm trầm từ những cây trà Di sản tại xã Đồng Phúc, Thái Nguyên. Trong khí hậu ôn hòa của vùng cao, những búp trà Shan cổ thụ ngậm đủ dưỡng chất từ lòng đất mẹ đã sẵn sàng cho một cuộc chuyển mình đầy nghệ thuật.\n\nQua đôi bàn tay tài hoa và nghệ thuật lên men toàn phần truyền thừa, linh hồn của Trà được đánh thức theo một chương mới: nồng nàn và sâu lắng hơn.",
+        image: "/images/product-mac-trieu.png",
+        imagePosition: "right"
+      },
+      {
+        title: "Hương vị & Nguyên liệu",
+        text: "Trà lên men hoàn toàn tự nhiên, nội chất dày, hương vị phong phú, trà pha được nước, hậu vị kéo dài là những cá tính mạnh mẽ của Hồng Trà Shan ESGValley. Khi thưởng thức, bạn sẽ cảm nhận được vị trà tròn trịa, êm dịu, không còn vị chát mà thay vào đó là sự ngọt ngào lan tỏa, dịu dàng như ánh nắng chiều trên vùng cao.\n\n100% búp chè Shan Tuyết cổ thụ từ vùng nguyên liệu ESGValley tại xã Đồng Phúc, Thái Nguyên. Không hương liệu, không phụ gia, không chất bảo quản. Khối lượng tịnh: 200g.",
+        image: "/images/product-mac-trieu.png",
+        imagePosition: "left"
+      }
+    ]
+  },
+  {
+    id: 11,
+    name: "Hồng Trà Quýt",
+    slug: "hong-tra-quyt",
+    category: "Trà",
+    tagline: "Giai điệu giao thoa của núi rừng",
+    description: "Hồng Trà Quýt – bản giao hưởng nồng nàn, những búp chè Shan tuyết cổ thụ Đồng Phúc tìm thấy sự đồng điệu trong hương vị thanh tao của quýt rừng Bạch Thông.",
+    price: 1100000,
+    image: "/images/product-tan-vien.png",
+    thumbnails: [],
+    story: [
+      {
+        title: "HỒNG TRÀ QUÝT – GIAI ĐIỆU GIAO THOA CỦA NÚI RỪNG",
+        text: "Có những cuộc gặp gỡ vốn đã được định sẵn nơi đại ngàn. Nếu Diệp Trà Shan là hơi thở thanh khiết của buổi sớm mai, thì Hồng Trà Quýt lại là bản giao hưởng nồng nàn, những búp chè Shan tuyết cổ thụ Đồng Phúc tìm thấy sự đồng điệu trong hương vị thanh tao của quýt rừng Bạch Thông. Trên những triền núi cao hơn 1.000m, những người dân bản địa đã thay lời núi rừng, hái tay từng búp trà, từng trái quýt bằng tất cả lòng biết ơn và sự trân trọng.",
+        image: "/images/product-tan-vien.png",
+        imagePosition: "right"
+      },
+      {
+        title: "Quy trình chế tác & Hương vị",
+        text: "Các Nghệ nhân khéo léo kết hợp búp trà Shan cổ thụ với lớp vỏ quýt thơm nồng. Trà được làm héo, sao nhẹ, phơi khô, lên men đến độ nhất định, sau đó đưa vào bên trong quả quýt rồi hong khô tự nhiên. Trái quýt có vỏ dày, sần sùi với lớp lớp tinh dầu căng mọng ngấm sâu vào trong Trà.\n\nKhi thưởng thức, bạn sẽ cảm nhận được vị ngọt thanh đặc trưng của quýt rừng len lỏi qua vị hồng Trà êm dịu, tròn trịa, để lại hậu vị ngọt sâu kéo dài. Nguyên liệu: 100% búp chè Shan Tuyết cổ thụ Đồng Phúc + quýt rừng bản địa Bạch Thông. Không hương liệu, không phụ gia. Khối lượng tịnh: 200g.",
+        image: "/images/product-tan-vien.png",
+        imagePosition: "left"
+      }
+    ]
+  },
+  {
+    id: 12,
+    name: "Trà Quýt Ống Lam Gác Bếp",
+    slug: "tra-quyt-ong-lam",
+    category: "Trà",
+    tagline: "Quyện hương núi rừng, đượm vị thời gian",
+    description: "Di sản Trà cổ thụ Đồng Phúc quyện cùng quýt rừng, được bao bọc trong lòng nứa xanh và nâng niu qua những mùa khói bếp thầm lặng của đồng bào Đồng Phúc.",
+    price: 1300000,
+    image: "/images/product-ma-dao.png",
+    thumbnails: [],
+    story: [
+      {
+        title: "TRÀ QUÝT ỐNG LAM GÁC BẾP – QUYỆN HƯƠNG NÚI RỪNG, ĐƯỢM VỊ THỜI GIAN",
+        text: "Có những giá trị văn hóa vốn đã được định sẵn bởi nhịp điệu thanh bình của núi rừng xứ Thái. Nếu Hồng Trà Quýt là giai điệu giao thoa đầy rạng rỡ, thì Trà Quýt ống lam gác bếp lại là một khoảng lặng sâu lắng, nơi Di sản Trà cổ thụ Đồng Phúc quyện cùng quýt rừng được bao bọc trong lòng nứa xanh và nâng niu qua những mùa khói bếp thầm lặng của đồng bào Đồng Phúc.\n\nNhững búp trà Shan tuyết trăm tuổi được Nghệ nhân kết hợp cùng vỏ quýt rừng thái nhỏ. Tất cả được nhồi chặt vào lòng ống nứa tươi xanh, rồi bắt đầu hành trình \"thử lửa\" trên gác bếp.",
+        image: "/images/product-ma-dao.png",
+        imagePosition: "right"
+      },
+      {
+        title: "Hương vị & Nguyên liệu",
+        text: "Làn khói bếp thầm lặng bao bọc, nhựa tre nứa tươi quyện cùng tinh dầu quýt rừng dần thẩm thấu, đánh thức linh hồn của Trà cổ thụ. Màu nước vàng óng như mật ong rừng, vị Trà đậm đà, chát nhẹ nhưng hậu vị ngọt sâu.\n\nNguyên liệu: Trà Shan Tuyết cổ thụ 100% từ xã Đồng Phúc, Thái Nguyên + vỏ quýt rừng bản địa Bạch Thông + ống nứa tươi tự nhiên. Không hương liệu, không phụ gia, không chất bảo quản. Khối lượng tịnh: 500g.",
+        image: "/images/product-ma-dao.png",
+        imagePosition: "left"
+      }
+    ]
+  },
+  {
     id: 6,
     name: "Matcha",
     slug: "matcha",
