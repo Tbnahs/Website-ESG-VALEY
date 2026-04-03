@@ -338,12 +338,72 @@ export default function News() {
 
           {/* THU VIEN ANH */}
           {activeTab === "Thư viện ảnh" && (
-            <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="columns-1 sm:columns-2 md:columns-3 gap-4 space-y-4">
-              {Array.from({ length: 24 }, (_, i) => `/images/news-${i + 1}.jpg`).map((src, i) => (
-                <div key={i} className="break-inside-avoid overflow-hidden rounded-2xl cursor-pointer group">
-                  <img src={src} className="w-full object-cover group-hover:scale-105 transition-transform duration-500" alt={`Ảnh tin tức ${i + 1}`} />
-                </div>
-              ))}
+            <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                {[
+                  { id: "1Vyx34Er2aA5cT4vaZ6q3skntIGGge2sb", date: "04/01/2026", name: "Giao Lưu Pickleball", cover: "/images/news-1.jpg" },
+                  { id: "11YrvNopKMFbYndMvxM8Zt5KLTq2Wcij2", date: "05/01/2026", name: "Hội Nghị Xúc Tiến Đầu Tư", cover: "/images/news-2.jpg" },
+                  { id: "1AKAPcm1I5xJTRwa0zB2pfYlt3YWjp6UA", date: "15/01/2026", name: "Làm Việc Đồng Phúc – Lần 1", cover: "/images/news-3.jpg" },
+                  { id: "1Y-i9iWU2dkxAPy89tl4eA4xgAPoAE-0w", date: "30/01/2026", name: "Hội Nghị 3 Tỉnh – Phổ Yên", cover: "/images/news-4.jpg" },
+                  { id: "1qnNkUUJQgJ3zYMmY59nR8lVdaiSqACI7", date: "22/02/2026", name: "Khai Xuân 2026 – Nhà Máy Chè Quân Chu", cover: "/images/news-5.jpg" },
+                  { id: "1YE3tsBqqhKmuTLMPb4Q7lhuvjFE3Udwq", date: "07/03/2026", name: "Trà Sáng Cùng Doanh Nhân – Kỳ I", cover: "/images/news-6.jpg" },
+                  { id: "1WgmgV_MCY36C1JNJdUjXQfR7r02olCdP", date: "11/03/2026", name: "Làm Việc Với Quân Chu", cover: "/images/news-7.jpg" },
+                  { id: "1k5gWouHwosTCQb9uv3roXhK8hc0PLJHW", date: "12/03/2026", name: "Làm Việc Với Đồng Phúc", cover: "/images/news-8.jpg" },
+                  { id: "1mFZPICufDR-qPbNGDmdN_CqLlM3JCZzd", date: "22/03/2026", name: "Lễ Xuống Giống Quân Chu 2026", cover: "/images/news-9.jpg" },
+                  { id: "1E9ZfVw6eq_LDcgAPKXd4s_y0RLeu5EnS", date: "26/03/2026", name: "Trao Chứng Nhận Làng Nghề Chè Shan Tuyết Bằng Phúc", cover: "/images/news-10.jpg" },
+                  { id: "12PZnTLDBpNJ_9IjllTDDsNQIn3oYMJYX", date: "26/03/2026", name: "Vùng Nguyên Liệu Chè Shan Tuyết Đồng Phúc", cover: "/images/news-11.jpg" },
+                  { id: "1dS8_JRmVcy2RO8IFmWe6bfoODba6n4ca", date: "28/03/2026", name: "Chương Trình Tặng Sữa Tại Đồng Phúc", cover: "/images/news-12.jpg" },
+                ].map((album, idx) => (
+                  <motion.a
+                    key={album.id}
+                    href={`https://drive.google.com/drive/folders/${album.id}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.4, delay: idx * 0.05 }}
+                    className="group block rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow duration-300 bg-white"
+                  >
+                    {/* Cover image */}
+                    <div className="relative aspect-[4/3] overflow-hidden">
+                      <img
+                        src={album.cover}
+                        alt={album.name}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      />
+                      {/* Overlay */}
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+                      {/* Date badge */}
+                      <div
+                        className="absolute top-3 left-3 px-3 py-1 rounded-full text-xs font-bold"
+                        style={{ background: "#FAD478", color: "#B7820B" }}
+                      >
+                        {album.date}
+                      </div>
+                      {/* Drive icon */}
+                      <div className="absolute top-3 right-3 w-8 h-8 rounded-full bg-white/90 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                        <svg viewBox="0 0 24 24" className="w-4 h-4" fill="none">
+                          <path d="M6.98 8L2 16.5h6.5L13.5 8H6.98Z" fill="#4285F4"/>
+                          <path d="M17.02 8l5 8.5H15.5L10.5 8h6.52Z" fill="#34A853"/>
+                          <path d="M8.5 16.5l2.5 4.5h5l-2.5-4.5H8.5Z" fill="#FBBC05"/>
+                        </svg>
+                      </div>
+                    </div>
+                    {/* Info */}
+                    <div className="p-4">
+                      <h3
+                        className="font-semibold leading-snug group-hover:text-[#3d7a3d] transition-colors line-clamp-2"
+                        style={{ fontSize: "16px", color: "#183806" }}
+                      >
+                        {album.name}
+                      </h3>
+                      <p className="mt-2 text-xs font-medium" style={{ color: "#5F9654" }}>
+                        Xem album trên Google Drive →
+                      </p>
+                    </div>
+                  </motion.a>
+                ))}
+              </div>
             </motion.div>
           )}
 
