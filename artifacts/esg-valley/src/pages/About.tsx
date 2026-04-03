@@ -34,7 +34,7 @@ const timelineData = [
     title: "Hạt Giống ESGValley Được Gieo",
     content:
       "Khái niệm ESG chính thức ra đời trong báo cáo \"Who Cares Wins\" của Liên Hợp Quốc. Cùng thời điểm đó, tại Quân Chu, ý tưởng về một thương hiệu Trà bền vững bắt đầu nhen nhóm. Trong những lần rong đuổi cùng bà con, ngồi bên chén trà nồng và nghe chuyện mùa vụ, chúng tôi đã trăn trở về một mô hình phát triển vượt xa khỏi lợi nhuận thuần túy – đó là sự thấu cảm về việc bảo vệ hệ sinh thái địa phương, nâng cao đời sống người nông dân và quản trị bằng sự minh bạch.",
-    img: "/images/toan-cau.jpg",
+    img: "/images/2004.jpg",
   },
   {
     year: 2011,
