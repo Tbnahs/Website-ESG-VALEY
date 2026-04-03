@@ -52,25 +52,25 @@ const EVENT_DATE = new Date("2026-03-22T09:00:00");
 /* ─── Product images (4 featured) ─── */
 const featuredProducts = [
   {
-    id: 2, name: "Tản Viên Trà", category: "Chè Thượng Hạng",
+    id: 2, slug: "tan-vien-tra", name: "Tản Viên Trà", category: "Chè Thượng Hạng",
     desc: "Linh khí đất trời hội tụ nơi núi Tản Viên – dòng trà đầu tiên nuôi dưỡng con người Việt.",
     price: "450,000 ₫",
     image: "/images/product-tan-vien-tra.png",
   },
   {
-    id: 3, name: "Mạc Triều Trà", category: "Chè Thượng Hạng",
+    id: 3, slug: "mac-trieu-tra", name: "Mạc Triều Trà", category: "Chè Thượng Hạng",
     desc: "Từ nương chè giản dị đến chén trà dâng vua chúa — hành trình chắt lọc của bao thế hệ.",
     price: "850,000 ₫",
     image: "/images/product-mac-trieu-tra.png",
   },
   {
-    id: 4, name: "Bách Niên Trà", category: "Chè Thượng Hạng",
+    id: 4, slug: "bach-nien-tra", name: "Bách Niên Trà", category: "Chè Thượng Hạng",
     desc: "Trà Shan Tuyết cổ thụ trên 100 năm tuổi — báu vật văn hóa thiêng liêng qua từng thế hệ.",
     price: "1,500,000 ₫",
     image: "/images/product-bach-nien-tra.png",
   },
   {
-    id: 5, name: "Thượng Cổ Trà", category: "Chè Thượng Hạng",
+    id: 5, slug: "thuong-co-tra", name: "Thượng Cổ Trà", category: "Chè Thượng Hạng",
     desc: "Câu chuyện về nàng Công và những đồi chè cổ xưa nhất vùng đất Thái Nguyên hùng vĩ.",
     price: "2,800,000 ₫",
     image: "/images/product-thuong-co-tra.png",
@@ -492,6 +492,7 @@ export default function Home() {
                 initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: idx * 0.1, duration: 0.6 }} viewport={{ once: true }}
                 className="group cursor-pointer flex flex-col gap-6"
+                onClick={() => navigate(`/san-pham/${product.slug}`)}
               >
                 {/* Square image — border-radius 32px */}
                 <div className="aspect-square overflow-hidden bg-muted" style={{ borderRadius: "32px" }}>
