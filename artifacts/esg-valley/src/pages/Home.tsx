@@ -47,7 +47,7 @@ function useCountdown(target: Date) {
   return t;
 }
 
-const EVENT_DATE = new Date("2025-10-05T09:00:00");
+const EVENT_DATE = new Date("2026-03-22T09:00:00");
 
 /* ─── Product images (4 featured) ─── */
 const featuredProducts = [
@@ -183,12 +183,10 @@ export default function Home() {
                 <span className="text-primary text-sm font-semibold">Sự kiện sắp diễn ra</span>
               </div>
               <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground leading-tight mb-4 uppercase">
-                Khởi Động Dự Án Le Mont Resort &amp; Golf — Công Bố{" "}
-                <span className="text-primary">ESGVALLEY</span>{" "}
-                — Khánh Thành Đường Vành Đai V
+                SỰ KIỆN "LỄ XUỐNG GIỐNG VÙNG CHÈ HỮU CƠ XÃ QUÂN CHU"
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-6 text-sm">
-                Sự kiện đánh dấu cột mốc quan trọng trong hành trình phát triển bền vững của ESG Valley — kết nối nông nghiệp xanh, du lịch sinh thái và cộng đồng địa phương trên vùng đất Thái Nguyên.
+                Sự kiện đánh dấu cột mốc quan trọng trong hành trình phát triển bền vững của ESG Valley - kết nối nông nghiệp xanh, du lịch sinh thái và cộng đồng địa phương trên vùng đất Thái Nguyên.
               </p>
               <Link href="/he-sinh-thai">
                 <button
@@ -272,7 +270,7 @@ export default function Home() {
 
                   {/* Date title */}
                   <div className="px-6 pt-5 pb-2 relative z-10">
-                    <p className="text-white font-bold text-[22px] leading-tight tracking-tight">5th Oct, 2025</p>
+                    <p className="text-white font-bold text-[22px] leading-tight tracking-tight">22nd Mar, 2026</p>
                   </div>
 
                   {/* Days of week */}
@@ -282,16 +280,16 @@ export default function Home() {
                     ))}
                   </div>
 
-                  {/* Week row 1: 28–04 */}
+                  {/* Week row 1: 15–21 */}
                   <div className="grid grid-cols-7 px-5 mt-1 relative z-10">
-                    {["28","29","30","01","02","03","04"].map((d, i) => (
+                    {["15","16","17","18","19","20","21"].map((d, i) => (
                       <span key={i} className="text-white/80 text-[14px] font-medium text-center leading-6">{d}</span>
                     ))}
                   </div>
 
-                  {/* Week row 2: 05–11 (05 highlighted) */}
+                  {/* Week row 2: 22–28 (22 highlighted) */}
                   <div className="grid grid-cols-7 px-5 mt-1 items-center relative z-10">
-                    {["05","06","07","08","09","10","11"].map((d, i) => (
+                    {["22","23","24","25","26","27","28"].map((d, i) => (
                       i === 0 ? (
                         <span key={i} className="flex items-center justify-center">
                           <span
@@ -308,7 +306,7 @@ export default function Home() {
                   {/* White footer */}
                   <div className="absolute bottom-0 left-0 right-0 h-[54px] bg-white flex items-center px-5 gap-2" style={{ borderRadius: "20px 20px 32px 32px" }}>
                     <span className="text-[#69CB33] text-lg">🌿</span>
-                    <span className="font-semibold text-[#183806] text-sm">9:00 - 12:00</span>
+                    <span className="font-semibold text-[#183806] text-sm">09:00 - 11:00</span>
                   </div>
                 </div>
               </div>
