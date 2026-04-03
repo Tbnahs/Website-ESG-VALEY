@@ -659,7 +659,7 @@ export const news: NewsArticle[] = [
     date: "20/02/2026",
     category: "Sự Kiện",
     excerpt: "Tại Hội nghị liên kết 3 tỉnh Thái Nguyên – Bắc Ninh – Phú Thọ, ESGValley vinh dự là đơn vị đồng hành phục vụ không gian tiệc Trà Di sản cho các đại biểu.",
-    image: "https://images.unsplash.com/photo-1559136555-9303baea8ebd?auto=format&fit=crop&q=80&w=1200",
+    image: "/images/news-21.jpg",
     content: `Tại Hội nghị liên kết 3 tỉnh Thái Nguyên – Bắc Ninh – Phú Thọ vừa diễn ra tại phường Vạn Xuân, ESGValley vinh dự là đơn vị đồng hành, phục vụ không gian tiệc Trà Di sản cho các đại biểu.\n\nGiữa những phiên thảo luận quan trọng, một tách Trà nóng hổi với hương thơm thanh tao không chỉ giúp làm dịu tinh thần mà còn là cầu nối gắn kết tình thân giữa các tỉnh bạn. Chúng tôi tin rằng, sự chỉn chu trong từng tách Trà chính là lời chào nồng hậu nhất, minh chứng cho tầm vóc của "Đệ nhất danh trà" trong kỷ nguyên mới.\n\nESGValley tự hào được góp phần quảng bá thương hiệu trà Thái Nguyên vươn xa, khẳng định giá trị Di sản trong các sự kiện ngoại giao và kinh tế trọng điểm.`,
     sourceUrl: "https://drive.google.com/drive/folders/1jZ8tt2jm4K4lFZOqLWy70kGpZbvLPrmD?usp=drive_link"
   },
@@ -670,7 +670,7 @@ export const news: NewsArticle[] = [
     date: "15/11/2025",
     category: "Bền Vững",
     excerpt: "10 tiếng đồng hồ. 10km rừng dốc ngược. 1.350 mét độ cao – hành trình của đoàn công tác ESGValley tìm về cội nguồn Di sản chè cổ thụ La Bằng, Thái Nguyên.",
-    image: "https://images.unsplash.com/photo-1518495973542-4542c06a5843?auto=format&fit=crop&q=80&w=1200",
+    image: "/images/news-22.jpg",
     content: `10 tiếng đồng hồ. 10km rừng dốc ngược. 1.350 mét độ cao. Những con số ấy không chỉ đo đạc quãng đường, mà đo độ bền bỉ của những trái tim khao khát tìm về cội nguồn của Di sản.\n\nĐoàn công tác của chúng tôi đã bước đi từ chân suối Kẹm, vượt qua những con đường trở đầy thách thức: vách đá cheo leo, thác nước ầm ào, đất rừng ẩm ướt trơn trượt.\n\nNhưng khi đứng trước quần thể chè Tổ tại xã La Bằng, mọi mệt mỏi dường như tan biến. Trên dãy Tam Đảo hùng vĩ, giữa tầng sương mù bao phủ, những cây chè cổ thụ hàng trăm năm tuổi đứng đó như những vị thần gác rừng. Thân cây xù xì, rêu phong phủ đầy, cành lá vươn cao ngạo nghễ.\n\nĐể giữ được giấc mơ xanh này, ESGValley đang thiết lập các cơ chế giám sát và nghiên cứu khoa học chuyên sâu, đảm bảo nguồn gen chè Tổ không bao giờ bị mất đi. Giữ được rừng chè là giữ được văn hóa, giữ được sinh thái và giữ được một biểu tượng đặc biệt ý nghĩa đối với ngành chè Thái Nguyên.`,
     sourceUrl: "https://drive.google.com/drive/folders/1R8-VwtjGqik-4Dh2ayFVkrjds3Fz7uee?usp=drive_link"
   },
@@ -681,7 +681,7 @@ export const news: NewsArticle[] = [
     date: "20/10/2025",
     category: "Văn Hóa",
     excerpt: "Thứ nhất là để giữ hương Trà. Thứ hai là để dễ thưởng Trà hơn. Và còn một điều khá hay nữa trong Văn hóa Trà mà ít người biết...",
-    image: "https://images.unsplash.com/photo-1564890369478-c89ca6d9cde9?auto=format&fit=crop&q=80&w=1200",
+    image: "/images/news-23.jpg",
     content: `Nhiều người lần đầu ngồi uống Trà thường hỏi một câu khá thú vị: "Vì sao chén Trà lúc nào cũng chỉ rót lưng lưng, không rót đầy?"\n\nThật ra đây là một thói quen rất lâu trong Văn hoá uống Trà.\n\nThứ nhất là để giữ hương Trà. Khi rót vừa chén, phần hương sẽ còn khoảng trống để lan lên. Cầm chén Trà lên, mình sẽ cảm nhận được mùi thơm trước rồi mới đến vị trà. Nếu rót đầy quá thì hương sẽ khó thoát ra.\n\nThứ hai là để dễ thưởng Trà hơn. Chén Trà thường nhỏ và nước khá nóng, rót vừa phải giúp mình cầm chén thoải mái, nhấp từng ngụm nhỏ để cảm nhận vị Trà rõ hơn.\n\nVà một điều nữa khá hay: trong Văn hoá Trà, chén Trà không cần đầy nhưng câu chuyện thì luôn đầy. Người ta ngồi lại với nhau vì chén Trà, nhưng thứ ở lại lâu hơn thường là những cuộc trò chuyện.\n\nNếu có dịp, bạn ghé ESGValley ngồi uống một chén Trà nhé. Có khi chỉ cần một chén Trà nhỏ thôi là đủ để bắt đầu một câu chuyện hay.`,
     sourceUrl: "https://drive.google.com/drive/folders/1kDi01ZpcXVW4hBwoCWsAO_nUHvPleyFA?usp=drive_link"
   },
@@ -692,7 +692,7 @@ export const news: NewsArticle[] = [
     date: "10/10/2025",
     category: "Sự Kiện",
     excerpt: "Tại ViPEL 2025, UBND tỉnh Thái Nguyên trao văn kiện hợp tác thí điểm mô hình Công - Tư đồng kiến quốc cho dự án phát triển nông nghiệp hữu cơ và bảo tồn di sản chè của Công ty Cổ phần Chè Quân Chu.",
-    image: "https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&q=80&w=1200",
+    image: "/images/news-24.jpg",
     content: `Một chương mới cho ngành trà Thái Nguyên đã chính thức mở ra trong khuôn khổ Chương trình Toàn cảnh Kinh tế tư nhân Việt Nam (ViPEL 2025) diễn ra vào ngày 10/10/2025.\n\nUBND tỉnh Thái Nguyên đã chính thức trao văn kiện hợp tác thí điểm mô hình "Công - Tư đồng kiến quốc" cho dự án: "Phát triển nông nghiệp hữu cơ, bảo tồn di sản và du lịch văn hóa gắn với cây chè của tỉnh Thái Nguyên" thuộc Công ty Cổ phần Chè Quân Chu – đơn vị đầu tiên trong khuôn khổ ViPEL 2025.\n\nDự án ESGValley không chỉ dừng lại ở phát triển kinh tế mà còn là hành trình bảo tồn những "di sản sống" ngàn năm. Với sự dẫn dắt của TS. Nguyễn Thị Vinh – Chủ tịch HĐQT Công ty Cổ phần Chè Quân Chu, ESG Valley cam kết:\n\nPhát triển nông nghiệp hữu cơ và chuyển đổi số toàn diện, tích hợp công nghệ IoT và AI, minh bạch hóa hành trình của búp trà từ đồi xanh đến bàn trà quốc tế.\n\nXây dựng mô hình kinh tế nhân văn, hỗ trợ 200.000 nông hộ và HTX do phụ nữ làm chủ chuyển đổi sang mô hình doanh nghiệp bền vững ESG.\n\nESG Valley và Đề án ViPEL 2025 chính là minh chứng cho một Việt Nam tự hào, nơi trí tuệ và lòng nhân ái hòa quyện để đưa giá trị xanh – thông minh – giàu bản sắc vươn tầm thế giới.`,
     sourceUrl: "https://drive.google.com/drive/folders/1kDmxGxYmcjv3WLNUMV80zvhEvgiqOjJY?usp=drive_link"
   }
