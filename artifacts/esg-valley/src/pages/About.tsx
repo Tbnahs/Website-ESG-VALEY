@@ -10,7 +10,7 @@ const timelineData = [
     title: "Thành lập Nông trường Chè Quân Chu",
     content:
       "Tiền thân là Nông trường chè Quân Chu được thành lập vào ngày 26/04/1966. Đây là một trong những đơn vị kinh tế quốc doanh đặt nền móng đầu tiên cho ngành chè tại khu vực chân núi Tam Đảo, huyện Đại Từ, Thái Nguyên.",
-    img: "/images/hinh-doi-che.png",
+    img: "/images/1966.jpg",
   },
   {
     year: 1978,
