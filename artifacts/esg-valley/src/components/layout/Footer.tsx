@@ -196,7 +196,7 @@ export function Footer() {
                 <SiTiktok className="w-5 h-5 text-white" />
               </a>
             </div>
-            <p className="text-white/50 text-xs mt-3 mb-2">Quốc tế</p>
+            <p className="text-xs mt-3 mb-2 text-[#ffffff]">Quốc tế</p>
             <div className="flex flex-wrap gap-3 items-center">
               <a href="#" title="Amazon" className="w-9 h-9 rounded-lg bg-[#232F3E] flex items-center justify-center opacity-85 hover:opacity-100 transition-opacity">
                 <FaAmazon className="w-5 h-5 text-[#FF9900]" />
