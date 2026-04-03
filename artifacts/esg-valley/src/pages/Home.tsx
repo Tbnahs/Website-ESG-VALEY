@@ -448,7 +448,7 @@ export default function Home() {
           >
             <div className="relative w-full" style={{ paddingBottom: "56.25%" }}>
               <iframe
-                src="https://www.youtube.com/embed/08_TGYCQJM8"
+                src="https://www.youtube.com/embed/7cFC5UtkQWY?start=207"
                 title="Câu chuyện của ESG Valley"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
