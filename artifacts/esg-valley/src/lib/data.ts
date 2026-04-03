@@ -462,7 +462,7 @@ export const news: NewsArticle[] = [
     date: "27/03/2026",
     category: "Sự Kiện",
     excerpt: "Hội nghị \"Doanh nghiệp góp phần vào tăng trưởng hai con số\" ghi dấu sự gắn kết giữa Chính phủ và cộng đồng doanh nhân, với sự tham dự của Chủ tịch HĐQT Công ty Cổ phần Chè Quân Chu.",
-    image: "https://images.unsplash.com/photo-1559136555-9303baea8ebd?auto=format&fit=crop&q=80&w=1200",
+    image: "/images/news-3.jpg",
     content: `Hội nghị "Doanh nghiệp góp phần vào tăng trưởng hai con số và Thủ tướng Chính phủ tri ân doanh nghiệp" ngày 27/3 ghi dấu sự gắn kết giữa Chính phủ và cộng đồng doanh nhân.\n\nTại sự kiện, Bà Nguyễn Thị Vinh – Chủ tịch Hội nữ doanh nhân tỉnh Thái Nguyên, Chủ tịch HĐQT Công ty Cổ phần Chè Quân Chu đã tham dự cùng nhiều lãnh đạo doanh nghiệp tiêu biểu cả nước, thể hiện quyết tâm đưa kinh tế Việt Nam vươn xa.`,
     sourceUrl: "https://baochinhphu.vn/tang-toc-khoi-nghiep-doanh-nghiep-tro-thanh-tru-cot-tang-truong-10226032711072608.htm"
   },
