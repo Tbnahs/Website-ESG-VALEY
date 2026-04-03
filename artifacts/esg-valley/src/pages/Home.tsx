@@ -246,7 +246,7 @@ export default function Home() {
                     }}
                   >
                     <span className="font-semibold text-[#525252] whitespace-nowrap" style={{ fontSize: "15px" }}>Lễ xuống giống</span>
-                    <span className="font-semibold text-[#A2A2A2]" style={{ fontSize: "12px" }}>Hà Giang, Việt Nam</span>
+                    <span className="font-semibold text-[#A2A2A2]" style={{ fontSize: "12px" }}>Xã Quân Chu,Viêt Nam</span>
                   </div>
                 </div>
 
