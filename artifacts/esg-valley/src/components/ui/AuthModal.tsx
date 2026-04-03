@@ -24,7 +24,7 @@ export function AuthModal() {
   const [error, setError] = useState("");
 
   const [forgotId, setForgotId] = useState("");
-  const [forgotIdType, setForgotIdType] = useState<"email" | "phone">("phone");
+  const [forgotIdType, setForgotIdType] = useState<"email" | "phone">("email");
   const [otp, setOtp] = useState(["", "", "", "", "", ""]);
   const [otpTimer, setOtpTimer] = useState(120);
   const [newPw, setNewPw] = useState("");
@@ -357,18 +357,21 @@ export function AuthModal() {
             {step === "forgot" && (
               <form onSubmit={handleForgotSend} className="p-8 space-y-4">
                 <p className="text-sm text-muted-foreground leading-relaxed">
-                  Nhập email hoặc số điện thoại đã đăng ký. Chúng tôi sẽ gửi mã OTP để xác nhận danh tính.
+                  Nhập địa chỉ email đã đăng ký. Chúng tôi sẽ gửi mã OTP để xác nhận danh tính.
                 </p>
 
                 <div className="flex rounded-sm overflow-hidden border border-border text-sm">
-                  <button type="button" onClick={() => setForgotIdType("phone")}
-                    className={`flex-1 py-2 flex items-center justify-center gap-1.5 transition-colors ${forgotIdType === "phone" ? "bg-primary text-primary-foreground" : "hover:bg-muted"}`}>
-                    <Phone className="w-3.5 h-3.5" /> Số điện thoại
-                  </button>
                   <button type="button" onClick={() => setForgotIdType("email")}
                     className={`flex-1 py-2 flex items-center justify-center gap-1.5 transition-colors ${forgotIdType === "email" ? "bg-primary text-primary-foreground" : "hover:bg-muted"}`}>
                     <Mail className="w-3.5 h-3.5" /> Email
                   </button>
+                  <div
+                    title="Tính năng OTP qua SMS sắp ra mắt"
+                    className="flex-1 py-2 flex items-center justify-center gap-1.5 text-muted-foreground cursor-not-allowed opacity-50 select-none"
+                  >
+                    <Phone className="w-3.5 h-3.5" /> Số điện thoại
+                    <span className="text-[10px] font-semibold bg-muted-foreground/20 rounded px-1 leading-tight">Sắp có</span>
+                  </div>
                 </div>
 
                 <div className="relative">
