@@ -119,6 +119,7 @@ export function Header() {
       if (userRef.current && !userRef.current.contains(e.target as Node)) setUserMenuOpen(false);
       if (productRef.current && !productRef.current.contains(e.target as Node)) setProductMenuOpen(false);
       if (ecosystemRef.current && !ecosystemRef.current.contains(e.target as Node)) setEcosystemMenuOpen(false);
+      if (supportRef.current && !supportRef.current.contains(e.target as Node)) setSupportMenuOpen(false);
     };
     document.addEventListener("mousedown", handleClick);
     return () => document.removeEventListener("mousedown", handleClick);
@@ -252,7 +253,6 @@ export function Header() {
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: 8 }}
                   transition={{ duration: 0.18 }}
-                  onMouseLeave={() => setProductMenuOpen(false)}
                   className="absolute left-1/2 -translate-x-1/2 top-full mt-3 bg-background border border-border rounded-xl shadow-2xl z-[60] overflow-hidden"
                   style={{ minWidth: "720px" }}
                 >
@@ -321,7 +321,6 @@ export function Header() {
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: 8 }}
                   transition={{ duration: 0.18 }}
-                  onMouseLeave={() => setEcosystemMenuOpen(false)}
                   className="absolute left-1/2 -translate-x-1/2 top-full mt-3 bg-background border border-border rounded-xl shadow-2xl z-[60] overflow-hidden"
                   style={{ minWidth: "280px" }}
                 >
@@ -375,7 +374,6 @@ export function Header() {
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: 8 }}
                   transition={{ duration: 0.18 }}
-                  onMouseLeave={() => setSupportMenuOpen(false)}
                   className="absolute left-1/2 -translate-x-1/2 top-full mt-3 bg-background border border-border rounded-xl shadow-2xl z-[60] overflow-hidden"
                   style={{ minWidth: "220px" }}
                 >
