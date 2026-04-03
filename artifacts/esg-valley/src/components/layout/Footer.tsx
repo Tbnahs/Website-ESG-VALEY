@@ -142,7 +142,7 @@ export function Footer() {
           {/* Liên Hệ */}
           <div>
             <h3 className="font-display text-sm font-semibold mb-4 uppercase tracking-wider text-[#C9A84C]">Liên Hệ</h3>
-            <ul className="space-y-3 text-xs text-white/80">
+            <ul className="space-y-3 text-xs text-[#ffffff]">
               <li className="flex items-center gap-2">
                 <Phone className="w-3.5 h-3.5 flex-shrink-0 text-[#C9A84C]" />
                 <span>0969 510 955</span>
@@ -183,14 +183,8 @@ export function Footer() {
               <a href="#" title="Lazada" className="opacity-85 hover:opacity-100 transition-opacity">
                 <img src="/images/lazada-icon.png" alt="Lazada" className="w-9 h-9 object-contain" />
               </a>
-              <a href="#" title="Tiki" className="w-9 h-9 rounded-lg bg-[#1A94FF] flex items-center justify-center opacity-85 hover:opacity-100 transition-opacity">
-                <svg viewBox="0 0 48 48" className="w-5 h-5" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="24" cy="26" r="10" fill="white"/>
-                  <rect x="20" y="10" width="8" height="4" rx="2" fill="white"/>
-                  <circle cx="20" cy="26" r="3" fill="#1A94FF"/>
-                  <circle cx="28" cy="26" r="3" fill="#1A94FF"/>
-                  <path d="M20 33 Q24 36 28 33" stroke="#1A94FF" strokeWidth="2" strokeLinecap="round" fill="none"/>
-                </svg>
+              <a href="#" title="Tiki" className="opacity-85 hover:opacity-100 transition-opacity">
+                <img src="/images/tiki-icon.png" alt="Tiki" className="w-9 h-9 object-contain rounded-xl" />
               </a>
               <a href="#" title="TikTok Shop" className="w-9 h-9 rounded-lg bg-[#010101] border border-white/10 flex items-center justify-center opacity-85 hover:opacity-100 transition-opacity">
                 <SiTiktok className="w-5 h-5 text-white" />
