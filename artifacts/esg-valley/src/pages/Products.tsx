@@ -1,8 +1,8 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronRight, ShoppingCart, CheckCircle } from "lucide-react";
 import { products } from "@/lib/data";
-import { Link, useLocation, useSearch } from "wouter";
+import { Link, useLocation } from "wouter";
 import { useCart } from "@/lib/cart";
 import { useAuth } from "@/lib/auth";
 import { useToast } from "@/hooks/use-toast";
@@ -13,10 +13,10 @@ export default function Products() {
   const { addItem } = useCart();
   const { isLoggedIn, openAuthModal } = useAuth();
   const [, navigate] = useLocation();
-  const search = useSearch();
   const [addedId, setAddedId] = useState<number | null>(null);
   const { toast } = useToast();
   const [highlightSlug, setHighlightSlug] = useState<string | null>(null);
+  const highlightTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const handleContact = () => {
     navigate("/ho-tro");
@@ -40,34 +40,58 @@ export default function Products() {
   const formatPrice = (price: number) =>
     price.toLocaleString("vi-VN") + "₫";
 
-  useEffect(() => {
+  const applySearchParams = (search: string) => {
     const params = new URLSearchParams(search);
     const cat = params.get("category");
     const highlight = params.get("highlight");
+
+    if (highlightTimerRef.current) clearTimeout(highlightTimerRef.current);
 
     if (highlight) {
       setActiveCategory("Tất cả");
       setHighlightSlug(highlight);
       const scrollTimer = setTimeout(() => {
         const el = document.getElementById(`product-${highlight}`);
-        if (el) {
-          el.scrollIntoView({ behavior: "smooth", block: "center" });
-        }
-      }, 300);
-      const clearTimer = setTimeout(() => {
+        if (el) el.scrollIntoView({ behavior: "smooth", block: "center" });
+      }, 400);
+      highlightTimerRef.current = setTimeout(() => {
         setHighlightSlug(null);
-      }, 3300);
-      return () => {
-        clearTimeout(scrollTimer);
-        clearTimeout(clearTimer);
-      };
+      }, 3400);
+      return scrollTimer;
     } else if (cat && categories.includes(cat)) {
       setActiveCategory(cat);
       setHighlightSlug(null);
     } else {
       setHighlightSlug(null);
     }
-  }, [search]);
+  };
+
+  useEffect(() => {
+    applySearchParams(window.location.search);
+
+    const handleSpaNavigate = (e: Event) => {
+      const s = (e as CustomEvent<string>).detail ?? window.location.search;
+      applySearchParams(s);
+    };
+    const handlePopState = () => applySearchParams(window.location.search);
+
+    const origPushState = history.pushState.bind(history);
+    history.pushState = function (state, title, url) {
+      origPushState(state, title, url);
+      const s = url ? new URL(String(url), window.location.href).search : "";
+      window.dispatchEvent(new CustomEvent("spa-navigate", { detail: s }));
+    };
+
+    window.addEventListener("popstate", handlePopState);
+    window.addEventListener("spa-navigate", handleSpaNavigate);
+
+    return () => {
+      history.pushState = origPushState;
+      window.removeEventListener("popstate", handlePopState);
+      window.removeEventListener("spa-navigate", handleSpaNavigate);
+      if (highlightTimerRef.current) clearTimeout(highlightTimerRef.current);
+    };
+  }, []);
 
   const filteredProducts = activeCategory === "Tất cả"
     ? products
