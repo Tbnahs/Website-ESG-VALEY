@@ -58,7 +58,7 @@ const timelineData = [
     title: "ESGValley – Hệ Sinh Thái Văn Hóa & Kinh Tế",
     content:
       "ESGValley bắt đầu xuất hiện mạnh mẽ hơn trong các hoạt động xúc tiến thương mại và kết nối doanh nghiệp tỉnh Thái Nguyên. Định vị là đơn vị tiên phong với mô hình \"Tiệc Trà Di sản\" tại Thái Nguyên. Ngày 22/03/2026, Công ty Cổ phần Chè Quân Chu hoàn tất công đoạn xuống giống cho vùng chè đầu tiên – một cột mốc quan trọng trong lộ trình bảo tồn và nâng tầm giá trị Trà gắn liền với phát triển du lịch bền vững tại xã Quân Chu, Thái Nguyên.",
-    img: "/images/su-kien.jpg",
+    img: "/images/2026.png",
   },
 ];
 
