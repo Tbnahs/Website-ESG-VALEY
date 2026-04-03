@@ -50,7 +50,7 @@ const timelineData = [
     title: "Ra mắt thương hiệu ESGValley",
     content:
       "Đánh dấu bước chuyển mình mang tính lịch sử khi Công ty Cổ phần Chè Quân Chu chính thức sáng tạo và ra mắt thương hiệu ESGValley, chuyển mình từ một nhà máy truyền thống sang một doanh nghiệp xanh, gắn sản phẩm chè, hoạt động sản xuất với các tiêu chuẩn bền vững toàn cầu với trách nhiệm bảo vệ hệ sinh thái và phát triển cộng đồng; đóng vai trò quan trọng trong việc hỗ trợ sinh kế cho bà con nông dân xã Quân Chu nói riêng và trên địa bàn tỉnh nói chung.",
-    img: "/images/mask-group.png",
+    img: "/images/2025.png",
   },
   {
     year: 2026,
