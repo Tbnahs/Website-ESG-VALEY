@@ -15,6 +15,7 @@ export default function Products() {
   const [, navigate] = useLocation();
   const [addedId, setAddedId] = useState<number | null>(null);
   const { toast } = useToast();
+  const [highlightSlug, setHighlightSlug] = useState<string | null>(null);
 
   const handleContact = () => {
     navigate("/ho-tro");
@@ -41,7 +42,21 @@ export default function Products() {
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
     const cat = params.get("category");
-    if (cat && categories.includes(cat)) {
+    const highlight = params.get("highlight");
+
+    if (highlight) {
+      setActiveCategory("Tất cả");
+      setHighlightSlug(highlight);
+      setTimeout(() => {
+        const el = document.getElementById(`product-${highlight}`);
+        if (el) {
+          el.scrollIntoView({ behavior: "smooth", block: "center" });
+        }
+      }, 300);
+      setTimeout(() => {
+        setHighlightSlug(null);
+      }, 3300);
+    } else if (cat && categories.includes(cat)) {
       setActiveCategory(cat);
     }
   }, []);
@@ -100,80 +115,88 @@ export default function Products() {
           {/* Product Grid — 2 columns */}
           <main className="flex-1">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-              {filteredProducts.map((product, idx) => (
-                <motion.div
-                  key={product.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: idx * 0.06, duration: 0.5 }}
-                  className="group bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden flex flex-col cursor-pointer"
-                  onClick={() => navigate(`/san-pham/${product.slug}`)}
-                >
-                  {/* Image */}
-                  <div className="relative aspect-square overflow-hidden bg-muted rounded-2xl">
-                    <img
-                      src={product.image}
-                      alt={product.name}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                    />
-                    <button
-                      onClick={e => { e.stopPropagation(); navigate(`/san-pham/${product.slug}`); }}
-                      className="absolute top-3 right-3 text-muted-foreground text-xs hover:text-primary transition-colors flex items-center gap-0.5 bg-white/80 backdrop-blur-sm px-2 py-1 rounded-full"
-                    >
-                      Xem thêm <ChevronRight className="w-3 h-3" />
-                    </button>
-                  </div>
-
-                  {/* Content */}
-                  <div className="flex flex-col flex-1 p-5">
-                    <span className="text-primary text-xs font-semibold uppercase tracking-widest mb-1">
-                      {product.category}
-                    </span>
-                    <h3 className="font-display text-lg font-bold text-foreground mb-2 group-hover:text-primary transition-colors leading-snug line-clamp-2">
-                      {product.name}
-                    </h3>
-                    <p className="text-muted-foreground text-sm leading-relaxed line-clamp-2 mb-4 flex-1">
-                      {product.description}
-                    </p>
-
-                    {/* CTA */}
-                    {product.category === "Dịch Vụ Đặc Biệt" ? (
+              {filteredProducts.map((product, idx) => {
+                const isHighlighted = highlightSlug === product.slug;
+                return (
+                  <motion.div
+                    id={`product-${product.slug}`}
+                    key={product.id}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: idx * 0.06, duration: 0.5 }}
+                    className={`group bg-white rounded-2xl border shadow-sm hover:shadow-md transition-all duration-500 overflow-hidden flex flex-col cursor-pointer ${
+                      isHighlighted
+                        ? "border-primary ring-4 ring-primary/40 ring-offset-2 shadow-xl scale-[1.02]"
+                        : "border-gray-100"
+                    }`}
+                    onClick={() => navigate(`/san-pham/${product.slug}`)}
+                  >
+                    {/* Image */}
+                    <div className="relative aspect-square overflow-hidden bg-muted rounded-2xl">
+                      <img
+                        src={product.image}
+                        alt={product.name}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                      />
                       <button
-                        onClick={e => { e.stopPropagation(); handleContact(); }}
-                        className="w-full py-2.5 border-2 border-primary text-primary text-sm font-semibold rounded-full hover:bg-primary hover:text-white transition-all duration-200"
+                        onClick={e => { e.stopPropagation(); navigate(`/san-pham/${product.slug}`); }}
+                        className="absolute top-3 right-3 text-muted-foreground text-xs hover:text-primary transition-colors flex items-center gap-0.5 bg-white/80 backdrop-blur-sm px-2 py-1 rounded-full"
                       >
-                        Liên hệ báo giá
+                        Xem thêm <ChevronRight className="w-3 h-3" />
                       </button>
-                    ) : (
-                      <div className="flex items-center justify-between gap-3">
-                        <span className="text-lg font-bold text-primary">
-                          {formatPrice(product.price)}
-                        </span>
+                    </div>
+
+                    {/* Content */}
+                    <div className="flex flex-col flex-1 p-5">
+                      <span className="text-primary text-xs font-semibold uppercase tracking-widest mb-1">
+                        {product.category}
+                      </span>
+                      <h3 className="font-display text-lg font-bold text-foreground mb-2 group-hover:text-primary transition-colors leading-snug line-clamp-2">
+                        {product.name}
+                      </h3>
+                      <p className="text-muted-foreground text-sm leading-relaxed line-clamp-2 mb-4 flex-1">
+                        {product.description}
+                      </p>
+
+                      {/* CTA */}
+                      {product.category === "Dịch Vụ Đặc Biệt" ? (
                         <button
-                          onClick={e => { e.stopPropagation(); handleAddToCart(product); }}
-                          className={`flex items-center gap-2 px-4 py-2 text-sm font-semibold rounded-full transition-all duration-300 ${
-                            addedId === product.id
-                              ? "bg-green-500 text-white"
-                              : "bg-primary text-white hover:bg-primary/90"
-                          }`}
+                          onClick={e => { e.stopPropagation(); handleContact(); }}
+                          className="w-full py-2.5 border-2 border-primary text-primary text-sm font-semibold rounded-full hover:bg-primary hover:text-white transition-all duration-200"
                         >
-                          <AnimatePresence mode="wait">
-                            {addedId === product.id ? (
-                              <motion.span key="done" initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0 }} className="flex items-center gap-2">
-                                <CheckCircle className="w-4 h-4" /> Đã thêm
-                              </motion.span>
-                            ) : (
-                              <motion.span key="add" initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="flex items-center gap-2">
-                                <ShoppingCart className="w-4 h-4" /> Thêm vào giỏ
-                              </motion.span>
-                            )}
-                          </AnimatePresence>
+                          Liên hệ báo giá
                         </button>
-                      </div>
-                    )}
-                  </div>
-                </motion.div>
-              ))}
+                      ) : (
+                        <div className="flex items-center justify-between gap-3">
+                          <span className="text-lg font-bold text-primary">
+                            {formatPrice(product.price)}
+                          </span>
+                          <button
+                            onClick={e => { e.stopPropagation(); handleAddToCart(product); }}
+                            className={`flex items-center gap-2 px-4 py-2 text-sm font-semibold rounded-full transition-all duration-300 ${
+                              addedId === product.id
+                                ? "bg-green-500 text-white"
+                                : "bg-primary text-white hover:bg-primary/90"
+                            }`}
+                          >
+                            <AnimatePresence mode="wait">
+                              {addedId === product.id ? (
+                                <motion.span key="done" initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0 }} className="flex items-center gap-2">
+                                  <CheckCircle className="w-4 h-4" /> Đã thêm
+                                </motion.span>
+                              ) : (
+                                <motion.span key="add" initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="flex items-center gap-2">
+                                  <ShoppingCart className="w-4 h-4" /> Thêm vào giỏ
+                                </motion.span>
+                              )}
+                            </AnimatePresence>
+                          </button>
+                        </div>
+                      )}
+                    </div>
+                  </motion.div>
+                );
+              })}
 
               {filteredProducts.length === 0 && (
                 <div className="col-span-2 text-center py-20 text-muted-foreground">

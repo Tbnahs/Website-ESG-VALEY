@@ -18,34 +18,34 @@ const productMenu = [
   {
     heading: "Trà",
     items: [
-      { label: "Mã Đáo Thành Công", cat: "Trà" },
-      { label: "Tản Viên Trà", cat: "Trà" },
-      { label: "Mạc Triều Trà", cat: "Trà" },
-      { label: "Bách Niên Trà", cat: "Trà" },
-      { label: "Thượng Cổ Trà", cat: "Trà" },
+      { label: "Mã Đáo Thành Công", cat: "Trà", slug: "ma-dao-thanh-cong" },
+      { label: "Tản Viên Trà", cat: "Trà", slug: "tan-vien-tra" },
+      { label: "Mạc Triều Trà", cat: "Trà", slug: "mac-trieu-tra" },
+      { label: "Bách Niên Trà", cat: "Trà", slug: "bach-nien-tra" },
+      { label: "Thượng Cổ Trà", cat: "Trà", slug: "thuong-co-tra" },
     ],
   },
   {
     heading: "Matcha",
     items: [
-      { label: "Matcha", cat: "Matcha" },
+      { label: "Matcha", cat: "Matcha", slug: "matcha" },
     ],
   },
   {
     heading: "Trà Cụ",
     items: [
-      { label: "Tách Trà", cat: "Trà Cụ" },
-      { label: "Ấm Trà", cat: "Trà Cụ" },
-      { label: "Tống Trà", cat: "Trà Cụ" },
-      { label: "Ly Nước", cat: "Trà Cụ" },
-      { label: "Đĩa Lót", cat: "Trà Cụ" },
+      { label: "Tách Trà", cat: "Trà Cụ", slug: "tach-tra" },
+      { label: "Ấm Trà", cat: "Trà Cụ", slug: "am-tra" },
+      { label: "Tống Trà", cat: "Trà Cụ", slug: "tong-tra" },
+      { label: "Ly Nước", cat: "Trà Cụ", slug: "ly-nuoc" },
+      { label: "Đĩa Lót", cat: "Trà Cụ", slug: "dia-lot" },
     ],
   },
   {
     heading: "Dịch Vụ Đặc Biệt",
     items: [
-      { label: "Tiệc Trà Di Sản", cat: "Dịch Vụ Đặc Biệt" },
-      { label: "Tea Show – Trình Diễn Nghệ Thuật Pha Trà", cat: "Dịch Vụ Đặc Biệt" },
+      { label: "Tiệc Trà Di Sản", cat: "Dịch Vụ Đặc Biệt", slug: "tiec-tra-di-san" },
+      { label: "Tea Show – Trình Diễn Nghệ Thuật Pha Trà", cat: "Dịch Vụ Đặc Biệt", slug: "tea-show" },
     ],
   },
 ];
@@ -268,7 +268,7 @@ export function Header() {
                           {col.items.map(item => (
                             <li key={item.label}>
                               <Link
-                                href={`/san-pham?category=${encodeURIComponent(item.cat)}`}
+                                href={`/san-pham?highlight=${item.slug}`}
                                 onClick={() => setProductMenuOpen(false)}
                                 className="block text-sm text-foreground hover:text-primary hover:bg-primary/5 px-2 py-1.5 rounded-lg transition-colors"
                               >
@@ -582,7 +582,7 @@ export function Header() {
                           {col.items.map(item => (
                             <Link
                               key={item.label}
-                              href={`/san-pham?category=${encodeURIComponent(item.cat)}`}
+                              href={`/san-pham?highlight=${item.slug}`}
                               onClick={() => setMobileMenuOpen(false)}
                               className="block text-sm text-foreground hover:text-primary px-2 py-1.5 transition-colors"
                             >
