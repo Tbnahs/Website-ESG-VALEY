@@ -1,13 +1,9 @@
 import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { X, Eye, EyeOff, User, Phone, Mail, Lock, ArrowLeft, CheckCircle, RefreshCw } from "lucide-react";
+import { X, Eye, EyeOff, User, Phone, Mail, Lock, ArrowLeft, CheckCircle, RefreshCw, Loader2 } from "lucide-react";
 import { useAuth } from "@/lib/auth";
 
 type Step = "login" | "register" | "forgot" | "otp" | "newpw" | "done";
-
-function generateOTP(): string {
-  return String(Math.floor(100000 + Math.random() * 900000));
-}
 
 function maskIdentifier(val: string): string {
   if (val.includes("@")) {
@@ -30,10 +26,11 @@ export function AuthModal() {
   const [forgotId, setForgotId] = useState("");
   const [forgotIdType, setForgotIdType] = useState<"email" | "phone">("phone");
   const [otp, setOtp] = useState(["", "", "", "", "", ""]);
-  const [generatedOtp, setGeneratedOtp] = useState("");
   const [otpTimer, setOtpTimer] = useState(120);
   const [newPw, setNewPw] = useState("");
   const [newPwConfirm, setNewPwConfirm] = useState("");
+  const [isSending, setIsSending] = useState(false);
+  const [isVerifying, setIsVerifying] = useState(false);
   const otpRefs = useRef<(HTMLInputElement | null)[]>([]);
   const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
@@ -44,9 +41,10 @@ export function AuthModal() {
       setError("");
       setForgotId("");
       setOtp(["", "", "", "", "", ""]);
-      setGeneratedOtp("");
       setNewPw("");
       setNewPwConfirm("");
+      setIsSending(false);
+      setIsVerifying(false);
       if (timerRef.current) clearInterval(timerRef.current);
     }
   }, [showAuthModal]);
@@ -62,12 +60,28 @@ export function AuthModal() {
     }, 1000);
   };
 
-  const sendOtp = () => {
-    const code = generateOTP();
-    setGeneratedOtp(code);
-    startOtpTimer();
-    setOtp(["", "", "", "", "", ""]);
+  const sendOtp = async () => {
+    if (isSending) return;
+    setIsSending(true);
     setError("");
+    setOtp(["", "", "", "", "", ""]);
+    try {
+      const res = await fetch("/api/otp/send", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ identifier: forgotId.trim(), type: forgotIdType }),
+      });
+      const data = await res.json() as { success: boolean; message?: string };
+      if (!res.ok || !data.success) {
+        setError(data.message ?? "Không thể gửi OTP. Vui lòng thử lại.");
+      } else {
+        startOtpTimer();
+      }
+    } catch {
+      setError("Lỗi kết nối. Vui lòng thử lại.");
+    } finally {
+      setIsSending(false);
+    }
   };
 
   const set = (k: string) => (e: React.ChangeEvent<HTMLInputElement>) =>
@@ -93,15 +107,34 @@ export function AuthModal() {
     setForm({ name: "", identifier: "", password: "", confirm: "" });
   };
 
-  const handleForgotSend = (e: React.FormEvent) => {
+  const handleForgotSend = async (e: React.FormEvent) => {
     e.preventDefault();
     setError("");
     if (!forgotId.trim()) {
       setError(`Vui lòng nhập ${forgotIdType === "email" ? "địa chỉ email" : "số điện thoại"}.`);
       return;
     }
-    sendOtp();
-    setStep("otp");
+    setIsSending(true);
+    setError("");
+    try {
+      const res = await fetch("/api/otp/send", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ identifier: forgotId.trim(), type: forgotIdType }),
+      });
+      const data = await res.json() as { success: boolean; message?: string };
+      if (!res.ok || !data.success) {
+        setError(data.message ?? "Không thể gửi OTP. Vui lòng thử lại.");
+      } else {
+        startOtpTimer();
+        setOtp(["", "", "", "", "", ""]);
+        setStep("otp");
+      }
+    } catch {
+      setError("Lỗi kết nối. Vui lòng thử lại.");
+    } finally {
+      setIsSending(false);
+    }
   };
 
   const handleOtpChange = (idx: number, val: string) => {
@@ -126,14 +159,31 @@ export function AuthModal() {
     }
   };
 
-  const handleVerifyOtp = (e: React.FormEvent) => {
+  const handleVerifyOtp = async (e: React.FormEvent) => {
     e.preventDefault();
     setError("");
     const entered = otp.join("");
     if (entered.length < 6) { setError("Vui lòng nhập đủ 6 chữ số OTP."); return; }
     if (otpTimer === 0) { setError("Mã OTP đã hết hạn. Vui lòng gửi lại."); return; }
-    if (entered !== generatedOtp) { setError("Mã OTP không đúng. Vui lòng kiểm tra lại."); return; }
-    setStep("newpw");
+    setIsVerifying(true);
+    try {
+      const res = await fetch("/api/otp/verify", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ identifier: forgotId.trim(), code: entered }),
+      });
+      const data = await res.json() as { valid: boolean; message?: string };
+      if (!res.ok || !data.valid) {
+        setError(data.message ?? "Mã OTP không đúng. Vui lòng kiểm tra lại.");
+      } else {
+        if (timerRef.current) clearInterval(timerRef.current);
+        setStep("newpw");
+      }
+    } catch {
+      setError("Lỗi kết nối. Vui lòng thử lại.");
+    } finally {
+      setIsVerifying(false);
+    }
   };
 
   const handleResetPassword = (e: React.FormEvent) => {
@@ -337,8 +387,12 @@ export function AuthModal() {
 
                 {error && <p className="text-red-500 text-sm">{error}</p>}
 
-                <button type="submit" className="w-full py-3 bg-primary text-primary-foreground font-semibold uppercase tracking-wider rounded-sm hover:bg-primary/90 transition-colors">
-                  Gửi Mã OTP
+                <button
+                  type="submit"
+                  disabled={isSending}
+                  className="w-full py-3 bg-primary text-primary-foreground font-semibold uppercase tracking-wider rounded-sm hover:bg-primary/90 transition-colors disabled:opacity-60 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                >
+                  {isSending ? <><Loader2 className="w-4 h-4 animate-spin" /> Đang gửi...</> : "Gửi Mã OTP"}
                 </button>
 
                 <p className="text-center text-sm text-muted-foreground">
@@ -390,12 +444,15 @@ export function AuthModal() {
                   </span>
                   <button
                     type="button"
-                    disabled={otpTimer > 90}
+                    disabled={otpTimer > 90 || isSending}
                     onClick={sendOtp}
-                    className={`flex items-center gap-1 font-semibold transition-colors ${otpTimer > 90 ? "text-muted-foreground cursor-not-allowed" : "text-primary hover:underline"}`}
+                    className={`flex items-center gap-1 font-semibold transition-colors ${otpTimer > 90 || isSending ? "text-muted-foreground cursor-not-allowed" : "text-primary hover:underline"}`}
                   >
-                    <RefreshCw className="w-3.5 h-3.5" />
-                    Gửi lại
+                    {isSending
+                      ? <Loader2 className="w-3.5 h-3.5 animate-spin" />
+                      : <RefreshCw className="w-3.5 h-3.5" />
+                    }
+                    {isSending ? "Đang gửi..." : "Gửi lại"}
                   </button>
                 </div>
 
@@ -403,9 +460,10 @@ export function AuthModal() {
 
                 <button
                   type="submit"
-                  className="w-full py-3 bg-primary text-primary-foreground font-semibold uppercase tracking-wider rounded-sm hover:bg-primary/90 transition-colors"
+                  disabled={isVerifying}
+                  className="w-full py-3 bg-primary text-primary-foreground font-semibold uppercase tracking-wider rounded-sm hover:bg-primary/90 transition-colors disabled:opacity-60 disabled:cursor-not-allowed flex items-center justify-center gap-2"
                 >
-                  Xác Nhận
+                  {isVerifying ? <><Loader2 className="w-4 h-4 animate-spin" /> Đang xác nhận...</> : "Xác Nhận"}
                 </button>
               </form>
             )}
