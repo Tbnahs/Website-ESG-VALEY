@@ -38,7 +38,7 @@ export const products: Product[] = [
     category: "Trà",
     tagline: "Tinh hoa trà Việt – trọn vẹn tâm tình",
     description: "Hộp quà tặng cao cấp Tết 2026, tinh hoa trà Việt – trọn vẹn tâm tình.",
-    price: 2800000,
+    price: 10000000,
     image: "/images/product-ma-dao-chinh.png",
     thumbnails: ["/images/ma-dao-thumb-1.png", "/images/ma-dao-thumb-2.png"],
     story: [
@@ -69,7 +69,7 @@ export const products: Product[] = [
     category: "Trà",
     tagline: "Linh khí núi Tản – hội tụ đất trời",
     description: "Thuở hồng hoang, khi Thần Nông nếm bách thảo và phát hiện lá trà có thể giải độc, đất Việt cũng bắt đầu ghi dấu sự sống nơi núi Tản Viên – vùng non thiêng hội tụ linh khí đất trời.",
-    price: 950000,
+    price: 2020000,
     image: "/images/product-ma-dao.png",
     thumbnails: ["/images/tan-vien-thumb-1.png", "/images/tan-vien-thumb-2.png"],
     story: [
@@ -94,7 +94,7 @@ export const products: Product[] = [
     category: "Trà",
     tagline: "Chắt lọc từ ngàn năm lịch sử",
     description: "Mạc Triều Trà mang trong mình câu chuyện về sự chắt lọc, nâng tầm và gửi gắm của bao thế hệ. Ban đầu, chén trà vốn chỉ là thức uống dân dã, giản dị bên mái nhà sàn, bên nương chè xanh.",
-    price: 1200000,
+    price: 1450000,
     image: "/images/product-tan-vien.png",
     thumbnails: ["/images/mac-trieu-thumb-1.png", "/images/mac-trieu-thumb-2.png"],
     story: [
@@ -119,7 +119,7 @@ export const products: Product[] = [
     category: "Trà",
     tagline: "Di sản trăm năm – vị ngon vượt thời gian",
     description: "Trải qua suốt chiều dài lịch sử, từ thuở dựng nước đến hôm nay, những giá trị văn hóa không ngừng được truyền lại như một báu vật vô giá. Trà – không chỉ là thức uống – đã trở thành món quà tinh thần thiêng liêng.",
-    price: 1500000,
+    price: 1020000,
     image: "/images/product-mac-trieu.png",
     thumbnails: ["/images/bach-nien-thumb-1.png", "/images/bach-nien-thumb-2.png"],
     story: [
@@ -170,12 +170,12 @@ export const products: Product[] = [
   },
   {
     id: 9,
-    name: "Diệp Trà Shan",
-    slug: "diep-tra-shan",
+    name: "Diệp Trà Shan (200g)",
+    slug: "diep-tra-shan-200g",
     category: "Trà",
     tagline: "Tinh khôi sương sớm Đồng Phúc",
-    description: "Giữa đỉnh ngàn Đồng Phúc mờ sương, nơi thời gian như ngưng đọng, những gốc trà Shan Tuyết cổ thụ hàng trăm năm tuổi vẫn âm thầm cắm rễ sâu, chắt lọc linh khí đất trời để kết tinh thành Di sản.",
-    price: 850000,
+    description: "Giữa đỉnh ngàn Đồng Phúc mờ sương, nơi thời gian như ngưng đọng, những gốc trà Shan Tuyết cổ thụ hàng trăm năm tuổi vẫn âm thầm cắm rễ sâu, chắt lọc linh khí đất trời để kết tinh thành Di sản. (200g)",
+    price: 540000,
     image: "/images/diep-tra-shan.jpg",
     thumbnails: ["/images/diep-tra-shan-2.jpg", "/images/diep-tra-shan-3.jpg"],
     story: [
@@ -195,12 +195,12 @@ export const products: Product[] = [
   },
   {
     id: 10,
-    name: "Hồng Trà Shan",
-    slug: "hong-tra-shan",
+    name: "Hồng Trà Shan (200g)",
+    slug: "hong-tra-shan-200g",
     category: "Trà",
     tagline: "Nội lực sâu lắng của Di sản Đồng Phúc",
-    description: "Nếu Diệp Trà Shan là hơi thở tinh khôi của buổi sớm, thì Hồng Trà Shan lại mang nội lực thâm trầm từ những cây trà Di sản tại xã Đồng Phúc, Thái Nguyên.",
-    price: 900000,
+    description: "Nếu Diệp Trà Shan là hơi thở tinh khôi của buổi sớm, thì Hồng Trà Shan lại mang nội lực thâm trầm từ những cây trà Di sản tại xã Đồng Phúc, Thái Nguyên. (200g)",
+    price: 720000,
     image: "/images/hong-tra-shan.jpg",
     thumbnails: ["/images/hong-tra-shan-2.jpg", "/images/hong-tra-shan-3.jpg"],
     story: [
@@ -220,12 +220,12 @@ export const products: Product[] = [
   },
   {
     id: 11,
-    name: "Hồng Trà Quýt",
-    slug: "hong-tra-quyt",
+    name: "Hồng Trà Quýt (200g)",
+    slug: "hong-tra-quyt-200g",
     category: "Trà",
     tagline: "Giai điệu giao thoa của núi rừng",
-    description: "Hồng Trà Quýt – bản giao hưởng nồng nàn, những búp chè Shan tuyết cổ thụ Đồng Phúc tìm thấy sự đồng điệu trong hương vị thanh tao của quýt rừng Bạch Thông.",
-    price: 1100000,
+    description: "Hồng Trà Quýt – bản giao hưởng nồng nàn, những búp chè Shan tuyết cổ thụ Đồng Phúc tìm thấy sự đồng điệu trong hương vị thanh tao của quýt rừng Bạch Thông. (200g)",
+    price: 1620000,
     image: "/images/hong-tra-quyt.jpg",
     thumbnails: ["/images/hong-tra-quyt-2.jpg", "/images/hong-tra-quyt-3.jpg"],
     story: [
@@ -245,12 +245,12 @@ export const products: Product[] = [
   },
   {
     id: 12,
-    name: "Trà Quýt Ống Lam Gác Bếp",
-    slug: "tra-quyt-ong-lam",
+    name: "Trà Quýt Ống Lam Gác Bếp (500g)",
+    slug: "tra-quyt-ong-lam-500g",
     category: "Trà",
     tagline: "Quyện hương núi rừng, đượm vị thời gian",
-    description: "Di sản Trà cổ thụ Đồng Phúc quyện cùng quýt rừng, được bao bọc trong lòng nứa xanh và nâng niu qua những mùa khói bếp thầm lặng của đồng bào Đồng Phúc.",
-    price: 1300000,
+    description: "Di sản Trà cổ thụ Đồng Phúc quyện cùng quýt rừng, được bao bọc trong lòng nứa xanh và nâng niu qua những mùa khói bếp thầm lặng của đồng bào Đồng Phúc. (500g)",
+    price: 2050000,
     image: "/images/tra-quyt-ong-lam.jpg",
     thumbnails: ["/images/tra-quyt-ong-lam-2.jpg"],
     story: [
@@ -427,6 +427,82 @@ export const products: Product[] = [
         text: "Tea Show của ESG Valley phù hợp cho sự kiện doanh nghiệp, lễ khai trương, tiệc tư nhân, hội thảo văn hóa và các buổi gặp gỡ đặc biệt. Đội ngũ trà sư sẽ tùy chỉnh nội dung chương trình theo chủ đề và yêu cầu riêng của từng sự kiện.",
         image: "/images/tea-show.jpg",
         imagePosition: "left"
+      }
+    ]
+  },
+  {
+    id: 13,
+    name: "Diệp Trà Shan (500g)",
+    slug: "diep-tra-shan-500g",
+    category: "Trà",
+    tagline: "Tinh khôi sương sớm Đồng Phúc – Kích cỡ lớn",
+    description: "Giữa đỉnh ngàn Đồng Phúc mờ sương, nơi thời gian như ngưng đọng, những gốc trà Shan Tuyết cổ thụ hàng trăm năm tuổi vẫn âm thầm cắm rễ sâu, chắt lọc linh khí đất trời để kết tinh thành Di sản. (500g)",
+    price: 1200000,
+    image: "/images/diep-tra-shan.jpg",
+    thumbnails: ["/images/diep-tra-shan-2.jpg", "/images/diep-tra-shan-3.jpg"],
+    story: [
+      {
+        title: "DIỆP TRÀ SHAN – TINH KHÔI SƯƠNG SỚM ĐỒNG PHÚC",
+        text: "Giữa đỉnh ngàn Đồng Phúc mờ sương, nơi thời gian như ngưng đọng, những gốc trà Shan Tuyết cổ thụ hàng trăm năm tuổi vẫn âm thầm cắm rễ sâu, chắt lọc linh khí đất trời để kết tinh thành Di sản. Với người dân bản địa, mỗi cây chè là một sinh linh, một chứng nhân sống động cho bản sắc văn hóa vùng cao tự bao đời.",
+        image: "/images/diep-tra-shan.jpg",
+        imagePosition: "right"
+      }
+    ]
+  },
+  {
+    id: 14,
+    name: "Hồng Trà Shan (500g)",
+    slug: "hong-tra-shan-500g",
+    category: "Trà",
+    tagline: "Nội lực sâu lắng của Di sản Đồng Phúc – Kích cỡ lớn",
+    description: "Nếu Diệp Trà Shan là hơi thở tinh khôi của buổi sớm, thì Hồng Trà Shan lại mang nội lực thâm trầm từ những cây trà Di sản tại xã Đồng Phúc, Thái Nguyên. (500g)",
+    price: 1600000,
+    image: "/images/hong-tra-shan.jpg",
+    thumbnails: ["/images/hong-tra-shan-2.jpg", "/images/hong-tra-shan-3.jpg"],
+    story: [
+      {
+        title: "HỒNG TRÀ SHAN – NỘI LỰC SÂU LẮNG CỦA DI SẢN ĐỒNG PHÚC",
+        text: "Nếu Diệp Trà Shan là hơi thở tinh khôi của buổi sớm, thì Hồng Trà Shan lại mang nội lực thâm trầm từ những cây trà Di sản tại xã Đồng Phúc, Thái Nguyên.",
+        image: "/images/hong-tra-shan.jpg",
+        imagePosition: "right"
+      }
+    ]
+  },
+  {
+    id: 15,
+    name: "Tản Viên Trà (150g)",
+    slug: "tan-vien-tra-150g",
+    category: "Trà",
+    tagline: "Linh khí núi Tản – hội tụ đất trời – Kích cỡ cao cấp",
+    description: "Thuở hồng hoang, khi Thần Nông nếm bách thảo và phát hiện lá trà có thể giải độc, đất Việt cũng bắt đầu ghi dấu sự sống nơi núi Tản Viên – vùng non thiêng hội tụ linh khí đất trời. (150g)",
+    price: 1500000,
+    image: "/images/product-ma-dao.png",
+    thumbnails: ["/images/tan-vien-thumb-1.png", "/images/tan-vien-thumb-2.png"],
+    story: [
+      {
+        title: "Linh khí núi Tản Viên",
+        text: "Tản Viên Trà mang trong mình linh khí thiêng liêng của núi Tản – vùng đất có ý nghĩa sâu sắc trong lịch sử và văn hóa Việt Nam.",
+        image: "/images/product-ma-dao.png",
+        imagePosition: "right"
+      }
+    ]
+  },
+  {
+    id: 16,
+    name: "Bạch Trà Shan (150g)",
+    slug: "bach-tra-shan-150g",
+    category: "Trà",
+    tagline: "Di sản trắng tinh khôi của núi cao",
+    description: "Bạch Trà Shan – loại trà hiếm với lá trắng như tuyết, mang hương vị tế nhị và sâu lắng từ vùng cao Đồng Phúc. (150g)",
+    price: 1300000,
+    image: "/images/diep-tra-shan.jpg",
+    thumbnails: ["/images/diep-tra-shan-2.jpg"],
+    story: [
+      {
+        title: "Bạch Trà Shan – Tinh Tuyệt",
+        text: "Bạch Trà Shan là sản phẩm đặc biệt, được hái từ những cây trà Shan cổ thụ chỉ trong ngày tuyệt đối và theo phương pháp chọn lọc khắt khe.",
+        image: "/images/diep-tra-shan.jpg",
+        imagePosition: "right"
       }
     ]
   }
