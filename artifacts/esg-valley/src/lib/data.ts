@@ -432,13 +432,13 @@ export const products: Product[] = [
   },
   {
     id: 13,
-    name: "Diệp Trà Shan (500g)",
-    slug: "diep-tra-shan-500g",
+    name: "Diệp Trà Shan (120g)",
+    slug: "diep-tra-shan-120g",
     category: "Trà",
-    tagline: "Tinh khôi sương sớm Đồng Phúc – Kích cỡ lớn",
-    description: "Giữa đỉnh ngàn Đồng Phúc mờ sương, nơi thời gian như ngưng đọng, những gốc trà Shan Tuyết cổ thụ hàng trăm năm tuổi vẫn âm thầm cắm rễ sâu, chắt lọc linh khí đất trời để kết tinh thành Di sản. (500g)",
-    price: 1200000,
-    image: "/images/diep-tra-shan.jpg",
+    tagline: "Tinh khôi sương sớm Đồng Phúc – Kích cỡ cao cấp",
+    description: "Giữa đỉnh ngàn Đồng Phúc mờ sương, nơi thời gian như ngưng đọng, những gốc trà Shan Tuyết cổ thụ hàng trăm năm tuổi vẫn âm thầm cắm rễ sâu, chắt lọc linh khí đất trời để kết tinh thành Di sản. (120g)",
+    price: 3500000,
+    image: "/images/diep-tra-shan-120g.png",
     thumbnails: ["/images/diep-tra-shan-2.jpg", "/images/diep-tra-shan-3.jpg"],
     story: [
       {
@@ -451,13 +451,13 @@ export const products: Product[] = [
   },
   {
     id: 14,
-    name: "Hồng Trà Shan (500g)",
-    slug: "hong-tra-shan-500g",
+    name: "Hồng Trà Shan (120g)",
+    slug: "hong-tra-shan-120g",
     category: "Trà",
-    tagline: "Nội lực sâu lắng của Di sản Đồng Phúc – Kích cỡ lớn",
-    description: "Nếu Diệp Trà Shan là hơi thở tinh khôi của buổi sớm, thì Hồng Trà Shan lại mang nội lực thâm trầm từ những cây trà Di sản tại xã Đồng Phúc, Thái Nguyên. (500g)",
-    price: 1600000,
-    image: "/images/hong-tra-shan.jpg",
+    tagline: "Nội lực sâu lắng của Di sản Đồng Phúc – Kích cỡ cao cấp",
+    description: "Nếu Diệp Trà Shan là hơi thở tinh khôi của buổi sớm, thì Hồng Trà Shan lại mang nội lực thâm trầm từ những cây trà Di sản tại xã Đồng Phúc, Thái Nguyên. (120g)",
+    price: 4550000,
+    image: "/images/hong-tra-shan-120g.png",
     thumbnails: ["/images/hong-tra-shan-2.jpg", "/images/hong-tra-shan-3.jpg"],
     story: [
       {
@@ -475,7 +475,7 @@ export const products: Product[] = [
     category: "Trà",
     tagline: "Linh khí núi Tản – hội tụ đất trời – Kích cỡ cao cấp",
     description: "Thuở hồng hoang, khi Thần Nông nếm bách thảo và phát hiện lá trà có thể giải độc, đất Việt cũng bắt đầu ghi dấu sự sống nơi núi Tản Viên – vùng non thiêng hội tụ linh khí đất trời. (150g)",
-    price: 1500000,
+    price: 10000000,
     image: "/images/product-ma-dao.png",
     thumbnails: ["/images/tan-vien-thumb-1.png", "/images/tan-vien-thumb-2.png"],
     story: [
@@ -494,9 +494,9 @@ export const products: Product[] = [
     category: "Trà",
     tagline: "Di sản trắng tinh khôi của núi cao",
     description: "Bạch Trà Shan – loại trà hiếm với lá trắng như tuyết, mang hương vị tế nhị và sâu lắng từ vùng cao Đồng Phúc. (150g)",
-    price: 1300000,
-    image: "/images/diep-tra-shan.jpg",
-    thumbnails: ["/images/diep-tra-shan-2.jpg"],
+    price: 7350000,
+    image: "/images/bach-tra-shan-150g.png",
+    thumbnails: ["/images/bach-tra-shan-150g.png"],
     story: [
       {
         title: "Bạch Trà Shan – Tinh Tuyệt",
