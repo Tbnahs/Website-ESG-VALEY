@@ -1,0 +1,12 @@
+modules = ["nodejs-20"]
+
+[[workflows.workflow]]
+name = "Run ERP UI"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "pnpm install && pnpm --filter @workspace/erp-ui run dev"
+waitForPort = 18366
+
+[workflows.workflow.metadata]
+outputType = "webview"
